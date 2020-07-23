@@ -11,4 +11,8 @@ public class SimpleModel {
     public void setId(String id) {
         this.id = id;
     }
+
+    public static void main(String[] args) {
+        System.out.println("dsaf");
+    }
 }
