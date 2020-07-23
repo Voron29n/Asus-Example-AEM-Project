@@ -129,6 +129,11 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
+            <groupId>biz.aQute.bnd</groupId>
+            <artifactId>bndlib</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.asus</groupId>
             <artifactId>com.asus.core</artifactId>
             <version>${project.version}</version>

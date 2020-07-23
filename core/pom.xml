@@ -43,7 +43,11 @@
                         </goals>
                         <configuration>
                             <bnd><![CDATA[
+Bundle-Category: asus
+Export-Package: com.sap.core.listeners.*;version="1.0", com.sap.core.models.*;version="1.0", com.sap.core.service.*;version="1.0"
 Import-Package: javax.annotation;version=0.0.0,*
+-exportcontents: ${packages;VERSIONED}
+-snapshot: ${tstamp;yyyyMMddHHmmssSSS}
                                 ]]></bnd>
                         </configuration>
                     </execution>
@@ -81,6 +85,21 @@ Import-Package: javax.annotation;version=0.0.0,*
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <!--  <optional>true</optional>-->
+            <!--  <scope>compile</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-atinject_1.0_spec</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>uk.org.lidalia</groupId>
             <artifactId>slf4j-test</artifactId>
