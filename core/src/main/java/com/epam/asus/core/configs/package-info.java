@@ -1,7 +1,7 @@
 /*
- * Folder with all Schedulers
+ * Folder with all Sling Configs
  */
 @Version("1.0")
-package com.epam.asus.core.schedulers;
+package com.epam.asus.core.configs;
 
 import org.osgi.annotation.versioning.Version;
