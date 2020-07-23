@@ -1,4 +1,0 @@
-package com.epam.asus.core.models;
-
-public class Var3 {
-}
