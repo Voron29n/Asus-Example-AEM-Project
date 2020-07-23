@@ -12,7 +12,7 @@
             }
         },
         beforeMount() {
-          console.log("ТУТУТУТУТУТ");
+          console.log("ТУТs");
         },
     };
 </script>
