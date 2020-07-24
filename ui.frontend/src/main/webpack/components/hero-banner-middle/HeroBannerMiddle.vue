@@ -1,6 +1,6 @@
 <template>
     <div>
-       {{source}} Hello
+        Hello
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
     props: {
         source: {
-            type: Object,
+            type: String,
             required: true
         },
         // linkTo: {
