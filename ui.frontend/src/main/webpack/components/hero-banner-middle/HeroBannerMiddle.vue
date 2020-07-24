@@ -8,7 +8,7 @@
 export default {
     props: {
         source: {
-            type: String,
+            type: Object,
             required: true
         },
         // linkTo: {

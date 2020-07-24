@@ -1,3 +1,7 @@
-<div id="hero-banner-middle-vue">
-    <hero-banner-middle source=${properties.sling:resourceType}/>
-</div>
+<sly data-sly-use.model="com.epam.asus.core.models.impl.HeroBannerMiddleImpl">
+
+    <div id="hero-banner-middle-vue">
+        <hero-banner-middle source=${properties.sling:resourceType}/>
+    </div>
+
+</sly>
