@@ -6,20 +6,20 @@
 
 <script>
 export default {
+    data(){
+        return {
+            modelData: {}
+        }
+    },
     props: {
-        source: {
+        modelProp: {
             type: String,
             required: true
         },
-        // linkTo: {
-        //     type: Boolean,
-        //     required: true
-        // },
-        // linkUrlTarget: {
-        //     type: String,
-        //     required: true
-        // }
     },
+    beforeMount() {
+        this.$data.modelData = JSON.parse(this.$props.modelProp);
+    }
 };
 </script>
 

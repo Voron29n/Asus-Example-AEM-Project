@@ -1,26 +1,25 @@
 package com.epam.asus.core.models.impl;
 
 import com.epam.asus.core.models.HeroBannerMiddle;
+import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.Via;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import javax.annotation.PostConstruct;
-import javax.inject.Inject;
 
 @Getter
 @Model(adaptables = {SlingHttpServletRequest.class, Resource.class},
-        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
-        resourceType = "asus/components/custom/hero-banner-middle/v1/hero-banner-middle"
+        adapters = {HeroBannerMiddle.class},
+        resourceType = HeroBannerMiddleImpl.RESOURCE_TYPE,
+        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
 public class HeroBannerMiddleImpl implements HeroBannerMiddle {
 
-//    @SlingObject
-//    private Resource currentResource;
+    protected static final String RESOURCE_TYPE = "asus/components/custom/hero-banner-middle/v1/hero-banner-middle";
 
     @ValueMapValue
     private boolean isExternalLink;
@@ -28,9 +27,6 @@ public class HeroBannerMiddleImpl implements HeroBannerMiddle {
     private String linkTo;
     @ValueMapValue
     private String linkUrlTarget;
-
-//    @Inject
-//    @Via("resource")
     @ValueMapValue
     private String fileReference;
 
@@ -39,6 +35,11 @@ public class HeroBannerMiddleImpl implements HeroBannerMiddle {
 
         if (!isExternalLink) linkTo = linkTo.concat(".html");
 
+    }
+
+    @Override
+    public String getModelJson() {
+        return new Gson().toJson(this);
     }
 
     @Override
