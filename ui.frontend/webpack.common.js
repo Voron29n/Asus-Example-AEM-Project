@@ -22,6 +22,7 @@ module.exports = {
             "@components": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "components")
             ),
+            'vue$': 'vue/dist/vue.esm.js'
         },
     },
     entry: {
