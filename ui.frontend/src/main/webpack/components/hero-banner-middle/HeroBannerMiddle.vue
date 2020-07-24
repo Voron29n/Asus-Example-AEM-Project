@@ -1,24 +1,21 @@
 <template>
     <div>
-        Hello
+        {{modelData.linkTo}}
     </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return {
-            modelData: {}
-        }
-    },
     props: {
         modelProp: {
             type: String,
             required: true
-        },
+        }
     },
-    beforeMount() {
-        this.$data.modelData = JSON.parse(this.$props.modelProp);
+    computed: {
+        modelData() {
+            return JSON.parse(this.$props.modelProp);
+        }
     }
 };
 </script>
