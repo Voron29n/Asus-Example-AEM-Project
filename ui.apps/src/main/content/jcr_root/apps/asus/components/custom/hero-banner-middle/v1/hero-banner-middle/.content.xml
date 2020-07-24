@@ -2,8 +2,8 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
           jcr:primaryType="cq:Component"
-          jcr:description="Hero v1"
-          jcr:title="Hero v1"
-          componentGroup="SAP Developers - Content"
+          jcr:description="Hero Banner Middle v1"
+          jcr:title="Hero Banner Middle v1"
+          componentGroup="Asus Project - Content"
           sling:resourceSuperType="core/wcm/components/image/v2/image"
           />
