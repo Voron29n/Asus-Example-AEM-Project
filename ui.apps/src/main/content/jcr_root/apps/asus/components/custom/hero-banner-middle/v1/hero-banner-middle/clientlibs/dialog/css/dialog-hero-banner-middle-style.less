@@ -1,5 +1,30 @@
 
 // displays the type radios horizontally
-.cq-dialog-container-link-info { /* stylelint-disable-line */
-    display: inline-block !important; /* stylelint-disable-line declaration-no-important */
+.cq-dialog-container-link-info-well { /* stylelint-disable-line */
+    align-items: flex-end;
+        width: auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 420px 20px;
+        grid-column-gap: 10px;
 }
+
+.cq-dialog-container-link-info-well .coral-Form-fieldwrapper {
+    width: -webkit-fill-available;
+}
+
+.cq-dialog-container-link-info-well-linkTo {
+    width: 400px;
+    padding-right: 30px;
+}
+
+.cq-dialog-container-link-info-well-linkUrlTarget{
+    align-self: center;
+    left: -30px;
+}
+
+
+.cq-dialog-container-link-info-well coral-Well .coral-Form--vertical foundation-autocomplete.coral-Form-field {
+        display: inline-flex;
+        width: 400px;
+ }
