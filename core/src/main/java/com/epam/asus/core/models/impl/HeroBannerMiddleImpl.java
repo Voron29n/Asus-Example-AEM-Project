@@ -32,13 +32,15 @@ public class HeroBannerMiddleImpl implements HeroBannerMiddle {
     @PostConstruct
     public final void init() {
 
-        if (!isExternalLink) linkTo = linkTo.concat(".html");
+        if (!isExternalLink && linkTo != null) {
+            linkTo = linkTo.concat(".html");
+        }
 
     }
 
     @Override
     public boolean isEmpty() {
-        return fileReference == null && linkTo == null;
+        return fileReference == null || linkTo == null;
     }
 
 }
