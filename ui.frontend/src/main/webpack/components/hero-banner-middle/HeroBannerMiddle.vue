@@ -1,25 +1,22 @@
 <template>
     <div>
-       {{source}} Hello
+        {{modelData.linkTo}}
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        source: {
+        modelProp: {
             type: String,
             required: true
-        },
-        // linkTo: {
-        //     type: Boolean,
-        //     required: true
-        // },
-        // linkUrlTarget: {
-        //     type: String,
-        //     required: true
-        // }
+        }
     },
+    computed: {
+        modelData() {
+            return JSON.parse(this.$props.modelProp);
+        }
+    }
 };
 </script>
 
