@@ -1,8 +1,15 @@
-<div data-sly-use.model="com.epam.asus.core.models.HeroBannerMiddle">
+<sly data-sly-use.model="com.epam.asus.core.models.HeroBannerMiddle"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!model.empty}">
 
     <div id="hero-banner-middle-vue">
-        <hero-banner-middle model-prop=${model.modelJson}></hero-banner-middle>
+        <hero-banner-middle
+                link-to=${model.linkTo}
+                link-url-target=${model.linkUrlTarget}
+                file-reference=${model.fileReference}
+        ></hero-banner-middle>
     </div>
 
-</div>
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
 

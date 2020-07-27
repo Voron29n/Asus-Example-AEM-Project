@@ -1,11 +1,15 @@
 import Vue from "vue";
 
-import HeroBannerMiddle from "./HeroBannerMiddle.vue";
+import HeroBannerMiddle from "./HeroBannerMiddle";
 
-Vue.config.devtools = true;
+const componentSelector = "#hero-banner-middle-vue";
 
-var hero = new Vue({
-    el: "#hero-banner-middle-vue",
-    components: { "hero-banner-middle": HeroBannerMiddle },
-    template: "#hero-banner-middle-vue"
-});
+const element = document.querySelector(componentSelector);
+
+var vueGlobalObject = !element
+    ? console.log("Can't find element with same selector:" + componentSelector)
+    : new Vue({
+          el: componentSelector,
+          components: { "hero-banner-middle": HeroBannerMiddle },
+          template: componentSelector,
+      });

@@ -1,25 +1,40 @@
 <template>
     <div>
-        {{modelData.linkTo}}
+        <v-image
+            :image-data="imageData"
+        ></v-image>
     </div>
 </template>
 
 <script>
+import ImageComponent from "./v-components/Image";
+
 export default {
+    components: {
+        "v-image": ImageComponent,
+    },
     props: {
-        modelProp: {
+        linkTo: {
             type: String,
-            required: true
+            required: false
+        },
+        linkUrlTarget: {
+            type: String,
+            required: false
+        },
+        fileReference: {
+            type: String,
+            required: false
         }
     },
     computed: {
-        modelData() {
-            return JSON.parse(this.$props.modelProp);
+        imageData(){
+            return {
+                linkTo: this.$props.linkTo,
+                linkUrlTarget: this.$props.linkUrlTarget,
+                fileReference: this.$props.fileReference
+            }
         }
     }
 };
 </script>
-
-<style lang="scss" scoped>
-@import "./style/default";
-</style>

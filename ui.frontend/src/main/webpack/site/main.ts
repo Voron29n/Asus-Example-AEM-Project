@@ -1,14 +1,13 @@
-
 // Stylesheets
 import "./main.scss";
 
 // Javascript or Typescript
 import "./**/*.ts";
 
-import "@components/hello-world/hello.js";
+// File with import all custom vue components
+import "./vue-components.ts";
 
-/* Hero Banner Component */
-import "@components/hero-banner-middle/hero-banner-middle.js";
+import "./main.js";
 
 import * as $ from "jquery";
 import "bootstrap";
