@@ -1,7 +1,6 @@
 package com.epam.asus.core.models.impl;
 
 import com.epam.asus.core.models.HeroBannerMiddle;
-import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -35,11 +34,6 @@ public class HeroBannerMiddleImpl implements HeroBannerMiddle {
 
         if (!isExternalLink) linkTo = linkTo.concat(".html");
 
-    }
-
-    @Override
-    public String getModelJson() {
-        return new Gson().toJson(this);
     }
 
     @Override
