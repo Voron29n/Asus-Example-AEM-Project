@@ -1,15 +1,22 @@
 <template>
     <div>
         <a :href="imageData.linkTo" :target="imageData.linkUrlTarget">
-            <img :src="imageData.fileReference" alt />
+            <img :src="imageData.fileReferenceDesktope" />
         </a>
     </div>
 </template>
 
 <script>
+import constant from "@util/constant";
+
 export default {
+    data() {
+        return {
+            witchForMobileVersion: constant.heroBannerMiddle.widthForMobileVersion
+        }
+    },
     props: {
-        imageData: Object
+        imageData: Object,
     }
 };
 </script>

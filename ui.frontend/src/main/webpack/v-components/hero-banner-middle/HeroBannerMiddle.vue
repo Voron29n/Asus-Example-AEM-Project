@@ -22,7 +22,11 @@ export default {
             type: String,
             required: false
         },
-        fileReference: {
+        fileReferenceMobile: {
+            type: String,
+            required: false
+        },
+        fileReferenceDesktope: {
             type: String,
             required: false
         }
@@ -32,7 +36,8 @@ export default {
             return {
                 linkTo: this.$props.linkTo,
                 linkUrlTarget: this.$props.linkUrlTarget,
-                fileReference: this.$props.fileReference
+                fileReferenceMobile: this.$props.fileReferenceMobile,
+                fileReferenceDesktope: this.$props.fileReferenceDesktope
             }
         }
     }
