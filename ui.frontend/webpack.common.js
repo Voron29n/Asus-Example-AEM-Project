@@ -12,7 +12,7 @@ const SOURCE_ROOT = __dirname + "/src/main/webpack";
 
 module.exports = {
     resolve: {
-        extensions: [".js", ".ts", ".vue", ".scss"],
+        extensions: [".js", ".ts", ".vue", ".scss", ".json"],
         plugins: [
             new TSConfigPathsPlugin({
                 configFile: "./tsconfig.json",
@@ -21,6 +21,9 @@ module.exports = {
         alias: {
             "@components": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "v-components")
+            ),
+            "@util": path.resolve(
+                path.join(__dirname, "src", "main", "webpack", "v-components", "util")
             ),
             'vue$': 'vue/dist/vue.esm.js'
         },
