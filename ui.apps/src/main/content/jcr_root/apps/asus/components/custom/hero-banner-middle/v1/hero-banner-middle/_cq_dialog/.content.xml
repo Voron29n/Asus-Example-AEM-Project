@@ -31,23 +31,22 @@
 
                                         <items jcr:primaryType="nt:unstructured">
 
-                                            <image
-                                                    granite:class="cmp-navigation__editor-social__image"
-                                                    jcr:primaryType="nt:unstructured"
+                                            <image  jcr:primaryType="nt:unstructured"
                                                     jcr:title="Image"
                                                     sling:resourceType="granite/ui/components/coral/foundation/container"
                                                     margin="{Boolean}true">
+
                                                 <items jcr:primaryType="nt:unstructured">
                                                     <columns
-                                                            granite:class="cmp-navigation__editor-social__image_block"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
                                                             margin="{Boolean}true">
                                                         <items jcr:primaryType="nt:unstructured">
-                                                            <column
-                                                                    jcr:primaryType="nt:unstructured"
+
+                                                            <column jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="granite/ui/components/coral/foundation/container">
                                                                 <items jcr:primaryType="nt:unstructured">
+
                                                                     <file
                                                                             jcr:primaryType="nt:unstructured"
                                                                             sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
@@ -76,10 +75,11 @@
                         </items>
                     </tab1>
 
-                    <tab2 jcr:primaryType="nt:unstructured"
-                          jcr:title="Hero Link property"
-                          margin="{Boolean}true"
-                          sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <heroLinkProperty
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Hero Link property"
+                            margin="{Boolean}true"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
                             <column
                                     jcr:primaryType="nt:unstructured"
@@ -116,34 +116,34 @@
                                                                             name="./isExternalLink"
                                                                             value="{Boolean}true"
                                                                             text="Button press to external url"
-                                                                            uncheckedValue="false">
+                                                                            uncheckedValue="{Boolean}false">
                                                                     </typeLink>
 
                                                                 <wellGroup
                                                                         jcr:primaryType="nt:unstructured"
                                                                         sling:resourceType="granite/ui/components/coral/foundation/well"
                                                                         granite:class="cq-dialog-container-link-info-well">
-                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <items jcr:primaryType="nt:unstructured">
 
-                                                                    <linkTo
-                                                                            jcr:primaryType="nt:unstructured"
-                                                                            fieldLabel="Link to Url or Site Page"
-                                                                            name="./linkTo"
-                                                                            rootPath="/content/asus"
-                                                                            suffix=".html"
-                                                                            sling:resourceType="cq/gui/components/coral/common/form/pagefield/"
-                                                                            granite:class="cq-dialog-container-link-info-well-linkTo"/>
+                                                                        <linkTo
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                fieldLabel="Link to Url or Site Page"
+                                                                                name="./linkTo"
+                                                                                rootPath="/content/asus"
+                                                                                suffix=".html"
+                                                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield/"
+                                                                                granite:class="cq-dialog-container-link-info-well-linkTo"/>
 
-                                                                    <linkUrlTarget
-                                                                            jcr:primaryType="nt:unstructured"
-                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
-                                                                            fieldDescription="check - new tab / uncheck - self tab"
-                                                                            name="./linkUrlTarget"
-                                                                            value="_blank"
-                                                                            uncheckedValue="_self"
-                                                                            checked="{Boolean}true"
-                                                                            granite:class="cq-dialog-container-link-info-well-linkUrlTarget"/>
-                                                                </items>
+                                                                        <linkUrlTarget
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                                                fieldDescription="check - new tab / uncheck - self tab"
+                                                                                name="./linkUrlTarget"
+                                                                                value="_blank"
+                                                                                uncheckedValue="_self"
+                                                                                checked="{Boolean}true"
+                                                                                granite:class="cq-dialog-container-link-info-well-linkUrlTarget"/>
+                                                                    </items>
                                                                 </wellGroup>
 
                                                                 </items>
@@ -158,7 +158,7 @@
                                 </items>
                             </column>
                         </items>
-                    </tab2>
+                    </heroLinkProperty>
 
                 </items>
             </tabs>
