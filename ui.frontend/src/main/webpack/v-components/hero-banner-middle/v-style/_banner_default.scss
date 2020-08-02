@@ -1,0 +1,23 @@
+.af-banner {
+    position: relative;
+    background: #fff;
+}
+
+.af-banner .banner-block {
+    display: block;
+    width: 100%;
+    padding-top: 36%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.af-banner .banner-block .banner-inner {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+}
