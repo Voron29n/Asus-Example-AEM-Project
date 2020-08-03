@@ -3,8 +3,7 @@
      data-sly-test.hasContent="${!model.empty}"
 >
 
-    1111111<p></p>
-    <div id="footer-vue">
+    <div id="footer-component-vue">
         <footer-language
                 descriptionLink=${model.descriptionLink}
                 link-to=${model.linkTo}
@@ -13,6 +12,5 @@
         ></footer-language>
     </div>
 
-    222222222222
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
