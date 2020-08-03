@@ -8,5 +8,7 @@ public interface HeroBannerMiddle {
 
     String getLinkUrlTarget();
 
-    String getFileReference();
+    String getFileReferenceMobile();
+
+    String getFileReferenceDesktope();
 }

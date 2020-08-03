@@ -1,8 +1,12 @@
 <template>
-    <div>
-        <v-image
-            :image-data="imageData"
-        ></v-image>
+    <div class="af-banner">
+        <div class="banner-block">
+            <div class="banner-inner">
+                <v-image
+                    :image-data="imageData"
+                ></v-image>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -16,25 +20,34 @@ export default {
     props: {
         linkTo: {
             type: String,
-            required: false
+            required: false,
         },
         linkUrlTarget: {
             type: String,
-            required: false
+            required: false,
         },
-        fileReference: {
+        fileReferenceMobile: {
             type: String,
-            required: false
-        }
+            required: false,
+        },
+        fileReferenceDesktope: {
+            type: String,
+            required: false,
+        },
     },
     computed: {
-        imageData(){
+        imageData() {
             return {
                 linkTo: this.$props.linkTo,
                 linkUrlTarget: this.$props.linkUrlTarget,
-                fileReference: this.$props.fileReference
-            }
-        }
-    }
+                fileReferenceMobile: this.$props.fileReferenceMobile,
+                fileReferenceDesktope: this.$props.fileReferenceDesktope,
+            };
+        },
+    },
 };
 </script>
+<style lang="scss">
+@import "./v-style/banner_default";
+@import "./v-style/banner_media";
+</style>

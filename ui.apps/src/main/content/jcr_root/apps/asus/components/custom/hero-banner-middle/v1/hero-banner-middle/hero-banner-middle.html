@@ -2,11 +2,12 @@
      data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      data-sly-test.hasContent="${!model.empty}">
 
-    <div id="hero-banner-middle-vue">
+    <div id="hero-banner-middle-component-vue">
         <hero-banner-middle
                 link-to=${model.linkTo}
                 link-url-target=${model.linkUrlTarget}
-                file-reference=${model.fileReference}
+                file-reference-desktope=${model.fileReferenceDesktope}
+                file-reference-mobile=${model.fileReferenceMobile}
         ></hero-banner-middle>
     </div>
 
