@@ -2,7 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
           xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          xmlns:xi="http://www.w3.org/2003/XInclude"
           jcr:primaryType="nt:unstructured"
           jcr:title="Footer v1"
           sling:resourceType="cq/gui/components/authoring/dialog"
@@ -16,12 +15,26 @@
                   maximized="{Boolean}true"
                   sling:resourceType="granite/ui/components/coral/foundation/tabs">
                 <items jcr:primaryType="nt:unstructured">
-
-                    <xi:include href="_language.xml" />
-                    <xi:include href="_footerLinks.xml" />
-                    <xi:include href="_socialGroups.xml" />
-                    <xi:include href="_copyright.xml" />
-
+                    <includeLanguage
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/asus/components/custom/footer/v1/footer/cq:dialog/tabs/language"
+                            sling:resourceType="granite/ui/components/foundation/include"
+                    />
+                    <includeFooterLinks
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/asus/components/custom/footer/v1/footer/cq:dialog/tabs/footerLinks"
+                            sling:resourceType="granite/ui/components/foundation/include"
+                    />
+                    <includeSocialGroups
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/asus/components/custom/footer/v1/footer/cq:dialog/tabs/socialGroups"
+                            sling:resourceType="granite/ui/components/foundation/include"
+                    />
+                    <includeCopyright
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/asus/components/custom/footer/v1/footer/cq:dialog/tabs/copyright"
+                            sling:resourceType="granite/ui/components/foundation/include"
+                    />
                 </items>
             </tabs>
         </items>
