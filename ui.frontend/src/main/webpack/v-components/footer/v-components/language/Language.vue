@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <p>safdasfasfasf</p>
+    <div class="footer-language">
+        <p>language side</p>
     </div>
 </template>
 
@@ -16,5 +16,6 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import "./language_default";
+@import "./language_media";
 </style>

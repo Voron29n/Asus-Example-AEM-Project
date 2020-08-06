@@ -19,7 +19,7 @@ const vueRootData = {
 /* First what you need is import your components and you can use alias @components for this*/
 import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
 import HelloWorld from "@components/hello-world/HelloWorld";
-import VFooter from "@components/footer/VFooter";
+import Footer from "@components/footer/Footer";
 
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
@@ -29,7 +29,7 @@ vueArrayComponents = [
         HeroBannerMiddle /* it is a import Vue Component */
     ),
     new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
-    new ComponentData("v-footer", "#footer-component-vue", VFooter),
+    new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
 ];
 
 /* 

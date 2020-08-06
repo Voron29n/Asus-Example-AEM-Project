@@ -83,6 +83,7 @@ public class FooterImpl implements Footer {
     }
 
 
+
     @Override
     public boolean isEmpty() {
         return descriptionLink == null;
