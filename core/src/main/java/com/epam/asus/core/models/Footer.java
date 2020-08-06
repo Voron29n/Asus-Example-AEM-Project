@@ -20,4 +20,6 @@ public interface Footer {
     List<SocialsBean> getSocialsCol();
     List<CopyrightsBean> getCopyrightsCol();
     List<LinksGroupBean> getFooterGroupLinksCol();
+
+    String getFooterGroupLinksJson();
 }

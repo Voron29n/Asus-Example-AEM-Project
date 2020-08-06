@@ -8,7 +8,7 @@
 
 export default {
     props: {
-        linksGroupData: Object,
+        linksGroupData: Array,
         default: () => ({})
     },
     

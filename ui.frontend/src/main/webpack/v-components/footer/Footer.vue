@@ -39,14 +39,9 @@ export default {
             required: false,
         },
         linksGroup: {
-            type: Array,
+            type: String,
             required: false,
         },
-        post: {
-            id: 1,
-            title: 'My Journey with Vue'
-        },
-        default: () => ({})
     },
     computed: {
         languageData() {
@@ -59,7 +54,7 @@ export default {
         },
         linksGroupData() {
             return {
-                linksGroup: this.$props.linksGroup,
+                linksGroup: JSON.parse(this.$props.linksGroup),
             };
         },
     },

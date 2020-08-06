@@ -1,0 +1,26 @@
+[{
+        "groupTitle": "Подробнее",
+        "linksNames": [{
+            "isExternalLink": true,
+            "descriptionLink": "Компьютеры «Powered by ASUS»",
+            "linkTo": "http://www.asus.com/Microsite/powered-by-asus/RU/",
+            "linkUrlTarget": "_blank"
+        }]
+    },
+    {
+        "groupTitle": "Кто мы?",
+        "linksNames": [{
+                "isExternalLink": true,
+                "descriptionLink": "О компании",
+                "linkTo": "https://www.asus.com/ru/About-ASUS/",
+                "linkUrlTarget": "_blank"
+            },
+            {
+                "isExternalLink": true,
+                "descriptionLink": "Новости",
+                "linkTo": "https://www.asus.com/ru/News/",
+                "linkUrlTarget": "_blank"
+            }
+        ]
+    }
+]

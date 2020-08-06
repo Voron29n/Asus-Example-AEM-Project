@@ -5,6 +5,7 @@ import com.epam.asus.core.models.beans.footer.CopyrightsBean;
 import com.epam.asus.core.models.beans.footer.LinksGroupBean;
 import com.epam.asus.core.models.beans.footer.SocialsBean;
 import com.epam.asus.core.services.FooterService;
+import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -57,6 +58,8 @@ public class FooterImpl implements Footer {
     private List<CopyrightsBean> copyrightsCol;
     private List<LinksGroupBean> footerGroupLinksCol;
 
+    private String footerGroupLinksJson;
+
     @PostConstruct
     public final void init() {
         if (!isExternalLink && linkTo != null) {
@@ -65,6 +68,7 @@ public class FooterImpl implements Footer {
         if (checkListResource(socials)) setSocialsCollection(socials);
         if (checkListResource(copyrights)) setCopyrightsCollections(copyrights);
         if (checkListResource(footerGroupLinks)) setFooterGroupLinksCollection(footerGroupLinks);
+        footerGroupLinksJson = new Gson().toJson(footerGroupLinksCol);
     }
 
     private boolean checkListResource(List<Resource> resources) {
