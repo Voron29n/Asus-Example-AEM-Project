@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>safdasfasfasf</p>
+
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 
 export default {
     props: {
-        languageData: Object,
+        linksData: Object,
         default: () => ({})
     },
     

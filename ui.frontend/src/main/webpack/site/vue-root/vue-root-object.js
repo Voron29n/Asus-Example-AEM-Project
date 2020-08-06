@@ -24,12 +24,12 @@ import Footer from "@components/footer/Footer";
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
     new ComponentData(
-        "hero-banner-middle" /* it is a name for custom tag that you can use at ui.app in component.html  */,
-        "#hero-banner-middle-component-vue" /* it is a selector. This selector need to know if in the page we have our custom component */,
+        "hero-banner-middle" /* it is a name for custom tag that you can use at ui.app in component.html  */ ,
+        "#hero-banner-middle-component-vue" /* it is a selector. This selector need to know if in the page we have our custom component */ ,
         HeroBannerMiddle /* it is a import Vue Component */
     ),
     new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
-    new ComponentData("footer-language", "#footer-component-vue", Footer),
+    new ComponentData("vfooter", "#footer-component-vue", Footer),
 ];
 
 /* 

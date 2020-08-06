@@ -1,45 +1,43 @@
 <template>
-    <div>
+<div id="footer-component-vue">
+    <vfooter>
+        <h1>My Todo App!</h1>
         <v-language
             :language-data="languageData"
-        ></v-language>
-    </div>
+        >
+         </v-language>
+    </vfooter>
+</div>
 </template>
 
 <script>
-import LanguageComponent from "./v-components/language";
+import LanguageSide from './v-components/Language'
 
 export default {
     components: {
-        "v-language": LanguageComponent,
+        "v-language": LanguageSide,
     },
     props: {
-        descriptionLink: {
-            type: String,
-            required: false
-        },
         linkTo: {
             type: String,
-            required: false
+            required: false,
         },
-        linkUrlTarget: {
-            type: String,
-            required: false
-        },
-        fileReference: {
-            type: String,
-            required: false
-        }
     },
     computed: {
-        languageData(){
+        languageData() {
             return {
-                descriptionLink: this.$props.descriptionLink,
                 linkTo: this.$props.linkTo,
-                linkUrlTarget: this.$props.linkUrlTarget,
-                fileReference: this.$props.fileReference
-            }
-        }
-    }
+            };
+        },
+    },
 };
+
+
 </script>
+
+<style lang="stylus" scoped>
+p {
+  font-size: 2em;
+  text-align: center;
+}
+</style>

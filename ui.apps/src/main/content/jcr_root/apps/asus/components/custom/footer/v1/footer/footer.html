@@ -4,13 +4,24 @@
 >
 
     <div id="footer-component-vue">
-        <footer-language
-                descriptionLink=${model.descriptionLink}
+
+        <vfooter
                 link-to=${model.linkTo}
-                link-url-target=${model.linkUrlTarget}
-                file-reference=${model.fileReference}
-        ></footer-language>
+
+        >
+        </vfooter>
+
     </div>
 
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+<!--/*<footer descriptionLink=${model.descriptionLink}*/-->
+<!--/*                link-to=${model.linkTo}*/-->
+<!--/*        link-url-target=${model.linkUrlTarget}*/-->
+<!--/*                file-reference=${model.fileReference}*/-->
+<!--/*        links-group=${model.footerGroupLinksCol}*/-->
+<!--/*                links-socials=${model.socialsCol}*/-->
+<!--/*        links-copyrights=${model.copyrightsCol}*/-->
+<!--/*&gt;*/-->
+<!--/*</footer>*/-->
