@@ -40,5 +40,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../v-style/image_default";
+@import "./image_default";
 </style>
