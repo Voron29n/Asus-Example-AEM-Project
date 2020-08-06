@@ -1,12 +1,10 @@
 <template>
 <div id="footer-component-vue">
-    <vfooter>
         <h1>My Todo App!</h1>
         <v-language
             :language-data="languageData"
         >
          </v-language>
-    </vfooter>
 </div>
 </template>
 
@@ -35,7 +33,7 @@ export default {
 
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 p {
   font-size: 2em;
   text-align: center;
