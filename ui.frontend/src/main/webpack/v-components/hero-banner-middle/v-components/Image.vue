@@ -8,9 +8,12 @@
 </template>
 
 <script>
+import {adapt} from "@mixin/adaptFromDesktopToMobileVersion"
+
 import constant from "@util/v-constant";
 
 export default {
+    mixins: [adapt],
     data() {
         return {
             imageSrc: "",
@@ -21,18 +24,11 @@ export default {
     props: {
         imageData: Object,
     },
-    mounted() {
-        this.resize();
-        window.addEventListener("resize", this.resize);
-    },
-    beforeDestroy() {
-        window.removeEventListener("resize", this.resize);
-    },
     methods: {
-        resize() {
+        adaptToWindow() {
             this.$data.imageSrc =
-                window.innerWidth > this.witchForMobileVersion
-                    ? this.$props.imageData.fileReferenceDesktope
+                this.isDesktopVersion()
+                    ? this.$props.imageData.fileReferenceDesktop
                     : this.$props.imageData.fileReferenceMobile;
         },
     },

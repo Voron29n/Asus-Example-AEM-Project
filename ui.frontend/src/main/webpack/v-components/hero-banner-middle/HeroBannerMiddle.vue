@@ -30,7 +30,7 @@ export default {
             type: String,
             required: false,
         },
-        fileReferenceDesktope: {
+        fileReferenceDesktop: {
             type: String,
             required: false,
         },
@@ -41,7 +41,7 @@ export default {
                 linkTo: this.$props.linkTo,
                 linkUrlTarget: this.$props.linkUrlTarget,
                 fileReferenceMobile: this.$props.fileReferenceMobile,
-                fileReferenceDesktope: this.$props.fileReferenceDesktope,
+                fileReferenceDesktop: this.$props.fileReferenceDesktop,
             };
         },
     },

@@ -31,7 +31,7 @@
 
                                         <items jcr:primaryType="nt:unstructured">
 
-                                            <imageDesktope
+                                            <imageDesktop
                                                     granite:class="cmp-navigation__editor-social__image"
                                                     jcr:primaryType="nt:unstructured"
                                                     jcr:title="Image"
@@ -54,9 +54,9 @@
                                                                             allowUpload="{Boolean}false"
                                                                             autoStart="{Boolean}false"
                                                                             class="cq-droptarget"
-                                                                            fieldLabel="Image Asset For Desktope Version"
+                                                                            fieldLabel="Image Asset For Desktop Version"
                                                                             fileNameParameter="./fileName"
-                                                                            fileReferenceParameter="./fileReferenceDesktope"
+                                                                            fileReferenceParameter="./fileReferenceDesktop"
                                                                             mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
                                                                             multiple="{Boolean}false"
                                                                             name="./file"
@@ -68,7 +68,7 @@
                                                         </items>
                                                     </columns>
                                                 </items>
-                                            </imageDesktope>
+                                            </imageDesktop>
                                             <imageMobile
                                                     granite:class="cmp-navigation__editor-social__image"
                                                     jcr:primaryType="nt:unstructured"

@@ -27,7 +27,7 @@ public class HeroBannerMiddleImpl implements HeroBannerMiddle {
     @ValueMapValue
     private String linkUrlTarget;
     @ValueMapValue
-    private String fileReferenceDesktope;
+    private String fileReferenceDesktop;
     @ValueMapValue
     private String fileReferenceMobile;
 
@@ -42,7 +42,7 @@ public class HeroBannerMiddleImpl implements HeroBannerMiddle {
 
     @Override
     public boolean isEmpty() {
-        return fileReferenceDesktope == null || fileReferenceMobile == null || linkTo == null;
+        return fileReferenceDesktop == null || fileReferenceMobile == null || linkTo == null;
     }
 
 }

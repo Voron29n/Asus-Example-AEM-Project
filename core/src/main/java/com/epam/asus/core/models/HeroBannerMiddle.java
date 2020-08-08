@@ -10,5 +10,5 @@ public interface HeroBannerMiddle {
 
     String getFileReferenceMobile();
 
-    String getFileReferenceDesktope();
+    String getFileReferenceDesktop();
 }
