@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import {adapt} from "@mixin/adaptFromDesktopToMobileVersion"
+import {adapt} from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
     mixins: [adapt],
