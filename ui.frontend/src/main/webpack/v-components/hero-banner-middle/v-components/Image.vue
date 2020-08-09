@@ -10,15 +10,11 @@
 <script>
 import {adapt} from "@mixin/adaptFromDesktopToMobileVersion"
 
-import constant from "@util/v-constant";
-
 export default {
     mixins: [adapt],
     data() {
         return {
             imageSrc: "",
-            witchForMobileVersion:
-                constant.heroBannerMiddle.widthForMobileVersion,
         };
     },
     props: {
