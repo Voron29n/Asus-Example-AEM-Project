@@ -3,8 +3,9 @@ import constant from "@util/v-constant";
 export const adapt = {
     data() {
         return {
+            isDesktopVersion: false,
             witchForMobileVersion:
-                constant.heroBannerMiddle.widthForMobileVersion
+                constant.heroBannerMiddle.widthForMobileVersion,
         };
     },
     mounted() {
@@ -16,10 +17,12 @@ export const adapt = {
     },
     methods: {
         adaptToWindow() {
-            //need impl
+            //default impl
+            this.isDesktopVersionMeth();
         },
-        isDesktopVersion() {
-            return window.innerWidth > this.witchForMobileVersion
+        isDesktopVersionMeth() {
+            this.isDesktopVersion = window.innerWidth > this.witchForMobileVersion;
+            return this.isDesktopVersion;
         }
     },
 };

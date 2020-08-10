@@ -23,7 +23,7 @@ export default {
     methods: {
         adaptToWindow() {
             this.$data.imageSrc =
-                this.isDesktopVersion()
+                this.isDesktopVersionMeth()
                     ? this.$props.imageData.fileReferenceDesktop
                     : this.$props.imageData.fileReferenceMobile;
         },
