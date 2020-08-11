@@ -1,6 +1,6 @@
 <template>
-    <div class="cmp_article_image_text-description" >
-        <span v-html="descriptionData.imageTextDescription"></span> 
+    <div class="cmp_article_text-description" >
+        <span v-html="descriptionData.textDescription"></span> 
     </div>
 </template>
 

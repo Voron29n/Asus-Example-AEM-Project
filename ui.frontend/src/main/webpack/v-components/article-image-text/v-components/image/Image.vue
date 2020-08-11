@@ -14,9 +14,9 @@ export default {
     computed: {
         imageClass() {
              if (this.$props.imageData.imageIsRightSide) {
-            return 'span3 rightimg'
+            return 'span4 rightimg'
         } else {
-            return 'span3 leftimg'
+            return 'span4 leftimg'
         }
         },
     },

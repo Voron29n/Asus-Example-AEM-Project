@@ -6,8 +6,8 @@ public interface ArticleTitle {
 
     String getTitle();
     String getDescription();
-    String getLinkUrlTarget();
-    String getLinkTo();
     String getDescriptionLink();
+    String getLinkTo();
+    String getLinkUrlTarget();
 
 }
