@@ -8,17 +8,13 @@
 </template>
 
 <script>
-import {adapt} from "@mixin/adaptFromDesktopToMobileVersion"
-
-import constant from "@util/v-constant";
+import {adapt} from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
     mixins: [adapt],
     data() {
         return {
             imageSrc: "",
-            witchForMobileVersion:
-                constant.heroBannerMiddle.widthForMobileVersion,
         };
     },
     props: {
@@ -27,7 +23,7 @@ export default {
     methods: {
         adaptToWindow() {
             this.$data.imageSrc =
-                this.isDesktopVersion()
+                this.isDesktopVersionMeth()
                     ? this.$props.imageData.fileReferenceDesktop
                     : this.$props.imageData.fileReferenceMobile;
         },

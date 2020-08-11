@@ -1,0 +1,30 @@
+#grid-parsys-desc-three-mobile-four-or-two {
+    display: block;
+}
+
+.af-banner {
+    background: #fff;
+}
+
+.af-banner {
+    position: relative;
+
+    .banner-block {
+        display: block;
+        width: 100%;
+        padding-top: 36%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &.af-banner_x3 {
+        background: #fff;
+        
+        .banner-block {
+            display: inline-block;
+            width: 33.33%;
+            padding-top: 12%;
+        }
+    
+    }
+}

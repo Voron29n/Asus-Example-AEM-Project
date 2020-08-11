@@ -1,0 +1,33 @@
+<sly
+    data-sly-use.model="com.epam.asus.core.models.GridParsys"
+    data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${!model.empty}"
+>
+    <div id="grid-parsys-desc-three-mobile-four-or-two">
+        <grid-parsys>
+            <template v-slot:desktop>
+                <div class="af-banner af-ss-banner af-banner_x3 spotlight-banner loaded">
+                    <sly data-sly-list.item="${model.parsysNames}">
+                        <div
+                            class="banner-block"
+                            data-sly-test="${itemList.index < 3}"
+                            data-sly-resource="${ @path=item, resourceType='wcm/foundation/components/parsys'}"
+                        ></div>
+                    </sly>
+                </div>
+            </template>
+
+            <template v-slot:mobile>
+                <sly data-sly-list.item="${model.parsysNames}">
+                    <div
+                        class="banner-block"
+                        data-sly-resource="${ @path=item, resourceType='wcm/foundation/components/parsys'}"
+                    ></div>
+                </sly>
+            </template>
+        </grid-parsys>
+    </div>
+</sly>
+<sly
+    data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"
+></sly>
