@@ -20,6 +20,7 @@ const vueRootData = {
 import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
 import HelloWorld from "@components/hello-world/HelloWorld";
 import Footer from "@components/footer/Footer";
+import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
 
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
@@ -30,6 +31,7 @@ vueArrayComponents = [
     ),
     new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
     new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
+    new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
 ];
 
 /* 
