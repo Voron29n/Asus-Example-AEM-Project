@@ -1,0 +1,28 @@
+p {
+    margin: 0px 0px 12px;
+}
+
+.cmp_article_image_text-description {
+    font-size: 12px;
+    line-height: 20px;
+    color: #333;
+}
+
+img {
+    margin: 0px 13px 13px 0px;
+    border: 0;
+}
+
+.leftimg {
+    float: left;
+    /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0;
+    /* Отступы вокруг картинки */
+}
+
+.rightimg {
+    float: right;
+    /* Выравнивание по правому краю  */
+    margin: 7px 0 7px 7px;
+    /* Отступы вокруг картинки */
+}

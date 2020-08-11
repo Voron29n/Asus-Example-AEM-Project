@@ -57,7 +57,8 @@ public class FooterImpl implements Footer {
     private List<SocialsBean> socialsCol;
     private List<CopyrightsBean> copyrightsCol;
     private List<LinksGroupBean> footerGroupLinksCol;
-
+    private String socialsJson;
+    private String copyrightsJson;
     private String footerGroupLinksJson;
 
     @PostConstruct
@@ -65,10 +66,14 @@ public class FooterImpl implements Footer {
         if (!isExternalLink && linkTo != null) {
             linkTo = linkTo.concat(".html");
         }
+        if (checkListResource(footerGroupLinks)) setFooterGroupLinksCollection(footerGroupLinks);
         if (checkListResource(socials)) setSocialsCollection(socials);
         if (checkListResource(copyrights)) setCopyrightsCollections(copyrights);
-        if (checkListResource(footerGroupLinks)) setFooterGroupLinksCollection(footerGroupLinks);
+
+        socialsJson = new Gson().toJson(socialsCol);
+        copyrightsJson = new Gson().toJson(copyrightsCol);
         footerGroupLinksJson = new Gson().toJson(footerGroupLinksCol);
+
     }
 
     private boolean checkListResource(List<Resource> resources) {
@@ -85,7 +90,6 @@ public class FooterImpl implements Footer {
     private void setFooterGroupLinksCollection(List<Resource> footerGroupLinks) {
         footerGroupLinksCol = footerService.populateMultiFieldFooterGroupLinksItems(footerGroupLinks);
     }
-
 
 
     @Override
