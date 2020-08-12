@@ -1,30 +1,32 @@
 #grid-parsys-desc-three-mobile-four-or-two {
     display: block;
 
-    .af-banner {
+    .af-parsys {
         background: #fff;
         position: relative;
         display: flex;
         justify-content: space-between;
 
-        .banner-block {
+        .parsys-block {
             display: block;
             padding-top: 0;
             overflow: hidden;
         }
+    }
 
-        &.af-banner_x3.desktop-banner {
-            .banner-block {
-                width: 33.1%;
-            }
-        }
-
-        &.af-banner_x2.mobile-banner {
+    .mobile-parsys {
+        .af-parsys {
             flex-wrap: wrap;
-
-            .banner-block {
+            
+            .parsys-block {
                 width: 49.5%;
             }
+        }
+    }
+
+    .desktop-parsys {
+        .parsys-block {
+            width: 33.1%;
         }
     }
 }

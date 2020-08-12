@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <slot v-if="isDesktopVersion" name="desktop"></slot>
-        <slot v-else name="mobile"></slot>
+    <div :class="[isDesktopVersion ? 'desktop-parsys' : 'mobile-parsys' ]">
+        <slot></slot>
     </div>
 </template>
 
@@ -11,15 +10,43 @@ import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 export default {
     mixins: [adapt],
     props: {
-        numberRowForMobileVersion: {
+        numberParsysMobileVersion: {
             type: String,
             required: true,
-        }
+        },
+        numberParsysDesktopVersion: {
+            type: String,
+            required: true,
+        },
+    },
+    methods: {
+        adaptToWindow() {
+            let arrayWithParsysElements = Array.from(
+                this.$el.querySelectorAll(".parsys-block")
+            );
+
+            let numberParsysDesktopVersion = parseInt(
+                this.$props.numberParsysDesktopVersion
+            );
+            let numberParsysMobileVersion = parseInt(
+                this.$props.numberParsysMobileVersion
+            );
+            let isDesktopVersion = this.isDesktopVersionMeth();
+
+            arrayWithParsysElements.forEach(function (value, index) {
+                if (isDesktopVersion) {
+                    value.style.display =
+                        index >= numberParsysDesktopVersion ? "none" : "block";
+                } else {
+                    value.style.display =
+                        index >= numberParsysMobileVersion ? "none" : "block";
+                }
+            });
+        },
     },
 };
 </script>
 
 <style lang="scss">
-@import "./v-style/banner_default";
-@import "./v-style/banner_media";
+@import "./v-style/parsys_default";
 </style>
