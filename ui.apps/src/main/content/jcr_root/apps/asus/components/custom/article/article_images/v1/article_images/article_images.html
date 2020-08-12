@@ -1,0 +1,13 @@
+<sly data-sly-use.model="com.epam.asus.core.models.ArticleListImages"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!model.empty}"
+>
+    <div id="article_image-component-vue">
+        <vue-images-data
+                images-title="${model.title}"
+                images=${model.imagesJson}>
+        </vue-images-data>
+    </div>
+
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

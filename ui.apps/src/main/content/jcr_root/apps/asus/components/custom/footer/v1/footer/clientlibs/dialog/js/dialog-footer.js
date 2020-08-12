@@ -3,11 +3,10 @@
     "use strict";
 
     var selectors = {
-        dialogContent: ".sap-navigation_v3__editor",
+        dialogContent: ".cmp-footer_v1__editor",
         socials: ".cmp-navigation__editor-multifield_socials",
         copyright: ".cmp-navigation__editor-multifield_actions_copyright",
         footerlinks: ".cmp-navigation__editor-multifield_actions_footerlinks",
-        infolinks: ".cmp-navigation__editor-multifield_actions_infolinks"
     };
 
     $(document).on("dialog-loaded", function (event) {
@@ -21,7 +20,6 @@
                 var socials = dialogContent.querySelector(selectors.socials);
                 var copyright = dialogContent.querySelector(selectors.copyright);
                 var footerlinks = dialogContent.querySelector(selectors.footerlinks);
-                //                         var infolinks = dialogContent.querySelector(selectors.infolinks);
 
                 if (socials) {
                     Coral.commons.ready(socials, function (e) {
@@ -74,12 +72,10 @@
         });
     };
 
-
     function onChangeAddButton(e) {
         let element = e.target;
         disableButton(element);
     };
-
 
     function disableButton(element) {
 
@@ -93,7 +89,6 @@
             jQuery.each(childs, function (index, value) {
                 if (value.localName === 'button') {
                     $(value).attr('disabled', 'disabled');
-                    $(value).attr('style', 'color: red');
                 }
             })
         } else {
@@ -101,11 +96,9 @@
             jQuery.each(childs, function (index, value) {
                 if (value.localName === 'button') {
                     $(value).removeAttr('disabled');
-                    $(value).removeAttr('style', 'color: red');
                 }
             })
         }
-
 
     };
 

@@ -155,47 +155,7 @@ h3 {
     line-height: 40px;
 }
 
-@media (max-width: 959px) and (min-width: 720px) {
-    .span4 {
-        width: 228px;
-    }
-}
-
-@media (max-width: 959px) and (min-width: 720px) {
-    [class*="span"] {
-        float: left;
-        margin-left: 20px;
-    }
-}
-
-@media (max-width: 768px) and (min-width: 720px) {
-    [class*="span"],
-    .row-fluid [class*="span"] {
-        width: auto!important;
-        margin-left: 0!important;
-        display: block;
-    }
-}
-
-@media (max-width: 719px) {
-    [class*="span"],
-    .row-fluid [class*="span"] {
-        float: none;
-        display: block;
-        width: auto;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 719px) {
-    [class*="span"],
-    .row-fluid [class*="span"] {
-        width: auto!important;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    #member-page-content img {
-        max-width: 100%!important;
-    }
+h4 {
+    font-size: 18px;
+    line-height: 20px;
 }
