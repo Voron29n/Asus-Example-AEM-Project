@@ -1,6 +1,5 @@
 <template>
     <div class="cmp_article_images-list">
-        <p>images group side</p>
         <ul v-if="imagesData.images.length">
             <li 
                 v-for="imageObject in imagesData.images"

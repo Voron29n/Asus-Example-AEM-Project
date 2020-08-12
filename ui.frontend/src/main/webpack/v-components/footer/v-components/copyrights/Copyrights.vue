@@ -1,6 +1,13 @@
 <template>
-    <div class="footer-copyrights">
-        <p>copyrights group side</p>
+    <div class="footer-copyrights" id="aai-copyright">
+        <ul id="copyright" v-if="copyrightsData.copyrights.length">
+            <li 
+                 v-for="copyrightsItem in copyrightsData.copyrights"
+                 :key="copyrightsItem.descriptionLink"
+            >
+                <a :href="copyrightsItem.linkTo" :target="copyrightsItem.linkUrlTarget">{{copyrightsItem.descriptionLink}}</a>
+            </li>
+		</ul>
     </div>
 </template>
 
@@ -9,7 +16,6 @@
 export default {
     props: {
         copyrightsData: Object,
-        default: () => ({})
     },
     
 };

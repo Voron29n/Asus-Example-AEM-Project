@@ -4,8 +4,7 @@ export const adapt = {
     data() {
         return {
             isDesktopVersion: false,
-            witchForMobileVersion:
-                constant.heroBannerMiddle.widthForMobileVersion,
+            witchForMobileVersion: constant.window.widthForMobileVersion,
         };
     },
     mounted() {
@@ -20,8 +19,12 @@ export const adapt = {
             //default impl
             this.isDesktopVersionMeth();
         },
-        isDesktopVersionMeth() {
-            this.isDesktopVersion = window.innerWidth > this.witchForMobileVersion;
+        isDesktopVersionMeth(maxWidth) {
+            if (maxWidth !== undefined) {
+                this.isDesktopVersion = window.innerWidth > maxWidth;
+            } else {
+                this.isDesktopVersion = window.innerWidth > this.witchForMobileVersion;
+            }
             return this.isDesktopVersion;
         }
     },

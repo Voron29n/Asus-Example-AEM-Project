@@ -1,0 +1,24 @@
+#footer-component-vue #aai-copyright {
+    float: right;
+    color: #959595;
+    font-size: 12px;
+}
+
+#footer-component-vue #copyright {
+    margin-bottom: 10px;
+}
+
+#footer-component-vue #copyright>li {
+    float: left;
+    line-height: 1.2;
+    list-style: none;
+}
+
+#footer-component-vue #aai-copyright a {
+    margin-right: 12px;
+    color: #7C7C7C;
+    text-decoration: none;
+    font-size: 12px;
+    border-right: 1px solid #7C7C7C;
+    padding-right: 10px;
+}
