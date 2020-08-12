@@ -10,6 +10,12 @@ import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
     mixins: [adapt],
+    props: {
+        numberRowForMobileVersion: {
+            type: String,
+            required: true,
+        }
+    },
 };
 </script>
 

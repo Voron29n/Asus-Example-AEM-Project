@@ -30,11 +30,28 @@ public class GridParsysImplDescThreeMobileFourOrTwo implements GridParsys {
     @ValueMapValue
     private String parsysType;
 
+    private int numberParsysMobileVersion;
+    private int numberParsysDesktopVersion;
+
     private List<String> parsysNames;
 
     @PostConstruct
     public final void init() {
         if (parsysType != null) {
+
+            numberParsysDesktopVersion = 3;
+
+            switch (parsysType) {
+                case NORMAL_PARSYS_TYPE:
+                    numberParsysMobileVersion = 4;
+                    break;
+                case SIMPLIFIED_PARSYS_TYPE:
+                    numberParsysMobileVersion = 2;
+                    break;
+                default:
+                    //FIXME add logger
+            }
+
             parsysNames = new ArrayList<>();
             for (int i = 0; i < 4; i++) {
                 parsysNames.add(PARSYS_NODE_NAME + String.valueOf(i));
