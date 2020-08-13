@@ -22,7 +22,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 fieldDescription="Social title "
                                 fieldLabel="Social title"
-                                required="{Boolean}true"
+                                required="{Boolean}false"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 name="./socialTitle"
                                 granite:class="cq-dialog-container-footer-socialTitle"

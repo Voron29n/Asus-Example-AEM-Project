@@ -33,12 +33,11 @@ export default {
   data() {
     return {
       isDesktopVersion: false,
-      witchForMobileVersion: constant.window.widthForMobileVersion,
     };
   },
   methods: {
     openLinkGroup(countItems, isSocialGroup, event) {
-      if (this.isDesktopVersionMeth(720)) {
+      if (this.isDesktopVersionMeth(720) || event.target.parentElement.className === "footer-links_group") {
         return;
       }
 

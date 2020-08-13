@@ -1,6 +1,6 @@
 <template>
     <div class="footer-copyrights" id="aai-copyright">
-        <ul id="copyright" v-if="copyrightsData.copyrights.length">
+        <ul id="copyright">
             <li 
                  v-for="copyrightsItem in copyrightsData.copyrights"
                  :key="copyrightsItem.descriptionLink"

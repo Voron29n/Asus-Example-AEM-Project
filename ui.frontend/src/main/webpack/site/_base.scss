@@ -19,6 +19,14 @@ body {
     color: #333;
 }
 
+body header.experiencefragment {
+    border-bottom: none;
+}
+
+body footer.experiencefragment {
+    border-top: none;
+}
+
 a {
     color: $color-link;
     @media (prefers-color-scheme: dark) {
