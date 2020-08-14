@@ -1,4 +1,4 @@
-package com.epam.asus.core.models.impl;
+package com.epam.asus.core.models.impl.hero;
 
 import com.epam.asus.core.models.HeroBannerMiddle;
 import lombok.Getter;
