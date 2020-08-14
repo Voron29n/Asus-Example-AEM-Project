@@ -1,0 +1,27 @@
+@media (max-width: 719px) {
+    .leftimg .rightimg {
+        float: none;
+    }
+    [class*="span"],
+    .row-fluid [class*="span"] {
+        width: auto !important;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 90%;
+    }
+}
+
+@media (min-width: 720px) {
+    .leftimg {
+        float: left;
+        /* Выравнивание по левому краю */
+        margin: 7px 7px 7px 0;
+        /* Отступы вокруг картинки */
+    }
+    .rightimg {
+        float: right;
+        /* Выравнивание по правому краю  */
+        margin: 7px 0 7px 7px;
+        /* Отступы вокруг картинки */
+    }
+}

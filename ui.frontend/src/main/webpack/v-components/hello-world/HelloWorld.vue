@@ -8,11 +8,11 @@
     export default {
         data(){
             return {
-                message: "ХУЕТАsss",
+                message: "Hello Vue",
             }
         },
         beforeMount() {
-          console.log("ТУТs");
+          console.log("Hello Vue");
         },
     };
 </script>

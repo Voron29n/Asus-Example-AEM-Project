@@ -19,8 +19,6 @@ import java.util.List;
 public class FooterServiceImpl implements FooterService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
-    private static final String TYPE_OF_OPEN_PROPERTY_KEY = "typeOfOpen";
-
 
     private boolean checkResource(List<Resource> resources){
         return resources != null && !resources.isEmpty();
@@ -95,7 +93,6 @@ public class FooterServiceImpl implements FooterService {
                 );
             }
         }
-
         return footerGroupLinksCol;
     }
 
@@ -106,6 +103,5 @@ public class FooterServiceImpl implements FooterService {
             return (getPropertyValue(vm, "linkTo"));
         }
     }
-
 
 }

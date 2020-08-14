@@ -53,8 +53,7 @@
                                             composite="{Boolean}true"
                                             fieldDescription="New value"
                                             fieldLabel="Links of group"
-                                            validation="multifield-max-8"
-                                            name="./linksCol">
+                                            validation="multifield-max-8">
                                         <field
                                                 granite:class="cmp-navigation__editor-action_infolinks"
                                                 jcr:primaryType="nt:unstructured"
@@ -92,7 +91,7 @@
                                                                 name="./linkTo"
                                                                 rootPath="/content/asus"
                                                                 suffix=".html"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                                                 granite:class="cq-dialog-container-footer-info-well-linkTo"/>
 
                                                         <linkUrlTarget

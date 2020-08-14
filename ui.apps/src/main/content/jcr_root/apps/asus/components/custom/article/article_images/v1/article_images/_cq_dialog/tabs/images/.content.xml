@@ -1,0 +1,86 @@
+<images xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+              xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+              xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+              jcr:primaryType="nt:unstructured"
+              jcr:title="Images"
+              margin="{Boolean}true"
+              sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+
+        <column
+                jcr:primaryType="nt:unstructured"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+
+                <column jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <listImages
+                                granite:class="foundation-toggleable cmp-article__editor-multifield_images"
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                validation="multifield-max-3"
+                                fieldDescription="New value"
+                                fieldLabel="Images collection">
+                            <field
+                                    granite:class="cmp-article__editor-images"
+                                    jcr:primaryType="nt:unstructured"
+                                    acs-commons-nested=""
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./images">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <image
+                                            granite:class="cmp-article__editor__image"
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Image"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    granite:class="cmp-article__editor__image_block"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <file
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                    allowUpload="{Boolean}false"
+                                                                    autoStart="{Boolean}false"
+                                                                    class="cq-droptarget"
+                                                                    fieldLabel="Image Asset"
+                                                                    fileNameParameter="./fileName"
+                                                                    fileReferenceParameter="./fileReference"
+                                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                                    multiple="{Boolean}false"
+                                                                    name="./file"
+                                                                    title="Upload Image Asset"
+                                                                    uploadUrl="${suffix.path}"
+                                                                    useHTML5="{Boolean}true"/>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </image>
+
+                                </items>
+
+                            </field>
+                        </listImages>
+                    </items>
+                </column>
+            </items>
+        </column>
+    </items>
+</images>

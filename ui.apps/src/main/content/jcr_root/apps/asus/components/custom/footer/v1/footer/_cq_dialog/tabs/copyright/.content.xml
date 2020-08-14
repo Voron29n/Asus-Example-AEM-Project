@@ -26,8 +26,7 @@
                                 composite="{Boolean}true"
                                 fieldDescription="New value"
                                 validation="multifield-max-3"
-                                fieldLabel="MultiField navigation collection"
-                                name="./copyrightsCol">
+                                fieldLabel="MultiField navigation collection">
                             <field
                                     granite:class="cmp-navigation__editor-action"
                                     jcr:primaryType="nt:unstructured"

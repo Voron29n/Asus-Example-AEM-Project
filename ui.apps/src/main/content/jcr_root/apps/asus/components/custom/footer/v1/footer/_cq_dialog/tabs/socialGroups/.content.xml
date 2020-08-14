@@ -22,7 +22,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 fieldDescription="Social title "
                                 fieldLabel="Social title"
-                                required="{Boolean}true"
+                                required="{Boolean}false"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 name="./socialTitle"
                                 granite:class="cq-dialog-container-footer-socialTitle"
@@ -36,8 +36,7 @@
                                 composite="{Boolean}true"
                                 validation="multifield-max-6"
                                 fieldDescription="New value"
-                                fieldLabel="Social navigation collection"
-                                name="./socialNavigationListCol">
+                                fieldLabel="Social navigation collection">
                             <field
                                     granite:class="cmp-navigation__editor-social"
                                     jcr:primaryType="nt:unstructured"

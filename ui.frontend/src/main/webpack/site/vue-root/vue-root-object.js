@@ -21,6 +21,12 @@ import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
 import HelloWorld from "@components/hello-world/HelloWorld";
 import Footer from "@components/footer/Footer";
 import GridParsysDesk4Mobile4Or2 from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
+import ArticleTitle from "@components/article-title/ArticleTitle";
+import ArticleImageText from "@components/article-image-text/ArticleImageText";
+import ArticleText from "@components/article-text/ArticleText";
+import ArticleImage from "@components/article-image/ArticleImage";
+import ArticleImages from "@components/article-images/ArticleImages";
+import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
 
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
@@ -32,6 +38,12 @@ vueArrayComponents = [
     new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
     new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
     new ComponentData("grid-parsys-desk3-mobile4-or-mobile2", "#grid-parsys-desc-three-mobile-four-or-two", GridParsysDesk4Mobile4Or2),
+    new ComponentData("vue-title-data", "#article_title-component-vue", ArticleTitle),
+    new ComponentData("vue-image-text-data", "#article_image-text-component-vue", ArticleImageText),
+    new ComponentData("vue-text-data", "#article_text-component-vue", ArticleText),
+    new ComponentData("vue-image-data", "#article_image-component-vue", ArticleImage),
+    new ComponentData("vue-images-data", "#article_image-component-vue", ArticleImages),
+    new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
 ];
 
 /* 

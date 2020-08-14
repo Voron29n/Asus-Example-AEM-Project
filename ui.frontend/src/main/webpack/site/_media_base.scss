@@ -1,0 +1,38 @@
+//== Base media
+@media (max-width: 959px) and (min-width: 720px) {
+    [class*="span"] {
+        float: left;
+        margin-left: 20px;
+    }
+    .span3 {
+        width: 166px;
+    }
+    .span4 {
+        width: 228px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 720px) {
+    [class*="span"],
+    .row-fluid [class*="span"] {
+        width: auto!important;
+        margin-left: 0!important;
+        display: block;
+    }
+}
+
+@media (max-width: 719px) {
+    [class*="span"],
+    .row-fluid [class*="span"] {
+        float: none;
+        display: block;
+        width: auto!important;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #member-page-content img {
+        max-width: 100%!important;
+    }
+}
