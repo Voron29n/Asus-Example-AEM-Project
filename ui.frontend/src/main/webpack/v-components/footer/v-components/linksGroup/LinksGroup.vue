@@ -15,7 +15,7 @@
     </div>
     <v-socials :socials-data="socialsData" @open-social-group="openLinkGroup"></v-socials>
   </div>
-</template>=
+</template>
 
 <script>
 import SocialsData from "../socials/Socials";
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     openLinkGroup(countItems, isSocialGroup, event) {
-      if (this.isDesktopVersionMeth(720) || event.target.parentElement.className === "footer-links_group") {
+      if (this.isDesktopVersionMeth(720) || event.target.parentElement.isEqualNode(this.$el)) {
         return;
       }
 
