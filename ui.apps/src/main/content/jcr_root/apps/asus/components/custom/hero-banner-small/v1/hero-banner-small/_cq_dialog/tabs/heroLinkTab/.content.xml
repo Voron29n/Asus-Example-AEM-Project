@@ -1,0 +1,92 @@
+<heroLinkTab xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+             xmlns:jcr="http://www.jcp.org/jcr/1.0"
+             xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+             jcr:primaryType="nt:unstructured"
+             jcr:title="Hero Link property"
+             margin="{Boolean}true"
+             sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <column
+                jcr:primaryType="nt:unstructured"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+                <column jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <actionslink jcr:primaryType="nt:unstructured"
+                                     jcr:title="Link and Actions"
+                                     margin="{Boolean}true"
+                                     sling:resourceType="granite/ui/components/coral/foundation/container">
+
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                        jcr:primaryType="nt:unstructured"
+                                        margin="{Boolean}true"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                granite:class="cq-dialog-container-link-info">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        name="./descriptionList">
+
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <typeLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                fieldDescription="Button press to external url"
+                                                                name="./isExternalLink"
+                                                                value="{Boolean}true"
+                                                                text="Button press to external url"
+                                                                uncheckedValue="false">
+                                                        </typeLink>
+
+                                                        <wellGroup
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                                granite:class="cq-dialog-container-link-info-well">
+                                                            <items jcr:primaryType="nt:unstructured">
+
+                                                                <linkTo
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        fieldLabel="Link to Url or Site Page"
+                                                                        name="./linkTo"
+                                                                        rootPath="/content/asus"
+                                                                        suffix=".html"
+                                                                        sling:resourceType="cq/gui/components/coral/common/form/pagefield/"
+                                                                        granite:class="cq-dialog-container-link-info-well-linkTo"/>
+
+                                                                <linkUrlTarget
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                                        fieldDescription="check - new tab / uncheck - self tab"
+                                                                        name="./linkUrlTarget"
+                                                                        value="_blank"
+                                                                        uncheckedValue="_self"
+                                                                        checked="{Boolean}true"
+                                                                        granite:class="cq-dialog-container-link-info-well-linkUrlTarget"/>
+                                                            </items>
+                                                        </wellGroup>
+                                                    </items>
+                                                </field>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </column>
+                            </items>
+                        </actionslink>
+
+                    </items>
+                </column>
+            </items>
+        </column>
+    </items>
+</heroLinkTab>
