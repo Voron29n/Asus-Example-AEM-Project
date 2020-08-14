@@ -1,7 +1,7 @@
 <template>
-    <div class="af-banner">
-        <div class="banner-block">
-            <div class="banner-inner">
+    <div class="af-banner-middle">
+        <div class="banner-middle-block">
+            <div class="banner-middle-inner">
                 <v-image
                     :image-data="imageData"
                 ></v-image>
@@ -48,6 +48,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "./v-style/banner_default";
-@import "./v-style/banner_media";
+@import "./v-style/banner_middle_default";
+@import "./v-style/banner_middle_media";
 </style>

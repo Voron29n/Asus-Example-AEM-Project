@@ -1,4 +1,4 @@
-.banner-wrap {
+.banner-middle-image-wrap {
     display: block;
     position: relative;
     width: 100%;
@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-.banner-wrap .af-link-block {
+.banner-middle-image-wrap .af-link-block {
     text-indent: 150%;
     white-space: nowrap;
     overflow: hidden;
@@ -28,7 +28,7 @@ a {
         outline: none;
     }
 }
-.banner-wrap .banner-img {
+.banner-middle-image-wrap .banner-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@ a {
     height: 100%;
 }
 
-.banner-wrap .banner-img img {
+.banner-middle-image-wrap .banner-img img {
     width: 100%;
     height: auto;
     border: 0;

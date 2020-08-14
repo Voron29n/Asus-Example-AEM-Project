@@ -1,5 +1,5 @@
 <template>
-    <div class="banner-wrap">
+    <div class="banner-middle-image-wrap">
         <a class="af-link-block" :href="imageData.linkTo" :target="imageData.linkUrlTarget"></a>
         <div class="banner-img">
             <img :src="imageSrc" />
