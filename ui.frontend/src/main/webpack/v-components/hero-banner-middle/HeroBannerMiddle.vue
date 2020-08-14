@@ -2,20 +2,20 @@
     <div class="af-banner-middle">
         <div class="banner-middle-block">
             <div class="banner-middle-inner">
-                <v-image
+                <v-hero-middle
                     :image-data="imageData"
-                ></v-image>
+                ></v-hero-middle>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import ImageComponent from "./v-components/Image";
+import HeroMiddleComponent from "./v-components/HeroMiddle";
 
 export default {
     components: {
-        "v-image": ImageComponent,
+        "v-hero-middle": HeroMiddleComponent,
     },
     props: {
         linkTo: {

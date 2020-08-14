@@ -32,5 +32,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./image_default";
+@import "./hero_middle_default";
 </style>
