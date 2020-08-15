@@ -3,4 +3,4 @@
 ###############################################################################
 
 #base=css
-dialog-hero-banner-middle-style.less
+dialog-hero-banner-small-style.less
