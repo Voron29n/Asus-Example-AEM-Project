@@ -1,0 +1,17 @@
+.banner-small-block {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding-top: 12vw;
+
+    .banner-small-inner {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 2px 0;
+    }
+}
+

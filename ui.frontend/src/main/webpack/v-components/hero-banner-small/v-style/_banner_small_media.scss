@@ -1,0 +1,33 @@
+@media only screen and (max-width: 1200px) {
+    .banner-small-block .banner-small-inner {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .banner-small-block {
+        padding-top: 35vw;
+
+        .banner-small-inner {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-small-block {
+        display: inline-block;
+        width: 100%;
+        padding-top: 63vw;
+        float: left;
+        font-size: 13px;
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-small-block {
+        padding-top: 72vw;
+        font-size: 12px;
+    }
+}
