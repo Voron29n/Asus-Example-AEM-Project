@@ -180,3 +180,9 @@ ol {
 #footer-component-vue ul {
     list-style: none;
 }
+
+* {
+    box-sizing: border-box;
+    min-height: 0;
+    min-width: 0;
+}
