@@ -3,5 +3,15 @@
      data-sly-test.hasContent="${!model.empty}">
 
 </sly>
+
+     <div id="hero-banner-small-component-vue" style="overflow: auto;">
+          <hero-banner-small
+               json-of-link-data=${model.jsonOfLinkData}
+               file-reference=${model.fileReference}
+               hero-title=${model.heroTitle}
+               hero-description=${model.heroDescription}
+        ></hero-banner-small>
+     </div>
+
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
 
