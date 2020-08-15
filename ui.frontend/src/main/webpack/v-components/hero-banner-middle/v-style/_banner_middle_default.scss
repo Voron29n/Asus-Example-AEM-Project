@@ -1,9 +1,9 @@
-.af-banner {
+.af-banner-middle {
     position: relative;
     background: #fff;
 }
 
-.af-banner .banner-block {
+.af-banner-middle .banner-middle-block {
     display: block;
     width: 100%;
     padding-top: 36%;
@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 
-.af-banner .banner-block .banner-inner {
+.af-banner-middle .banner-middle-block .banner-middle-inner {
     display: block;
     position: absolute;
     width: 100%;

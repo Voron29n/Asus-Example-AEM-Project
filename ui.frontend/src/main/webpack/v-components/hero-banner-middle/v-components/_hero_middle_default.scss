@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-.banner-middle-image-wrap .af-link-block {
+.banner-middle-image-wrap .af-banner-middle-link-block {
     text-indent: 150%;
     white-space: nowrap;
     overflow: hidden;
@@ -17,7 +17,7 @@
 a {
     text-decoration: none;
 
-    &.af-link-block {
+    &.af-banner-middle-link-block {
         display: block;
         width: 100%;
         height: 100%;
@@ -28,7 +28,7 @@ a {
         outline: none;
     }
 }
-.banner-middle-image-wrap .banner-img {
+.banner-middle-image-wrap .banner-middle-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@ a {
     height: 100%;
 }
 
-.banner-middle-image-wrap .banner-img img {
+.banner-middle-image-wrap .banner-middle-img img {
     width: 100%;
     height: auto;
     border: 0;

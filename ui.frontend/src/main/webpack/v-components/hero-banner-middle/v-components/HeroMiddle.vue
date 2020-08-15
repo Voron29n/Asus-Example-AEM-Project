@@ -1,7 +1,7 @@
 <template>
     <div class="banner-middle-image-wrap">
-        <a class="af-link-block" :href="imageData.linkTo" :target="imageData.linkUrlTarget"></a>
-        <div class="banner-img">
+        <a class="af-banner-middle-link-block" :href="heroMiddleData.linkTo" :target="heroMiddleData.linkUrlTarget"></a>
+        <div class="banner-middle-img">
             <img :src="imageSrc" />
         </div>
     </div>
@@ -18,14 +18,14 @@ export default {
         };
     },
     props: {
-        imageData: Object,
+        heroMiddleData: Object,
     },
     methods: {
         adaptToWindow() {
             this.$data.imageSrc =
                 this.isDesktopVersionMeth()
-                    ? this.$props.imageData.fileReferenceDesktop
-                    : this.$props.imageData.fileReferenceMobile;
+                    ? this.$props.heroMiddleData.fileReferenceDesktop
+                    : this.$props.heroMiddleData.fileReferenceMobile;
         },
     },
 };

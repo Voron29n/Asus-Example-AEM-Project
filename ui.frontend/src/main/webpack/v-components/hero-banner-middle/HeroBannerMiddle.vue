@@ -3,7 +3,7 @@
         <div class="banner-middle-block">
             <div class="banner-middle-inner">
                 <v-hero-middle
-                    :image-data="imageData"
+                    :hero-middle-data="heroMiddleData"
                 ></v-hero-middle>
             </div>
         </div>
@@ -36,7 +36,7 @@ export default {
         },
     },
     computed: {
-        imageData() {
+        heroMiddleData() {
             return {
                 linkTo: this.$props.linkTo,
                 linkUrlTarget: this.$props.linkUrlTarget,
