@@ -17,19 +17,19 @@
                 <items jcr:primaryType="nt:unstructured">
                     <heroImageTab
                             jcr:primaryType="nt:unstructured"
-                            path="/apps/asus/components/custom/hero-banner-small/v1/hero-banner-small/cq:dialog/tabs/heroImageTab"
+                            path="/apps/asus/components/custom/hero-banner/hero-banner-small/v1/hero-banner-small/cq:dialog/tabs/heroImageTab"
                             sling:resourceType="granite/ui/components/foundation/include"
                     />
 
                     <heroTextTab
                             jcr:primaryType="nt:unstructured"
-                            path="/apps/asus/components/custom/hero-banner-small/v1/hero-banner-small/cq:dialog/tabs/heroTextTab"
+                            path="/apps/asus/components/custom/hero-banner/hero-banner-small/v1/hero-banner-small/cq:dialog/tabs/heroTextTab"
                             sling:resourceType="granite/ui/components/foundation/include"
                     />
 
                     <heroLinkTab
                             jcr:primaryType="nt:unstructured"
-                            path="/apps/asus/components/custom/hero-banner-small/v1/hero-banner-small/cq:dialog/tabs/heroLinkTab"
+                            path="/apps/asus/components/custom/hero-banner/hero-banner-small/v1/hero-banner-small/cq:dialog/tabs/heroLinkTab"
                             sling:resourceType="granite/ui/components/foundation/include"
                     />
 

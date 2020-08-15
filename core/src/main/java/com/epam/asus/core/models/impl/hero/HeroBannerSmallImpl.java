@@ -42,7 +42,7 @@ public class HeroBannerSmallImpl implements HeroBannerSmall {
 
     @Override
     public boolean isEmpty() {
-        return currentResource == null || heroTitle == null || fileReference == null || heroDescription == null;
+        return heroTitle == null || fileReference == null || heroDescription == null;
     }
 }
 
