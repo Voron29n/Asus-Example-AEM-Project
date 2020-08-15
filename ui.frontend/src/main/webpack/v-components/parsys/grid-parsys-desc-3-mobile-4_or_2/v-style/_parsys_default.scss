@@ -2,7 +2,6 @@
     display: block;
 
     .af-parsys {
-        background: #fff;
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -19,14 +18,14 @@
             flex-wrap: wrap;
             
             .parsys-block {
-                width: 49.5%;
+                width: 49.9%;
             }
         }
     }
 
     .desktop-parsys {
         .parsys-block {
-            width: 33.1%;
+            width: 33.3%;
         }
     }
 }
