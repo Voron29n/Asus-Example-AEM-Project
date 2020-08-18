@@ -36,3 +36,28 @@
         max-width: 100%!important;
     }
 }
+
+@media (max-width: 719px) {
+    body h1.page-title.double-border-bottom {
+        margin-bottom: 6px !important;
+    }
+}
+
+@media (max-width: 959px) and (min-width: 720px) {
+    [class*="span"] {
+        margin-left: 1%;
+    }
+}
+
+@media (max-width: 959px) and (min-width: 720px) {
+    .span3 {
+        width: 166px;
+    }
+}
+
+@media (max-width: 959px) and (min-width: 720px) {
+    [class*="span"] {
+        float: left;
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,46 @@
+@media (max-width: 719px) {
+    #phone-list-menu,
+    #phone-product-tab {
+        margin: 1.5em 0;
+    }
+}
+
+@media (max-width: 719px) {
+    .hidden-desktop,
+    .visible-phone {
+        display: inherit!important;
+    }
+}
+
+@media (max-width: 719px) {
+    #phone-list-menu .btn-group .btn,
+    #phone-product-tab .btn-group .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 719px) {
+    #phone-list-menu .dropdown-menu,
+    #phone-product-tab .dropdown-menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 719px) {
+    .hidden-phone {
+        display: none!important;
+    }
+}
+
+#news-content,
+#member-page-content {
+    margin-bottom: 20px;
+    width: 73.5%;
+    margin-left: 2%;
+    padding-left: 2%;
+    border-left: none;
+}
+
+#member-page-content {
+    min-height: 680px;
+}

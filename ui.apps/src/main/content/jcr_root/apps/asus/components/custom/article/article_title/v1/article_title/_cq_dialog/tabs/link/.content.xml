@@ -39,7 +39,7 @@
                                                         jcr:primaryType="nt:unstructured"
                                                         fieldDescription="DescriptionLink"
                                                         fieldLabel="DescriptionLink"
-                                                        required="{Boolean}true"
+                                                        required="{Boolean}false"
                                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                         name="./descriptionLink"
                                                         granite:class="cq-dialog-container-link-descriptionLink"/>

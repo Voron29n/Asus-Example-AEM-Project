@@ -1,12 +1,12 @@
-<footerLinks xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+<navGroups xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
              xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
              xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
 
              jcr:primaryType="nt:unstructured"
-             jcr:title="Groups footer links"
+             jcr:title="Groups nav-info-page links"
              margin="{Boolean}true"
              sling:resourceType="granite/ui/components/coral/foundation/container"
-             granite:class="cmp-navigation_footerlinks">
+             granite:class="cmp-nav-info-page_links">
 
     <items jcr:primaryType="nt:unstructured">
         <column
@@ -15,25 +15,25 @@
                 sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
 
             <items jcr:primaryType="nt:unstructured">
-                <footerlinksNames jcr:primaryType="nt:unstructured"
-                                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <linksNames jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
 
                     <items jcr:primaryType="nt:unstructured">
                         <multi
-                                granite:class="foundation-toggleable cmp-navigation__editor-multifield_actions_footerlinks"
+                                granite:class="foundation-toggleable cmp-navigation__editor-multifield_actions_nav-info-page"
                                 cq:showOnCreate="{Boolean}true"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                                 composite="{Boolean}true"
                                 fieldDescription="New value"
                                 fieldLabel="Group links collection"
-                                validation="multifield-max-3">
+                                validation="multifield-max-4">
                             <field
-                                    granite:class="cmp-navigation__editor-action_footerlinks"
+                                    granite:class="cmp-navigation__editor-action_links"
                                     jcr:primaryType="nt:unstructured"
                                     acs-commons-nested=""
                                     sling:resourceType="granite/ui/components/coral/foundation/container"
-                                    name="./footerGroupLinks">
+                                    name="./navInfoPageGroupLinks">
                                 <items jcr:primaryType="nt:unstructured">
 
                                     <title
@@ -58,17 +58,8 @@
                                                 jcr:primaryType="nt:unstructured"
                                                 acs-commons-nested=""
                                                 sling:resourceType="granite/ui/components/coral/foundation/container"
-                                                name="./linksGroup">
+                                                name="./navInfoPageLinksGroup">
                                             <items jcr:primaryType="nt:unstructured">
-
-                                                <checkbox
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                                                        fieldDescription="Is URL link?"
-                                                        name="./isExternalLink"
-                                                        value="{Boolean}true"
-                                                        uncheckedValue="{Boolean}false"
-                                                        text="URL?"/>
 
                                                 <description
                                                         granite:class="cmp-navigation__editor-actionField"
@@ -81,7 +72,7 @@
                                                 <wellGroup
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="granite/ui/components/coral/foundation/well"
-                                                        granite:class="cq-dialog-container-footer-well-group_links">
+                                                        granite:class="cq-dialog-container-nav_info_page-well-group_links">
                                                     <items jcr:primaryType="nt:unstructured">
 
                                                         <linkTo
@@ -91,18 +82,7 @@
                                                                 rootPath="/content/asus"
                                                                 suffix=".html"
                                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                                granite:class="cq-dialog-container-footer-info-well-linkTo"/>
-
-                                                        <linkUrlTarget
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
-                                                                fieldDescription="check - new tab / uncheck - self tab"
-                                                                name="./linkUrlTarget"
-                                                                value="_blank"
-                                                                uncheckedValue="_self"
-                                                                default="_blank"
-                                                                checked="{Boolean}true"
-                                                                granite:class="cq-dialog-container-link-info-well-linkUrlTarget"/>
+                                                                granite:class="cq-dialog-container-nav_info_page-info-well-linkTo"/>
 
                                                     </items>
                                                 </wellGroup>
@@ -126,9 +106,9 @@
                             jcr:primaryType="nt:unstructured"
                             element-names-container="{Boolean}true"
                             field-path="${requestPathInfo.resourcePath}"/>
-                </footerlinksNames>
+                </linksNames>
 
             </items>
         </column>
     </items>
-</footerLinks>
+</navGroups>

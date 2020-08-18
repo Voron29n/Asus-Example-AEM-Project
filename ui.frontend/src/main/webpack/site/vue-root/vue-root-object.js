@@ -20,6 +20,7 @@ const vueRootData = {
 import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
 import HelloWorld from "@components/hello-world/HelloWorld";
 import Footer from "@components/footer/Footer";
+import NavInfoPage from "@components/nav-info-page/NavInfoPage";
 import ArticleTitle from "@components/article-title/ArticleTitle";
 import ArticleImageText from "@components/article-image-text/ArticleImageText";
 import ArticleText from "@components/article-text/ArticleText";
@@ -36,6 +37,7 @@ vueArrayComponents = [
     ),
     new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
     new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
+    new ComponentData("vue-navinfopage-data", "#nav_info_page-component-vue", NavInfoPage),
     new ComponentData("vue-title-data", "#article_title-component-vue", ArticleTitle),
     new ComponentData("vue-image-text-data", "#article_image-text-component-vue", ArticleImageText),
     new ComponentData("vue-text-data", "#article_text-component-vue", ArticleText),
