@@ -364,7 +364,20 @@ body .container {
     *min-width: 960px;
     max-width: 1180px;
     width: auto;
-    margin: 0 10px auto;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
     padding: 0 0.1%;
     box-sizing: border-box;
+}
+
+.page>.cmp-container>.container>.cmp-container>.aem-Grid>.container {
+    float: none;
+    display: flow-root;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.page>.cmp-container>.responsivegrid {
+    max-width: none;
 }
