@@ -1,4 +1,4 @@
-package com.epam.asus.core.services.iml.article;
+package com.epam.asus.core.services.impl.article;
 
 import com.epam.asus.core.models.beans.article.ImagesBean;
 import com.epam.asus.core.services.ArticleService;

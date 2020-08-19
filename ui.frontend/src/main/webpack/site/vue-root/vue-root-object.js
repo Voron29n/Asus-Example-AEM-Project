@@ -26,6 +26,7 @@ import ArticleImageText from "@components/article-image-text/ArticleImageText";
 import ArticleText from "@components/article-text/ArticleText";
 import ArticleImage from "@components/article-image/ArticleImage";
 import ArticleImages from "@components/article-images/ArticleImages";
+import HotProductGroups from "@components/hot-product-groups/HotProductGroups";
 import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
 
 /* Second step, you need add new Object with all vue components data at array */
@@ -43,6 +44,7 @@ vueArrayComponents = [
     new ComponentData("vue-text-data", "#article_text-component-vue", ArticleText),
     new ComponentData("vue-image-data", "#article_image-component-vue", ArticleImage),
     new ComponentData("vue-images-data", "#article_image-component-vue", ArticleImages),
+    new ComponentData("vue-hot_product_groups-data", "#hot_product_groups-component-vue", HotProductGroups),
     new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
 ];
 

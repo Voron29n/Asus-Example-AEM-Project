@@ -1,4 +1,4 @@
-package com.epam.asus.core.services.iml.footer;
+package com.epam.asus.core.services.impl.footer;
 
 import com.epam.asus.core.models.beans.footer.CopyrightsBean;
 import com.epam.asus.core.models.beans.footer.LinksGroupBean;

@@ -1,4 +1,4 @@
-package com.epam.asus.core.services.iml.nav_info_page;
+package com.epam.asus.core.services.impl.nav_info_page;
 
 import com.epam.asus.core.models.beans.nav_info_page.LinksGroupBean;
 import com.epam.asus.core.models.impl.nav_info_page.LinksGroup;

@@ -81,7 +81,7 @@
                                                                 name="./linkTo"
                                                                 rootPath="/content/asus"
                                                                 suffix=".html"
-                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield/"
                                                                 granite:class="cq-dialog-container-nav_info_page-info-well-linkTo"/>
 
                                                     </items>

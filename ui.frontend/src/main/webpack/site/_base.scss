@@ -139,6 +139,12 @@ video {
     vertical-align: baseline;
 }
 
+img {
+    height: auto;
+    vertical-align: middle;
+    border: none;
+}
+
 [class*="span"] {
     float: left;
     margin-left: 24px;
@@ -352,4 +358,13 @@ ul.unstyled,
 ol.unstyled {
     margin-left: 0;
     list-style: none;
+}
+
+body .container {
+    *min-width: 960px;
+    max-width: 1180px;
+    width: auto;
+    margin: 0 10px auto;
+    padding: 0 0.1%;
+    box-sizing: border-box;
 }

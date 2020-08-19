@@ -1,0 +1,42 @@
+.promos-prod {
+    *border-bottom: 1px solid #ccc;
+}
+
+.cmc-unit-group {
+    margin: 0;
+}
+
+.cmc-unit-group>li {
+    width: 24.5%;
+    margin-bottom: 70px;
+    text-align: center;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+}
+
+.cmc-unit-group>li img {
+    display: block;
+    margin: 0 auto;
+}
+
+.cmc-unit-group>li h3 {
+    margin: 0 auto;
+    font-weight: normal;
+    width: 92%;
+    padding: 0;
+    color: #222222;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.cmc-unit-group>li p {
+    margin: 0 auto;
+    width: 92%;
+    color: #7d7d7d;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
