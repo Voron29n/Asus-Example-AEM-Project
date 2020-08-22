@@ -36,19 +36,17 @@ module.exports = {
     },
     output: {
         filename: (chunkData) => {
-            return chunkData.chunk.name === "dependencies"
-                ? "clientlib-dependencies/[name].js"
-                : "clientlib-site/[name].js";
+            return chunkData.chunk.name === "dependencies" ?
+                "clientlib-dependencies/[name].js" :
+                "clientlib-site/[name].js";
         },
         path: path.resolve(__dirname, "dist"),
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    {
+                use: [{
                         options: {
                             eslintPath: require.resolve("eslint"),
                         },
@@ -116,12 +114,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "clientlib-[name]/[name].css",
         }),
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),
-                to: "./clientlib-site",
-            },
-        ]),
+        new CopyWebpackPlugin([{
+            from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),
+            to: "./clientlib-site",
+        }, ]),
     ],
     stats: {
         assetsSort: "chunks",

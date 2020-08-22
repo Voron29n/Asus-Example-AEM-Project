@@ -28,6 +28,7 @@ import ArticleImage from "@components/article-image/ArticleImage";
 import ArticleImages from "@components/article-images/ArticleImages";
 import HotProductGroups from "@components/hot-product-groups/HotProductGroups";
 import CustomizedText from "@components/customized-text/CustomizedText";
+import HeroBannerTop from "@components/hero-banner-top/HeroBannerTop";
 import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
 
 /* Second step, you need add new Object with all vue components data at array */
@@ -47,6 +48,7 @@ vueArrayComponents = [
     new ComponentData("vue-images-data", "#article_image-component-vue", ArticleImages),
     new ComponentData("vue-hot_product_groups-data", "#hot_product_groups-component-vue", HotProductGroups),
     new ComponentData("vue-customized_text-data", "#customized_text-component-vue", CustomizedText),
+    new ComponentData("vue-hero_banner_top-data", "#hero_banner_top-component-vue", HeroBannerTop),
     new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
 ];
 
