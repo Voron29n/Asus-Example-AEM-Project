@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./v-style/banner_default";
 @import "./v-style/banner_media";
 </style>

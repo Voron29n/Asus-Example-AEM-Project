@@ -19,6 +19,9 @@ module.exports = {
             }),
         ],
         alias: {
+            "@resources": path.resolve(
+                path.join(__dirname, "src", "main", "webpack", "resources")
+            ),
             "@components": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "v-components")
             ),
@@ -27,6 +30,9 @@ module.exports = {
             ),
             "@mixin": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "v-components", "v-mixin")
+            ),
+            "@common": path.resolve(
+                path.join(__dirname, "src", "main", "webpack", "v-components", "v-common")
             ),
             'vue$': 'vue/dist/vue.esm.js'
         },
@@ -70,7 +76,16 @@ module.exports = {
             },
             {
                 test: /\.vue$/,
-                use: ["vue-loader"],
+                use: {
+                    loader: "vue-loader",
+                    options: {
+                        loaders: {
+                            scss: [
+                                "vue-style-loader"
+                            ]
+                        }
+                    }
+                }
             },
             {
                 test: /\.scss$/,
@@ -90,6 +105,9 @@ module.exports = {
                                 return [require("autoprefixer")];
                             },
                         },
+                    },
+                    {
+                        loader: "resolve-url-loader",
                     },
                     {
                         loader: "sass-loader",
@@ -116,7 +134,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([{
             from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),
-            to: "./clientlib-site",
+            to: "./clientlib-site/resources",
         }, ]),
     ],
     stats: {

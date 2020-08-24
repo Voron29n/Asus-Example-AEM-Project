@@ -1,0 +1,37 @@
+@media (max-width: 1300px) and (min-width: 721px) {
+    .proart__hero_banner_top__title {
+        top: 0%;
+        left: 50%;
+        margin-left: 0;
+        padding-top: 60px;
+        width: 80%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .proart__hero_banner_top__title {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        right: 0;
+        margin: 0;
+        margin-left: 0;
+        padding-top: 60px;
+        width: 80%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: block;
+    }
+}
+
+@media (max-width: 720px) {
+    .proart__hero_banner_top__title .content-title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 26px;
+        margin-top: 0;
+    }
+}

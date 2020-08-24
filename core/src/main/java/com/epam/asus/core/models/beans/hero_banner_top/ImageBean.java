@@ -9,7 +9,8 @@ import lombok.*;
 @Builder(access = AccessLevel.PUBLIC)
 public class ImageBean {
 
-    private String fileReference;
+    private String fileReferenceDesktop;
+    private String fileReferenceMobile;
     private String descriptionLink;
     private String linkTo;
     private String linkUrlTarget;

@@ -1,0 +1,15 @@
+<sly data-sly-use.model="com.epam.asus.core.models.ProArtHeroBannerTop"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!model.empty}">
+
+    <div id="proart__hero_banner_top-component-vue">
+        <vue-proart__hero_banner_top-data
+                hero-title=${model.title}
+                file-reference-desktop=${model.fileReferenceDesktop}
+                file-reference-mobile=${model.fileReferenceMobile}
+        ></vue-proart__hero_banner_top-data>
+    </div>
+
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+

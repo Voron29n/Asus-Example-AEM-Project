@@ -44,7 +44,8 @@ public class HeroBannerTopServiceImpl implements HeroBannerTopService {
         ValueMap vm = item.getValueMap();
         boolean isExternalLink = getPropertyValue(vm, "externalLink").equals("true");
         return ImageBean.builder()
-                .fileReference(getPropertyValue(vm, "fileReference"))
+                .fileReferenceDesktop(getPropertyValue(vm, "fileReferenceDesktop"))
+                .fileReferenceMobile(getPropertyValue(vm, "fileReferenceMobile"))
                 .descriptionLink(getPropertyValue(vm, "descriptionLink"))
                 .linkTo(correctLinkByURLValue(isExternalLink, vm))
                 .linkUrlTarget(getPropertyValue(vm, "linkUrlTarget"))

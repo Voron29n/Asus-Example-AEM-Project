@@ -1,222 +1,149 @@
 <template>
-  <div>
-    <section class="af-banner af-top-banner loaded" id="hero-banner-top">
-      <ul
-        class="top-slider slick-initialized slick-slider"
-        :data-activeImageId="activeImageId"
-      >
-        <div class="slick-list draggable">
-          <div class="slick-track" :style="fullWidth" role="listbox">
-            <li
-              class="slick-slide"
-              :class="{
-                'slick-current slick-active active-on': index === activeImageId,
-                'active-off': index != activeImageId,
-              }"
-              :style="widthLi"
-              :id="[`top_image_li-${index}`]"
-              :data-slick-index="[`${index}`]"
-              v-for="(imageItem, index) in imagesData.heroItems"
-              :key="index"
-            >
-              <div
-                class="banner-block af-top-banner"
-                :title="imageItem.descriptionLink"
-              >
-                <div class="banner-inner">
-                  <div class="banner-wrap">
-                    <a
-                      class="af-link-block"
-                      :title="imageItem.descriptionLink"
-                      :data-link="imageItem.linkTo"
-                      :href="imageItem.linkTo"
-                      :target="imageItem.linkUrlTarget"
+    <div class="af-banner af-top-banner loaded" id="hero-banner-top">
+        <ul class="top-slider slick-initialized slick-slider">
+            <div class="slick-list draggable">
+                <div class="slick-track" :style="fullWidth">
+                    <li
+                        class="slick-slide"
+                        :class="
+                                [index === activeImageId ? 'slick-current slick-active active-on' : 'active-off']
+                                "
+                        :style="widthLi"
+                        v-for="(imageItem, index) in imagesData.heroItems"
+                        :key="index"
                     >
-                      {{ imageItem.descriptionLink }}
-                    </a>
-
-                    <div class="banner-img">
-                      <img
-                        :alt="imageItem.descriptionLink"
-                        :src="imageItem.fileReference"
-                      />
-                    </div>
-                  </div>
+                        <div class="banner-block af-top-banner" :title="imageItem.descriptionLink">
+                            <div class="banner-inner">
+                                <div class="banner-wrap">
+                                    <a
+                                        class="af-link-block"
+                                        :title="imageItem.descriptionLink"
+                                        :data-link="imageItem.linkTo"
+                                        :href="imageItem.linkTo"
+                                        :target="imageItem.linkUrlTarget"
+                                    >{{ imageItem.descriptionLink }}
+                                    </a>
+                                    <div class="banner-img">
+                                        <img
+                                            :alt="imageItem.descriptionLink"
+                                            :src="isDesktopVersion
+                                                      ? imageItem.fileReferenceDesktop
+                                                      : imageItem.fileReferenceMobile
+                                                  "
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </div>
-              </div>
-            </li>
-          </div>
-        </div>
-
-        <ul class="slick-dots">
-          <li
-            :class="{
-              'slick-active': index === activeImageId,
-              '': index != activeImageId,
-            }"
-            :id="[`slick-slide-${index}`]"
-            :data-slick-dots-index="[`${index}`]"
-            v-for="(imageItem, index) in imagesData.heroItems"
-            :key="index"
-          >
-            <button
-              type="button"
-              data-role="none"
-              role="button"
-              aria-required="false"
-              :tabindex="index"
-              @click="slickDot(index)"
-            ></button>
-          </li>
+            </div>
+            <v-slick-dots
+                :items-data="imagesData.heroItems"
+                :active-item-id="activeImageId"
+                @change-slick-dots="slickDots"
+            ></v-slick-dots>
+            <v-slick-arrows
+                :images-length="imagesLength"
+                :active-image-id="activeImageId"
+                @change-slick-arrow="slickNextOrPrev"
+            ></v-slick-arrows>
         </ul>
-
-        <div class="l-arrow slick-arrow">
-          <button
-            type="button"
-            class="slick-prev"
-            @click="slickPrev()"
-          ></button>
-        </div>
-        <div class="r-arrow slick-arrow">
-          <button
-            type="button"
-            class="slick-next"
-            @click="slickNext()"
-          ></button>
-        </div>
-      </ul>
-    </section>
-  </div>
+    </div>
 </template>
 
 <script>
+import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
+import SlickArrowsComponent from "@common/slick-arrow/SlickArrow";
+import SlickDotsComponent from "@common/slick-dots/SlickDots";
+
 export default {
-  props: {
-    imagesData: Object,
-  },
-  data() {
-    return {
-      isDesktopVersion: false,
-      imagesLength: null,
-      activeImageIndex: null,
-      activeImageId: null,
-      activeItem: null,
-      fullWidth: {
-        width: null,
-      },
-      widthLi: {
-        width: null,
-      },
-      pauseSlick: false,
-    };
-  },
-  mounted() {
-    this.imageLength();
-    this.updateStyle();
-    this.imageTimeout();
-  },
-  created() {
-    window.addEventListener("resize", this.updateStyle);
-  },
-  methods: {
-    updateStyle() {
-      this.updateFullWidth();
-      this.updateStyleWidthLi();
-      this.updateStyleLeftLi();
+    mixins: [adapt],
+    components: {
+        "v-slick-arrows": SlickArrowsComponent,
+        "v-slick-dots": SlickDotsComponent,
     },
-    updateFullWidth() {
-      this.fullWidth.width = this.imagesLength * window.innerWidth + "px";
+    props: {
+        imagesData: Object,
     },
-    updateStyleWidthLi() {
-      this.widthLi.width = window.innerWidth + "px";
-    },
-    updateStyleLeftLi() {
-      //       $('#hero-banner-top ul li').each(function(index, item){
-      //          column1RelArray.push($(this).attr('rel'));
-      //        });
-      // let list = $("#hero-banner-top ul").querySelectorAll('li');
+    data() {
+        return {
+            imagesLength: null,
+            activeImageId: null,
 
-      $("#hero-banner-top .top-slider .slick-slide").each(function(
-        index,
-        item
-      ) {
-        if (index === 0) {
-          item.style.left = "0px";
-        } else {
-          // item.style.left = '-' + index * this.widthLi.width + 'px';
-          item.style.left = "-" + index * window.innerWidth + "px";
-        }
-      });
-    },
+            countForCycle: null,
 
-    selectImage(index) {
-      this.activeItem = index;
+            fullWidth: {
+                width: null,
+            },
+            widthLi: {
+                width: null,
+            },
+            pauseSlick: false,
+        };
     },
-    activeImage(index) {
-      this.activeImageId = index;
+    mounted() {
+        this.imageLength();
+        this.updateStyle();
+        this.imageTimeout();
     },
-    imageTimeout() {
-      if (!this.pauseSlick) {
-        var length = this.imagesLength;
-        var next = this.activeImageIndex;
-
-        // $("#hero-banner-top ul li").hide();
-        let elem = $("#hero-banner-top .top-slider .slick-slide").eq(
-          length - next
-        );
-        // elem.show();
-
-        let slickIndex = $(elem).data("slick-index");
-
-        this.activeImage(slickIndex);
-
-        if (--this.activeImageIndex) {
-          setTimeout(this.imageTimeout, 5000);
-        }
-        if (this.activeImageIndex === 0) {
-          this.activeImageIndex = this.imagesLength;
-          setTimeout(this.imageTimeout, 5000);
-        }
-      } else {
-        this.pauseSlick = false;
-        setTimeout(this.imageTimeout, 10000);
-      }
+    created() {
+        window.addEventListener("resize", this.updateStyle);
     },
-    imageLength: function() {
-      if (this.$props.imagesData.heroItems != null) {
-        this.imagesLength = this.$props.imagesData.heroItems.length;
-        this.activeImageIndex = this.imagesLength;
-      }
+    methods: {
+        activateImage(index) {
+            this.activeImageId = index;
+        },
+        updateStyle() {
+            this.updateFullWidth();
+            this.updateStyleWidthLi();
+            this.updateStyleLeftLi();
+        },
+        updateFullWidth() {
+            this.fullWidth.width = this.imagesLength * window.innerWidth + "px";
+        },
+        updateStyleWidthLi() {
+            this.widthLi.width = window.innerWidth + "px";
+        },
+        updateStyleLeftLi() {
+            let elements = this.$el.querySelectorAll(
+                ".top-slider .slick-slide"
+            );
+            elements.forEach(function (item, index) {
+                if (index === 0) {
+                    item.style.left = "0px";
+                } else {
+                    item.style.left = "-" + index * window.innerWidth + "px";
+                }
+            });
+        },
+        imageTimeout() {
+            if (this.pauseSlick) {
+                this.pauseSlick = false;
+                setTimeout(this.imageTimeout, 10000);
+            } else {
+                this.activateImage(this.imagesLength - this.countForCycle);
+                this.countForCycle--;
+                if (this.countForCycle === 0)
+                    this.countForCycle = this.imagesLength;
+                setTimeout(this.imageTimeout, 5000);
+            }
+        },
+        imageLength: function () {
+            if (this.$props.imagesData.heroItems != null) {
+                this.imagesLength = this.$props.imagesData.heroItems.length;
+                this.countForCycle = this.imagesLength;
+            }
+        },
+        slickNextOrPrev(selectIndex) {
+            this.pauseSlick = true;
+            this.activateImage(selectIndex);
+        },
+        slickDots(selectIndex) {
+            this.pauseSlick = true;
+            this.activateImage(selectIndex);
+        },
     },
-    slickPrev: function() {
-      this.pauseSlick = true;
-      let length = this.imagesLength;
-      let curentIndex = this.activeImageId;
-      let selectIndex = null;
-      if (curentIndex === 0) {
-        selectIndex = length - 1;
-      } else {
-        selectIndex = curentIndex - 1;
-      }
-      this.activeImage(selectIndex);
-    },
-    slickNext: function() {
-      this.pauseSlick = true;
-      let length = this.imagesLength;
-      let curentIndex = this.activeImageId;
-      let selectIndex = null;
-      if (curentIndex === length - 1) {
-        selectIndex = 0;
-      } else {
-        selectIndex = curentIndex + 1;
-      }
-      this.activeImage(selectIndex);
-    },
-    slickDot: function(selectIndex) {
-      this.pauseSlick = true;
-      this.activeImage(selectIndex);
-    },
-  },
 };
 </script>
 

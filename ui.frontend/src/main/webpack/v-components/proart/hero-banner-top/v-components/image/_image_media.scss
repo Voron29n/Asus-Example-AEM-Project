@@ -1,0 +1,29 @@
+@media (max-width: 1300px) and (min-width: 721px) {
+    .proart__hero_banner_top__image .img {
+        width: 2560px;
+        height: 650px;
+    }
+}
+
+@media (max-width: 1300px) and (min-width: 721px) {
+    #proart__hero_banner_top .section_kv .kv_banner_carousel .component_container .carousel-list .carousel-item .item-img {
+        width: 1300px;
+        margin-left: -650px;
+    }
+}
+
+@media (max-width: 720px) {
+    .proart__hero_banner_top__image .img {
+        width: 2560px;
+        height: 341px;
+    }
+}
+
+@media (max-width: 720px) {
+    .proart__hero_banner_top__image .section_kv .kv_banner_carousel .component_container .carousel-list .carousel-item .item-img {
+        width: 720px;
+        position: relative;
+        margin-left: -360px;
+        background-color: #ffcc0033;
+    }
+}

@@ -17,6 +17,8 @@ const vueRootData = {
 };
 
 /* First what you need is import your components and you can use alias @components for this*/
+import IconifyIcon from '@iconify/vue';
+import icomoon from '@iconify/icons-icomoon-free/download'
 import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
 import HelloWorld from "@components/hello-world/HelloWorld";
 import Footer from "@components/footer/Footer";
@@ -30,9 +32,12 @@ import HotProductGroups from "@components/hot-product-groups/HotProductGroups";
 import CustomizedText from "@components/customized-text/CustomizedText";
 import HeroBannerTop from "@components/hero-banner-top/HeroBannerTop";
 import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
+import ProArtHeroBannerTop from "@components/proart/hero-banner-top/HeroBannerTop";
 
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
+    new ComponentData(IconifyIcon),
+    new ComponentData(icomoon),
     new ComponentData(
         "hero-banner-middle" /* it is a name for custom tag that you can use at ui.app in component.html  */ ,
         "#hero-banner-middle-component-vue" /* it is a selector. This selector need to know if in the page we have our custom component */ ,
@@ -50,6 +55,7 @@ vueArrayComponents = [
     new ComponentData("vue-customized_text-data", "#customized_text-component-vue", CustomizedText),
     new ComponentData("vue-hero_banner_top-data", "#hero_banner_top-component-vue", HeroBannerTop),
     new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
+    new ComponentData("vue-proart__hero_banner_top-data", "#proart__hero_banner_top-component-vue", ProArtHeroBannerTop),
 ];
 
 /* 
