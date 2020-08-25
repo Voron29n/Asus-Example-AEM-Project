@@ -21,13 +21,15 @@ public class ProArtHeroBannerTopImpl implements ProArtHeroBannerTop {
     @ValueMapValue
     private String title;
     @ValueMapValue
-    private String fileReferenceDesktop;
+    private String fileReferenceSmall;
     @ValueMapValue
-    private String fileReferenceMobile;
+    private String fileReferenceMedium;
+    @ValueMapValue
+    private String fileReferenceLarge;
 
     @Override
     public boolean isEmpty() {
-        return fileReferenceDesktop == null;
+        return fileReferenceLarge == null;
     }
 
 }

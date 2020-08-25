@@ -10,12 +10,17 @@
 }
 
 .text-gradient-gold {
+    background-image: linear-gradient(45deg, #f3ec78 10%, #af4261);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(39deg, #ceb497 0%, #766050 100%);
+    -moz-text-fill-color: transparent;
 }
 
 .text_bold {
     font-style: normal !important;
+    font-weight: bold;
 }
 
 .proart__hero_banner_top__title .content-title {
@@ -23,5 +28,5 @@
     display: inline-block;
     font-size: 52px;
     line-height: 1;
-    text-transform: uppercase;
+    *text-transform: uppercase;
 }

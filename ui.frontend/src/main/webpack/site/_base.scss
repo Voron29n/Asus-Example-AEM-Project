@@ -19,6 +19,17 @@ body {
     color: #333;
 }
 
+body {
+    background-attachment: scroll !important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 html>body {
     *padding-right: 20px;
 }

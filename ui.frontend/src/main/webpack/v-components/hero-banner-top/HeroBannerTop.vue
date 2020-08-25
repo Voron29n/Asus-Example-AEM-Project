@@ -1,11 +1,11 @@
 <template>
-<div>
-    <v-images :images-data="imagesData"></v-images>      
-</div>
+    <div>
+        <v-images :images-data="imagesData"></v-images>
+    </div>
 </template>
 
 <script>
-import ImagesData from './v-components/images/Images'
+import ImagesData from "./v-components/images/Images";
 
 export default {
     components: {
@@ -25,7 +25,6 @@ export default {
         },
     },
 };
-
 </script>
 
 <style lang="scss">

@@ -1,5 +1,7 @@
 {
     "window": {
-        "widthForMobileVersion": 768
+        "widthForMobileVersion": 768,
+        "widthForMediumVersion": 1300,
+        "widthForSmallVersion": 720
     }
 }

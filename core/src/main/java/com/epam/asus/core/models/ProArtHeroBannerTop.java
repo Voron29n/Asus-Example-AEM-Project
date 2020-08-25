@@ -5,6 +5,7 @@ public interface ProArtHeroBannerTop {
     boolean isEmpty();
 
     String getTitle();
-    String getFileReferenceDesktop();
-    String getFileReferenceMobile();
+    String getFileReferenceSmall();
+    String getFileReferenceMedium();
+    String getFileReferenceLarge();
 }

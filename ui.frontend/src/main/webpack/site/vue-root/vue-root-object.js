@@ -18,7 +18,7 @@ const vueRootData = {
 
 /* First what you need is import your components and you can use alias @components for this*/
 import IconifyIcon from '@iconify/vue';
-import icomoon from '@iconify/icons-icomoon-free/download'
+import icomoon from '@iconify/icons-icomoon-free/download';
 import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
 import HelloWorld from "@components/hello-world/HelloWorld";
 import Footer from "@components/footer/Footer";

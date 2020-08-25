@@ -5,40 +5,25 @@
         left: auto;
         right: auto;
     }
-}
-
-@media (max-width: 1300px) and (min-width: 721px) {
-    #proart__hero_banner_top .section_kv .kv_banner_carousel {
+    #proart__hero_banner_top .kv_banner_carousel {
+        height: 650px;
+    }
+    #proart__hero_banner_top .kv_banner_carousel .component_container {
+        background-color: #000;
+    }
+    #proart__hero_banner_top .kv_banner_carousel .component_container .carousel-list .carousel-item {
         height: 650px;
     }
 }
 
 @media (max-width: 720px) {
-    #proart__hero_banner_top .section_kv .kv_banner_carousel {
+    #proart__hero_banner_top .kv_banner_carousel {
         height: auto;
     }
-}
-
-@media (max-width: 1300px) and (min-width: 721px) {
-    #proart__hero_banner_top .section_kv .kv_banner_carousel .component_container {
+    #proart__hero_banner_top .kv_banner_carousel .component_container {
         background-color: #000;
     }
-}
-
-@media (max-width: 720px) {
-    #proart__hero_banner_top .section_kv .kv_banner_carousel .component_container {
-        background-color: #000;
-    }
-}
-
-@media (max-width: 1300px) and (min-width: 721px) {
-    #proart__hero_banner_top .section_kv .kv_banner_carousel .component_container .carousel-list .carousel-item {
-        height: 650px;
-    }
-}
-
-@media (max-width: 720px) {
-    #proart__hero_banner_top .section_kv .kv_banner_carousel .component_container .carousel-list .carousel-item {
+    #proart__hero_banner_top .kv_banner_carousel .component_container .carousel-list .carousel-item {
         height: auto;
     }
 }

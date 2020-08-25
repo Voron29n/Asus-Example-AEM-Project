@@ -21,8 +21,7 @@
                                         :data-link="imageItem.linkTo"
                                         :href="imageItem.linkTo"
                                         :target="imageItem.linkUrlTarget"
-                                    >{{ imageItem.descriptionLink }}
-                                    </a>
+                                    >{{ imageItem.descriptionLink }}</a>
                                     <div class="banner-img">
                                         <img
                                             :alt="imageItem.descriptionLink"
@@ -70,9 +69,7 @@ export default {
         return {
             imagesLength: null,
             activeImageId: null,
-
             countForCycle: null,
-
             fullWidth: {
                 width: null,
             },
@@ -90,7 +87,16 @@ export default {
     created() {
         window.addEventListener("resize", this.updateStyle);
     },
+    beforeDestroy() {
+        window.removeEventListener("resize", this.updateStyle);
+    },
     methods: {
+        imageLength: function () {
+            if (this.$props.imagesData.heroItems != null) {
+                this.imagesLength = this.$props.imagesData.heroItems.length;
+                this.countForCycle = this.imagesLength;
+            }
+        },
         activateImage(index) {
             this.activeImageId = index;
         },
@@ -127,12 +133,6 @@ export default {
                 if (this.countForCycle === 0)
                     this.countForCycle = this.imagesLength;
                 setTimeout(this.imageTimeout, 5000);
-            }
-        },
-        imageLength: function () {
-            if (this.$props.imagesData.heroItems != null) {
-                this.imagesLength = this.$props.imagesData.heroItems.length;
-                this.countForCycle = this.imagesLength;
             }
         },
         slickNextOrPrev(selectIndex) {

@@ -22,9 +22,19 @@
                             sling:resourceType="granite/ui/components/foundation/include"
                     />
 
-                    <includeImages
+                    <includeImageSmall
                             jcr:primaryType="nt:unstructured"
-                            path="/apps/asus/components/custom/proart/hero-banner-top/v1/hero-banner-top/cq:dialog/tabs/images"
+                            path="/apps/asus/components/custom/proart/hero-banner-top/v1/hero-banner-top/cq:dialog/tabs/image-small"
+                            sling:resourceType="granite/ui/components/foundation/include"
+                    />
+                    <includeImageMedium
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/asus/components/custom/proart/hero-banner-top/v1/hero-banner-top/cq:dialog/tabs/image-medium"
+                            sling:resourceType="granite/ui/components/foundation/include"
+                    />
+                    <includeImageLarge
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/asus/components/custom/proart/hero-banner-top/v1/hero-banner-top/cq:dialog/tabs/image-large"
                             sling:resourceType="granite/ui/components/foundation/include"
                     />
 

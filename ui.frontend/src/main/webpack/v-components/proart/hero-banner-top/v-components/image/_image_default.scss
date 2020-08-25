@@ -1,15 +1,20 @@
-.proart__hero_banner_top__image .img {
-    width: 2560px;
-    height: 686px;
+.proart__hero_banner_top__image {
     position: absolute;
     left: 50%;
     margin-left: -1280px;
+    width: 2560px;
+    height: 686px;
 }
 
-.proart__hero_banner_top__image .img {
+.img {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: block;
+}
+
+.proart__hero_banner_top__image,
+.proart__hero_banner_top__image .img {
+    width: 2560px;
+    height: 686px;
 }
