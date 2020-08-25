@@ -45,6 +45,7 @@ import org.slf4j.LoggerFactory;
 public class LoggingFilter implements Filter {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
+    FilterConfig filterConfig;
 
     @Override
     public void doFilter(final ServletRequest request, final ServletResponse response,
@@ -60,10 +61,12 @@ public class LoggingFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) {
+        // default implementation ignored
     }
 
     @Override
     public void destroy() {
+        // default implementation ignored
     }
 
 }

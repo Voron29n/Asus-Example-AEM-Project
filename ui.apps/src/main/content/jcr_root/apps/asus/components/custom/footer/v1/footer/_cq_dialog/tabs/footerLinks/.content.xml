@@ -39,7 +39,7 @@
                                     <title
                                             jcr:primaryType="nt:unstructured"
                                             fieldDescription="Title group links"
-                                            fieldLabel="Title group"
+                                            emptyText="Title group"
                                             required="{Boolean}true"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             name="./groupTitle"/>
@@ -86,7 +86,7 @@
 
                                                         <linkTo
                                                                 jcr:primaryType="nt:unstructured"
-                                                                fieldLabel="Link to Url"
+                                                                emptyText="Link to Url"
                                                                 name="./linkTo"
                                                                 rootPath="/content/asus"
                                                                 suffix=".html"

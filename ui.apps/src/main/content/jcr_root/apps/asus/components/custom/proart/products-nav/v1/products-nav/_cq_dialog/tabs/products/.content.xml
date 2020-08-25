@@ -1,0 +1,354 @@
+<products xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+              xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+              xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+              jcr:primaryType="nt:unstructured"
+              jcr:title="Products"
+              margin="{Boolean}true"
+              sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+
+        <column
+                jcr:primaryType="nt:unstructured"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+
+                <column jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <multiProducts
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                validation="multifield-max-4"
+                                fieldDescription="New value"
+                                fieldLabel="Products nav collection"
+                                granite:class="foundation-toggleable cq-dialog-container__editor-multifield-products_nav_group">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    acs-commons-nested=""
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./products"
+                                    granite:class="cq-dialog-container__editor-products_nav_group">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <imageSmall
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Image small"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true"
+                                            granite:class="cq-dialog-container__editor-products_nav__image">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true"
+                                                    granite:class="cq-dialog-container__editor-products_nav__image_block">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fileSmall
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                    allowUpload="{Boolean}false"
+                                                                    autoStart="{Boolean}false"
+                                                                    class="cq-droptarget"
+                                                                    fieldLabel="Image small Asset"
+                                                                    fileNameParameter="./fileNameSmall"
+                                                                    fileReferenceParameter="./fileReferenceSmall"
+                                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                                    multiple="{Boolean}false"
+                                                                    name="./fileSmall"
+                                                                    title="Upload Image Asset"
+                                                                    uploadUrl="${suffix.path}"
+                                                                    requestSuffix="/small.img.png"
+                                                                    useHTML5="{Boolean}true"/>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </imageSmall>
+                                    <imageMedium
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Image middle"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true"
+                                            granite:class="cq-dialog-container__editor-products_nav__image">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true"
+                                                    granite:class="cq-dialog-container__editor-products_nav__image_block">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fileMedium
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                    allowUpload="{Boolean}false"
+                                                                    autoStart="{Boolean}false"
+                                                                    class="cq-droptarget"
+                                                                    fieldLabel="Image medium Asset"
+                                                                    fileNameParameter="./fileNameMedium"
+                                                                    fileReferenceParameter="./fileReferenceMedium"
+                                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                                    multiple="{Boolean}false"
+                                                                    name="./fileMedium"
+                                                                    title="Upload Image Asset"
+                                                                    requestSuffix="/medium.img.png"
+                                                                    uploadUrl="${suffix.path}"
+                                                                    useHTML5="{Boolean}true"/>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </imageMedium>
+                                    <imageLarge
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Image large"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true"
+                                            granite:class="cq-dialog-container__editor-products_nav__image">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true"
+                                                    granite:class="cq-dialog-container__editor-products_nav__image_block">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fileLarge
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                    allowUpload="{Boolean}false"
+                                                                    autoStart="{Boolean}false"
+                                                                    class="cq-droptarget"
+                                                                    fieldLabel="Image large Asset"
+                                                                    fileNameParameter="./fileNameLarge"
+                                                                    fileReferenceParameter="./fileReferenceLarge"
+                                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                                    multiple="{Boolean}false"
+                                                                    name="./fileLarge"
+                                                                    title="Upload Image Asset"
+                                                                    requestSuffix="/large.img.png"
+                                                                    uploadUrl="${suffix.path}"
+                                                                    useHTML5="{Boolean}true"/>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </imageLarge>
+
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            fieldDescription="Title product"
+                                            emptyText="Title product"
+                                            required="{Boolean}true"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            name="./title"
+                                            granite:class="cq-dialog-container-products_nav-title"
+                                    />
+
+                                    <wellGroup
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/well"
+                                            granite:class="cq-dialog-container-products_nav-group-well">
+                                        <items jcr:primaryType="nt:unstructured">
+
+
+                                            <linkTo
+                                                    jcr:primaryType="nt:unstructured"
+                                                    emptyText="Link to Url"
+                                                    name="./linkTo"
+                                                    rootPath="/content/asus"
+                                                    suffix=".html"
+                                                    sling:resourceType="cq/gui/components/coral/common/form/pagefield/"
+                                                    granite:class="cq-dialog-container-products_nav-info-well-linkTo"/>
+
+                                            <linkUrlTarget
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                    fieldDescription="check - new tab / uncheck - self tab"
+                                                    name="./linkUrlTarget"
+                                                    value="_blank"
+                                                    uncheckedValue="_self"
+                                                    default="_blank"
+                                                    checked="{Boolean}true"
+                                                    granite:class="cq-dialog-container-products_nav-link-info-well-linkUrlTarget"/>
+
+                                        </items>
+                                    </wellGroup>
+
+                                    <descriptionGroup
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/well">
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                            <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    fieldDescription="Product description"
+                                                    fieldLabel="Product description"
+                                                    required="{Boolean}false"
+                                                    name="./description"
+                                                    useFixedInlineToolbar="{Boolean}true"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    granite:class="cq-dialog-container-products_nav-description"
+                                            >
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <format jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <justify jcr:primaryType="nt:unstructured"
+                                                             features="*"/>
+                                                    <links jcr:primaryType="nt:unstructured"
+                                                           features="*"/>
+                                                    <lists jcr:primaryType="nt:unstructured"
+                                                           features="*"/>
+                                                    <misctools jcr:primaryType="nt:unstructured">
+                                                        <specialCharsConfig
+                                                                jcr:primaryType="nt:unstructured">
+                                                            <chars jcr:primaryType="nt:unstructured">
+                                                                <default_copyright
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;copy;"
+                                                                        name="copyright"/>
+                                                                <default_euro
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;euro;"
+                                                                        name="euro"/>
+                                                                <default_registered
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;reg;"
+                                                                        name="registered"/>
+                                                                <default_trademark
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;trade;"
+                                                                        name="trademark"/>
+                                                            </chars>
+                                                        </specialCharsConfig>
+                                                    </misctools>
+
+                                                    <paraformat jcr:primaryType="nt:unstructured"
+                                                                features="*">
+                                                        <formats jcr:primaryType="nt:unstructured">
+                                                            <default_p jcr:primaryType="nt:unstructured"
+                                                                       description="Paragraph"
+                                                                       tag="p"/>
+                                                            <default_h1
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 1"
+                                                                    tag="h1"/>
+                                                            <default_h2
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 2"
+                                                                    tag="h2"/>
+                                                            <default_h3
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 3"
+                                                                    tag="h3"/>
+                                                            <default_h4
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 4"
+                                                                    tag="h4"/>
+                                                            <default_h5
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading5"
+                                                                    tag="h5"/>
+                                                            <default_h6
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Heading 6"
+                                                                    tag="h6"/>
+                                                            <default_blockquote
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Quote"
+                                                                    tag="blockquote"/>
+                                                            <default_pre
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    description="Preformatted"
+                                                                    tag="pre"/>
+                                                        </formats>
+                                                    </paraformat>
+
+                                                    <table jcr:primaryType="nt:unstructured"
+                                                           features="*">
+                                                        <hiddenHeaderConfig
+                                                                jcr:primaryType="nt:unstructured"
+                                                                hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                                hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing"/>
+                                                    </table>
+
+                                                    <tracklinks jcr:primaryType="nt:unstructured"
+                                                                features="*"/>
+
+                                                    <findreplace jcr:primaryType="nt:unstructured"
+                                                                 features="*"/>
+
+                                                    <subsuperscript jcr:primaryType="nt:unstructured"
+                                                                    features="*"/>
+
+                                                    <spellcheck jcr:primaryType="nt:unstructured"
+                                                                features="*"/>
+                                                </rtePlugins>
+
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat,findreplace#find,findreplace#replace,subsuperscript#subscript,subsuperscript#superscript,spellcheck#checktext]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                                                        ref="justify"/>
+                                                                <lists jcr:primaryType="nt:unstructured"
+                                                                       items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                       ref="lists"/>
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                            </popovers>
+                                                        </inline>
+
+                                                        <tableEditOptions
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+
+                                                        <dialogFullScreen
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps,findreplace#find,findreplace#replace,subsuperscript#subscript,subsuperscript#superscript,spellcheck#checktext]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                            </popovers>
+                                                        </dialogFullScreen>
+                                                    </cui>
+                                                </uiSettings>
+                                            </description>
+                                        </items>
+                                    </descriptionGroup>
+
+                                </items>
+
+                            </field>
+                        </multiProducts>
+                    </items>
+                </column>
+            </items>
+        </column>
+    </items>
+</products>

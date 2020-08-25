@@ -1,11 +1,12 @@
 package com.epam.asus.core.services.impl.hero_banner_top;
 
 import com.epam.asus.core.models.beans.hero_banner_top.ImageBean;
+import com.epam.asus.core.services.CommonUtils;
 import com.epam.asus.core.services.HeroBannerTopService;
-import org.apache.commons.lang.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,24 +17,24 @@ import java.util.List;
 public class HeroBannerTopServiceImpl implements HeroBannerTopService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
+    private static final String FILE_REFERENCE_DESKTOP = "fileReferenceDesktop";
+    private static final String FILE_REFERENCE_MOBILE = "fileReferenceMobile";
+    private static final String LINK_URL_TARGET = "linkUrlTarget";
+    private static final String EXTERNAL_LINK = "externalLink";
+    private static final String DESCRIPTION_LINK = "descriptionLink";
 
-    private boolean checkResource(List<Resource> resources){
-        return resources != null && !resources.isEmpty();
-    }
-
-    private String getPropertyValue(final ValueMap properties, final String propertyName) {
-        return properties.containsKey(propertyName) ? properties.get(propertyName, String.class) : StringUtils.EMPTY;
-    }
+    @Reference
+    protected CommonUtils commonUtils;
 
     @Override
     public List<ImageBean> populateMultiFieldImageItems(List<Resource> heroImages) {
         List<ImageBean> heroImagesCollection = new ArrayList<>();
-        if (checkResource(heroImages)) {
+        if (commonUtils.isCheckResource(heroImages)) {
             for (Resource item : heroImages) {
                 if (item != null) {
                     heroImagesCollection.add(buildImageBean(item));
                 } else {
-                    logger.info(LOGGER_MESSAGE , item);
+                    logger.info(LOGGER_MESSAGE , heroImages);
                 }
             }
         }
@@ -42,22 +43,14 @@ public class HeroBannerTopServiceImpl implements HeroBannerTopService {
 
     private ImageBean buildImageBean(Resource item){
         ValueMap vm = item.getValueMap();
-        boolean isExternalLink = getPropertyValue(vm, "externalLink").equals("true");
+        boolean isExternalLink = commonUtils.getPropertyValueByPropertyName(vm, EXTERNAL_LINK).equals("true");
         return ImageBean.builder()
-                .fileReferenceDesktop(getPropertyValue(vm, "fileReferenceDesktop"))
-                .fileReferenceMobile(getPropertyValue(vm, "fileReferenceMobile"))
-                .descriptionLink(getPropertyValue(vm, "descriptionLink"))
-                .linkTo(correctLinkByURLValue(isExternalLink, vm))
-                .linkUrlTarget(getPropertyValue(vm, "linkUrlTarget"))
+                .fileReferenceDesktop(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_DESKTOP))
+                .fileReferenceMobile(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_MOBILE))
+                .descriptionLink(commonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
+                .linkTo(commonUtils.correctLinkByURLValue(isExternalLink, vm))
+                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
-    }
-
-    private String correctLinkByURLValue(boolean isExternalLink, ValueMap vm){
-        if(!isExternalLink){
-            return getPropertyValue(vm, "linkTo").concat(".html");
-        }else {
-            return (getPropertyValue(vm, "linkTo"));
-        }
     }
 
 }

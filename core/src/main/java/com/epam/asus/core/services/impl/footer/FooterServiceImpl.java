@@ -4,11 +4,12 @@ import com.epam.asus.core.models.beans.footer.CopyrightsBean;
 import com.epam.asus.core.models.beans.footer.LinksGroupBean;
 import com.epam.asus.core.models.beans.footer.SocialsBean;
 import com.epam.asus.core.models.impl.footer.LinksGroup;
+import com.epam.asus.core.services.CommonUtils;
 import com.epam.asus.core.services.FooterService;
-import org.apache.commons.lang.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,24 +20,25 @@ import java.util.List;
 public class FooterServiceImpl implements FooterService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
+    private static final String FILE_REFERENCE = "fileReference";
+    private static final String TITLE = "title";
+    private static final String LINK_TO = "linkTo";
+    private static final String LINK_URL_TARGET = "linkUrlTarget";
+    private static final String EXTERNAL_LINK = "externalLink";
+    private static final String DESCRIPTION_LINK = "descriptionLink";
 
-    private boolean checkResource(List<Resource> resources){
-        return resources != null && !resources.isEmpty();
-    }
-
-    private String getPropertyValue(final ValueMap properties, final String propertyName) {
-        return properties.containsKey(propertyName) ? properties.get(propertyName, String.class) : StringUtils.EMPTY;
-    }
+    @Reference
+    protected CommonUtils commonUtils;
 
     @Override
     public List<SocialsBean> populateMultiFieldSocialsItems(List<Resource> socials) {
         List<SocialsBean> socialsCol = new ArrayList<>();
-        if (checkResource(socials)) {
+        if (commonUtils.isCheckResource(socials)) {
             for (Resource item : socials) {
                 if (item != null) {
                     socialsCol.add(buildSocialsBean(item));
                 } else {
-                    logger.info(LOGGER_MESSAGE , item);
+                    logger.info(LOGGER_MESSAGE , socials);
                 }
             }
         }
@@ -46,22 +48,22 @@ public class FooterServiceImpl implements FooterService {
     private SocialsBean buildSocialsBean(Resource item){
         ValueMap vm = item.getValueMap();
         return SocialsBean.builder()
-                .title(getPropertyValue(vm, "title"))
-                .linkTo(getPropertyValue(vm, "linkTo"))
-                .linkUrlTarget(getPropertyValue(vm, "linkUrlTarget"))
-                .fileReference(getPropertyValue(vm, "fileReference"))
+                .title(commonUtils.getPropertyValueByPropertyName(vm, TITLE))
+                .linkTo(commonUtils.getPropertyValueByPropertyName(vm, LINK_TO))
+                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
+                .fileReference(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
                 .build();
     }
 
     @Override
     public List<CopyrightsBean> populateMultiFieldCopyrightItems(List<Resource> copyrights) {
         List<CopyrightsBean> copyrightsCol = new ArrayList<>();
-        if (checkResource(copyrights)) {
+        if (commonUtils.isCheckResource(copyrights)) {
             for (Resource item : copyrights) {
                 if (item != null) {
                     copyrightsCol.add(buildCopyrightBean(item));
                 } else {
-                    logger.info(LOGGER_MESSAGE , item);
+                    logger.info(LOGGER_MESSAGE , copyrights);
                 }
             }
         }
@@ -70,19 +72,19 @@ public class FooterServiceImpl implements FooterService {
 
     private CopyrightsBean buildCopyrightBean(Resource item){
         ValueMap vm = item.getValueMap();
-        boolean isExternalLink = getPropertyValue(vm, "externalLink").equals("true");
+        boolean isExternalLink = commonUtils.getPropertyValueByPropertyName(vm, EXTERNAL_LINK).equals("true");
         return CopyrightsBean.builder()
+                .descriptionLink(commonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
                 .isExternalLink(isExternalLink)
-                .descriptionLink(getPropertyValue(vm, "descriptionLink"))
-                .linkTo(correctLinkByURLValue(isExternalLink, vm))
-                .linkUrlTarget(getPropertyValue(vm, "linkUrlTarget"))
+                .linkTo(commonUtils.correctLinkByURLValue(isExternalLink, vm))
+                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
     }
 
     @Override
     public List<LinksGroupBean> populateMultiFieldFooterGroupLinksItems(List<Resource> footerGroupLinks) {
         List<LinksGroupBean> footerGroupLinksCol = new ArrayList<>();
-        if(checkResource(footerGroupLinks)) {
+        if(commonUtils.isCheckResource(footerGroupLinks)) {
             for (Resource resource : footerGroupLinks) {
                 LinksGroup linksGroup = resource.adaptTo(LinksGroup.class);
                 assert linksGroup != null;
@@ -92,16 +94,9 @@ public class FooterServiceImpl implements FooterService {
                                             .build()
                 );
             }
+        }else {
+            logger.info(LOGGER_MESSAGE , footerGroupLinks);
         }
         return footerGroupLinksCol;
     }
-
-    private String correctLinkByURLValue(boolean isExternalLink, ValueMap vm){
-        if(!isExternalLink){
-            return getPropertyValue(vm, "linkTo").concat(".html");
-        }else {
-            return (getPropertyValue(vm, "linkTo"));
-        }
-    }
-
 }

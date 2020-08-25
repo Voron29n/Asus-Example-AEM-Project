@@ -21,7 +21,7 @@
                         <socialTitle
                                 jcr:primaryType="nt:unstructured"
                                 fieldDescription="Social title "
-                                fieldLabel="Social title"
+                                emptyText="Social title"
                                 required="{Boolean}false"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 name="./socialTitle"
@@ -87,7 +87,7 @@
                                     <title
                                             jcr:primaryType="nt:unstructured"
                                             fieldDescription="Title of social image"
-                                            fieldLabel="Title of social image"
+                                            emptyText="Title of social image"
                                             required="{Boolean}true"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             name="./title"
@@ -102,7 +102,7 @@
 
                                             <linkTo
                                                     jcr:primaryType="nt:unstructured"
-                                                    fieldLabel="Link to Url"
+                                                    emptyText="Link to Url"
                                                     name="./linkTo"
                                                     rootPath="/content/asus"
                                                     suffix=".html"

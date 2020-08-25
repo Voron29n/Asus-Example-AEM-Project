@@ -1,4 +1,4 @@
-package com.epam.asus.core.models.impl.proart.hero_banner_top;
+package com.epam.asus.core.models.impl.pro_art.hero_banner_top;
 
 import com.epam.asus.core.models.ProArtHeroBannerTop;
 import lombok.Getter;
@@ -11,10 +11,10 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Getter
 @Model(adaptables = {SlingHttpServletRequest.class, Resource.class},
         adapters = {ProArtHeroBannerTop.class},
-        resourceType = ProArtHeroBannerTopImpl.RESOURCE_TYPE,
+        resourceType = HeroBannerTopImpl.RESOURCE_TYPE,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
-public class ProArtHeroBannerTopImpl implements ProArtHeroBannerTop {
+public class HeroBannerTopImpl implements ProArtHeroBannerTop {
 
     protected static final String RESOURCE_TYPE = "asus/components/custom/proart/hero-banner-top/v1/hero-banner-top";
 

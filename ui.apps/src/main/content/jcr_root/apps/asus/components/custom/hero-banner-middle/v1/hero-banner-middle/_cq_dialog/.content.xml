@@ -165,7 +165,7 @@
 
                                                                     <linkTo
                                                                             jcr:primaryType="nt:unstructured"
-                                                                            fieldLabel="Link to Url or Site Page"
+                                                                            emptyText="Link to Url or Site Page"
                                                                             name="./linkTo"
                                                                             rootPath="/content/asus"
                                                                             suffix=".html"

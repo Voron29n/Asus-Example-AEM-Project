@@ -2,10 +2,11 @@ package com.epam.asus.core.services.impl.article;
 
 import com.epam.asus.core.models.beans.article.ImagesBean;
 import com.epam.asus.core.services.ArticleService;
-import org.apache.commons.lang.StringUtils;
+import com.epam.asus.core.services.CommonUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,24 +17,20 @@ import java.util.List;
 public class ArticleServiceImpl implements ArticleService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
+    private static final String FILE_REFERENCE = "fileReference";
 
-    private boolean checkResource(List<Resource> resources){
-        return resources != null && !resources.isEmpty();
-    }
-
-    private String getPropertyValue(final ValueMap properties) {
-        return properties.containsKey("fileReference") ? properties.get("fileReference", String.class) : StringUtils.EMPTY;
-    }
+    @Reference
+    protected CommonUtils commonUtils;
 
     @Override
     public List<ImagesBean> populateMultiFieldImagesItems(List<Resource> images) {
         List<ImagesBean> imagesBeanList = new ArrayList<>();
-        if (checkResource(images)) {
+        if (commonUtils.isCheckResource(images)) {
             for (Resource item : images) {
                 if (item != null) {
                     imagesBeanList.add(buildImagesBean(item));
                 } else {
-                    logger.info(LOGGER_MESSAGE , item);
+                    logger.info(LOGGER_MESSAGE , images);
                 }
             }
         }
@@ -43,7 +40,7 @@ public class ArticleServiceImpl implements ArticleService {
     private ImagesBean buildImagesBean(Resource item){
         ValueMap vm = item.getValueMap();
         return ImagesBean.builder()
-                .fileReference(getPropertyValue(vm))
+                .fileReference(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
                 .build();
     }
 

@@ -26,7 +26,7 @@
                                 <title
                                         jcr:primaryType="nt:unstructured"
                                         fieldDescription="Proart-cmp__hero_banner_top-title"
-                                        fieldLabel="Proart hero_banner_top-title"
+                                        emptyText="Proart hero_banner_top-title"
                                         required="{Boolean}false"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                         name="./title"

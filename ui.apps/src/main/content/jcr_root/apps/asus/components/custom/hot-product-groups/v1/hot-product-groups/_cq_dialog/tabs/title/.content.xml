@@ -23,14 +23,14 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/well">
                             <items jcr:primaryType="nt:unstructured">
 
-                                <groupsTitle
+                                <title
                                         jcr:primaryType="nt:unstructured"
                                         fieldDescription="Product Groups title"
-                                        fieldLabel="Product Groups title"
+                                        emptyText="Product Groups title"
                                         required="{Boolean}false"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                         name="./groupsTitle"
-                                        granite:class="cq-dialog-container-hot_product_groups-groupsTitle"
+                                        granite:class="cq-dialog-container-hot_product_groups-title"
                                 />
 
                             </items>

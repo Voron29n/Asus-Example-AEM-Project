@@ -42,12 +42,13 @@
                                                         autoStart="{Boolean}false"
                                                         class="cq-droptarget"
                                                         fieldLabel="Image medium Asset"
-                                                        fileNameParameter="./fileName"
+                                                        fileNameParameter="./fileNameMedium"
                                                         fileReferenceParameter="./fileReferenceLarge"
                                                         mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
                                                         multiple="{Boolean}false"
-                                                        name="./file"
+                                                        name="./fileMedium"
                                                         title="Upload Image Asset"
+                                                        requestSuffix="/medium.img.png"
                                                         uploadUrl="${suffix.path}"
                                                         useHTML5="{Boolean}true"/>
                                             </items>

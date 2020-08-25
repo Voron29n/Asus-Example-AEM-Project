@@ -44,7 +44,7 @@
                         <configuration>
                             <bnd><![CDATA[
 Bundle-Category: asus
-Export-Package: com.sap.core.listeners.*;version="1.0", com.sap.core.models.*;version="1.0", com.sap.core.service.*;version="1.0"
+Export-Package: com.epam.asus.core.listeners.*;version="1.0", com.epam.asus.core.models.*;version="1.0", com.epam.asus.core.services.*;version="1.0"
 Import-Package: javax.annotation;version=0.0.0,*
 -exportcontents: ${packages;VERSIONED}
 -snapshot: ${tstamp;yyyyMMddHHmmssSSS}
@@ -89,8 +89,8 @@ Import-Package: javax.annotation;version=0.0.0,*
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
-            <!--  <optional>true</optional>-->
-            <!--  <scope>compile</scope>-->
+              <optional>true</optional>
+              <scope>compile</scope>
         </dependency>
 
         <dependency>
@@ -104,6 +104,13 @@ Import-Package: javax.annotation;version=0.0.0,*
             <groupId>uk.org.lidalia</groupId>
             <artifactId>slf4j-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>20.0.0</version>
+            <scope>compile</scope>
         </dependency>
         <!-- OSGi Dependencies -->
         <dependency>

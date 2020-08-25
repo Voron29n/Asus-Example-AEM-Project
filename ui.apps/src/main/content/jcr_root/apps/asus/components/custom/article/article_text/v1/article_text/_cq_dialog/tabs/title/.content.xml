@@ -26,7 +26,7 @@
                                 <title
                                         jcr:primaryType="nt:unstructured"
                                         fieldDescription="Article-cmp_text-title"
-                                        fieldLabel="Article_cmp-text_title"
+                                        emptyText="Article_cmp-text_title"
                                         required="{Boolean}false"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                         name="./title"
