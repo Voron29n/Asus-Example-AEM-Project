@@ -57,11 +57,11 @@
 
     function onSocialsChange(e) {
         disableButton(e);
-    };
+    }
 
     function onCopyrightChange(e) {
         disableButton(e);
-    };
+    }
 
     function onFooterlinksChange(e) {
         disableButton(e);
@@ -70,12 +70,12 @@
             let element = this.querySelector(selectors.infolinks);
             disableButton(element);
         });
-    };
+    }
 
     function onChangeAddButton(e) {
         let element = e.target;
         disableButton(element);
-    };
+    }
 
     function disableButton(element) {
 
@@ -100,7 +100,7 @@
             })
         }
 
-    };
+    }
 
 
 })(window, jQuery, jQuery(document), Granite, Coral);
