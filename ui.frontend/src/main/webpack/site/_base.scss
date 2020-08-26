@@ -74,6 +74,15 @@ a:hover {
     color: #0070bf;
 }
 
+a:link {
+    color: #00a8ff;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
 p {
     display: block;
     margin-block-start: 1em;
@@ -421,4 +430,39 @@ body .container {
 .page>.cmp-container>.responsivegrid {
     *max-width: none;
     max-width: -webkit-fill-available;
+    font-size: 12px;
+    line-height: 20px;
+    color: #333;
+}
+
+.section {
+    display: block;
+}
+
+body .row {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row:before,
+.row:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.row:after {
+    clear: both;
+}
+
+.always__on__top {
+    position: relative;
+    z-index: 1000;
+}
+
+.text_regular,
+.text_regular * {
+    *font-family: "Helvetica Now Display W05 Rg" !important;
+    font-style: normal !important;
 }

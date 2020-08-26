@@ -61,3 +61,16 @@
         margin-left: 20px;
     }
 }
+
+@media (max-width: 719px) {
+    .row,
+    .thumbnails {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 959px) and (min-width: 720px) {
+    .row {
+        margin-left: -20px;
+    }
+}

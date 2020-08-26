@@ -1,5 +1,5 @@
 <template>
-    <div class="wd_section section_products" id="proart__productsNav">
+    <div class="section wd_section section_products" id="proart__productsNav">
         <div class="section_content">
             <div class="row">
                 <div class="col l12 m12 s12 always__on__top">
