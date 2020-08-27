@@ -6,7 +6,6 @@ import com.epam.asus.core.services.HeroBannerTopService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,13 +22,10 @@ public class HeroBannerTopServiceImpl implements HeroBannerTopService {
     private static final String EXTERNAL_LINK = "externalLink";
     private static final String DESCRIPTION_LINK = "descriptionLink";
 
-    @Reference
-    protected CommonUtils commonUtils;
-
     @Override
     public List<ImageBean> populateMultiFieldImageItems(List<Resource> heroImages) {
         List<ImageBean> heroImagesCollection = new ArrayList<>();
-        if (commonUtils.isCheckResource(heroImages)) {
+        if (CommonUtils.isCheckResource(heroImages)) {
             for (Resource item : heroImages) {
                 if (item != null) {
                     heroImagesCollection.add(buildImageBean(item));
@@ -43,13 +39,13 @@ public class HeroBannerTopServiceImpl implements HeroBannerTopService {
 
     private ImageBean buildImageBean(Resource item){
         ValueMap vm = item.getValueMap();
-        boolean isExternalLink = commonUtils.getPropertyValueByPropertyName(vm, EXTERNAL_LINK).equals("true");
+        boolean isExternalLink = CommonUtils.getPropertyValueByPropertyName(vm, EXTERNAL_LINK).equals("true");
         return ImageBean.builder()
-                .fileReferenceDesktop(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_DESKTOP))
-                .fileReferenceMobile(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_MOBILE))
-                .descriptionLink(commonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
-                .linkTo(commonUtils.correctLinkByURLValue(isExternalLink, vm))
-                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
+                .fileReferenceDesktop(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_DESKTOP))
+                .fileReferenceMobile(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_MOBILE))
+                .descriptionLink(CommonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
+                .linkTo(CommonUtils.correctLinkByURLValue(isExternalLink, vm))
+                .linkUrlTarget(CommonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
     }
 

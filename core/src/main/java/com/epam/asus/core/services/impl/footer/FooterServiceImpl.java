@@ -9,7 +9,6 @@ import com.epam.asus.core.services.FooterService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,13 +26,10 @@ public class FooterServiceImpl implements FooterService {
     private static final String EXTERNAL_LINK = "externalLink";
     private static final String DESCRIPTION_LINK = "descriptionLink";
 
-    @Reference
-    protected CommonUtils commonUtils;
-
     @Override
     public List<SocialsBean> populateMultiFieldSocialsItems(List<Resource> socials) {
         List<SocialsBean> socialsCol = new ArrayList<>();
-        if (commonUtils.isCheckResource(socials)) {
+        if (CommonUtils.isCheckResource(socials)) {
             for (Resource item : socials) {
                 if (item != null) {
                     socialsCol.add(buildSocialsBean(item));
@@ -48,17 +44,17 @@ public class FooterServiceImpl implements FooterService {
     private SocialsBean buildSocialsBean(Resource item){
         ValueMap vm = item.getValueMap();
         return SocialsBean.builder()
-                .title(commonUtils.getPropertyValueByPropertyName(vm, TITLE))
-                .linkTo(commonUtils.getPropertyValueByPropertyName(vm, LINK_TO))
-                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
-                .fileReference(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
+                .title(CommonUtils.getPropertyValueByPropertyName(vm, TITLE))
+                .linkTo(CommonUtils.getPropertyValueByPropertyName(vm, LINK_TO))
+                .linkUrlTarget(CommonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
+                .fileReference(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
                 .build();
     }
 
     @Override
     public List<CopyrightsBean> populateMultiFieldCopyrightItems(List<Resource> copyrights) {
         List<CopyrightsBean> copyrightsCol = new ArrayList<>();
-        if (commonUtils.isCheckResource(copyrights)) {
+        if (CommonUtils.isCheckResource(copyrights)) {
             for (Resource item : copyrights) {
                 if (item != null) {
                     copyrightsCol.add(buildCopyrightBean(item));
@@ -72,19 +68,19 @@ public class FooterServiceImpl implements FooterService {
 
     private CopyrightsBean buildCopyrightBean(Resource item){
         ValueMap vm = item.getValueMap();
-        boolean isExternalLink = commonUtils.getPropertyValueByPropertyName(vm, EXTERNAL_LINK).equals("true");
+        boolean isExternalLink = CommonUtils.getPropertyValueByPropertyName(vm, EXTERNAL_LINK).equals("true");
         return CopyrightsBean.builder()
-                .descriptionLink(commonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
+                .descriptionLink(CommonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
                 .isExternalLink(isExternalLink)
-                .linkTo(commonUtils.correctLinkByURLValue(isExternalLink, vm))
-                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
+                .linkTo(CommonUtils.correctLinkByURLValue(isExternalLink, vm))
+                .linkUrlTarget(CommonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
     }
 
     @Override
     public List<LinksGroupBean> populateMultiFieldFooterGroupLinksItems(List<Resource> footerGroupLinks) {
         List<LinksGroupBean> footerGroupLinksCol = new ArrayList<>();
-        if(commonUtils.isCheckResource(footerGroupLinks)) {
+        if(CommonUtils.isCheckResource(footerGroupLinks)) {
             for (Resource resource : footerGroupLinks) {
                 LinksGroup linksGroup = resource.adaptTo(LinksGroup.class);
                 assert linksGroup != null;

@@ -6,7 +6,6 @@ import com.epam.asus.core.services.CommonUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,13 +18,10 @@ public class ArticleServiceImpl implements ArticleService {
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
     private static final String FILE_REFERENCE = "fileReference";
 
-    @Reference
-    protected CommonUtils commonUtils;
-
     @Override
     public List<ImagesBean> populateMultiFieldImagesItems(List<Resource> images) {
         List<ImagesBean> imagesBeanList = new ArrayList<>();
-        if (commonUtils.isCheckResource(images)) {
+        if (CommonUtils.isCheckResource(images)) {
             for (Resource item : images) {
                 if (item != null) {
                     imagesBeanList.add(buildImagesBean(item));
@@ -40,7 +36,7 @@ public class ArticleServiceImpl implements ArticleService {
     private ImagesBean buildImagesBean(Resource item){
         ValueMap vm = item.getValueMap();
         return ImagesBean.builder()
-                .fileReference(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
+                .fileReference(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
                 .build();
     }
 

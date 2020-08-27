@@ -6,7 +6,6 @@ import com.epam.asus.core.services.CommonUtils;
 import com.epam.asus.core.services.NavInfoPageService;
 import org.apache.sling.api.resource.Resource;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,13 +17,10 @@ public class NavInfoPageServiceImpl implements NavInfoPageService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
 
-    @Reference
-    protected CommonUtils commonUtils;
-
     @Override
     public List<LinksGroupBean> populateMultiFieldNavInfoPageGroupLinksItems(List<Resource> navInfoPageGroupLinks) {
         List<LinksGroupBean> navInfoPageGroupLinksCol = new ArrayList<>();
-        if(commonUtils.isCheckResource(navInfoPageGroupLinks)) {
+        if(CommonUtils.isCheckResource(navInfoPageGroupLinks)) {
             for (Resource item : navInfoPageGroupLinks) {
                 navInfoPageGroupLinksCol.add(buildLinksGroupBean(item));
             }

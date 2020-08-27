@@ -6,7 +6,6 @@ import com.epam.asus.core.services.pro_art.ProductsNavService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,13 +24,10 @@ public class ProductsNavServiceImpl implements ProductsNavService {
     private static final String LINK_URL_TARGET = "linkUrlTarget";
     private static final String DESCRIPTION = "description";
 
-    @Reference
-    protected CommonUtils commonUtils;
-
     @Override
     public List<ProductBean> populateMultiFieldProductItems(List<Resource> products) {
         List<ProductBean> productsCol = new ArrayList<>();
-        if (commonUtils.isCheckResource(products)) {
+        if (CommonUtils.isCheckResource(products)) {
             for (Resource item : products) {
                 if (item != null) {
                     productsCol.add(buildProductBean(item));
@@ -46,13 +42,13 @@ public class ProductsNavServiceImpl implements ProductsNavService {
     private ProductBean buildProductBean(Resource item){
         ValueMap vm = item.getValueMap();
         return ProductBean.builder()
-                .fileReferenceSmall(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_SMALL))
-                .fileReferenceMedium(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_MEDIUM))
-                .fileReferenceLarge(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_LARGE))
-                .title(commonUtils.getPropertyValueByPropertyName(vm, TITLE))
-                .description(commonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION))
-                .linkTo(commonUtils.getPropertyValueByPropertyName(vm, LINK_TO))
-                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
+                .fileReferenceSmall(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_SMALL))
+                .fileReferenceMedium(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_MEDIUM))
+                .fileReferenceLarge(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_LARGE))
+                .title(CommonUtils.getPropertyValueByPropertyName(vm, TITLE))
+                .description(CommonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION))
+                .linkTo(CommonUtils.getPropertyValueByPropertyName(vm, LINK_TO))
+                .linkUrlTarget(CommonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
     }
 

@@ -11,9 +11,9 @@ import { ComponentData } from "./ComponentData";
 let vueArrayComponents = []; // Array for all created vue components
 const vueComponentObject = {};
 const vueRootData = {
+    rootWrapperSelector: ".root.container.responsivegrid",
     rootIdValue: "vue-root",
     rootIdSelector: "#vue-root",
-    rootWrapperSelector: ".root.container.responsivegrid",
 };
 
 /* First what you need is import your components and you can use alias @components for this*/
@@ -40,9 +40,9 @@ vueArrayComponents = [
     new ComponentData(IconifyIcon),
     new ComponentData(icomoon),
     new ComponentData(
-        "hero-banner-middle" /* it is a name for custom tag that you can use at ui.app in component.html  */ ,
+        "hero-banner-middle" /* it is a name for custom tag(tagName) that you can use at ui.app in component.html  */ ,
         "#hero-banner-middle-component-vue" /* it is a selector. This selector need to know if in the page we have our custom component */ ,
-        HeroBannerMiddle /* it is a import Vue Component */
+        HeroBannerMiddle /* it is a import(importObject) Vue Component */
     ),
     new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
     new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
