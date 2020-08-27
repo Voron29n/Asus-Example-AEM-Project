@@ -6,7 +6,6 @@ import com.epam.asus.core.services.HotProductGroupsService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,13 +22,10 @@ public class HotProductGroupsServiceImpl implements HotProductGroupsService {
     private static final String LINK_URL_TARGET = "linkUrlTarget";
     private static final String DESCRIPTION_LINK = "descriptionLink";
 
-    @Reference
-    protected CommonUtils commonUtils;
-
     @Override
     public List<ProductBean> populateMultiFieldHotProductItems(List<Resource> products) {
         List<ProductBean> productsCol = new ArrayList<>();
-        if (commonUtils.isCheckResource(products)) {
+        if (CommonUtils.isCheckResource(products)) {
             for (Resource item : products) {
                 if (item != null) {
                     productsCol.add(buildProductBean(item));
@@ -44,11 +40,11 @@ public class HotProductGroupsServiceImpl implements HotProductGroupsService {
     private ProductBean buildProductBean(Resource item){
         ValueMap vm = item.getValueMap();
         return ProductBean.builder()
-                .fileReference(commonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
-                .title(commonUtils.getPropertyValueByPropertyName(vm, TITLE))
-                .descriptionLink(commonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
-                .linkTo(commonUtils.getPropertyValueByPropertyName(vm, LINK_TO))
-                .linkUrlTarget(commonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
+                .fileReference(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE))
+                .title(CommonUtils.getPropertyValueByPropertyName(vm, TITLE))
+                .descriptionLink(CommonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
+                .linkTo(CommonUtils.getPropertyValueByPropertyName(vm, LINK_TO))
+                .linkUrlTarget(CommonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
     }
 
