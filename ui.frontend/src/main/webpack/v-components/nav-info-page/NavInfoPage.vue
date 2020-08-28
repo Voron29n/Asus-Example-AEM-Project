@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import TitleData from './v-components/title/Title'
-import LinksGroupData from './v-components/linksGroup/LinksGroup'
+import NavInfoPage_TitleDataCmp from './v-components/title/Title'
+import NavInfoPage_LinksGroupDataCmp from './v-components/linksGroup/LinksGroup'
 
 export default {
     components: {
-        "v-title": TitleData,
-        "v-linksGroup": LinksGroupData,
+        "v-title": NavInfoPage_TitleDataCmp,
+        "v-linksGroup": NavInfoPage_LinksGroupDataCmp,
     },
     props: {
         title: {

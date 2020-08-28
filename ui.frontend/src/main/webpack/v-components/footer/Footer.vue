@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import LanguageData from './v-components/language/Language'
-import LinksGroupData from './v-components/linksGroup/LinksGroup'
-import CopyrightsData from './v-components/copyrights/Copyrights'
+import Footer_LanguageCmp from './v-components/language/Language'
+import Footer_LinksGroupCmp from './v-components/linksGroup/LinksGroup'
+import Footer_CopyrightsCmp from './v-components/copyrights/Copyrights'
 
 export default {
     components: {

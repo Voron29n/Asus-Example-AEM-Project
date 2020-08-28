@@ -18,13 +18,13 @@
 </template>
 
 <script>
-import SocialsData from "../socials/Socials";
+import Footer_SocialsCmp from "../socials/Socials";
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
   mixins: [adapt],
   components: {
-    "v-socials": SocialsData,
+    "v-socials": Footer_SocialsCmp,
   },
   props: {
     linksGroupData: Object,

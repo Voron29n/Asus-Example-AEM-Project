@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import ImageData from './v-components/image/Image'
+import ArticleImage_ImageCmp from './v-components/image/Image'
 
 export default {
     components: {
-        "v-image": ImageData,
+        "v-image": ArticleImage_ImageCmp,
     },
     props: {
         fileReference: {

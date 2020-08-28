@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import ProductsData from "./v-components/products/Products";
+import ProductsNav_ProductsDataCmp from "./v-components/products/Products";
 
 export default {
     components: {
-        "v-products": ProductsData,
+        "v-products": ProductsNav_ProductsDataCmp,
     },
     props: {
         productsNav: {

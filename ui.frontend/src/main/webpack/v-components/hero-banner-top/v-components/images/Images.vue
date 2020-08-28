@@ -53,14 +53,14 @@
 
 <script>
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
-import SlickArrowsComponent from "@common/slick-arrow/SlickArrow";
-import SlickDotsComponent from "@common/slick-dots/SlickDots";
+import HeroBannerTop_SlickArrowsCmp from "@common/slick-arrow/SlickArrow";
+import HeroBannerTop_SlickDotsCmp from "@common/slick-dots/SlickDots";
 
 export default {
     mixins: [adapt],
     components: {
-        "v-slick-arrows": SlickArrowsComponent,
-        "v-slick-dots": SlickDotsComponent,
+        "v-slick-arrows": HeroBannerTop_SlickArrowsCmp,
+        "v-slick-dots": HeroBannerTop_SlickDotsCmp,
     },
     props: {
         imagesData: Object,

@@ -1,0 +1,46 @@
+@media only screen and (max-width: 1300px) {
+    .banner-small-wrap .banner-small-info {
+        .banner-small-sub-title {
+            margin: 0 0 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .banner-small-wrap {
+        .banner-small-info {
+            .banner-small-sub-title {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-small-wrap {
+        .banner-small-info {
+            .banner-small-sub-title {
+                margin: 0;
+                font-size: 1.1em;
+                font-weight: 400;
+                line-height: 1.3em;
+                max-height: 2.6em;
+                color: #666;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-small-wrap .banner-small-info {
+        .banner-small-sub-title {
+            margin: 0;
+            font-size: 0.8em;
+            font-weight: 400;
+            line-height: 1.3em;
+            max-height: 2.6em;
+            color: #666;
+        }
+    }
+}

@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import TitleData from './v-components/title/Title'
-import DescriptionData from './v-components/description/Description'
+import CustomizedText_TitleCmp from './v-components/title/Title'
+import CustomizedText_DescriptionCmp from './v-components/description/Description'
 
 export default {
     components: {

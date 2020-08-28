@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import ImagesData from "./v-components/images/Images";
+import HeroBannerTop_ImagesCmp from "./v-components/images/Images";
 
 export default {
     components: {
-        "v-images": ImagesData,
+        "v-images": HeroBannerTop_ImagesCmp,
     },
     props: {
         heroItems: {

@@ -1,19 +1,35 @@
 <template>
-        <div class="banner-small-block">
-            <div class="banner-small-inner">
-                <v-hero-small
-                    :hero-small-data="heroSmallData"
-                ></v-hero-small>
+    <div class="banner-small-block">
+        <div class="banner-small-inner">
+            <div class="banner-small-wrap">
+                <v-link :link-data="linkData"></v-link>
+                <v-image :image-data="imageData"></v-image>
+                <div class="banner-small-info">
+                    <div :class="{'banner-small-info-wrap' : !isDesktopVersion}">
+                        <v-title :title-data="titleData"></v-title>
+                        <v-description :description-data="descriptionData"></v-description>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 </template>
 
 <script>
-import HeroSmall from "./v-components/HeroSmall";
+import HeroBannerSmall_LinkCmp from "./v-components/link/Link";
+import HeroBannerSmall_ImageCmp from "./v-components/image/Image";
+import HeroBannerSmall_TitleCmp from "./v-components/title/Title";
+import HeroBannerSmall_DescriptionCmp from "./v-components/description/Description";
+
+import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
+    mixins: [adapt],
     components: {
-        "v-hero-small": HeroSmall,
+        "v-link": HeroBannerSmall_LinkCmp,
+        "v-image": HeroBannerSmall_ImageCmp,
+        "v-title": HeroBannerSmall_TitleCmp,
+        "v-description": HeroBannerSmall_DescriptionCmp,
     },
     props: {
         jsonOfLinkData: {
@@ -34,11 +50,23 @@ export default {
         },
     },
     computed: {
-        heroSmallData() {
+        linkData() {
             return {
                 heroLink: JSON.parse(this.$props.jsonOfLinkData),
+            };
+        },
+        imageData() {
+            return {
                 fileReference: this.$props.fileReference,
+            };
+        },
+        titleData() {
+            return {
                 heroTitle: this.$props.heroTitle,
+            };
+        },
+        descriptionData() {
+            return {
                 heroDescription: this.$props.heroDescription,
             };
         },

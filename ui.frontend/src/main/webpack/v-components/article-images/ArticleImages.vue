@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import TitleData from './v-components/title/Title'
-import ImagesData from './v-components/images/Images'
+import ArticleImages_TitleCmp from './v-components/title/Title'
+import ArticleImages_ImagesCmp from './v-components/images/Images'
 
 export default {
     components: {
-        "v-title": TitleData,
-        "v-images": ImagesData,
+        "v-title": ArticleImages_TitleCmp,
+        "v-images": ArticleImages_ImagesCmp,
     },
     props: {
         imagesTitle: {

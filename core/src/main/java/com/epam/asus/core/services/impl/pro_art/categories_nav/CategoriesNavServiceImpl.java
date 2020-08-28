@@ -19,7 +19,7 @@ public class CategoriesNavServiceImpl implements CategoriesNavService {
 
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
     private static final String FILE_REFERENCE_DESKTOP = "fileReferenceDesktop";
-    private static final String FILE_REFERENCE_MOBILE = "fileReferenceMedium";
+    private static final String FILE_REFERENCE_MOBILE = "fileReferenceMobile";
     private static final String TITLE = "title";
     private static final String LINK_TO = "linkTo";
     private static final String LINK_URL_TARGET = "linkUrlTarget";

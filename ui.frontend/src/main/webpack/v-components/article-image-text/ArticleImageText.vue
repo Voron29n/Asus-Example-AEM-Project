@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import TitleData from './v-components/title/Title'
-import DescriptionData from './v-components/description/Description'
-import ImageData from './v-components/image/Image'
+import ArticleImageText_TitleCmp from './v-components/title/Title'
+import ArticleImageText_DescriptionCmp from './v-components/description/Description'
+import ArticleImageText_ImageCmp from './v-components/image/Image'
 
 export default {
     components: {
-        "v-title": TitleData,
-        "v-description": DescriptionData,
-        "v-image": ImageData,
+        "v-title": ArticleImageText_TitleCmp,
+        "v-description": ArticleImageText_DescriptionCmp,
+        "v-image": ArticleImageText_ImageCmp,
     },
     props: {
         imageTextTitle: {

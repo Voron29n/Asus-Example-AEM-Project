@@ -18,13 +18,13 @@
 </template>
 
 <script>
-import TitleData from "./v-components/title/Title";
-import ImageData from "./v-components/image/Image";
+import HeroBannerTop_TitleDataCmp from "./v-components/title/Title";
+import HeroBannerTop_ImageDataCmp from "./v-components/image/Image";
 
 export default {
     components: {
-        "v-title": TitleData,
-        "v-image": ImageData,
+        "v-title": HeroBannerTop_TitleDataCmp,
+        "v-image": HeroBannerTop_ImageDataCmp,
     },
     props: {
         heroTitle: {

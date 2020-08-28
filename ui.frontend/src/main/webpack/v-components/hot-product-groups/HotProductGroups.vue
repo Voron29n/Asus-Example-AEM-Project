@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import TitleData from "./v-components/title/Title";
-import ProductGroupsData from "./v-components/product-groups/ProductGroups";
+import HotProductGroups_TitleDataCmp from "./v-components/title/Title";
+import HotProductGroups_ProductGroupsDataCmp from "./v-components/product-groups/ProductGroups";
 
 export default {
   components: {
-    "v-title": TitleData,
-    "v-productGroups": ProductGroupsData,
+    "v-title": HotProductGroups_TitleDataCmp,
+    "v-productGroups": HotProductGroups_ProductGroupsDataCmp,
   },
   props: {
     groupsTitle: {

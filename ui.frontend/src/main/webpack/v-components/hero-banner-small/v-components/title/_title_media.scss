@@ -1,0 +1,34 @@
+@media only screen and (max-width: 1300px) {
+    .banner-small-wrap .banner-small-info {
+        .banner-small-title {
+            line-height: 1.1em;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-small-wrap {
+        .banner-small-info {
+            .banner-small-title {
+                font-size: 1.4em;
+                line-height: 1.1em;
+                max-height: 2.2em;
+                overflow: hidden;
+                margin: 0 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-small-wrap .banner-small-info {
+        .banner-small-title {
+            font-size: 1em;
+            line-height: 1.4em;
+            max-height: 2.2em;
+            overflow: hidden;
+            margin: 0 0 10px;
+        }
+    }
+}

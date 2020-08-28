@@ -7,15 +7,15 @@
 </template>
 
 <script>
-import TitleData from './v-components/title/Title'
-import DescriptionData from './v-components/description/Description'
-import LinkData from './v-components/link/Link'
+import ArticleTitle_TitleCmp from './v-components/title/Title'
+import ArticleTitle_DescriptionCmp from './v-components/description/Description'
+import ArticleTitle_LinkCmp from './v-components/link/Link'
 
 export default {
     components: {
-        "v-title": TitleData,
-        "v-description": DescriptionData,
-        "v-link": LinkData,
+        "v-title": ArticleTitle_TitleCmp,
+        "v-description": ArticleTitle_DescriptionCmp,
+        "v-link": ArticleTitle_LinkCmp,
     },
     props: {
         title: {

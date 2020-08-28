@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import TitleData from './v-components/title/Title'
-import DescriptionData from './v-components/description/Description'
+import ArticleText_TitleCmp from './v-components/title/Title'
+import ArticleText_DescriptionCmp from './v-components/description/Description'
 
 export default {
     components: {
-        "v-title": TitleData,
-        "v-description": DescriptionData,
+        "v-title": ArticleText_TitleCmp,
+        "v-description": ArticleText_DescriptionCmp,
     },
     props: {
         textTitle: {

@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import HeroMiddleComponent from "./v-components/HeroMiddle";
+import HeroBannerMiddle_HeroMiddleCmp from "./v-components/HeroMiddle";
 
 export default {
     components: {
-        "v-hero-middle": HeroMiddleComponent,
+        "v-hero-middle": HeroBannerMiddle_HeroMiddleCmp,
     },
     props: {
         linkTo: {
