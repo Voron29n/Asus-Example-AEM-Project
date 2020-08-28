@@ -1,0 +1,76 @@
+#proart__hero_banner_top * {
+    font-family: "Segoe UI", sans-serif !important;
+}
+
+#proart__hero_banner_top .row {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row:before,
+.row:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.always__on__top {
+    position: relative;
+    z-index: 1000;
+}
+
+#proart__hero_banner_top .row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#proart__hero_banner_top .row .col.l12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+#proart__hero_banner_top .kv_banner_carousel {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 2560px;
+    height: 686px;
+}
+
+.kv_banner_carousel {
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 2560px;
+    height: 686px;
+}
+
+.kv_banner_carousel .component_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.kv_banner_carousel .component_container .carousel-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kv_banner_carousel .component_container .carousel-list .carousel-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 688px;
+}

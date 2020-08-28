@@ -1,0 +1,11 @@
+@media (max-width: 719px) {
+    .cmc-unit-group>li {
+        width: 49%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cmc-unit-group>li {
+        width: 100%;
+    }
+}

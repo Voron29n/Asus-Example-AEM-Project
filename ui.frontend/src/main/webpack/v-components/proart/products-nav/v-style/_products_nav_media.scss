@@ -1,0 +1,65 @@
+@media (max-width: 720px) and (min-width: 0px) {
+    .section {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 720px) {
+    #proart__products_nav-component-vue .wd_section {
+        margin-bottom: 95px;
+    }
+    #proart__products_nav-component-vue .section_products {
+        position: relative;
+        margin-top: 10px;
+    }
+    #proart__productsNav .row .col.s12 {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+}
+
+@media (max-width: 1300px) and (min-width: 721px) {
+    .section {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 1300px;
+    }
+    .wd_section {
+        margin-bottom: 137px;
+    }
+    #proart__products_nav-component-vue .section_products {
+        position: relative;
+        margin-top: 60px;
+        background-color: #000;
+    }
+    #proart__productsNav .row .col.m12 {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+}
+
+@media (min-width: 1301px) {
+    .wd_section {
+        margin-bottom: 170px;
+    }
+}
+
+@media (max-width: 719px) {
+    .row {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 959px) and (min-width: 720px) {
+    .row {
+        margin-left: -20px;
+    }
+}

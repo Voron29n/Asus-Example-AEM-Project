@@ -1,4 +1,7 @@
-// .cmp_article_image_text-block {
-//     display: flex;
-//     flex-direction: row-reverse;
-// }
+#article_image-text-component-vue {
+    display: inline-block;
+}
+
+.cmp_article_image_text-block {
+    display: block;
+}

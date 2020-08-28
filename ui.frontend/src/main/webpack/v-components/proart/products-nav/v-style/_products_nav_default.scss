@@ -1,0 +1,58 @@
+.products-nav {
+    background-color: #000;
+}
+
+#proart__products_nav-component-vue .section {
+    position: relative;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 2560px;
+    box-sizing: border-box;
+    display: block;
+}
+
+#proart__products_nav-component-vue .section_products {
+    background-color: #131313;
+    position: relative;
+}
+
+#proart__productsNav .row {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row:before,
+.row:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.always__on__top {
+    position: relative;
+    z-index: 1000;
+}
+
+#proart__productsNav .always__on__top {
+    position: relative;
+    z-index: 1000;
+}
+
+#proart__productsNav .row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+#proart__productsNav .row .col.l12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}

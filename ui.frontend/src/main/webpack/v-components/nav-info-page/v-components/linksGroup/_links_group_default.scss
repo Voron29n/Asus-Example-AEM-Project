@@ -1,0 +1,105 @@
+.btn-group .caret {
+    border-top: 4px solid #000;
+    float: right;
+}
+
+.visible-phone,
+.visible-tablet,
+.hidden-desktop {
+    display: none!important;
+}
+
+.btn-group {
+    position: relative;
+    white-space: nowrap;
+}
+
+.btn,
+.nav-btn {
+    border: 0;
+    padding: initial;
+    text-shadow: none;
+    background: initial;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+}
+
+.btn-group .dropdown-toggle,
+.btn-group>.btn:first-child {
+    background-image: none;
+    background-color: #FFF;
+    border-radius: 0;
+    text-align: left;
+    border: 1px solid #929292;
+    position: relative;
+}
+
+.btn,
+.nav-btn {
+    padding: 4px 14px;
+    width: 93%;
+    background-image: none;
+    background-color: #FFF;
+    border-radius: 0;
+    text-align: left;
+    border: 1px solid #929292;
+    position: relative;
+}
+
+.btn-group .caret {
+    border-top: 4px solid #000;
+    float: right;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    border-color: #5B5B5B;
+}
+
+.dropdown-menu-flex-visible {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu-flex-visible .dropdown-menu {
+    position: initial;
+    display: initial;
+}
+
+.hidden-phone .member-func>span {
+    font-size: 18px;
+}
+
+.hidden-phone .member-func {
+    padding-bottom: 1.5em;
+    margin-bottom: 1.8em;
+    border-bottom: none;
+}
+
+.hidden-phone .member-func li {
+    padding: 4px 0;
+    margin-bottom: 1px;
+}
+
+.hidden-phone a {
+    color: #777;
+    font-size: 14px;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #00a8ff;
+}
+
+.hidden-phone a:link {
+    color: #777;
+}

@@ -1,0 +1,17 @@
+<sly data-sly-use.model="com.epam.asus.core.models.HotProductGroups"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!model.empty}"
+>
+
+    <div id="hot_product_groups-component-vue">
+
+        <vue-hot_product_groups-data
+                groups-title=${model.groupsTitle}
+                hot-products-info="${model.hotProductGroupsJson}"
+        >
+        </vue-hot_product_groups-data>
+
+    </div>
+
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

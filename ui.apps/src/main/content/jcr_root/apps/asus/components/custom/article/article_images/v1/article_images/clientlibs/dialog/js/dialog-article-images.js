@@ -33,13 +33,13 @@
 
     function onImagesChange(e) {
         disableButton(e);
-    };
+    }
 
 
     function onChangeAddButton(e) {
         let element = e.target;
         disableButton(element);
-    };
+    }
 
 
     function disableButton(element) {
@@ -65,7 +65,7 @@
             })
         }
 
-    };
+    }
 
 
 })(window, jQuery, jQuery(document), Granite, Coral);

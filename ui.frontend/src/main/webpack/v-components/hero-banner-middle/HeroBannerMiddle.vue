@@ -47,7 +47,7 @@ export default {
     },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./v-style/banner_middle_default";
 @import "./v-style/banner_middle_media";
 </style>

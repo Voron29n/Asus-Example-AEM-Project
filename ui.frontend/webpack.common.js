@@ -19,6 +19,9 @@ module.exports = {
             }),
         ],
         alias: {
+            "@resources": path.resolve(
+                path.join(__dirname, "src", "main", "webpack", "resources")
+            ),
             "@components": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "v-components")
             ),
@@ -28,6 +31,9 @@ module.exports = {
             "@mixin": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "v-components", "v-mixin")
             ),
+            "@common": path.resolve(
+                path.join(__dirname, "src", "main", "webpack", "v-components", "v-common")
+            ),
             'vue$': 'vue/dist/vue.esm.js'
         },
     },
@@ -36,19 +42,17 @@ module.exports = {
     },
     output: {
         filename: (chunkData) => {
-            return chunkData.chunk.name === "dependencies"
-                ? "clientlib-dependencies/[name].js"
-                : "clientlib-site/[name].js";
+            return chunkData.chunk.name === "dependencies" ?
+                "clientlib-dependencies/[name].js" :
+                "clientlib-site/[name].js";
         },
         path: path.resolve(__dirname, "dist"),
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    {
+                use: [{
                         options: {
                             eslintPath: require.resolve("eslint"),
                         },
@@ -72,7 +76,16 @@ module.exports = {
             },
             {
                 test: /\.vue$/,
-                use: ["vue-loader"],
+                use: {
+                    loader: "vue-loader",
+                    options: {
+                        loaders: {
+                            scss: [
+                                "vue-style-loader"
+                            ]
+                        }
+                    }
+                }
             },
             {
                 test: /\.scss$/,
@@ -92,6 +105,9 @@ module.exports = {
                                 return [require("autoprefixer")];
                             },
                         },
+                    },
+                    {
+                        loader: "resolve-url-loader",
                     },
                     {
                         loader: "sass-loader",
@@ -116,12 +132,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "clientlib-[name]/[name].css",
         }),
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),
-                to: "./clientlib-site",
-            },
-        ]),
+        new CopyWebpackPlugin([{
+            from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),
+            to: "./clientlib-site/resources",
+        }, ]),
     ],
     stats: {
         assetsSort: "chunks",

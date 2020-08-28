@@ -27,8 +27,7 @@
                                 composite="{Boolean}true"
                                 fieldDescription="New value"
                                 fieldLabel="Group links collection"
-                                validation="multifield-max-3"
-                                name="./footerGroupLinksCol">
+                                validation="multifield-max-3">
                             <field
                                     granite:class="cmp-navigation__editor-action_footerlinks"
                                     jcr:primaryType="nt:unstructured"
@@ -40,7 +39,7 @@
                                     <title
                                             jcr:primaryType="nt:unstructured"
                                             fieldDescription="Title group links"
-                                            fieldLabel="Title group"
+                                            emptyText="Title group"
                                             required="{Boolean}true"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             name="./groupTitle"/>
@@ -87,7 +86,7 @@
 
                                                         <linkTo
                                                                 jcr:primaryType="nt:unstructured"
-                                                                fieldLabel="Link to Url"
+                                                                emptyText="Link to Url"
                                                                 name="./linkTo"
                                                                 rootPath="/content/asus"
                                                                 suffix=".html"

@@ -1,0 +1,29 @@
+@media (max-width: 1300px) and (min-width: 721px) {
+    .proart__hero_banner_top__image,
+    .proart__hero_banner_top__image .img {
+        width: 1300px;
+        height: 650px;
+    }
+    .proart__hero_banner_top__image {
+        width: 1300px;
+        margin-left: -650px;
+    }
+}
+
+@media (max-width: 720px) {
+    .proart__hero_banner_top__image,
+    .proart__hero_banner_top__image .img {
+        width: 2560px;
+        height: 341px;
+    }
+    .proart__hero_banner_top__image {
+        width: 720px;
+        position: relative;
+        margin-left: -360px;
+        background-color: #ffcc0033;
+    }
+    .proart__hero_banner_top__image .img {
+        width: 720px;
+        position: relative;
+    }
+}

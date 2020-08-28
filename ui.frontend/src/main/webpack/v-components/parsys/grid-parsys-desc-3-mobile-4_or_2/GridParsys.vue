@@ -47,6 +47,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./v-style/parsys_default";
 </style>
