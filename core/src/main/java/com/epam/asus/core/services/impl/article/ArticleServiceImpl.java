@@ -2,7 +2,7 @@ package com.epam.asus.core.services.impl.article;
 
 import com.epam.asus.core.models.beans.article.ImagesBean;
 import com.epam.asus.core.services.ArticleService;
-import com.epam.asus.core.services.CommonUtils;
+import com.epam.asus.core.servlets.CommonUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;

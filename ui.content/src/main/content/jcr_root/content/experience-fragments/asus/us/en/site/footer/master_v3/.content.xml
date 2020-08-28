@@ -7,7 +7,7 @@
         cq:xfMasterVariation="{Boolean}true"
         cq:xfVariantType="web"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Footer white"
+        jcr:title="Footer black"
         sling:resourceType="asus/components/xfpage">
         <root
             jcr:primaryType="nt:unstructured"

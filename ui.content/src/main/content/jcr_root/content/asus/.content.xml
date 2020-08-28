@@ -10,10 +10,10 @@
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"
         sling:resourceType="foundation/components/redirect"
-        redirectTarget="/content/asus/us/en">
+        redirectTarget="/content/asus/us/ru">
         <image jcr:primaryType="nt:unstructured">
             <file/>
         </image>
     </jcr:content>
-    <us/>
+    <ru/>
 </jcr:root>
