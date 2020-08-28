@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import CategoriesNav_ProductsDataCmp from "./v-components/title/Title";
-import CategoriesNav_TitleDataCmp from "./v-components/categories/Categories";
+import CategoriesNav_TitleDataCmp from "./v-components/title/Title";
+import CategoriesNav_CategoriesDataCmp from "./v-components/categories/Categories";
 
 export default {
     components: {
         "v-title": CategoriesNav_TitleDataCmp,
-        "v-categories": CategoriesNav_ProductsDataCmp,
+        "v-categories": CategoriesNav_CategoriesDataCmp,
     },
     props: {
         categoriesTitle: {
@@ -30,7 +30,7 @@ export default {
                 categoriesTitle: this.$props.categoriesTitle,
             };
         },
-        productsData() {
+        categoriesData() {
             return {
                 categoriesNav: JSON.parse(this.$props.categoriesNav),
             };

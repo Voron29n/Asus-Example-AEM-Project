@@ -20,9 +20,9 @@ import Footer_CopyrightsCmp from './v-components/copyrights/Copyrights'
 
 export default {
     components: {
-        "v-language": LanguageData,
-        "v-linksGroup": LinksGroupData,
-        "v-copyrights": CopyrightsData,
+        "v-language": Footer_LanguageCmp,
+        "v-linksGroup": Footer_LinksGroupCmp,
+        "v-copyrights": Footer_CopyrightsCmp,
     },
     props: {
         blackVersion: {

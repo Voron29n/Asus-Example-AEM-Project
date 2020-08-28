@@ -15,8 +15,8 @@ import CustomizedText_DescriptionCmp from './v-components/description/Descriptio
 
 export default {
     components: {
-        "v-title": TitleData,
-        "v-description": DescriptionData,
+        "v-title": CustomizedText_TitleCmp,
+        "v-description": CustomizedText_DescriptionCmp,
     },
     props: {
         textTitle: {

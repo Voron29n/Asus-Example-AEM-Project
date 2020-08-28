@@ -36,6 +36,7 @@ import HeroBannerTop from "@components/hero-banner-top/HeroBannerTop";
 import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
 import ProArtHeroBannerTop from "@components/proart/hero-banner-top/HeroBannerTop";
 import ProArtProductsNav from "@components/proart/products-nav/ProductsNav";
+import ProArtCategoriesNav from "@components/proart/categories-nav/CategoriesNav";
 
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
@@ -62,6 +63,7 @@ vueArrayComponents = [
     new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
     new ComponentData("vue-proart__hero_banner_top-data", "#proart__hero_banner_top-component-vue", ProArtHeroBannerTop),
     new ComponentData("vue-products_nav-data", "#proart__products_nav-component-vue", ProArtProductsNav),
+    new ComponentData("vue-categories_nav-data", "#proart__categories_nav-component-vue", ProArtCategoriesNav),
 ];
 
 /* 
