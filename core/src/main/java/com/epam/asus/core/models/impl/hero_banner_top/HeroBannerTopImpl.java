@@ -3,6 +3,7 @@ package com.epam.asus.core.models.impl.hero_banner_top;
 import com.epam.asus.core.models.HeroBannerTop;
 import com.epam.asus.core.models.beans.hero_banner_top.ImageBean;
 import com.epam.asus.core.services.HeroBannerTopService;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -37,14 +38,10 @@ public class HeroBannerTopImpl implements HeroBannerTop {
 
     @PostConstruct
     public final void init() {
-        if (checkListResource(heroImages)) {
+        if (CommonUtils.isCheckResource(heroImages)) {
             setHeroImagesCollection(heroImages);
             heroBannerTopCollectionJson = new Gson().toJson(heroImagesCollection);
         }
-    }
-
-    private boolean checkListResource(List<Resource> resources) {
-        return resources != null && !resources.isEmpty();
     }
 
     private void setHeroImagesCollection(List<Resource> heroImages){

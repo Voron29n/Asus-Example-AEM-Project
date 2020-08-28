@@ -1,5 +1,6 @@
 package com.epam.asus.core.models.impl.nav_info_page;
 
+import com.epam.asus.core.utilites.CommonUtils;
 import lombok.Getter;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -26,7 +27,7 @@ public class LinksGroup {
 
     @PostConstruct
     public final void init() {
-        if(navInfoPageLinksGroup!=null && !navInfoPageLinksGroup.isEmpty()){
+        if(CommonUtils.isCheckResource(navInfoPageLinksGroup)){
             linksNames = new ArrayList<>();
             for (Resource resource : navInfoPageLinksGroup) {
                 LinksNames linksName = resource.adaptTo(LinksNames.class);

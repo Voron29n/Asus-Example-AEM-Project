@@ -14,7 +14,9 @@ import java.util.List;
 
 @Component(immediate = true, service = ProductsNavService.class)
 public class ProductsNavServiceImpl implements ProductsNavService {
+
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
     private static final String FILE_REFERENCE_SMALL = "fileReferenceSmall";
     private static final String FILE_REFERENCE_MEDIUM = "fileReferenceMedium";

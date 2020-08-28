@@ -3,6 +3,7 @@ package com.epam.asus.core.models.impl.nav_info_page;
 import com.epam.asus.core.models.NavInfoPage;
 import com.epam.asus.core.models.beans.nav_info_page.LinksGroupBean;
 import com.epam.asus.core.services.NavInfoPageService;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -41,12 +42,10 @@ public class NavInfoPageImpl implements NavInfoPage {
 
     @PostConstruct
     public final void init() {
-        if (checkListResource(navInfoPageGroupLinks)) setNavInfoPageGroupLinksCollection(navInfoPageGroupLinks);
-        navInfoPageGroupLinksJson = new Gson().toJson(navInfoPageGroupLinksCol);
-    }
-
-    private boolean checkListResource(List<Resource> resources) {
-        return resources != null && !resources.isEmpty();
+        if (CommonUtils.isCheckResource(navInfoPageGroupLinks)) {
+            setNavInfoPageGroupLinksCollection(navInfoPageGroupLinks);
+            navInfoPageGroupLinksJson = new Gson().toJson(navInfoPageGroupLinksCol);
+        }
     }
 
     private void setNavInfoPageGroupLinksCollection(List<Resource> navInfoPageGroupLinks) {
@@ -55,6 +54,6 @@ public class NavInfoPageImpl implements NavInfoPage {
 
     @Override
     public boolean isEmpty() {
-        return title == null;
+        return title == null || navInfoPageGroupLinksJson == null;
     }
 }

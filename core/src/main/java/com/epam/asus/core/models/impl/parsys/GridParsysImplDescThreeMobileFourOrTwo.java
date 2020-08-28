@@ -59,7 +59,6 @@ public class GridParsysImplDescThreeMobileFourOrTwo implements GridParsys {
         }
     }
 
-
     @Override
     public boolean isEmpty() {
         return parsysType == null;

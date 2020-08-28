@@ -14,7 +14,9 @@ import java.util.List;
 
 @Component(immediate = true, service = HeroBannerTopService.class)
 public class HeroBannerTopServiceImpl implements HeroBannerTopService {
+
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
     private static final String FILE_REFERENCE_DESKTOP = "fileReferenceDesktop";
     private static final String FILE_REFERENCE_MOBILE = "fileReferenceMobile";
@@ -44,7 +46,7 @@ public class HeroBannerTopServiceImpl implements HeroBannerTopService {
                 .fileReferenceDesktop(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_DESKTOP))
                 .fileReferenceMobile(CommonUtils.getPropertyValueByPropertyName(vm, FILE_REFERENCE_MOBILE))
                 .descriptionLink(CommonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
-                .linkTo(CommonUtils.correctLinkByURLValue(isExternalLink, vm))
+                .linkTo(CommonUtils.correctLinkByURLFromValueMap(isExternalLink, vm))
                 .linkUrlTarget(CommonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
     }

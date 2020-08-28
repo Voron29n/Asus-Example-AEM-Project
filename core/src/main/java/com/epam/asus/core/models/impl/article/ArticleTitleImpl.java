@@ -1,6 +1,7 @@
 package com.epam.asus.core.models.impl.article;
 
 import com.epam.asus.core.models.ArticleTitle;
+import com.epam.asus.core.utilites.CommonUtils;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -36,9 +37,7 @@ public class ArticleTitleImpl implements ArticleTitle{
 
     @PostConstruct
     public final void init() {
-        if (!isExternalLink && linkTo != null) {
-            linkTo = linkTo.concat(".html");
-        }
+        linkTo = CommonUtils.correctExternalLink(isExternalLink, linkTo);
     }
 
     @Override

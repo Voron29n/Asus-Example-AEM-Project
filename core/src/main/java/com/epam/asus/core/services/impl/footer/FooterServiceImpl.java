@@ -74,7 +74,7 @@ public class FooterServiceImpl implements FooterService {
         return CopyrightsBean.builder()
                 .descriptionLink(CommonUtils.getPropertyValueByPropertyName(vm, DESCRIPTION_LINK))
                 .isExternalLink(isExternalLink)
-                .linkTo(CommonUtils.correctLinkByURLValue(isExternalLink, vm))
+                .linkTo(CommonUtils.correctLinkByURLFromValueMap(isExternalLink, vm))
                 .linkUrlTarget(CommonUtils.getPropertyValueByPropertyName(vm, LINK_URL_TARGET))
                 .build();
     }

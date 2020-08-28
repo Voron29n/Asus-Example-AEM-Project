@@ -25,7 +25,7 @@ public class ArticleTextImpl implements ArticleText {
 
     @Override
     public boolean isEmpty() {
-        return description == null;
+        return title == null && description == null;
     }
 
 }

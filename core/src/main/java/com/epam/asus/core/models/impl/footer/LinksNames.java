@@ -1,5 +1,6 @@
 package com.epam.asus.core.models.impl.footer;
 
+import com.epam.asus.core.utilites.CommonUtils;
 import lombok.Getter;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -23,8 +24,6 @@ public class LinksNames {
 
     @PostConstruct
     public final void init() {
-        if(!isExternalLink && linkTo != null){
-            linkTo = linkTo.concat(".html");
-        }
+        linkTo = CommonUtils.correctExternalLink(isExternalLink, linkTo);
     }
 }

@@ -3,6 +3,7 @@ package com.epam.asus.core.models.impl.hot_product_groups;
 import com.epam.asus.core.models.HotProductGroups;
 import com.epam.asus.core.models.beans.hot_product_groups.ProductBean;
 import com.epam.asus.core.services.HotProductGroupsService;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -41,12 +42,10 @@ public class HotProductGroupsImpl implements HotProductGroups {
 
     @PostConstruct
     public final void init() {
-        if (checkListResource(hotProductGroups)) setHotProductGroupsCollection(hotProductGroups);
-        hotProductGroupsJson = new Gson().toJson(productsCol);
-    }
-
-    private boolean checkListResource(List<Resource> resources) {
-        return resources != null && !resources.isEmpty();
+        if (CommonUtils.isCheckResource(hotProductGroups)) {
+            setHotProductGroupsCollection(hotProductGroups);
+            hotProductGroupsJson = new Gson().toJson(productsCol);
+        }
     }
 
     private void setHotProductGroupsCollection(List<Resource> hotProductGroups) {
@@ -55,7 +54,7 @@ public class HotProductGroupsImpl implements HotProductGroups {
 
     @Override
     public boolean isEmpty() {
-        return groupsTitle == null && productsCol == null;
+        return groupsTitle == null && hotProductGroupsJson == null;
     }
 
 }

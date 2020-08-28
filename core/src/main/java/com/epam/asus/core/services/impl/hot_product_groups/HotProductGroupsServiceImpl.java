@@ -14,7 +14,9 @@ import java.util.List;
 
 @Component(immediate = true, service = HotProductGroupsService.class)
 public class HotProductGroupsServiceImpl implements HotProductGroupsService {
+
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
     private static final String FILE_REFERENCE = "fileReference";
     private static final String TITLE = "title";

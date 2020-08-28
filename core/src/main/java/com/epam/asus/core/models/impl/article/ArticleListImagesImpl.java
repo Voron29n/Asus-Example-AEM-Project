@@ -3,6 +3,7 @@ package com.epam.asus.core.models.impl.article;
 import com.epam.asus.core.models.ArticleListImages;
 import com.epam.asus.core.models.beans.article.ImagesBean;
 import com.epam.asus.core.services.ArticleService;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -41,14 +42,10 @@ public class ArticleListImagesImpl implements ArticleListImages {
 
     @PostConstruct
     public final void init() {
-        if (checkListResource(images)) {
+        if (CommonUtils.isCheckResource(images)) {
             setImagesBeanList(images);
             imagesJson = new Gson().toJson(imagesBeanList);
         }
-    }
-
-    private boolean checkListResource(List<Resource> resources) {
-        return resources != null && !resources.isEmpty();
     }
 
     private void setImagesBeanList(List<Resource> images) {

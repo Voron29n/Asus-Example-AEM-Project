@@ -29,7 +29,7 @@ public class HeroBannerTopImpl implements ProArtHeroBannerTop {
 
     @Override
     public boolean isEmpty() {
-        return fileReferenceLarge == null;
+        return fileReferenceSmall == null || fileReferenceMedium == null || fileReferenceLarge == null;
     }
 
 }

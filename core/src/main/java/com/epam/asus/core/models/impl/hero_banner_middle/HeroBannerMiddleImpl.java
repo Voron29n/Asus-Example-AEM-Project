@@ -1,6 +1,7 @@
 package com.epam.asus.core.models.impl.hero_banner_middle;
 
 import com.epam.asus.core.models.HeroBannerMiddle;
+import com.epam.asus.core.utilites.CommonUtils;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -33,11 +34,7 @@ public class HeroBannerMiddleImpl implements HeroBannerMiddle {
 
     @PostConstruct
     public final void init() {
-
-        if (!isExternalLink && linkTo != null) {
-            linkTo = linkTo.concat(".html");
-        }
-
+        linkTo = CommonUtils.correctExternalLink(isExternalLink, linkTo);
     }
 
     @Override

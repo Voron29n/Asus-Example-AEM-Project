@@ -25,7 +25,7 @@ public class CustomizedTextImpl implements CustomizedText {
 
     @Override
     public boolean isEmpty() {
-        return description == null;
+        return title == null && description == null;
     }
 
 }

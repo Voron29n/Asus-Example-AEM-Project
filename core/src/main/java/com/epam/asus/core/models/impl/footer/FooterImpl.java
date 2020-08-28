@@ -5,6 +5,7 @@ import com.epam.asus.core.models.beans.footer.CopyrightsBean;
 import com.epam.asus.core.models.beans.footer.LinksGroupBean;
 import com.epam.asus.core.models.beans.footer.SocialsBean;
 import com.epam.asus.core.services.FooterService;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -66,23 +67,24 @@ public class FooterImpl implements Footer {
 
     @PostConstruct
     public final void init() {
-        if (!isExternalLink && linkTo != null) {
-            linkTo = linkTo.concat(".html");
+        linkTo = CommonUtils.correctExternalLink(isExternalLink, linkTo);
+        if (CommonUtils.isCheckResource(socials)) {
+            setSocialsCollection(socials);
+            socialsJson = new Gson().toJson(socialsCol);
         }
-        if (checkListResource(footerGroupLinks)) setFooterGroupLinksCollection(footerGroupLinks);
-        if (checkListResource(socials)) setSocialsCollection(socials);
-        if (checkListResource(copyrights)) setCopyrightsCollections(copyrights);
-
-        socialsJson = new Gson().toJson(socialsCol);
-        copyrightsJson = new Gson().toJson(copyrightsCol);
-        footerGroupLinksJson = new Gson().toJson(footerGroupLinksCol);
-
+        if (CommonUtils.isCheckResource(copyrights)) {
+            setCopyrightsCollections(copyrights);
+            copyrightsJson = new Gson().toJson(copyrightsCol);
+        }
+        if (CommonUtils.isCheckResource(footerGroupLinks)) {
+            setFooterGroupLinksCollection(footerGroupLinks);
+            footerGroupLinksJson = new Gson().toJson(footerGroupLinksCol);
+        }
     }
 
-    private boolean checkListResource(List<Resource> resources) {
-        return resources != null && !resources.isEmpty();
+    private void setFooterGroupLinksCollection(List<Resource> footerGroupLinks) {
+        footerGroupLinksCol = footerService.populateMultiFieldFooterGroupLinksItems(footerGroupLinks);
     }
-
     private void setSocialsCollection(List<Resource> socials){
         socialsCol = footerService.populateMultiFieldSocialsItems(socials);
     }
@@ -90,14 +92,8 @@ public class FooterImpl implements Footer {
         copyrightsCol = footerService.populateMultiFieldCopyrightItems(copyrights);
     }
 
-    private void setFooterGroupLinksCollection(List<Resource> footerGroupLinks) {
-        footerGroupLinksCol = footerService.populateMultiFieldFooterGroupLinksItems(footerGroupLinks);
-    }
-
-
     @Override
     public boolean isEmpty() {
         return descriptionLink == null;
     }
-
 }

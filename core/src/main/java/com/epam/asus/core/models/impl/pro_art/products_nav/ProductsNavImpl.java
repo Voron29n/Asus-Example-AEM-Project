@@ -3,6 +3,7 @@ package com.epam.asus.core.models.impl.pro_art.products_nav;
 import com.epam.asus.core.models.ProArtProductsNav;
 import com.epam.asus.core.models.beans.pro_art.products_nav.ProductBean;
 import com.epam.asus.core.services.pro_art.ProductsNavService;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -37,12 +38,10 @@ public class ProductsNavImpl implements ProArtProductsNav {
 
     @PostConstruct
     public final void init() {
-        if (checkListResource(products)) setProductsNavCollection(products);
-        productsNavJson = new Gson().toJson(productsCol);
-    }
-
-    private boolean checkListResource(List<Resource> resources) {
-        return resources != null && !resources.isEmpty();
+        if (CommonUtils.isCheckResource(products)) {
+            setProductsNavCollection(products);
+            productsNavJson = new Gson().toJson(productsCol);
+        }
     }
 
     private void setProductsNavCollection(List<Resource> products) {
@@ -51,6 +50,6 @@ public class ProductsNavImpl implements ProArtProductsNav {
 
     @Override
     public boolean isEmpty() {
-        return productsCol == null;
+        return productsNavJson == null;
     }
 }
