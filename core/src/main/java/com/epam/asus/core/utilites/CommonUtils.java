@@ -1,4 +1,4 @@
-package com.epam.asus.core.servlets;
+package com.epam.asus.core.utilites;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.sling.api.resource.Resource;

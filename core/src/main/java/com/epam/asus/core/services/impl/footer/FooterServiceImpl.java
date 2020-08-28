@@ -4,7 +4,7 @@ import com.epam.asus.core.models.beans.footer.CopyrightsBean;
 import com.epam.asus.core.models.beans.footer.LinksGroupBean;
 import com.epam.asus.core.models.beans.footer.SocialsBean;
 import com.epam.asus.core.models.impl.footer.LinksGroup;
-import com.epam.asus.core.servlets.CommonUtils;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.epam.asus.core.services.FooterService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;

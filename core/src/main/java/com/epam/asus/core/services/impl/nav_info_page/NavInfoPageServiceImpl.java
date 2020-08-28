@@ -2,7 +2,7 @@ package com.epam.asus.core.services.impl.nav_info_page;
 
 import com.epam.asus.core.models.beans.nav_info_page.LinksGroupBean;
 import com.epam.asus.core.models.impl.nav_info_page.LinksGroup;
-import com.epam.asus.core.servlets.CommonUtils;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.epam.asus.core.services.NavInfoPageService;
 import org.apache.sling.api.resource.Resource;
 import org.osgi.service.component.annotations.Component;

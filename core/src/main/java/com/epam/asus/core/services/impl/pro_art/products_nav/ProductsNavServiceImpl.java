@@ -1,7 +1,7 @@
 package com.epam.asus.core.services.impl.pro_art.products_nav;
 
 import com.epam.asus.core.models.beans.pro_art.products_nav.ProductBean;
-import com.epam.asus.core.servlets.CommonUtils;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.epam.asus.core.services.pro_art.ProductsNavService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
