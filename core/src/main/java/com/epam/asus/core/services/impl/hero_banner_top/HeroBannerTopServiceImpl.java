@@ -1,7 +1,7 @@
 package com.epam.asus.core.services.impl.hero_banner_top;
 
 import com.epam.asus.core.models.beans.hero_banner_top.ImageBean;
-import com.epam.asus.core.services.CommonUtils;
+import com.epam.asus.core.servlets.CommonUtils;
 import com.epam.asus.core.services.HeroBannerTopService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;

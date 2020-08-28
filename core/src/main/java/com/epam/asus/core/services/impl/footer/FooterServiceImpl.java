@@ -4,7 +4,7 @@ import com.epam.asus.core.models.beans.footer.CopyrightsBean;
 import com.epam.asus.core.models.beans.footer.LinksGroupBean;
 import com.epam.asus.core.models.beans.footer.SocialsBean;
 import com.epam.asus.core.models.impl.footer.LinksGroup;
-import com.epam.asus.core.services.CommonUtils;
+import com.epam.asus.core.servlets.CommonUtils;
 import com.epam.asus.core.services.FooterService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
@@ -17,7 +17,9 @@ import java.util.List;
 
 @Component(immediate = true, service = FooterService.class)
 public class FooterServiceImpl implements FooterService {
+
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+
     private static final String LOGGER_MESSAGE = "ValueMap not found for resource : {}";
     private static final String FILE_REFERENCE = "fileReference";
     private static final String TITLE = "title";

@@ -9,4 +9,5 @@
         sling:resourceType="cq/experience-fragments/components/experiencefragment"/>
     <master_v1/>
     <master_v2/>
+    <master_v3/>
 </jcr:root>

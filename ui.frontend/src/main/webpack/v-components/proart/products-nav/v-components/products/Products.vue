@@ -56,7 +56,7 @@ export default {
     methods: {
         getImage(el) {
           let style = null;
-            switch (this.getWindowVersion()) {
+            switch (this.windowVersion) {
                 case "small":
                     style = ("url(" + el.fileReferenceSmall + ")");
                     break;

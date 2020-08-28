@@ -1,7 +1,7 @@
 package com.epam.asus.core.services.impl.hot_product_groups;
 
 import com.epam.asus.core.models.beans.hot_product_groups.ProductBean;
-import com.epam.asus.core.services.CommonUtils;
+import com.epam.asus.core.servlets.CommonUtils;
 import com.epam.asus.core.services.HotProductGroupsService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div :class="[this.blackVersion ? 'black-version' : 'white-version']">
     <div class="aai-inner">
         <div class="aai-fmiddle">
             <v-linksGroup :links-group-data="linksGroupData" :socials-data="socialsData"></v-linksGroup>
@@ -25,6 +25,10 @@ export default {
         "v-copyrights": CopyrightsData,
     },
     props: {
+        blackVersion: {
+            type: Boolean,
+            required: false,
+        },
         descriptionLink: {
             type: String,
             required: false,
@@ -44,22 +48,27 @@ export default {
         linksGroup: {
             type: String,
             required: false,
-            default: ""
         },
         socials: {
             type: String,
             required: false,
-            default: ""
         },
         socialsTitle: {
             type: String,
             required: false,
-            default: ""
         },
         copyrights: {
             type: String,
             required: false,
-            default: ""
+        },
+    },
+    mounted() {
+        this.applyCurrentFooterStyle();
+    },
+    methods: {
+        applyCurrentFooterStyle() {
+            document.querySelector('body footer').style.background = 
+                this.blackVersion ? '#242424' : '#ECECEC' ;
         },
     },
     computed: {

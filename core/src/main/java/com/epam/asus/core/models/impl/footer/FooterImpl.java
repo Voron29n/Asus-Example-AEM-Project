@@ -32,6 +32,9 @@ public class FooterImpl implements Footer {
     private FooterService footerService;
 
     @ValueMapValue
+    private boolean isBlackVersion;
+
+    @ValueMapValue
     private String fileReference;
     @ValueMapValue
     private boolean isExternalLink;
