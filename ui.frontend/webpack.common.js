@@ -34,6 +34,9 @@ module.exports = {
             "@common": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "v-components", "v-common")
             ),
+            "@plugin": path.resolve(
+                path.join(__dirname, "src", "main", "webpack", "v-components", "v-plugin")
+            ),
             'vue$': 'vue/dist/vue.esm.js'
         },
     },
