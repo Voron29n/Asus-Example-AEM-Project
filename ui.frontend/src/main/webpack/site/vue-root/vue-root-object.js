@@ -4,6 +4,12 @@ import Vue from "vue";
 /* Vue configuration */
 Vue.config.devtools = true;
 
+/* Import Custom Vue Plugin */
+import fetchPlugin from "@plugin/fetchPlugin.js";
+
+/* Registration Custom Vue Plugin */
+Vue.use(fetchPlugin);
+
 /* Import custom class */
 import { ComponentData } from "./ComponentData";
 
@@ -17,8 +23,6 @@ const vueRootData = {
 };
 
 /* First what you need is import your components and you can use alias @components for this*/
-import IconifyIcon from '@iconify/vue';
-import icomoon from '@iconify/icons-icomoon-free/download';
 import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
 import HeroBannerSmall from "@components/hero-banner-small/HeroBannerSmall";
 import HelloWorld from "@components/hello-world/HelloWorld";
@@ -40,8 +44,6 @@ import ProArtCategoriesNav from "@components/proart/categories-nav/CategoriesNav
 
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
-    new ComponentData(IconifyIcon),
-    new ComponentData(icomoon),
     new ComponentData(
         "hero-banner-middle" /* it is a name for custom tag(tagName) that you can use at ui.app in component.html  */ ,
         "#hero-banner-middle-component-vue" /* it is a selector. This selector need to know if in the page we have our custom component */ ,
