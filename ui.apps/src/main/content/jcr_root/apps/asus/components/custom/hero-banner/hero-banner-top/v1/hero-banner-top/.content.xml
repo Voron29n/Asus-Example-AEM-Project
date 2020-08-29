@@ -4,5 +4,5 @@
           jcr:primaryType="cq:Component"
           jcr:description="Hero banner top v1"
           jcr:title="Hero banner top v1"
-          componentGroup="Asus Project - Content"
+          componentGroup="Asus Project - Hero Group"
           />
