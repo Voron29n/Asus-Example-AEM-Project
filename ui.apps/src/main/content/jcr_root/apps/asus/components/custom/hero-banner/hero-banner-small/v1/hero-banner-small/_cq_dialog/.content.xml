@@ -5,7 +5,7 @@
           jcr:primaryType="nt:unstructured"
           jcr:title="Hero Banner Small"
           sling:resourceType="cq/gui/components/authoring/dialog"
-          extraClientlibs="[asus.components.hero.banner.small.v1.dialog]">
+          extraClientlibs="[asus.components.hero-banner.banner-small.v1.dialog]">
     <content
             jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/container">

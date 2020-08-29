@@ -23,21 +23,26 @@ const vueRootData = {
 };
 
 /* First what you need is import your components and you can use alias @components for this*/
-import HeroBannerMiddle from "@components/hero-banner-middle/HeroBannerMiddle";
-import HeroBannerSmall from "@components/hero-banner-small/HeroBannerSmall";
-import HelloWorld from "@components/hello-world/HelloWorld";
-import Footer from "@components/footer/Footer";
-import NavInfoPage from "@components/nav-info-page/NavInfoPage";
+/* default */
+import HotProductGroups from "@components/standart/hot-product-groups/HotProductGroups";
+/* Parsys Group*/
 import GridParsysDesk4Mobile4Or2 from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
-import ArticleTitle from "@components/article-title/ArticleTitle";
-import ArticleImageText from "@components/article-image-text/ArticleImageText";
-import ArticleText from "@components/article-text/ArticleText";
-import ArticleImage from "@components/article-image/ArticleImage";
-import ArticleImages from "@components/article-images/ArticleImages";
-import HotProductGroups from "@components/hot-product-groups/HotProductGroups";
-import CustomizedText from "@components/customized-text/CustomizedText";
-import HeroBannerTop from "@components/hero-banner-top/HeroBannerTop";
 import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
+/* Hero-banner Group*/
+import HeroBannerMiddle from "@components/hero-banner/hero-banner-middle/HeroBannerMiddle";
+import HeroBannerSmall from "@components/hero-banner/hero-banner-small/HeroBannerSmall";
+import HeroBannerTop from "@components/hero-banner/hero-banner-top/HeroBannerTop";
+/* Structure Group*/
+import Footer from "@components/structure/footer/Footer";
+import NavInfoPage from "@components/structure/nav-info-page/NavInfoPage";
+/* Article Group*/
+import ArticleTitle from "@components/article/article-title/ArticleTitle";
+import ArticleImageText from "@components/article/article-image-text/ArticleImageText";
+import ArticleText from "@components/article/article-text/ArticleText";
+import ArticleImage from "@components/article/article-image/ArticleImage";
+import ArticleImages from "@components/article/article-images/ArticleImages";
+import CustomizedText from "@components/article/customized-text/CustomizedText";
+/* ProArt Group*/
 import ProArtHeroBannerTop from "@components/proart/hero-banner-top/HeroBannerTop";
 import ProArtProductsNav from "@components/proart/products-nav/ProductsNav";
 import ProArtCategoriesNav from "@components/proart/categories-nav/CategoriesNav";
@@ -50,7 +55,6 @@ vueArrayComponents = [
         HeroBannerMiddle /* it is a import(importObject) Vue Component */
     ),
     new ComponentData("hero-banner-small", "#hero-banner-small-component-vue", HeroBannerSmall),
-    new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
     new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
     new ComponentData("grid-parsys-desk3-mobile4-or-mobile2", "#grid-parsys-desc-three-mobile-four-or-two", GridParsysDesk4Mobile4Or2),
     new ComponentData("vue-navinfopage-data", "#nav_info_page-component-vue", NavInfoPage),

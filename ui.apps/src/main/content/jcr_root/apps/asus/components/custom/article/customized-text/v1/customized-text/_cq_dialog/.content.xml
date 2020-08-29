@@ -5,7 +5,7 @@
           jcr:primaryType="nt:unstructured"
           jcr:title="Customized text v1"
           sling:resourceType="cq/gui/components/authoring/dialog"
-          extraClientlibs="[asus.components.customized-text.v1.dialog]">
+          extraClientlibs="[asus.components.article.customized-text.v1.dialog]">
     <content
             jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/container">
@@ -18,12 +18,12 @@
 
                     <includeTitle
                             jcr:primaryType="nt:unstructured"
-                            path="/apps/asus/components/custom/customized-text/v1/customized-text/cq:dialog/tabs/title"
+                            path="/apps/asus/components/custom/article/customized-text/v1/customized-text/cq:dialog/tabs/title"
                             sling:resourceType="granite/ui/components/foundation/include"
                     />
                     <includeDescription
                             jcr:primaryType="nt:unstructured"
-                            path="/apps/asus/components/custom/customized-text/v1/customized-text/cq:dialog/tabs/description"
+                            path="/apps/asus/components/custom/article/customized-text/v1/customized-text/cq:dialog/tabs/description"
                             sling:resourceType="granite/ui/components/foundation/include"
                     />
                 </items>

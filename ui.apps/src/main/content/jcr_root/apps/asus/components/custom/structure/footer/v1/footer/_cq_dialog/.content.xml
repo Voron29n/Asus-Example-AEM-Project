@@ -5,7 +5,7 @@
           jcr:primaryType="nt:unstructured"
           jcr:title="Footer v1"
           sling:resourceType="cq/gui/components/authoring/dialog"
-          extraClientlibs="[asus.components.footer.v1.dialog]">
+          extraClientlibs="[asus.components.structure.footer.v1.dialog]">
     <content
             granite:class="cmp-footer_v1__editor"
             jcr:primaryType="nt:unstructured"

@@ -4,5 +4,5 @@
     cq:allowedTemplates="[/conf/asus/settings/wcm/templates/(?!page-).*]"
     jcr:primaryType="sling:OrderedFolder"
     jcr:title="Asus Project Fragments">
-    <us/>
+    <ru/>
 </jcr:root>

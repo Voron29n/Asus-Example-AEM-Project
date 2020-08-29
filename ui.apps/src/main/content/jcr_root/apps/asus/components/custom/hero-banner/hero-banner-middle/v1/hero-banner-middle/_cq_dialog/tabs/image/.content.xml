@@ -1,0 +1,103 @@
+<image xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+              xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+              xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+              jcr:primaryType="nt:unstructured"
+              jcr:title="Hero Image"
+              margin="{Boolean}true"
+              sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+
+        <column
+                jcr:primaryType="nt:unstructured"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+
+                <column jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <imageDesktop
+                                granite:class="cmp-hero_banner_middle__desktop-image"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Image Desktop"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                        granite:class="cmp-hero_banner_middle__image_block"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                        margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <file
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                        allowUpload="{Boolean}false"
+                                                        autoStart="{Boolean}false"
+                                                        class="cq-droptarget"
+                                                        fieldLabel="Image Asset For Desktop Version"
+                                                        fileNameParameter="./fileNameDesktop"
+                                                        fileReferenceParameter="./fileReferenceDesktop"
+                                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                        multiple="{Boolean}false"
+                                                        name="./fileDesktop"
+                                                        title="Upload Image Asset"
+                                                        uploadUrl="${suffix.path}"
+                                                        useHTML5="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </columns>
+                            </items>
+                        </imageDesktop>
+                        <imageMobile
+                                granite:class="cmp-hero_banner_middle__mobile-image"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Image Mobile"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                            <items jcr:primaryType="nt:unstructured">
+                                <columns
+                                        granite:class="cmp-hero_banner_middle__mobile-image_block"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                        margin="{Boolean}true">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <file
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                        allowUpload="{Boolean}false"
+                                                        autoStart="{Boolean}false"
+                                                        class="cq-droptarget"
+                                                        fieldLabel="Image Asset For Mobile Version"
+                                                        fileNameParameter="./fileNameMobile"
+                                                        fileReferenceParameter="./fileReferenceMobile"
+                                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                        multiple="{Boolean}false"
+                                                        name="./fileMobile"
+                                                        title="Upload Image Asset"
+                                                        uploadUrl="${suffix.path}"
+                                                        useHTML5="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </columns>
+                            </items>
+                        </imageMobile>
+
+                    </items>
+                </column>
+            </items>
+        </column>
+    </items>
+</image>
