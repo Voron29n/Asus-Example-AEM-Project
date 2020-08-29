@@ -2,20 +2,16 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:tags="[]"
-        cq:template="/conf/asus/settings/wcm/templates/xf-web-variation"
-        cq:xfMasterVariation="{Boolean}true"
-        cq:xfVariantType="web"
+        cq:template="/conf/asus/settings/wcm/templates/page-content-article"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Footer black"
-        sling:resourceType="asus/components/xfpage">
+        sling:resourceType="asus/components/page">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="asus/components/container"
-            layout="responsiveGrid">
-            <footer
+            sling:resourceType="asus/components/container">
+                <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="asus/components/custom/structure/footer/v1/footer"/>
+                    sling:resourceType="asus/components/container"
+                    layout="responsiveGrid"/>
         </root>
     </jcr:content>
 </jcr:root>

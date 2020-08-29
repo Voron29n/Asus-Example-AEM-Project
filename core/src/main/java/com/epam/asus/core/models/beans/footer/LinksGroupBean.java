@@ -1,6 +1,6 @@
 package com.epam.asus.core.models.beans.footer;
 
-import com.epam.asus.core.models.impl.footer.LinksNames;
+import com.epam.asus.core.models.impl.structure.footer.LinksNames;
 import lombok.*;
 
 import java.util.List;

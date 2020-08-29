@@ -1,6 +1,6 @@
 package com.epam.asus.core.models.beans.nav_info_page;
 
-import com.epam.asus.core.models.impl.nav_info_page.LinksNames;
+import com.epam.asus.core.models.impl.article.nav_info_page.LinksNames;
 import lombok.*;
 
 import java.util.List;

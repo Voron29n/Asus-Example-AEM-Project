@@ -15,7 +15,7 @@
             layout="responsiveGrid">
             <nav
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="asus/components/custom/nav-info-page/v1/nav-info-page"/>
+                    sling:resourceType="asus/components/custom/article/nav-info-page/v1/nav-info-page"/>
         </root>
     </jcr:content>
 </jcr:root>
