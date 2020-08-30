@@ -73,12 +73,13 @@ module.exports = {
                 ],
             },
             {
-                test: /\.js$/,
+                test: /(\.js[\S]{0,1})$/i,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                options: {
-                    plugins: ['@babel/plugin-syntax-dynamic-import']
-                }
+                query: {
+                    presets: ['@babel/preset-env'],
+                    plugins: ['@babel/proposal-class-properties']
+                },
             },
             {
                 test: /\.vue$/,

@@ -58,7 +58,11 @@ vueArrayComponents = [
     // new ComponentData("hero-banner-small", "#hero-banner-small-component-vue", HeroBannerSmall),
     // // new ComponentData("hello-world", "#hello-component-vue", HelloWorld),
     // new ComponentData('vue-footer-data', "#footer-component-vue", '../../v-components/structure/footer/Footer.vue'),
-    new ComponentData('vue-footer-data', "#footer-component-vue", '@components/structure/footer/Footer'),
+    new ComponentData(
+        "vue-footer-data",
+        "#footer-component-vue",
+        "@components/structure/footer/Footer"
+    ),
     // new ComponentData("grid-parsys-desk3-mobile4-or-mobile2", "#grid-parsys-desc-three-mobile-four-or-two", GridParsysDesk4Mobile4Or2),
     // new ComponentData("vue-navinfopage-data", "#nav_info_page-component-vue", NavInfoPage),
     // new ComponentData("vue-title-data", "#article_title-component-vue", ArticleTitle),
@@ -82,156 +86,63 @@ vueArrayComponents = [
     }
 */
 vueArrayComponents.forEach((element) => {
-    if (document.querySelector(element.selector)) {
-        vueComponentObject[element.tagName] = element.path;
-    } else {
-        console.log(
-            "Can't find element with same selector:" + element.selector
-        );
-    }
+    // for (const cmp of document.querySelectorAll(element.tagName)) {
+
+    //     // link.addEventListener("click", e => {
+    //     //   e.preventDefault();
+
+    //     import ('./data.js')
+    //     .then(module => {
+    //             module.qwe();
+    //         })
+    //         .catch(err => {
+    //             console.log("error")
+    //         });
+    //     // });
+    // }
+    let myExport = element.tagName;
+
+    // });
+    // import * as myModule from './file.js';
+    // myModule.doAllTheAmazingThings(myExport);
+
+    // import {myExport} from '/modules/my-module.js';
+
+    // if (document.querySelector(element.selector)) {
+    //     // vueComponentObject[element.tagName] = element.path;
+    //     let data = element.tagName;
+    //     // import('./data.js')
+    //     //     .then((module) => {
+    //     // // Do something with the module.
+    //     //     });
+    //     import { getUsefulContents } from './file.js';
+    //     getUsefulContents(window.location.href,
+    //         data => { doSomethingUseful(data); });
+
+    // } else {
+    //     console.log(
+    //         "Can't find element with same selector:" + element.selector
+    //     );
+    // }
 });
 
+import { getUsefulContents } from "./file.js";
+getUsefulContents(window.location.href, (data) => {
+    doSomethingUseful(data);
+});
+
+function doSomethingUseful(data) {
+    console.log(data);
+}
+
 /*
-    Fourth step add id for div below body,
-    because vue can't mount to <html> or <body> 
-*/
+        Fourth step add id for div below body,
+        because vue can't mount to <html> or <body> 
+    */
 document.querySelector(vueRootData.rootWrapperSelector).id =
     vueRootData.rootIdValue;
 
-/* Final step create vue root object */
-// new Vue({
-//     el: vueRootData.rootIdSelector,
-//     components: vueComponentObject,
-//     template: vueRootData.rootIdSelector,
-// });
-
-// new Vue({
-//     // ...
-//     components: {
-//         'Footer': () =>
-//             import ('../../v-components/structure/footer/Footer')
-//     }
-// })
-
-//Vue.component('Footer', function(resolve) {
-//    // Специальный синтаксис require укажет Webpack
-//    // автоматически разделить сборку на части
-//    // для последующей асинхронной загрузки
-//    require(['../../v-components/structure/footer/Footer'], resolve)
-//})
-
-// Vue.component(
-//   'Footer',
-//   // Динамический импорт возвращает Promise
-//   () => import('../../v-components/structure/footer/Footer')
-// )
-
-// Vue.component('Footer', (resolve) => {
-//     import ('../../v-components/structure/footer/Footer')
-//     .then((Footer) => {
-//         resolve(Footer.default);
-//     });
-// });
-
-// new Vue({
-//     el: vueRootData.rootIdSelector
-// });
-
-// Vue.component('vue-footer-data', require('../../v-components/structure/footer/Footer'));
-/* Final step create vue root object */
-// new Vue({
-//     el: vueRootData.rootIdSelector,
-//     components: {
-//         Footer,
-//     },
-
-//     template: vueRootData.rootIdSelector,
-// });
-// let VueFooterData = require('@components/structure/footer/Footer.vue')
-// Vue.component('vue-footer-data', require('@components/structure/footer/Footer.vue'));
-// Vue.component('vueFooterData', require('@components/structure/footer/Footer.vue'));
-// Vue.component('Footer', (resolve) => {
-//     import ('@components/structure/footer/Footer.vue')
-//     .then((Footer) => {
-//         resolve(Footer.default);
-//     });
-// });
-
-// Vue.component('footer-component-vue', require('@components/structure/footer/Footer.vue'));
-
-// Vue.component('vue-footer-data', require('@components/structure/footer/Footer.vue'), {
-//     name: 'vue-footer-data'
-// });
-
-// vueArrayComponents.forEach((element) => {
-//     if (document.querySelector(element.selector)) {
-//         import ('./' + element.tagName + '.js')
-//         // import ('./' + element.tagName + '.js\'')
-//         // Vue.component(element.tagName, require(element.path));
-//         // Vue.component(element.tagName, (resolve) => {
-//         //     import (element.path)
-//         //     .then((element) => {
-//         //         resolve(element.default);
-//         //     });
-//         // });
-//     } else {
-//         console.log(
-//             "Can't find element with same selector2:" + element.selector
-//         );
-//     }
-// });
-// var QWERTY = "./" + "vue-footer-data" + ".js";
-// // import Item2 from(QWERTY);
-// // Vue.use(Item2);
-
-// function dynamicallyLoadScript(url) {
-//     var script = document.createElement("script"); // create a script DOM node
-//     script.src = QWERTY; // set its src to the provided URL
-//     document.head.appendChild(script); // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
-// }
-
-// dynamicallyLoadScript(QWERTY);
-
-
-let FooterVueCmp = require('@components/structure/footer/Footer.vue');
-Vue.component('vue-footer-data', FooterVueCmp);
-// Vue.component('vue-footer-data', (resolve) => {
-//     import ('@components/structure/footer/Footer.vue')
-//     .then((Footer) => {
-//         resolve(Footer.default);
-//     });
-// });
-
-Vue.component('vue-footer-data', (resolve) => {
-    import ('@components/structure/footer/Footer.vue')
-    .then((Footer) => {
-        resolve(Footer.default);
-    });
-});
-
 new Vue({
     el: vueRootData.rootIdSelector,
-    // components: {
-    //     'vue-footer-data': Vue.component('vue-footer-data', require('@components/structure/footer/Footer.vue'))
-    // },
     template: vueRootData.rootIdSelector,
 });
-
-// new Vue({
-//     el: vueRootData.rootIdSelector,
-//     components: {
-//         // 'footer-component-vue': () =>
-//         //     import ('@components/structure/footer/Footer.vue'),
-//         // vueComponentObject: () => this.forEach(function (element) {
-//         //     import (element.path)}
-//         // });
-//         // vueComponentObject: function() {
-//         //     this.$options.components.vueComponentObject.forEach((element) => {
-//         //     // vueComponentObject.forEach((element) => {
-//         //         import (element.path)
-//         //     });
-//         // }
-//         components: vueComponentObject,
-//     },
-//     template: vueRootData.rootIdSelector,
-// });
