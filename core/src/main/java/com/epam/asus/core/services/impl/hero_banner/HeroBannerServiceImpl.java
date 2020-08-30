@@ -39,6 +39,22 @@ public class HeroBannerServiceImpl implements HeroBannerService {
         return heroImagesCollection;
     }
 
+    @Override
+    public List<ImageBean> adaptResourceToMultiFieldImageItems(List<Resource> heroImages) {
+        List<ImageBean> heroImagesCollection = new ArrayList<>();
+        if (CommonUtils.isCheckResource(heroImages)) {
+            for (Resource item : heroImages) {
+                if (item != null) {
+                    heroImagesCollection.add(item.adaptTo(ImageBean.class));
+                } else {
+                    logger.info(LOGGER_MESSAGE , heroImages);
+                }
+            }
+        }
+        return heroImagesCollection;
+    }
+
+
     private ImageBean buildImageBean(Resource item){
         ValueMap vm = item.getValueMap();
         boolean isExternalLink = CommonUtils.getPropertyValueByPropertyName(vm, EXTERNAL_LINK).equals("true");

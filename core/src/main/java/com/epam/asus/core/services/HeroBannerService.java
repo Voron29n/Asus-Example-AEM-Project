@@ -8,4 +8,6 @@ import java.util.List;
 public interface HeroBannerService {
 
     List<ImageBean> populateMultiFieldImageItems(List<Resource> heroImages);
+
+    List<ImageBean> adaptResourceToMultiFieldImageItems(List<Resource> heroImages);
 }
