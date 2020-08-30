@@ -1,8 +1,8 @@
 $(window).adaptTo("foundation-registry").register("foundation.validation.validator", {
-  // check elements that has attribute data-foundation-validation with value starting with "multifield-max"
+  // check elements that has attribute data-foundation-validation with value starting with "custom-multifield-max"
   selector: "[data-foundation-validation^='custom-multifield-max']",
   validate: function(el) {
-    // parse the max number from the attribute value, the value maybe something like "multifield-max-6"
+    // parse the max number from the attribute value, the value maybe something like "custom-multifield-max-6"
     var validationName = el.getAttribute("data-validation")
     var max = validationName.replace("custom-multifield-max-", "");
     max = parseInt(max);
