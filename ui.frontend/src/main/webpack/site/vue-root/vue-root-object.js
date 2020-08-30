@@ -32,6 +32,7 @@ import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/Grid
 import HeroBannerMiddle from "@components/hero-banner/hero-banner-middle/HeroBannerMiddle";
 import HeroBannerSmall from "@components/hero-banner/hero-banner-small/HeroBannerSmall";
 import HeroBannerTop from "@components/hero-banner/hero-banner-top/HeroBannerTop";
+import HeroBannerMiddleList from "@components/hero-banner/hero-banner-middle-list/HeroBannerMiddleList";
 /* Structure Group*/
 import Footer from "@components/structure/footer/Footer";
 import NavInfoPage from "@components/structure/nav-info-page/NavInfoPage";
@@ -55,6 +56,8 @@ vueArrayComponents = [
         HeroBannerMiddle /* it is a import(importObject) Vue Component */
     ),
     new ComponentData("hero-banner-small", "#hero-banner-small-component-vue", HeroBannerSmall),
+    new ComponentData("hero-banner-middle-list", "#hero_banner_middle_list-component-vue", HeroBannerMiddleList),
+    new ComponentData("vue-hero_banner_top-data", "#hero_banner_top-component-vue", HeroBannerTop),
     new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
     new ComponentData("grid-parsys-desk3-mobile4-or-mobile2", "#grid-parsys-desc-three-mobile-four-or-two", GridParsysDesk4Mobile4Or2),
     new ComponentData("vue-navinfopage-data", "#nav_info_page-component-vue", NavInfoPage),
@@ -65,7 +68,6 @@ vueArrayComponents = [
     new ComponentData("vue-images-data", "#article_image-component-vue", ArticleImages),
     new ComponentData("vue-hot_product_groups-data", "#hot_product_groups-component-vue", HotProductGroups),
     new ComponentData("vue-customized_text-data", "#customized_text-component-vue", CustomizedText),
-    new ComponentData("vue-hero_banner_top-data", "#hero_banner_top-component-vue", HeroBannerTop),
     new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
     new ComponentData("vue-proart__hero_banner_top-data", "#proart__hero_banner_top-component-vue", ProArtHeroBannerTop),
     new ComponentData("vue-products_nav-data", "#proart__products_nav-component-vue", ProArtProductsNav),
