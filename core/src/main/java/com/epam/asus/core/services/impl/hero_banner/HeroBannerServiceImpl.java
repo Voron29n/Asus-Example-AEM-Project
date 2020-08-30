@@ -1,8 +1,8 @@
-package com.epam.asus.core.services.impl.hero_banner_top;
+package com.epam.asus.core.services.impl.hero_banner;
 
-import com.epam.asus.core.models.beans.hero_banner_top.ImageBean;
+import com.epam.asus.core.models.beans.hero_banner.ImageBean;
 import com.epam.asus.core.utilites.CommonUtils;
-import com.epam.asus.core.services.HeroBannerTopService;
+import com.epam.asus.core.services.HeroBannerService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.osgi.service.component.annotations.Component;
@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component(immediate = true, service = HeroBannerTopService.class)
-public class HeroBannerTopServiceImpl implements HeroBannerTopService {
+@Component(immediate = true, service = HeroBannerService.class)
+public class HeroBannerServiceImpl implements HeroBannerService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
@@ -38,6 +38,22 @@ public class HeroBannerTopServiceImpl implements HeroBannerTopService {
         }
         return heroImagesCollection;
     }
+
+    @Override
+    public List<ImageBean> adaptResourceToMultiFieldImageItems(List<Resource> heroImages) {
+        List<ImageBean> heroImagesCollection = new ArrayList<>();
+        if (CommonUtils.isCheckResource(heroImages)) {
+            for (Resource item : heroImages) {
+                if (item != null) {
+                    heroImagesCollection.add(item.adaptTo(ImageBean.class));
+                } else {
+                    logger.info(LOGGER_MESSAGE , heroImages);
+                }
+            }
+        }
+        return heroImagesCollection;
+    }
+
 
     private ImageBean buildImageBean(Resource item){
         ValueMap vm = item.getValueMap();
