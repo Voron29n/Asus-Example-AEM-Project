@@ -1,6 +1,6 @@
 package com.epam.asus.core.services;
 
-import com.epam.asus.core.models.beans.hero_banner_top.ImageBean;
+import com.epam.asus.core.models.beans.hero_banner.ImageBean;
 import org.apache.sling.api.resource.Resource;
 
 import java.util.List;
