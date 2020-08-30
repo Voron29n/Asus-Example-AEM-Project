@@ -2,7 +2,7 @@ package com.epam.asus.core.models.impl.hero_banner;
 
 import com.epam.asus.core.models.HeroBannerTop;
 import com.epam.asus.core.models.beans.hero_banner_top.ImageBean;
-import com.epam.asus.core.services.HeroBannerTopService;
+import com.epam.asus.core.services.HeroBannerService;
 import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;
 import lombok.Getter;
@@ -27,7 +27,7 @@ public class HeroBannerTopImpl implements HeroBannerTop {
     protected static final String RESOURCE_TYPE = "asus/components/custom/hero-banner/hero-banner-top/v1/hero-banner-top";
 
     @Inject
-    private HeroBannerTopService heroBannerTopService;
+    private HeroBannerService heroBannerService;
 
     @Inject
     @Via("resource")
@@ -45,7 +45,7 @@ public class HeroBannerTopImpl implements HeroBannerTop {
     }
 
     private void setHeroImagesCollection(List<Resource> heroImages){
-        heroImagesCollection = heroBannerTopService.populateMultiFieldImageItems(heroImages);
+        heroImagesCollection = heroBannerService.populateMultiFieldImageItems(heroImages);
     }
 
     @Override

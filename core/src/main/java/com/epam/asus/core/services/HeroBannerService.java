@@ -5,7 +5,7 @@ import org.apache.sling.api.resource.Resource;
 
 import java.util.List;
 
-public interface HeroBannerTopService {
+public interface HeroBannerService {
 
     List<ImageBean> populateMultiFieldImageItems(List<Resource> heroImages);
 }
