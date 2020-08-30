@@ -24,6 +24,7 @@ import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 export default {
   mixins: [adapt],
   components: {
+    // "v-socials": () => import('../socials/Socials'),
     "v-socials": Footer_SocialsCmp,
   },
   props: {

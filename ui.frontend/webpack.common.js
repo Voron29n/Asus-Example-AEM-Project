@@ -75,7 +75,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "eslint-loader",
+                loader: 'babel-loader',
+                options: {
+                    plugins: ['@babel/plugin-syntax-dynamic-import']
+                }
             },
             {
                 test: /\.vue$/,
