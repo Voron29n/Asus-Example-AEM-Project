@@ -40,9 +40,9 @@
                                 <productTitle
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                        emptyText="Product Title"
+                                        emptyText="Menu Title"
                                         required="{Boolean}true"
-                                        name="./productTitle"/>
+                                        name="./menuTitle"/>
                             </items>
                         </productMenuData>
 
@@ -51,7 +51,6 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/well"
                                 granite:class="cq-dialog-container-product_line_list-link-group product-link-data-group">
                             <items jcr:primaryType="nt:unstructured">
-
 
                                 <linkTo
                                         jcr:primaryType="nt:unstructured"
