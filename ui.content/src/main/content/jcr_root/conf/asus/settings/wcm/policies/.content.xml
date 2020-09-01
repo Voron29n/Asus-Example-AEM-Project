@@ -210,7 +210,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Root"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:Asus Project - Content,/apps/asus/components/form/container,group:Asus Project - Grid Parsys,group:Asus Project - Hero Group,group:Asus Project - ProArt,group:Asus Project - Custom Content]">
+                    components="[group:Asus Project - Content,group:Asus Project - Product,/apps/asus/components/form/container,group:Asus Project - Grid Parsys,group:Asus Project - Hero Group,group:Asus Project - ProArt,group:Asus Project - Custom Content]">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -270,7 +270,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:Asus Project - Content,group:Asus Project - Grid Parsys,group:Asus Project - Hero Group,/apps/asus/components/form/container,group:Asus Project - Custom Content]">
+                    components="[group:Asus Project - Content,group:Asus Project - Grid Parsys,group:Asus Project - Hero Group,group:Asus Project - Product,/apps/asus/components/form/container,group:Asus Project - Custom Content]">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
