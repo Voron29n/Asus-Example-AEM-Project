@@ -27,7 +27,6 @@ const vueRootData = {
 import HotProductGroups from "@components/standart/hot-product-groups/HotProductGroups";
 /* Parsys Group*/
 import GridParsysDesk4Mobile4Or2 from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
-import GridParsys from "@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys";
 /* Hero-banner Group*/
 import HeroBannerMiddle from "@components/hero-banner/hero-banner-middle/HeroBannerMiddle";
 import HeroBannerSmall from "@components/hero-banner/hero-banner-small/HeroBannerSmall";
