@@ -1,7 +1,8 @@
 package com.epam.asus.core.models.impl.hero_banner;
 
 import com.epam.asus.core.models.HeroBannerTop;
-import com.epam.asus.core.models.beans.hero_banner_top.ImageBean;
+
+import com.epam.asus.core.models.beans.hero_banner.ImageBean;
 import com.epam.asus.core.services.HeroBannerService;
 import com.epam.asus.core.utilites.CommonUtils;
 import com.google.gson.Gson;

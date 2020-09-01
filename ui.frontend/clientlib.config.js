@@ -13,7 +13,6 @@
  ~ See the License for the specific language governing permissions and
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 const path = require('path');
 
 const BUILD_DIR = path.join(__dirname, 'dist');
@@ -49,15 +48,17 @@ module.exports = {
                 // Copy entrypoint scripts and stylesheets into the respective ClientLib
                 // directories
                 js: {
-                    cwd: 'clientlib-dependencies',
-                    files: ['**/*.js'],
-                    flatten: false
+                    cwd: 'js',
+                    files: ['*.js'],
+                    flatten: false,
+                    ignore: ['site.js']
                 },
                 css: {
-                    cwd: 'clientlib-dependencies',
-                    files: ['**/*.css'],
-                    flatten: false
-                }
+                    cwd: 'css',
+                    files: ['*.css'],
+                    flatten: false,
+                    ignore: ['site.css']
+                },
             }
         },
         {
@@ -69,35 +70,39 @@ module.exports = {
                 // Copy entrypoint scripts and stylesheets into the respective ClientLib
                 // directories
                 js: {
-                    cwd: 'clientlib-site',
-                    files: ['**/*.js'],
-                    flatten: false
+                    cwd: 'js',
+                    files: ['site.*'],
+                    flatten: true,
                 },
 
                 // default config
-                //        css: {
-                //          cwd: 'clientlib-site',
-                //          files: ['**/*.css'],
-                //          flatten: false
-                //        },
+                css: {
+                    cwd: 'css',
+                    files: ['site.*'],
+                    flatten: true,
+                },
 
                 // Copy all other files into the `resources` ClientLib directory
-                //        resources: {
-                //          cwd: 'clientlib-site',
-                //          files: ['**/*.*'],
-                //          flatten: false,
-                //          ignore: ['**/*.js', '**/*.css']
-                //        },
-
-                // author config
-                css: {
-                    cwd: 'clientlib-site',
+                resources: {
+                    cwd: 'clientlib-site/resources',
                     files: ['**/*.*'],
                     flatten: false,
-                    ignore: ['**/*.js']
+                    ignore: ['**/*.js', '**/*.css']
                 },
 
             }
         }
     ]
 };
+
+// const copy = require('copy');
+// copy(path.join(CLIENTLIB_DIR, 'clientlib-dependencies/css/*.*'), CLIENTLIB_DIR + '/clientlib-site/resources/css', function(err, file) {
+//     // exposes the vinyl `file` created when the file is copied
+// });
+
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
+// new CopyWebpackPlugin([{
+//     from: CLIENTLIB_DIR + '/clientlib-dependencies/css/*.*',
+//     to: CLIENTLIB_DIR + '/clientlib-site/resources/css',
+// }, ]);
+// console.log('kjhflgf');

@@ -8,44 +8,53 @@
         ></v-linksGroup>
       </div>
       <div class="aai-fbootom">
-        <v-language :language-data="languageData"></v-language>
-        <v-copyrights :copyrights-data="copyrightsData"></v-copyrights>
+        <VueLanguage :language-data="languageData"></VueLanguage>
+        <VueCopyright :copyrights-data="copyrightsData"></VueCopyright>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Footer_LanguageCmp from "./v-components/language/Language";
-import Footer_LinksGroupCmp from "./v-components/linksGroup/LinksGroup";
-import Footer_CopyrightsCmp from "./v-components/copyrights/Copyrights";
+// import Footer_LanguageCmp from "./v-components/language/Language";
+// import Footer_CopyrightsCmp from "./v-components/copyrights/Copyrights";
+// import Footer_LinksGroupCmp from "./v-components/linksGroup/LinksGroup";
 
 export default {
-  name: "footer-component-vue",
-    // name: "vue-footer-data",
+  // name: "footer-component-vue",
+    name: "Footer",
   beforeCreate: function() {
     // (this.$options.components.Footer_LanguageCmp = require("./Footer.vue").default),
     // (this.$options.components.Footer_LinksGroupCmp = require("./Footer.vue").default),
     // (this.$options.components.Footer_CopyrightsCmp = require("./Footer.vue").default);
     
     // (this.$options.components.VueFooterData = require("./Footer.vue").default);
-    // this.$options.components.VueFooterData = require("./Footer.vue");
+    // this.$options.components.vueFooterData = require("./Footer.vue");
     // Vue.component('vue-footer-data', require('@components/structure/footer/Footer.vue'), {
     //     name: 'vue-footer-data'
     // });
     // Vue.component('vue-footer-data', require('./Footer.vue'));
+    // Vue.component('vue-footer-data', require('@components/structure/footer/Footer'));
   },
   components: {
-    // vLanguage:  () => import("./v-components/language/Language"),
-    // vLinksGroup: () => import("./v-components/linksGroup/LinksGroup"),
-    // vCopyrights: () => import("./v-components/copyrights/Copyrights"),
+    // vLanguage:  () => import(/* webpackChunkName: "vLanguage" */'./v-components/language/Language.vue'),
+    // vLinksGroup: () => import(/* webpackChunkName: "vLinksGroup" */'./v-components/linksGroup/LinksGroup.vue'),
+    // vCopyrights: () => import(/* webpackChunkName: "vCopyrights" */'./v-components/copyrights/Copyrights.vue'),
     // "v-language":  () => import("./v-components/language/Language"),
     // "v-linksGroup": () => import("./v-components/linksGroup/LinksGroup"),
     // "v-copyrights": () => import("./v-components/copyrights/Copyrights"),
-    // VueFooterData,
-    "v-language": Footer_LanguageCmp,
-    "v-linksGroup": Footer_LinksGroupCmp,
-    "v-copyrights": Footer_CopyrightsCmp,
+    // vLanguage:  () => import(/* webpackChunkName: "" */ './v-components/language/Language'),
+    // vLinksGroup:  () => import(/* webpackChunkName: "" */ './v-components/linksGroup/LinksGroup'),
+    // vCopyrights:  () => import(/* webpackChunkName: "" */ './v-components/copyrights/Copyrights'),
+    // vueFooterData: () => import(/* webpackChunkName: "" */ './Footer'),
+
+    VueCopyright:  () => import(/* webpackChunkName: "Footer" */ './v-components/copyrights/Copyrights'),
+    VueLanguage:  () => import(/* webpackChunkName: "Footer" */ './v-components/language/Language'),
+    // "v-language": Footer_LanguageCmp,
+    // "v-copyrights": Footer_CopyrightsCmp,
+    "v-linksGroup": () => import(/* webpackChunkName: "Footer" */ './v-components/linksGroup/LinksGroup'),
+
+    
     
   },
   props: {
@@ -123,6 +132,8 @@ export default {
     },
   },
 };
+
+
 </script>
 
 <style lang="scss">

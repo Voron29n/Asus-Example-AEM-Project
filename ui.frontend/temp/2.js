@@ -7,17 +7,13 @@ const TSConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const SOURCE_ROOT = __dirname + "/src/main/webpack";
 
 module.exports = {
     resolve: {
         extensions: [".js", ".ts", ".vue", ".scss", ".json"],
-        plugins: [
-            new TSConfigPathsPlugin({
-                configFile: "./tsconfig.json",
-            }),
-        ],
         alias: {
             "@resources": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "resources")
@@ -44,9 +40,12 @@ module.exports = {
         site: SOURCE_ROOT + "/site/main.ts",
     },
     output: {
-        filename: 'js/[name].js',
+        filename: (chunkData) => {
+            return chunkData.chunk.name === "dependencies" ?
+                "clientlib-dependencies/[name].js" :
+                "clientlib-site/[name].js";
+        },
         path: path.resolve(__dirname, "dist"),
-        publicPath: '/bin/myDataSourcePoolServlet' + '/'
     },
     module: {
         rules: [{
@@ -70,10 +69,9 @@ module.exports = {
                 ],
             },
             {
-                // Transpiles ES6-8 into ES5
                 test: /\.js$/,
                 exclude: /node_modules/,
-                exclude: (file) => /node_modules/.test(file) && !/\.vue\.js/.test(file),
+                loader: ["babel-loader"],
             },
             {
                 test: /\.vue$/,
@@ -81,30 +79,23 @@ module.exports = {
                     loader: "vue-loader",
                     options: {
                         loaders: {
-                            scss: ["vue-style-loader"],
-                        },
-                    },
-                },
+                            scss: [
+                                "vue-style-loader"
+                            ]
+                        }
+                    }
+                }
             },
             {
                 test: /\.scss$/,
-                loader: [
-                    // "vue-style-loader",
+                use: [
+                    "vue-style-loader",
                     MiniCssExtractPlugin.loader,
                     {
-                        loader: 'css-loader',
+                        loader: "css-loader",
                         options: {
                             url: false,
-                            import: true,
-                            sourceMap: true,
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            url: true,
-                            // sourceMap: true
-                        }
+                        },
                     },
                     {
                         loader: "postcss-loader",
@@ -118,18 +109,33 @@ module.exports = {
                         loader: "resolve-url-loader",
                     },
                     {
+                        loader: "sass-loader",
+                        options: {
+                            url: false,
+                        },
+                    },
+                    {
                         loader: "webpack-import-glob-loader",
+                        options: {
+                            url: false,
+                        },
                     },
                 ],
             },
         ],
     },
     plugins: [
+        new TSConfigPathsPlugin({
+            configFile: "./tsconfig.json",
+        }),
         new VueLoaderPlugin(),
         new CleanWebpackPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
+        // new MiniCssExtractPlugin({
+        //     filename: "clientlib-site/[name].css",
+        // }),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            filename: "[name].css",
         }),
         new CopyWebpackPlugin([{
             from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),
