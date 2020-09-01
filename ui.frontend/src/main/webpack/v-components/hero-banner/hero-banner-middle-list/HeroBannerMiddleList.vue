@@ -1,14 +1,29 @@
 <template>
-    <div>Hero Banner Middle List</div>
+    <div>
+        <div>Hero Banner Middle List</div>
+        <v-hero-images-list
+            :hero-banner-middle-list-data="heroBannerMiddleListData"
+        ></v-hero-images-list>
+    </div>
 </template>
 
 <script>
+import HeroBannerMiddleList_ImagesListCmp from "./v-components/imagesList/HeroImagesList";
+
 export default {
+    components: {
+        "v-hero-images-list": HeroBannerMiddleList_ImagesListCmp
+    },
     props: {
         heroBannerMiddleListItems: {
             type: String,
             required: true,
-        }
+        },
+    },
+    computed: {
+        heroBannerMiddleListData() {
+            return JSON.parse(this.heroBannerMiddleListItems);
+        },
     },
 };
 </script>

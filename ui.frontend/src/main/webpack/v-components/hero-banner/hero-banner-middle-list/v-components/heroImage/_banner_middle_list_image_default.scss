@@ -1,0 +1,120 @@
+.af-banner-hero {
+    position: relative;
+    background: #fff;
+
+    .banner-hero-image-block {
+        display: block;
+        width: 100%;
+        padding-top: 36%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    
+        .banner-hero-image-inner {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+
+            .banner-hero-image-wrap {
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                text-align: center;
+            
+                .af-banner-hero-image-link-block {
+                    text-indent: 150%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            
+                a {
+                    text-decoration: none;
+            
+                    &.af-banner-hero-image-link-block {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        outline: none;
+                    }
+                }
+            
+                .banner-hero-image-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+            
+                    img {
+                            width: 100%;
+                            height: auto;
+                            border: 0;
+                        }
+                }
+            }
+            
+            
+
+        }
+    }
+}
+
+.banner-hero-image-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+
+    .af-banner-middle-link-block {
+        text-indent: 150%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+
+        &.af-banner-hero-image-link-block {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            outline: none;
+        }
+    }
+
+    .banner-hero-image-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+
+        img {
+                width: 100%;
+                height: auto;
+                border: 0;
+            }
+    }
+}
+
+

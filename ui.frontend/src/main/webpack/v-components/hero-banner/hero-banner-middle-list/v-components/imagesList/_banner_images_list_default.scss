@@ -1,0 +1,22 @@
+.banner-hero-list {
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    
+    li:first-child {
+        border-top: 0px;
+    }
+
+    li {
+        list-style-type: none; /* Убираем маркеры */
+        margin-bottom: 2px;
+        border-top: 2px solid #fff;
+    }
+    
+}
