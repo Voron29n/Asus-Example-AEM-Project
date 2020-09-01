@@ -36,5 +36,5 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "./banner_middle_list_image_default";
-// @import "./v-style/banner_middle_list_images_media";
+@import "./banner_middle_list_image_media";
 </style>

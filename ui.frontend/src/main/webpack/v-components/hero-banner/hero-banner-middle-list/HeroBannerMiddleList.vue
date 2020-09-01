@@ -1,10 +1,5 @@
 <template>
-    <div>
-        <div>Hero Banner Middle List</div>
-        <v-hero-images-list
-            :hero-banner-middle-list-data="heroBannerMiddleListData"
-        ></v-hero-images-list>
-    </div>
+    <v-hero-images-list :hero-banner-middle-list-data="heroBannerMiddleListData"></v-hero-images-list>
 </template>
 
 <script>
@@ -12,7 +7,7 @@ import HeroBannerMiddleList_ImagesListCmp from "./v-components/imagesList/HeroIm
 
 export default {
     components: {
-        "v-hero-images-list": HeroBannerMiddleList_ImagesListCmp
+        "v-hero-images-list": HeroBannerMiddleList_ImagesListCmp,
     },
     props: {
         heroBannerMiddleListItems: {
