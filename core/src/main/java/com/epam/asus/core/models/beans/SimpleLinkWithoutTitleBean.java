@@ -27,6 +27,6 @@ public class SimpleLinkWithoutTitleBean {
     }
 
     public boolean isEmpty(){
-        return linkTo == null || linkUrlTarget == null;
+        return linkTo == null;
     }
 }
