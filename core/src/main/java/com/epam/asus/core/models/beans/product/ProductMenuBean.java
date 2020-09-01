@@ -16,7 +16,7 @@ import javax.annotation.PostConstruct;
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ProductMenuBean {
 
-    public static final String DEFAULT_FONT_AWESOME_MENU_ICON_CLASS = "<i class=\"fas fa-bars\"></i>";
+    public static final String DEFAULT_FONT_AWESOME_MENU_ICON_CLASS = "fas fa-bars";
 
     @SlingObject
     private Resource currentResource;
