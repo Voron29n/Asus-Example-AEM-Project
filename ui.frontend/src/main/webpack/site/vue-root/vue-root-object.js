@@ -70,7 +70,6 @@ vueArrayComponents = [
     new ComponentData("vue-images-data", "#article_image-component-vue", ArticleImages),
     new ComponentData("vue-hot_product_groups-data", "#hot_product_groups-component-vue", HotProductGroups),
     new ComponentData("vue-customized_text-data", "#customized_text-component-vue", CustomizedText),
-    new ComponentData("grid-parsys", "#grid-parsys-desc-three-mobile-four-or-two", GridParsys),
     new ComponentData("vue-proart__hero_banner_top-data", "#proart__hero_banner_top-component-vue", ProArtHeroBannerTop),
     new ComponentData("vue-products_nav-data", "#proart__products_nav-component-vue", ProArtProductsNav),
     new ComponentData("vue-categories_nav-data", "#proart__categories_nav-component-vue", ProArtCategoriesNav),
