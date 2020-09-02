@@ -39,14 +39,14 @@ public final class CommonUtils {
         return isExternalLink ? getPropertyValueByPropertyName(vm, LINK_TO) : getPropertyValueByPropertyName(vm, LINK_TO).concat(HTML);
     }
 
-    public static String correctFontAwesomeIconClass(String iconClassProp){
+    public static String correctFontAwesomeIconClass(String iconClassProp, String defaultIconClass){
         String iconClassData = null;
         if (isIconClassWithHtml(iconClassProp)) {
              iconClassData = cutIconClassFromHtmlWithIconClass(iconClassProp);
         } else if (isIconClassWithoutHtml(iconClassProp)) {
             iconClassData = iconClassProp;
         } else {
-            iconClassData = DEFAULT_FONT_AWESOME_MENU_ICON_CLASS;
+            iconClassData = defaultIconClass;
         }
         return iconClassData;
     }

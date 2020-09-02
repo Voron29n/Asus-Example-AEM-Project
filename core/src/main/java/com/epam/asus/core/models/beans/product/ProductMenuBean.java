@@ -30,8 +30,6 @@ public class ProductMenuBean {
     @PostConstruct
     private void init(){
         productMenuLink = currentResource.adaptTo(SimpleLinkWithoutTitleBean.class);
-        iconClass = CommonUtils.correctFontAwesomeIconClass(iconClass);
+        iconClass = CommonUtils.correctFontAwesomeIconClass(iconClass, DEFAULT_FONT_AWESOME_MENU_ICON_CLASS);
     }
-
-
 }
