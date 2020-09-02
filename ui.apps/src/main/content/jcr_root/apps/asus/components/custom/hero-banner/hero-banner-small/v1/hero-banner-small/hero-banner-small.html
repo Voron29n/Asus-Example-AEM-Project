@@ -4,13 +4,13 @@
 
 </sly>
 
-     <div id="hero-banner-small-component-vue" style="overflow: auto;">
-          <hero-banner-small
+     <div id="hero-banner-small_component-vue" style="overflow: auto;">
+          <vue_hero-banner-small-data
                json-of-link-data=${model.jsonOfLinkData}
                file-reference=${model.fileReference}
                hero-title=${model.heroTitle}
                hero-description=${model.heroDescription}
-        ></hero-banner-small>
+        ></vue_hero-banner-small-data>
      </div>
 
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

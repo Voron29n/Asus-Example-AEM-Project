@@ -1,15 +1,16 @@
 <template>
     <div>
-        <v-images :images-data="imagesData"></v-images>
+        <VueImages :images-data="imagesData"></VueImages>
     </div>
 </template>
 
 <script>
-import HeroBannerTop_ImagesCmp from "./v-components/images/Images";
-
 export default {
     components: {
-        "v-images": HeroBannerTop_ImagesCmp,
+        VueImages: () =>
+            import(
+                /* webpackChunkName: "HeroBannerTop" */ "./v-components/images/Images"
+            ),
     },
     props: {
         heroItems: {

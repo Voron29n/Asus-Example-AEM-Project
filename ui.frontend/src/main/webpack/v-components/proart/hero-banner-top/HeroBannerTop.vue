@@ -6,8 +6,8 @@
                     <div class="component_container" id="kv_banner">
                         <div class="carousel-list stopCarousel">
                             <div class="carousel-item item-1">
-                                <v-image :image-data="imageData"></v-image>
-                                <v-title :title-data="titleData"></v-title>
+                                <VueImage :image-data="imageData"></VueImage>
+                                <VueTitle :title-data="titleData"></VueTitle>
                             </div>
                         </div>
                     </div>
@@ -18,13 +18,16 @@
 </template>
 
 <script>
-import HeroBannerTop_TitleDataCmp from "./v-components/title/Title";
-import HeroBannerTop_ImageDataCmp from "./v-components/image/Image";
-
 export default {
     components: {
-        "v-title": HeroBannerTop_TitleDataCmp,
-        "v-image": HeroBannerTop_ImageDataCmp,
+        VueImage: () =>
+            import(
+                /* webpackChunkName: "HeroBannerTop" */ "./v-components/title/Title"
+            ),
+             VueTitle: () =>
+            import(
+                /* webpackChunkName: "HeroBannerTop" */ "./v-components/image/Image"
+            ),
     },
     props: {
         heroTitle: {

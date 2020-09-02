@@ -13,19 +13,17 @@
         </li>
       </ul>
     </div>
-    <v-socials :socials-data="socialsData" @open-social-group="openLinkGroup"></v-socials>
+    <VueSocials :socials-data="socialsData" @open-social-group="openLinkGroup"></VueSocials>
   </div>
 </template>
 
 <script>
-import Footer_SocialsCmp from "../socials/Socials";
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
   mixins: [adapt],
   components: {
-    // "v-socials": () => import('../socials/Socials'),
-    "v-socials": Footer_SocialsCmp,
+    VueSocials: () => import(/* webpackChunkName: "Footer" */ '../socials/Socials'),
   },
   props: {
     linksGroupData: Object,

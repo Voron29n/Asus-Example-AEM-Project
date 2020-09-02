@@ -1,47 +1,48 @@
 <template>
-  <div>
-    <section class="cmc-hot-prod">
-      <v-title :title-data="titleData"></v-title>
-      <div class="commercial-inner">
-        <v-productGroups
-          :product-groups-data="productGroupsData"
-        ></v-productGroups>
-      </div>
-    </section>
-  </div>
+    <div>
+        <section class="cmc-hot-prod">
+            <VueTitle :title-data="titleData"></VueTitle>
+            <div class="commercial-inner">
+                <VueProductGroups :product-groups-data="productGroupsData"></VueProductGroups>
+            </div>
+        </section>
+    </div>
 </template>
 
 <script>
-import HotProductGroups_TitleDataCmp from "./v-components/title/Title";
-import HotProductGroups_ProductGroupsDataCmp from "./v-components/product-groups/ProductGroups";
-
 export default {
-  components: {
-    "v-title": HotProductGroups_TitleDataCmp,
-    "v-productGroups": HotProductGroups_ProductGroupsDataCmp,
-  },
-  props: {
-    groupsTitle: {
-      type: String,
-      required: false,
+    components: {
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "HotProductGroups" */ "./v-components/title/Title"
+            ),
+        VueProductGroups: () =>
+            import(
+                /* webpackChunkName: "HotProductGroups" */ "./v-components/product-groups/ProductGroups"
+            ),
     },
-    hotProductsInfo: {
-      type: String,
-      required: false,
+    props: {
+        groupsTitle: {
+            type: String,
+            required: false,
+        },
+        hotProductsInfo: {
+            type: String,
+            required: false,
+        },
     },
-  },
-  computed: {
-    titleData() {
-      return {
-        groupsTitle: this.$props.groupsTitle,
-      };
+    computed: {
+        titleData() {
+            return {
+                groupsTitle: this.$props.groupsTitle,
+            };
+        },
+        productGroupsData() {
+            return {
+                hotProductsInfo: JSON.parse(this.$props.hotProductsInfo),
+            };
+        },
     },
-    productGroupsData() {
-      return {
-        hotProductsInfo: JSON.parse(this.$props.hotProductsInfo),
-      };
-    },
-  },
 };
 </script>
 

@@ -1,15 +1,16 @@
 <template>
-<div id="article_image-component-vue">
-    <v-image :image-data="imageData"></v-image>
-</div>
+    <div id="article_image-component-vue">
+        <VueImage :image-data="imageData"></VueImage>
+    </div>
 </template>
 
 <script>
-import ArticleImage_ImageCmp from './v-components/image/Image'
-
 export default {
     components: {
-        "v-image": ArticleImage_ImageCmp,
+        VueImage: () =>
+            import(
+                /* webpackChunkName: "ArticleImage" */ "./v-components/image/Image"
+            ),
     },
     props: {
         fileReference: {
@@ -25,7 +26,6 @@ export default {
         },
     },
 };
-
 </script>
 
 <style lang="scss" scoped>

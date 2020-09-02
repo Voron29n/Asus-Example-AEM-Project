@@ -1,23 +1,28 @@
 <template>
-<div id="article_image-text-component-vue">
-    <v-title :title-data="titleData"></v-title>
-    <div class="cmp_article_image_text-block">
-        <v-image :image-data="imageData"></v-image>
-        <v-description :description-data="descriptionData"></v-description> 
+    <div id="article_image-text-component-vue">
+        <VueTitle :title-data="titleData"></VueTitle>
+        <div class="cmp_article_image_text-block">
+            <VueImage :image-data="imageData"></VueImage>
+            <VueDescription :description-data="descriptionData"></VueDescription>
+        </div>
     </div>
-</div>
 </template>
 
 <script>
-import ArticleImageText_TitleCmp from './v-components/title/Title'
-import ArticleImageText_DescriptionCmp from './v-components/description/Description'
-import ArticleImageText_ImageCmp from './v-components/image/Image'
-
 export default {
     components: {
-        "v-title": ArticleImageText_TitleCmp,
-        "v-description": ArticleImageText_DescriptionCmp,
-        "v-image": ArticleImageText_ImageCmp,
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "ArticleImageText" */ "./v-components/title/Title"
+            ),
+        VueImage: () =>
+            import(
+                /* webpackChunkName: "ArticleImageText" */ "./v-components/image/Image"
+            ),
+        VueDescription: () =>
+            import(
+                /* webpackChunkName: "ArticleImageText" */ "./v-components/description/Description"
+            ),
     },
     props: {
         imageTextTitle: {
@@ -35,7 +40,7 @@ export default {
         imageIsRightSide: {
             type: Boolean,
             required: false,
-            default: false
+            default: false,
         },
     },
     computed: {
@@ -57,7 +62,6 @@ export default {
         },
     },
 };
-
 </script>
 
 <style lang="scss" scoped>

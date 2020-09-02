@@ -1,21 +1,26 @@
 <template>
-<div id="article_title-component-vue">
-    <v-title :title-data="titleData"></v-title>
-    <v-description :description-data="descriptionData"></v-description>
-    <v-link :link-data="linkData"></v-link>
-</div>
+    <div id="article_title-component-vue">
+        <VueTitle :title-data="titleData"></VueTitle>
+        <VueDescription :description-data="descriptionData"></VueDescription>
+        <VueLink :link-data="linkData"></VueLink>
+    </div>
 </template>
 
 <script>
-import ArticleTitle_TitleCmp from './v-components/title/Title'
-import ArticleTitle_DescriptionCmp from './v-components/description/Description'
-import ArticleTitle_LinkCmp from './v-components/link/Link'
-
 export default {
     components: {
-        "v-title": ArticleTitle_TitleCmp,
-        "v-description": ArticleTitle_DescriptionCmp,
-        "v-link": ArticleTitle_LinkCmp,
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "ArticleTitle" */ "./v-components/title/Title"
+            ),
+        VueDescription: () =>
+            import(
+                /* webpackChunkName: "ArticleTitle" */ "./v-components/description/Description"
+            ),
+        VueLink: () =>
+            import(
+                /* webpackChunkName: "ArticleTitle" */ "./v-components/link/Link"
+            ),
     },
     props: {
         title: {
@@ -59,7 +64,6 @@ export default {
         },
     },
 };
-
 </script>
 
 <style lang="scss" scoped>

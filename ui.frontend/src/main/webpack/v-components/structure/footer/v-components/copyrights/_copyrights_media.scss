@@ -1,21 +1,21 @@
 @media (max-width: 719px) {
-    #footer-component-vue #extra_link,
-    #footer-component-vue #aai-copyright {
+    #footer_component-vue #extra_link,
+    #footer_component-vue #aai-copyright {
         float: none;
     }
 }
 
 @media (max-width: 719px) {
-    #footer-component-vue #aai-copyright {
+    #footer_component-vue #aai-copyright {
         margin-top: 20px;
     }
 }
 
 @media only screen and (max-width: 720px) {
-    #footer-component-vue #aai-copyright #copyright {
+    #footer_component-vue #aai-copyright #copyright {
         text-align: left;
     }
-    #footer-component-vue #aai-copyright a {
+    #footer_component-vue #aai-copyright a {
         font-size: x-small;
     }
 }

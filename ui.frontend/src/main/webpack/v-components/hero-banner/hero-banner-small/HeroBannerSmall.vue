@@ -2,12 +2,12 @@
     <div class="banner-small-block">
         <div class="banner-small-inner">
             <div class="banner-small-wrap">
-                <v-link :link-data="linkData"></v-link>
-                <v-image :image-data="imageData"></v-image>
+                <VueLink :link-data="linkData"></VueLink>
+                <VueImage :image-data="imageData"></VueImage>
                 <div class="banner-small-info">
                     <div :class="{'banner-small-info-wrap' : !isDesktopVersion}">
-                        <v-title :title-data="titleData"></v-title>
-                        <v-description :description-data="descriptionData"></v-description>
+                        <VueTitle :title-data="titleData"></VueTitle>
+                        <VueDescription :description-data="descriptionData"></VueDescription>
                     </div>
                 </div>
             </div>
@@ -16,20 +16,27 @@
 </template>
 
 <script>
-import HeroBannerSmall_LinkCmp from "./v-components/link/Link";
-import HeroBannerSmall_ImageCmp from "./v-components/image/Image";
-import HeroBannerSmall_TitleCmp from "./v-components/title/Title";
-import HeroBannerSmall_DescriptionCmp from "./v-components/description/Description";
-
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
     mixins: [adapt],
     components: {
-        "v-link": HeroBannerSmall_LinkCmp,
-        "v-image": HeroBannerSmall_ImageCmp,
-        "v-title": HeroBannerSmall_TitleCmp,
-        "v-description": HeroBannerSmall_DescriptionCmp,
+        VueLink: () =>
+            import(
+                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/link/Link"
+            ),
+        VueImage: () =>
+            import(
+                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/image/Image"
+            ),
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/title/Title"
+            ),
+        VueDescription: () =>
+            import(
+                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/description/Description"
+            ),
     },
     props: {
         jsonOfLinkData: {

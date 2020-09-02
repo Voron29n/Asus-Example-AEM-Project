@@ -1,18 +1,21 @@
 <template>
-<div>
-    <v-title :title-data="titleData"></v-title>
-    <v-linksGroup :links-group-data="linksGroupData"></v-linksGroup>       
-</div>
+    <div>
+        <VueTitle :title-data="titleData"></VueTitle>
+        <VueLinksGroup :links-group-data="linksGroupData"></VueLinksGroup>
+    </div>
 </template>
 
 <script>
-import NavInfoPage_TitleDataCmp from './v-components/title/Title'
-import NavInfoPage_LinksGroupDataCmp from './v-components/linksGroup/LinksGroup'
-
 export default {
     components: {
-        "v-title": NavInfoPage_TitleDataCmp,
-        "v-linksGroup": NavInfoPage_LinksGroupDataCmp,
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "NavInfoPage" */ "./v-components/title/Title"
+            ),
+        VueLinksGroup: () =>
+            import(
+                /* webpackChunkName: "NavInfoPage" */ "./v-components/linksGroup/LinksGroup"
+            ),
     },
     props: {
         title: {
@@ -22,7 +25,7 @@ export default {
         linksGroup: {
             type: String,
             required: false,
-            default: ""
+            default: "",
         },
     },
     computed: {
@@ -38,7 +41,6 @@ export default {
         },
     },
 };
-
 </script>
 
 <style lang="scss">

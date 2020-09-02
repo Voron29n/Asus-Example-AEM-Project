@@ -3,7 +3,7 @@
         <div class="section_content">
             <div class="row">
                 <div class="col l12 m12 s12 always__on__top">
-                    <v-products :products-data="productsData"></v-products>
+                    <VueProducts :products-data="productsData"></VueProducts>
                 </div>
             </div>
         </div>
@@ -11,11 +11,12 @@
 </template>
 
 <script>
-import ProductsNav_ProductsDataCmp from "./v-components/products/Products";
-
 export default {
     components: {
-        "v-products": ProductsNav_ProductsDataCmp,
+        VueProducts: () =>
+            import(
+                /* webpackChunkName: "ProductsNav" */ "./v-components/products/Products"
+            ),
     },
     props: {
         productsNav: {

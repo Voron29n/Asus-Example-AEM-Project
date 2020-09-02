@@ -1,12 +1,12 @@
 @media (max-width: 959px) and (min-width: 720px) {
-    #footer-component-vue .aai-fnav li>a {
+    #footer_component-vue .aai-fnav li>a {
         padding: 0;
     }
 }
 
 @media only screen and (max-width: 720px) {
-    body #footer-component-vue,
-    body #footer-component-vue.aai-maxi-w .aai-inner {
+    body #footer_component-vue,
+    body #footer_component-vue.aai-maxi-w .aai-inner {
         min-width: auto;
         min-width: inherit;
         width: 100%;
@@ -17,14 +17,14 @@
 }
 
 @media (max-width: 719px) {
-    #footer-component-vue .aai-inner {
+    #footer_component-vue .aai-inner {
         padding-bottom: 0px;
     }
 }
 
 @media (max-width: 959px) {
-    #footer-component-vue .aai-inner,
-    #footer-component-vue .aai-inner,
+    #footer_component-vue .aai-inner,
+    #footer_component-vue .aai-inner,
     .aai-sub-inner {
         min-width: 100%;
         max-width: 100%;
@@ -33,44 +33,44 @@
 }
 
 @media (max-width: 719px) {
-    #footer-component-vue .aai-fmiddle {
+    #footer_component-vue .aai-fmiddle {
         padding: 30px 20px 10px;
     }
 }
 
 @media only screen and (max-width: 720px) {
-    body #footer-component-vue .aai-fmiddle {
+    body #footer_component-vue .aai-fmiddle {
         padding: 0;
     }
 }
 
 @media (max-width: 719px) {
-    #footer-component-vue .aai-fnav li {
+    #footer_component-vue .aai-fnav li {
         padding: 14px 0;
     }
 }
 
 @media only screen and (max-width: 720px) {
-    body #footer-component-vue .aai-fbootom {
+    body #footer_component-vue .aai-fbootom {
         padding: 0 3px;
     }
 }
 
 @media (max-width: 719px) {
-    #footer-component-vue .aai-fbootom {
+    #footer_component-vue .aai-fbootom {
         padding: 0 20px;
     }
 }
 
 @media (max-width: 719px) {
-    #footer-component-vue #extra_link,
-    #footer-component-vue #aai-copyright {
+    #footer_component-vue #extra_link,
+    #footer_component-vue #aai-copyright {
         float: none;
     }
 }
 
 @media (max-width: 720px) {
-    #footer-component-vue .aai-footer-span {
+    #footer_component-vue .aai-footer-span {
         width: 100% !important;
         overflow: hidden;
         display: block;
@@ -90,7 +90,7 @@
 }
 
 @media only screen and (max-width: 720px) {
-    body #footer-component-vue .aai-footer-span:first-child {
+    body #footer_component-vue .aai-footer-span:first-child {
         margin-top: 20px;
     }
 }

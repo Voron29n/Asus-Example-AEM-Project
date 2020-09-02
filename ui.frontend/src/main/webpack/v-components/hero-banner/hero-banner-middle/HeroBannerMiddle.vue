@@ -2,20 +2,19 @@
     <div class="af-banner-middle">
         <div class="banner-middle-block">
             <div class="banner-middle-inner">
-                <v-hero-middle
-                    :hero-middle-data="heroMiddleData"
-                ></v-hero-middle>
+                <VueHeroMiddle :hero-middle-data="heroMiddleData"></VueHeroMiddle>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import HeroBannerMiddle_HeroMiddleCmp from "./v-components/HeroMiddle";
-
 export default {
     components: {
-        "v-hero-middle": HeroBannerMiddle_HeroMiddleCmp,
+        VueHeroMiddle: () =>
+            import(
+                /* webpackChunkName: "HeroBannerMiddle" */ "./v-components/HeroMiddle"
+            ),
     },
     props: {
         linkTo: {

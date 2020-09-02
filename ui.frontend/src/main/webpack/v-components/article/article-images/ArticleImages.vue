@@ -1,18 +1,21 @@
 <template>
-<div id="article_image-component-vue">
-        <v-title :title-data="titleData"></v-title>
-        <v-images :images-data="imagesData"></v-images>
-</div>
+    <div id="article_image-component-vue">
+        <VueTitle :title-data="titleData"></VueTitle>
+        <VueImages :images-data="imagesData"></VueImages>
+    </div>
 </template>
 
 <script>
-import ArticleImages_TitleCmp from './v-components/title/Title'
-import ArticleImages_ImagesCmp from './v-components/images/Images'
-
 export default {
     components: {
-        "v-title": ArticleImages_TitleCmp,
-        "v-images": ArticleImages_ImagesCmp,
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "ArticleImages" */ "./v-components/title/Title"
+            ),
+        VueImages: () =>
+            import(
+                /* webpackChunkName: "ArticleImages" */ "./v-components/images/Images"
+            ),
     },
     props: {
         imagesTitle: {
@@ -22,7 +25,6 @@ export default {
         images: {
             type: String,
             required: false,
-            default: ""
         },
     },
     computed: {
@@ -38,7 +40,6 @@ export default {
         },
     },
 };
-
 </script>
 
 <style lang="scss" scoped>

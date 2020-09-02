@@ -1,18 +1,21 @@
 <template>
     <div id="proart__categoriesNav">
-        <v-title :title-data="titleData"></v-title>
-        <v-categories :categories-data="categoriesData"></v-categories>
+        <VueTitle :title-data="titleData"></VueTitle>
+        <VueCategories :categories-data="categoriesData"></VueCategories>
     </div>
 </template>
 
 <script>
-import CategoriesNav_TitleDataCmp from "./v-components/title/Title";
-import CategoriesNav_CategoriesDataCmp from "./v-components/categories/Categories";
-
 export default {
     components: {
-        "v-title": CategoriesNav_TitleDataCmp,
-        "v-categories": CategoriesNav_CategoriesDataCmp,
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "CategoriesNav" */ "./v-components/title/Title"
+            ),
+        VueCategories: () =>
+            import(
+                /* webpackChunkName: "CategoriesNav" */ "./v-components/categories/Categories"
+            ),
     },
     props: {
         categoriesTitle: {

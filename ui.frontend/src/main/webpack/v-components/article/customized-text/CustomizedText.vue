@@ -1,22 +1,25 @@
 <template>
-<div class="cmc-inner fill">
-    <div class="cmc-span">
-        <v-title :title-data="titleData"></v-title>
-        <br>
-        <v-description :description-data="descriptionData"></v-description>
-        <br>
+    <div class="cmc-inner fill">
+        <div class="cmc-span">
+            <VueTitle :title-data="titleData"></VueTitle>
+            <br />
+            <VueDescription :description-data="descriptionData"></VueDescription>
+            <br />
+        </div>
     </div>
-</div>
 </template>
 
 <script>
-import CustomizedText_TitleCmp from './v-components/title/Title'
-import CustomizedText_DescriptionCmp from './v-components/description/Description'
-
 export default {
     components: {
-        "v-title": CustomizedText_TitleCmp,
-        "v-description": CustomizedText_DescriptionCmp,
+        VueTitle: () =>
+            import(
+                /* webpackChunkName: "CustomizedText" */ "./v-components/title/Title"
+            ),
+        VueDescription: () =>
+            import(
+                /* webpackChunkName: "CustomizedText" */ "./v-components/description/Description"
+            ),
     },
     props: {
         textTitle: {
@@ -41,7 +44,6 @@ export default {
         },
     },
 };
-
 </script>
 
 <style lang="scss" scoped>
