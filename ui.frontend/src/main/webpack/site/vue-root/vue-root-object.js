@@ -46,6 +46,8 @@ import CustomizedText from "@components/article/customized-text/CustomizedText";
 import ProArtHeroBannerTop from "@components/proart/hero-banner-top/HeroBannerTop";
 import ProArtProductsNav from "@components/proart/products-nav/ProductsNav";
 import ProArtCategoriesNav from "@components/proart/categories-nav/CategoriesNav";
+/* Product Group */
+import ProductLineList from "@components/product/product-line-list/ProductLineList"
 
 /* Second step, you need add new Object with all vue components data at array */
 vueArrayComponents = [
@@ -57,6 +59,7 @@ vueArrayComponents = [
     new ComponentData("hero-banner-small", "#hero-banner-small-component-vue", HeroBannerSmall),
     new ComponentData("hero-banner-middle-list", "#hero_banner_middle_list-component-vue", HeroBannerMiddleList),
     new ComponentData("vue-hero_banner_top-data", "#hero_banner_top-component-vue", HeroBannerTop),
+    new ComponentData("vue-product-line-list", "#product_line_list-component-vue", ProductLineList),
     new ComponentData("vue-footer-data", "#footer-component-vue", Footer),
     new ComponentData("grid-parsys-desk3-mobile4-or-mobile2", "#grid-parsys-desc-three-mobile-four-or-two", GridParsysDesk4Mobile4Or2),
     new ComponentData("vue-navinfopage-data", "#nav_info_page-component-vue", NavInfoPage),

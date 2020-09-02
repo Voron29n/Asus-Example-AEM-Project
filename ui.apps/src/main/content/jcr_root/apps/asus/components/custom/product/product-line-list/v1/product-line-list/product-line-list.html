@@ -1,8 +1,12 @@
-<sly    data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
->
+<sly    data-sly-use.model="com.epam.asus.core.models.ProductLineList"
+        data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+        data-sly-test.hasContent="${!model.empty}">
 
     <div id="product_line_list-component-vue">
-
+        <vue-product-line-list
+            product-menu-bean-json=${model.productMenuBeanJson}
+            product-line-list-collection-json=${model.productLineListCollectionJson}
+        ></vue-product-line-list>
     </div>
 
 </sly>
