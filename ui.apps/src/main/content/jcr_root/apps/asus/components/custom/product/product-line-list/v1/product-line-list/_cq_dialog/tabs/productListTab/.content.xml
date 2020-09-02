@@ -91,7 +91,6 @@
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                                     emptyText="Product Description"
-                                                    required="{Boolean}true"
                                                     name="./productDescription"/>
 
                                         </items>
