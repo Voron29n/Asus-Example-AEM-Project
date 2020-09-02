@@ -38,14 +38,10 @@ public class ProductLineListImpl implements ProductLineList {
 
     private String productLineListCollectionJson;
 
-    private List<ProductItemBean> productLineList;
-
-    private ProductMenuBean productMenuBean;
-
     @PostConstruct
     private void init() {
-        productMenuBean = currentResource.adaptTo(ProductMenuBean.class);
-        productLineList = productList.stream()
+        ProductMenuBean productMenuBean = currentResource.adaptTo(ProductMenuBean.class);
+        List<ProductItemBean> productLineList = productList.stream()
                 .map(productItem -> productItem.adaptTo(ProductItemBean.class))
                 .collect(Collectors.toList());
         productMenuBeanJson = new Gson().toJson(productMenuBean);
@@ -53,12 +49,7 @@ public class ProductLineListImpl implements ProductLineList {
     }
 
     @Override
-    public String getProductMenuBeanJson() {
-        return null;
-    }
-
-    @Override
-    public String getProductLineListCollectionJson() {
-        return null;
+    public boolean isEmpty(){
+        return productLineListCollectionJson == null || productMenuBeanJson == null;
     }
 }

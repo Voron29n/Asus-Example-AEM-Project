@@ -5,4 +5,7 @@ public interface ProductLineList {
     String getProductMenuBeanJson();
 
     String getProductLineListCollectionJson();
+
+    boolean isEmpty();
+
 }
