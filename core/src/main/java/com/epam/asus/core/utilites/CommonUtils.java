@@ -58,8 +58,9 @@ public final class CommonUtils {
     }
 
     private static String cutIconClassFromHtmlWithIconClass(String iconClassProp) {
-        Pattern fontAwesomePattern = Pattern.compile(FONT_AWESOME_ICON_PATTERN_WITH_HTML);
+        Pattern fontAwesomePattern = Pattern.compile(FONT_AWESOME_PATTERN_CLASS);
         Matcher fontAwesomeMatcher = fontAwesomePattern.matcher(iconClassProp);
+        fontAwesomeMatcher.find();
         return iconClassProp.substring(fontAwesomeMatcher.start(),fontAwesomeMatcher.end());
     }
 
