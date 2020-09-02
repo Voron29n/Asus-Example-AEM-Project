@@ -4,6 +4,7 @@ import com.epam.asus.core.models.ProductLineList;
 import com.epam.asus.core.models.beans.product.ProductItemBean;
 import com.epam.asus.core.models.beans.product.ProductMenuBean;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import lombok.Getter;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -11,6 +12,7 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Via;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -44,12 +46,20 @@ public class ProductLineListImpl implements ProductLineList {
         List<ProductItemBean> productLineList = productList.stream()
                 .map(productItem -> productItem.adaptTo(ProductItemBean.class))
                 .collect(Collectors.toList());
-        productMenuBeanJson = new Gson().toJson(productMenuBean);
-        productLineListCollectionJson = new Gson().toJson(productLineList);
+        Gson gson = getGson();
+        productMenuBeanJson = gson.toJson(productMenuBean);
+        productLineListCollectionJson = gson.toJson(productLineList);
+    }
+
+    @NotNull
+    private Gson getGson() {
+        return new GsonBuilder()
+                .excludeFieldsWithoutExposeAnnotation()
+                .create();
     }
 
     @Override
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return productLineListCollectionJson == null || productMenuBeanJson == null;
     }
 }
