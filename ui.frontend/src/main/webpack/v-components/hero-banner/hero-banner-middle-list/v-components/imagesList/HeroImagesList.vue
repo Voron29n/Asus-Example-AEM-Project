@@ -72,7 +72,6 @@ export default {
                     this.activeImageId === arrayLenght
                         ? 0
                         : this.activeImageId + 1;
-                console.log("updateStyle");
                 this.updateComponentStyle();
             }
             setTimeout(this.updateActiveImg, 5000);
