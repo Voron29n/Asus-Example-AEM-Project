@@ -9,12 +9,16 @@
 </template>
 
 <script>
+import Vue from "vue";
+Vue.component('vue_hero-banner-middle-data', require("@components/hero-banner/hero-banner-middle/HeroBannerMiddle").default);
+
 export default {
     components: {
+        "vue_hero-banner-middle-data": () => import( /* webpackChunkName: "HeroBannerMiddle" */ './HeroBannerMiddle.vue').then(m => m.default),
         VueHeroMiddle: () =>
             import(
                 /* webpackChunkName: "HeroBannerMiddle" */ "./v-components/HeroMiddle"
-            ),
+            ).then(m => m.default),
     },
     props: {
         linkTo: {

@@ -57,7 +57,7 @@ module.exports = {
                     cwd: 'css',
                     files: ['*.css'],
                     flatten: false,
-                    ignore: ['site.css']
+                    ignore: ['site.asus.css']
                 },
             }
         },
@@ -94,15 +94,3 @@ module.exports = {
         }
     ]
 };
-
-// const copy = require('copy');
-// copy(path.join(CLIENTLIB_DIR, 'clientlib-dependencies/css/*.*'), CLIENTLIB_DIR + '/clientlib-site/resources/css', function(err, file) {
-//     // exposes the vinyl `file` created when the file is copied
-// });
-
-// const CopyWebpackPlugin = require("copy-webpack-plugin");
-// new CopyWebpackPlugin([{
-//     from: CLIENTLIB_DIR + '/clientlib-dependencies/css/*.*',
-//     to: CLIENTLIB_DIR + '/clientlib-site/resources/css',
-// }, ]);
-// console.log('kjhflgf');

@@ -364,8 +364,9 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[asus.dependencies,asus.site]"
-                    clientlibsJsHead="asus.dependencies">
+                    clientlibs="[asus.site]"
+
+                >
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>

@@ -32,7 +32,7 @@ vueArrayComponents = [
     new ComponentData("#grid-parsys_desc-three-mobile-four-or-two_component-vue", "grid-parsys_desk3-mobile4-or-mobile2-data"),
     /* hero-banner group*/
     new ComponentData("#hero-banner-small_component-vue", "vue_hero-banner-small-data"),
-    new ComponentData("#hero-banner-middle_component-vue_component-vue", "vue_hero-banner-middle-data"),
+    // new ComponentData("#hero-banner-middle_component-vue_component-vue", "vue_hero-banner-middle-data"),
     new ComponentData("#hero-banner-top_component-vue", "vue_hero-banner-top-data"),
     /* structure group*/
     new ComponentData("#footer_component-vue", "vue_footer-data"),
