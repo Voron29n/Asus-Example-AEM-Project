@@ -18,6 +18,7 @@
 </template>
 
 <script>
+
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {

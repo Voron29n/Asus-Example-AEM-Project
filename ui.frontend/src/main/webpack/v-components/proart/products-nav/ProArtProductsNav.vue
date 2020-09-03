@@ -12,10 +12,11 @@
 
 <script>
 export default {
+    name: "ProArtProductsNav",
     components: {
         VueProducts: () =>
             import(
-                /* webpackChunkName: "ProductsNav" */ "./v-components/products/Products"
+                /* webpackChunkName: "ProArtProductsNav" */ "./v-components/products/Products"
             ),
     },
     props: {

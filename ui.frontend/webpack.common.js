@@ -129,7 +129,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            filename: 'css/[name].asus.css'
         }),
         new CopyWebpackPlugin([{
             from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),

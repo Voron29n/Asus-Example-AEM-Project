@@ -22,11 +22,11 @@ export default {
     components: {
         VueImage: () =>
             import(
-                /* webpackChunkName: "HeroBannerTop" */ "./v-components/title/Title"
+                /* webpackChunkName: "ProArtHeroBannerTop" */ "./v-components/image/Image"
             ),
-             VueTitle: () =>
+        VueTitle: () =>
             import(
-                /* webpackChunkName: "HeroBannerTop" */ "./v-components/image/Image"
+                /* webpackChunkName: "ProArtHeroBannerTop" */ "./v-components/title/Title"
             ),
     },
     props: {

@@ -21,10 +21,20 @@ import java.util.Objects;
 @Component(service=Servlet.class,
         property={
                 Constants.SERVICE_DESCRIPTION + "= Servlet style",
+//                "sling.servlet.methods=" + HttpConstants.METHOD_GET,
+//                "sling.servlet.resourceTypes=" + "sling/servlet/default",
+////                "sling.servlet.resourceTypes=" + "sling/servlet/default",
+//                "sling.servlet.selectors=" + "asus",
+////                "sling.servlet.paths="+ "myDataSourcePoolServlet/css",
+////             "sling.servlet.paths.strict = true",
+////                "sling.servlet.prefix="+ "/bin/",
+////                "sling.servlet.paths="+ "myDataSourcePoolServlet/css/",
+//                "sling.servlet.extensions=" + "css"
+
                 "sling.servlet.methods=" + HttpConstants.METHOD_GET,
-                "sling.servlet.resourceTypes=" + "sling/servlet/default",
-                "sling.servlet.paths="+ "/bin/myDataSourcePoolServlet/css/",
-                "sling.servlet.extensions=" + "css"
+                "sling.servlet.resourceTypes="+ "sling/servlet/default",
+                "sling.servlet.selectors="+ "asus",
+                "sling.servlet.extensions="+ "css"
         })
 public class StyleCmpServlet extends SlingSafeMethodsServlet {
 
@@ -44,8 +54,6 @@ public class StyleCmpServlet extends SlingSafeMethodsServlet {
                 child = resource.getChild(name);
                 response.setContentType("text/css");
                 response.getOutputStream().write(Objects.requireNonNull(child).getPath().getBytes().clone());
-            } else {
-                response.setStatus(400);
             }
         }
     }

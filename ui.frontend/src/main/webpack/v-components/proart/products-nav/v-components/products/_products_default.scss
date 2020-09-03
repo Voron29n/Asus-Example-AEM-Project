@@ -8,7 +8,7 @@
     font-size: 0;
 }
 
-#proart__products_nav-component-vue .section_products .product_list {
+.products-nav .section_products .product_list {
     background-color: #000;
     padding-right: 1px;
 }
@@ -156,13 +156,13 @@ figure {
     margin-right: auto;
     width: 90%;
     color: #fff;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1.6;
 }
 
-.product_list .product .product-content .content-hidden .content-info span * {
+.product_list .product .product-content .content-hidden .content-info span>* {
     color: #fff;
-    font-size: 23px;
+    font-size: 20px;
     line-height: 1.6;
     margin: 0px 0px 0px;
 }
@@ -236,7 +236,7 @@ figure {
     transition: height 400ms 800ms;
 }
 
-#proart__productsNav .row:after {
+.products-nav .row:after {
     content: "";
     display: table;
     clear: both;

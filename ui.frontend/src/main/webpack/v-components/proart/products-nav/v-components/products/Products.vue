@@ -1,5 +1,4 @@
 <template>
-    <div>
         <div class="product_list">
             <div class="product"
             v-for="productItem in productsData.productsNav"
@@ -37,7 +36,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -45,11 +43,6 @@ import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
     mixins: [adapt],
-    data() {
-        return {
-            imageSrcStyle: null,
-        };
-    },
     props: {
         productsData: Object,
     },
