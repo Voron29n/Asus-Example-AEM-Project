@@ -1,7 +1,7 @@
 package com.epam.asus.core.models.beans.product;
 
 import com.epam.asus.core.models.beans.SimpleLinkWithoutTitleBean;
-import com.google.gson.annotations.Expose;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Getter;
 import org.apache.sling.api.resource.Resource;
@@ -17,20 +17,18 @@ import javax.annotation.PostConstruct;
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ProductItemBean {
 
+    @JsonIgnore
     @Getter(AccessLevel.NONE)
     @SlingObject
     private Resource currentResource;
 
-    @Expose
     @ValueMapValue
     private String fileReference;
-    @Expose
     @ValueMapValue
     private String productTitle;
-    @Expose
     @ValueMapValue
     private String productDescription;
-    @Expose
+
     private SimpleLinkWithoutTitleBean productMenuLink;
 
     @PostConstruct

@@ -1,6 +1,7 @@
 package com.epam.asus.core.models.beans;
 
 import com.epam.asus.core.utilites.CommonUtils;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -18,6 +19,7 @@ public class SimpleLinkWithoutTitleBean {
     private String linkTo;
     @ValueMapValue
     private String linkUrlTarget;
+    @JsonIgnore
     @ValueMapValue
     private boolean isExternalLink;
 
@@ -26,6 +28,7 @@ public class SimpleLinkWithoutTitleBean {
         linkTo = CommonUtils.correctExternalLink(isExternalLink, linkTo);
     }
 
+    @JsonIgnore
     public boolean isEmpty(){
         return linkTo == null;
     }

@@ -3,6 +3,8 @@ package com.epam.asus.core.models.impl.product;
 import com.epam.asus.core.models.ProductLineList;
 import com.epam.asus.core.models.beans.product.ProductItemBean;
 import com.epam.asus.core.models.beans.product.ProductMenuBean;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import lombok.Getter;
@@ -41,21 +43,14 @@ public class ProductLineListImpl implements ProductLineList {
     private String productLineListCollectionJson;
 
     @PostConstruct
-    private void init() {
+    private void init() throws JsonProcessingException {
         ProductMenuBean productMenuBean = currentResource.adaptTo(ProductMenuBean.class);
         List<ProductItemBean> productLineList = productList.stream()
                 .map(productItem -> productItem.adaptTo(ProductItemBean.class))
                 .collect(Collectors.toList());
-        Gson gson = getGson();
-        productMenuBeanJson = gson.toJson(productMenuBean);
-        productLineListCollectionJson = gson.toJson(productLineList);
-    }
 
-    @NotNull
-    private Gson getGson() {
-        return new GsonBuilder()
-                .excludeFieldsWithoutExposeAnnotation()
-                .create();
+        productMenuBeanJson = new ObjectMapper().writeValueAsString(productMenuBean);
+        productLineListCollectionJson = new ObjectMapper().writeValueAsString(productLineList);
     }
 
     @Override
