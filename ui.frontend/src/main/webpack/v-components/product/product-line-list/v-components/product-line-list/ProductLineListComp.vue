@@ -9,7 +9,7 @@
                                 v-for="productItem in productLineList"
                                 :key="productItem.productTitle"
                                 :product-item-data="productItem"
-                            ></v-product-item>  
+                            ></v-product-item>
                             <v-product-menu-icon
                                 :product-menu-data="productMenuBean"
                             ></v-product-menu-icon>
@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import ProductLineList_ProductItem from "../product-item/ProductItem";
-import ProductLineList_ProductMenuIcon from "../product-menu-icon/ProductMenuIcon";
+import ProductLineList_ProductItem from "../product-line-list-parts/ProductItem";
+import ProductLineList_ProductMenuIcon from "../product-line-list-parts/ProductMenuIcon";
 
 export default {
     components: {
