@@ -29,11 +29,11 @@ public class ProductItemBean {
     @ValueMapValue
     private String productDescription;
 
-    private SimpleLinkWithoutTitleBean productMenuLink;
+    private SimpleLinkWithoutTitleBean productItemLink;
 
     @PostConstruct
     private void init(){
-        productMenuLink = currentResource.adaptTo(SimpleLinkWithoutTitleBean.class);
+        productItemLink = currentResource.adaptTo(SimpleLinkWithoutTitleBean.class);
     }
 
 }
