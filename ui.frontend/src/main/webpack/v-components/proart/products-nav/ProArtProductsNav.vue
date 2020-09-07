@@ -12,8 +12,9 @@
 
 <script>
 export default {
-    name: "ProArtProductsNav",
+    name: "proart_products-nav-data",
     components: {
+        "proart_products-nav-data": () => import( /* webpackChunkName: "ProArtProductsNav" */ './ProArtProductsNav.vue').then(m => m.default),
         VueProducts: () =>
             import(
                 /* webpackChunkName: "ProArtProductsNav" */ "./v-components/products/Products"

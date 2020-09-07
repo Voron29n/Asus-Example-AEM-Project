@@ -7,7 +7,9 @@
 
 <script>
 export default {
+    name: "article_images-data",
     components: {
+        "article_images-data": () => import( /* webpackChunkName: "ArticleImages" */ './ArticleImages.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "ArticleImages" */ "./v-components/title/Title"

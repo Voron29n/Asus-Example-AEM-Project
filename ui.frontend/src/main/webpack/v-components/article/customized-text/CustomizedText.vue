@@ -11,7 +11,9 @@
 
 <script>
 export default {
+    name: "article_customized-text-data",
     components: {
+        "article_customized-text-data": () => import( /* webpackChunkName: "CustomizedText" */ './CustomizedText.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "CustomizedText" */ "./v-components/title/Title"

@@ -9,18 +9,6 @@
 </template>
 
 <script>
-// import Vue from "vue";
-// import heroBannerMiddle from './HeroBannerMiddle.vue';
-// Vue.component('hero-banner-middle-data', heroBannerMiddle);
-
-// Vue.component('hero-banner-middle-data', require("@components/hero-banner/hero-banner-middle/HeroBannerMiddle").default);
-// Vue.component('hero-banner-middle-data', (resolve) => {
-//     import ( /* webpackChunkName: "HeroBannerMiddle" */ "@components/hero-banner/hero-banner-middle/HeroBannerMiddle")
-//     .then((HeroBannerMiddle) => {
-//         resolve(HeroBannerMiddle.default);
-//     });
-// });
-
 export default {
     name: "hero-banner-middle-data",
     components: {

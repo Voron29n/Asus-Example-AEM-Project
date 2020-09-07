@@ -7,7 +7,9 @@
 
 <script>
 export default {
+    name: "article_text-data",
     components: {
+        "article_text-data": () => import( /* webpackChunkName: "ArticleText" */ './ArticleText.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "ArticleText" */ "./v-components/title/Title"

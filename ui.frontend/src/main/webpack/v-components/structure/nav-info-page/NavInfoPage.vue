@@ -7,7 +7,9 @@
 
 <script>
 export default {
+    name: "nav-info-page-data",
     components: {
+        "nav-info-page-data": () => import( /* webpackChunkName: "NavInfoPage" */ './NavInfoPage.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "NavInfoPage" */ "./v-components/title/Title"

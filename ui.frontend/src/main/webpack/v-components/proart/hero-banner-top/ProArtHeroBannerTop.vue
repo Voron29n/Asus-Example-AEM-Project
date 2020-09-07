@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import Vue from "vue";
-Vue.component('vue_proart_hero-banner-top-data', require("@components/proart/hero-banner-top/ProArtHeroBannerTop"));
 export default {
+    name: "proart_hero-banner-top-data",
     components: {
+        "proart_hero-banner-top-data": () => import( /* webpackChunkName: "ProArtHeroBannerTop" */ './ProArtHeroBannerTop.vue').then(m => m.default),
         VueImage: () =>
             import(
                 /* webpackChunkName: "ProArtHeroBannerTop" */ "./v-components/image/Image"

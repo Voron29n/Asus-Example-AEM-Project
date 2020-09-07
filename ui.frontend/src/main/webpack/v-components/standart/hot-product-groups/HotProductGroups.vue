@@ -11,7 +11,9 @@
 
 <script>
 export default {
+    name: "hot-product-groups-data",
     components: {
+        "hot-product-groups-data": () => import( /* webpackChunkName: "HotProductGroups" */ './HotProductGroups.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "HotProductGroups" */ "./v-components/title/Title"
