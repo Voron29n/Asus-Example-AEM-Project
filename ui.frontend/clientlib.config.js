@@ -51,7 +51,7 @@ module.exports = {
                     cwd: 'js',
                     files: ['*.js'],
                     flatten: false,
-                    ignore: ['site.js']
+                    ignore: ['site.asus.js']
                 },
                 css: {
                     cwd: 'css',
@@ -70,14 +70,14 @@ module.exports = {
                 // Copy entrypoint scripts and stylesheets into the respective ClientLib
                 // directories
                 js: {
-                    cwd: 'js',
+                    cwd: 'clientlib-vue/js',
                     files: ['site.*'],
                     flatten: true,
                 },
 
                 // default config
                 css: {
-                    cwd: 'css',
+                    cwd: 'clientlib-vue/css',
                     files: ['site.*'],
                     flatten: true,
                 },
@@ -89,6 +89,37 @@ module.exports = {
                     flatten: false,
                     ignore: ['**/*.js', '**/*.css']
                 },
+
+            }
+        },
+        {
+            ...libsBaseConfig,
+            name: 'clientlib-vue',
+            assets: {
+                // Copy entrypoint scripts and stylesheets into the respective ClientLib
+                // directories
+                js: {
+                    cwd: 'clientlib-vue/js',
+                    files: ['**/*.js'],
+                    flatten: false,
+                    ignore: ['site.*']
+                },
+
+                // default config
+                css: {
+                    cwd: 'clientlib-vue/css',
+                    files: ['**/*.css'],
+                    flatten: false,
+                    ignore: ['site.*']
+                },
+
+                // Copy all other files into the `resources` ClientLib directory
+                // resources: {
+                //     cwd: 'clientlib-site/resources',
+                //     files: ['**/*.*'],
+                //     flatten: false,
+                //     ignore: ['**/*.js', '**/*.css']
+                // },
 
             }
         }

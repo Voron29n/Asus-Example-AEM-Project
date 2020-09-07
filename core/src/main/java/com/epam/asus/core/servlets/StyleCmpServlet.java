@@ -34,27 +34,27 @@ import java.util.Objects;
                 "sling.servlet.methods=" + HttpConstants.METHOD_GET,
                 "sling.servlet.resourceTypes="+ "sling/servlet/default",
                 "sling.servlet.selectors="+ "asus",
-                "sling.servlet.extensions="+ "css"
+                "sling.servlet.extensions="+ "js"
         })
 public class StyleCmpServlet extends SlingSafeMethodsServlet {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
     private static final String PATH_REQUEST = "/bin/myDataSourcePoolServlet/css/(.*)";
-    private static final String PATH_CSS_NODE = "/apps/asus/clientlibs/clientlib-dependencies/css";
+    private static final String PATH_JS_NODE = "/apps/asus/clientlibs/clientlib-site/resources/js";
 
     @Override
     protected void doGet(final SlingHttpServletRequest request, final @NotNull SlingHttpServletResponse response) throws IOException {
 
-        if(request.getPathInfo().matches(PATH_REQUEST)){
+//        if(request.getPathInfo().matches(PATH_REQUEST)){
             String name = Path.of(FilenameUtils.getName(request.getPathInfo())).getFileName().toString();
 
-            Resource resource = request.getResourceResolver().getResource(PATH_CSS_NODE);
+            Resource resource = request.getResourceResolver().getResource(PATH_JS_NODE);
             Resource child = null;
             if (resource != null) {
                 child = resource.getChild(name);
-                response.setContentType("text/css");
+                response.setContentType("text/javascript");
                 response.getOutputStream().write(Objects.requireNonNull(child).getPath().getBytes().clone());
             }
-        }
+//        }
     }
 }

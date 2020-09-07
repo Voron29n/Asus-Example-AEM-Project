@@ -44,9 +44,10 @@ module.exports = {
         site: SOURCE_ROOT + "/site/main.ts",
     },
     output: {
-        filename: 'js/[name].js',
+        filename: 'clientlib-vue/js/[name].asus.js',
         path: path.resolve(__dirname, "dist"),
-        publicPath: '/bin/myDataSourcePoolServlet' + '/'
+        // publicPath: '/bin/myDataSourcePoolServlet' + '/'
+        publicPath: '/apps/asus/clientlibs' + '/'
     },
     module: {
         rules: [{
@@ -60,6 +61,10 @@ module.exports = {
                     },
                     {
                         loader: "ts-loader",
+                        options: {
+                            appendTsSuffixTo: [/\.vue$/],
+                            transpileOnly: true
+                        },
                     },
                     {
                         loader: "webpack-import-glob-loader",
@@ -96,7 +101,7 @@ module.exports = {
                         options: {
                             url: false,
                             import: true,
-                            sourceMap: true,
+                            sourceMap: false,
                         }
                     },
                     {
@@ -129,7 +134,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].asus.css'
+            filename: 'clientlib-vue/css/[name].asus.css'
         }),
         new CopyWebpackPlugin([{
             from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),

@@ -4,17 +4,17 @@ import Vue from "vue";
 /* Vue configuration */
 Vue.config.devtools = true;
 
+import { fetch } from 'whatwg-fetch';
 /* Import Custom Vue Plugin */
-// import fetchPlugin from "@plugin/fetchPlugin.js";
+import fetchPlugin from "@plugin/fetchPlugin.js";
 /* Registration Custom Vue Plugin */
-// Vue.use(fetchPlugin);
+Vue.use(fetchPlugin);
 
 /* Import custom class */
 import { ComponentData } from "./ComponentData";
 
 /* Default fields */
 let vueArrayComponents = []; // Array for all created vue components
-
 const vueRootData = {
     rootWrapperSelector: ".root.container.responsivegrid",
     rootIdValue: "vue-root",
@@ -32,7 +32,7 @@ vueArrayComponents = [
     new ComponentData("#grid-parsys_desc-three-mobile-four-or-two_component-vue", "grid-parsys_desk3-mobile4-or-mobile2-data"),
     /* hero-banner group*/
     new ComponentData("#hero-banner-small_component-vue", "vue_hero-banner-small-data"),
-    // new ComponentData("#hero-banner-middle_component-vue_component-vue", "vue_hero-banner-middle-data"),
+    new ComponentData("#hero-banner-middle_component-vue", "vue_hero-banner-middle-data"),
     new ComponentData("#hero-banner-top_component-vue", "vue_hero-banner-top-data"),
     /* structure group*/
     new ComponentData("#footer_component-vue", "vue_footer-data"),
@@ -51,11 +51,36 @@ vueArrayComponents = [
 ];
 
 /* Third step import Vue Component */
-import { injectVueComponent } from "./import/utils";
+// import { injectVueComponent } from "./import/utils";
+
+
+const main = document.querySelector(vueRootData.rootWrapperSelector);
+main.id = vueRootData.rootIdValue;
+
+async function getComponent(element) {
+    switch (element.tagName) {
+        case "vue_hero-banner-middle-data":
+            element.innerHTML = await
+            Vue.component("vue_hero-banner-middle-data", require("@components/hero-banner/hero-banner-middle/HeroBannerMiddle").default);
+            break;
+        case "4":
+            alert('В точку!');
+            break;
+        case 5:
+            alert('Перебор');
+            break;
+        default:
+            // alert("Нет таких значений");
+    }
+    return element;
+};
 
 vueArrayComponents.forEach((element) => {
-    if (document.querySelector(element.selector)) {
-        injectVueComponent(element.tagName);
+    if (document.querySelector(element.tagName)) {
+        // Vue.component("hero-banner-middle-data", require("@components/hero-banner/hero-banner-middle/HeroBannerMiddle").default);
+        getComponent(element).then(component => {
+            main.appendChild(component);
+        })
     }
 });
 
@@ -63,10 +88,12 @@ vueArrayComponents.forEach((element) => {
     Fourth step add id for div below body,
     because vue can't mount to <html> or <body> 
 */
-document.querySelector(vueRootData.rootWrapperSelector).id =
-    vueRootData.rootIdValue;
+// document.querySelector(vueRootData.rootWrapperSelector).id =
+//     vueRootData.rootIdValue;
+//   components: vueComponentObject,
 
 new Vue({
     el: vueRootData.rootIdSelector,
+    // components: vueComponentObject,
     template: vueRootData.rootIdSelector,
 });

@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import Vue from "vue";
+Vue.component('vue_proart_hero-banner-top-data', require("@components/proart/hero-banner-top/ProArtHeroBannerTop"));
 export default {
     components: {
         VueImage: () =>
