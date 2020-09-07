@@ -40,7 +40,13 @@
 
 @media only screen and (max-width: 720px) {
     body #footer_component-vue .aai-fmiddle {
-        padding: 0;
+        padding: 1px 0 0px;
+    }
+    #footer_component-vue .aai-footer-span {
+        margin-left: 10px;
+        margin-right: 40px;
+        padding-right: 0px;
+        width: 95% !important;
     }
 }
 
@@ -71,12 +77,13 @@
 
 @media (max-width: 720px) {
     #footer_component-vue .aai-footer-span {
-        width: 100% !important;
+        width: 95% !important;
         overflow: hidden;
         display: block;
         height: 40px;
         border-bottom: 1px solid #CCC;
         margin-bottom: 20px;
+        margin-left: 10px;
         -webkit-transform: translateZ(0);
         -moz-transform: translateZ(0);
         -ms-transform: translateZ(0);
@@ -92,5 +99,9 @@
 @media only screen and (max-width: 720px) {
     body #footer_component-vue .aai-footer-span:first-child {
         margin-top: 20px;
+        margin-left: 10px;
+    }
+    body #footer_component-vue {
+        padding: 0px;
     }
 }

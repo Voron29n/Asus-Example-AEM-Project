@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Vue from "vue";
-Vue.component('vue_hero-banner-middle-data', require("@components/hero-banner/hero-banner-middle/HeroBannerMiddle").default);
+// import Vue from "vue";
+// Vue.component('vue_hero-banner-middle-data', require("@components/hero-banner/hero-banner-middle/HeroBannerMiddle").default);
 
 export default {
     components: {
