@@ -31,9 +31,7 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss" scoped>
-@import "./slick-arrow_default";
-@import "./slick-arrow_media";
-</style>
+import (/* webpackChunkName: "SlickArrow" */ './_slick-arrow_default.scss');
+import (/* webpackChunkName: "SlickArrow" */ './_slick-arrow_media.scss');
+</script>

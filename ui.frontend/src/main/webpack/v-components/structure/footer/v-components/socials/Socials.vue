@@ -21,7 +21,6 @@
 export default {
   props: {
     socialsData: Object,
-    default: () => ({}),
   },
 };
 </script>

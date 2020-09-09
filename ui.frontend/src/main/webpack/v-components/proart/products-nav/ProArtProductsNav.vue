@@ -12,9 +12,7 @@
 
 <script>
 export default {
-    name: "proart_products-nav-data",
     components: {
-        "proart_products-nav-data": () => import( /* webpackChunkName: "ProArtProductsNav" */ './ProArtProductsNav.vue').then(m => m.default),
         VueProducts: () =>
             import(
                 /* webpackChunkName: "ProArtProductsNav" */ "./v-components/products/Products"
@@ -34,9 +32,7 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss">
-@import "./v-style/products_nav_default";
-@import "./v-style/products_nav_media";
-</style>
+import (/* webpackChunkName: "ProArtProductsNav" */ './v-style/_products_nav_default.scss');
+import (/* webpackChunkName: "ProArtProductsNav" */ './v-style/_products_nav_media.scss');
+</script>

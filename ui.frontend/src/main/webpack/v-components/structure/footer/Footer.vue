@@ -16,9 +16,7 @@
 import Vue from "vue";
 Vue.component('VueLinksGroup', require("@components/structure/footer/v-components/linksGroup/LinksGroup"));
 export default {
-    name: "footer-data",
     components: {
-        "footer-data": () => import( /* webpackChunkName: "Footer" */ './Footer.vue').then(m => m.default),
         VueCopyright: () =>
             import(
                 /* webpackChunkName: "Footer" */ "./v-components/copyrights/Copyrights"
@@ -108,9 +106,7 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss">
-@import "./v-style/footer_default";
-@import "./v-style/footer_media";
-</style>
+import (/* webpackChunkName: "Footer" */ './v-style/_footer_default.scss');
+import (/* webpackChunkName: "Footer" */ './v-style/_footer_media.scss');
+</script>

@@ -10,9 +10,7 @@
 
 <script>
 export default {
-    name: "article_image-text-data",
     components: {
-        "article_image-text-data": () => import( /* webpackChunkName: "ArticleImageText" */ './ArticleImageText.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "ArticleImageText" */ "./v-components/title/Title"
@@ -64,9 +62,6 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss" scoped>
-@import "./v-style/article_image_text_default";
-@import "./v-style/article_image_text_media";
-</style>
+import (/* webpackChunkName: "ArticleImageText" */ './v-style/_article_image_text_default.scss');
+</script>

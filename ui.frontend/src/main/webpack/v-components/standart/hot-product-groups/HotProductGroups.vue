@@ -11,9 +11,7 @@
 
 <script>
 export default {
-    name: "hot-product-groups-data",
     components: {
-        "hot-product-groups-data": () => import( /* webpackChunkName: "HotProductGroups" */ './HotProductGroups.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "HotProductGroups" */ "./v-components/title/Title"
@@ -46,9 +44,8 @@ export default {
         },
     },
 };
+
+import (/* webpackChunkName: "HotProductGroups" */ './v-style/_hot_product_groups_default.scss');
+import (/* webpackChunkName: "HotProductGroups" */ './v-style/_hot_product_groups_media.scss');
 </script>
 
-<style lang="scss">
-@import "./v-style/hot_product_groups_default";
-@import "./v-style/hot_product_groups_media";
-</style>

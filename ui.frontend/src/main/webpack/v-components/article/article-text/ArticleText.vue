@@ -7,9 +7,7 @@
 
 <script>
 export default {
-    name: "article_text-data",
     components: {
-        "article_text-data": () => import( /* webpackChunkName: "ArticleText" */ './ArticleText.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "ArticleText" */ "./v-components/title/Title"
@@ -43,8 +41,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss" scoped>
-@import "./v-style/article_text_default";
-@import "./v-style/article_text_media";
-</style>

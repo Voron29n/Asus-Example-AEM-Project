@@ -11,7 +11,6 @@
 export default {
     props: {
         languageData: Object,
-        default: () => ({})
     },
     
 };

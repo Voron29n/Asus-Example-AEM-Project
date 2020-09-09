@@ -8,10 +8,6 @@
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
-    name: "grid-parsys_desk3-mobile4-or-mobile2-data",
-    components: {
-        "grid-parsys_desk3-mobile4-or-mobile2-data": () => import( /* webpackChunkName: "GridParsys" */ './GridParsys.vue').then(m => m.default),
-    },
     mixins: [adapt],
     props: {
         numberParsysMobileVersion: {
@@ -49,8 +45,6 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss" scoped>
-@import "./v-style/parsys_default";
-</style>
+import (/* webpackChunkName: "GridParsys" */ './v-style/_parsys_default.scss');
+</script>

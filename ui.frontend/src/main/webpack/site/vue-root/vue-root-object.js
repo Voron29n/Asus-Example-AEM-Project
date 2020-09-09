@@ -15,6 +15,7 @@ import { ComponentData } from "./ComponentData";
 /* Default fields */
 let vueArrayComponents = []; // Array for all created vue components
 const vueRootData = {
+    rootClassSelector: ".root",
     rootWrapperSelector: ".root.container.responsivegrid",
     rootIdValue: "vue-root",
     rootIdSelector: "#vue-root",
@@ -42,27 +43,27 @@ vueArrayComponents = [
     ),
     new ComponentData(
         "#hero-banner-middle_component-vue",
-        "vue_hero-banner-middle-data"
+        "vue_hero-banner-middle-data", "@components/hero-banner/hero-banner-middle/HeroBannerMiddle"
     ),
     new ComponentData(
         "#hero-banner-top_component-vue",
         "vue_hero-banner-top-data"
     ),
     /* structure group*/
-    new ComponentData("#footer_component-vue", "vue_footer-data"),
+    new ComponentData("#footer_component-vue", "vue_footer-data", "@components/structure/footer/Footer"),
     new ComponentData("#nav-info-page_component-vue", "vue_nav-info-page-data"),
     /* article group*/
-    new ComponentData("#article__title_component-vue", "vue_title-data"),
+    new ComponentData("#article__title_component-vue", "vue_article_title-data"),
     new ComponentData(
         "#article__image-text_component-vue",
-        "vue_image-text-data"
+        "vue_article_image-text-data"
     ),
-    new ComponentData("#article__text_component-vue", "vue_text-data"),
-    new ComponentData("#article__image_component-vue", "vue_image-data"),
-    new ComponentData("#article__images_component-vue", "vue_images-data"),
+    new ComponentData("#article__text_component-vue", "vue_article_text-data"),
+    new ComponentData("#article__image_component-vue", "vue_article_image-data"),
+    new ComponentData("#article__images_component-vue", "vue_article_images-data"),
     new ComponentData(
         "#customized-text_component-vue",
-        "vue_customized-text-data"
+        "vue_article_customized-text-data"
     ),
     /* proart group*/
     new ComponentData(
@@ -83,139 +84,60 @@ vueArrayComponents = [
     Third step add id for div below body,
     because vue can't mount to <html> or <body> 
 */
-const main = document.querySelector(vueRootData.rootWrapperSelector);
-main.id = vueRootData.rootIdValue;
+
+// if (document.querySelector('.xf-web-container > div') != null) {
+//     document.querySelector('.xf-web-container > div').id = vueRootData.rootIdValue;
+// } else if (document.querySelector(vueRootData.rootIdSelector) != null) {
+//     document.querySelector(vueRootData.rootIdSelector).id = vueRootData.rootIdValue;
+// }
+
+if (document.querySelector(vueRootData.rootClassSelector) != null) {
+    document.querySelector(vueRootData.rootClassSelector).id =
+        vueRootData.rootIdValue;
+} else if (document.querySelector('.xf-web-container > div')) {
+    document.querySelector('.xf-web-container > div').id = vueRootData.rootIdValue;
+}
 
 /* Fourth  step import Vue Component */
-// import { getComponent } from "./utils";
+import { getComponent } from "./utils";
 
-async function getComponent(element) {
-    switch (element.tagName) {
-        /* standart */
-        case "vue_hot-product-groups-data":
-            await Vue.component(
-                "vue_hot-product-groups-data",
-                require("@components/standart/hot-product-groups/HotProductGroups")
-                .default
-            );
-            break;
-            /* parsys group*/
-        case "grid-parsys_desk3-mobile4-or-mobile2-data":
-            await Vue.component(
-                "grid-parsys_desk3-mobile4-or-mobile2-data",
-                require("@components/parsys/grid-parsys-desc-3-mobile-4_or_2/GridParsys")
-                .default
-            );
-            break;
-            /* hero-banner group*/
-        case "vue_hero-banner-small-data":
-            await Vue.component(
-                "vue_hero-banner-small-data",
-                require("@components/hero-banner/hero-banner-small/HeroBannerSmall")
-                .default
-            );
-            break;
-        case "vue_hero-banner-middle-data":
-            await Vue.component(
-                "vue_hero-banner-middle-data",
-                require("@components/hero-banner/hero-banner-middle/HeroBannerMiddle")
-                .default
-            );
-            break;
-        case "vue_hero-banner-top-data":
-            await Vue.component(
-                "vue_hero-banner-top-data",
-                require("@components/hero-banner/hero-banner-top/HeroBannerTop").default
-            );
-            break;
-            /* structure group*/
-        case "vue_footer-data":
-            await Vue.component(
-                "vue_footer-data",
-                require("@components/structure/footer/Footer").default
-            );
-            break;
-        case "vue_nav-info-page-data":
-            await Vue.component(
-                "vue_nav-info-page-data",
-                require("@components/structure/nav-info-page/NavInfoPage").default
-            );
-            break;
-            /* article group*/
-        case "vue_article_title-data":
-            await Vue.component(
-                "vue_article_title-data",
-                require("@components/article/article-title/ArticleTitle").default
-            );
-            break;
-        case "vue_article_image-text-data":
-            await Vue.component(
-                "vue_article_image-text-data",
-                require("@components/article/article-image-text/ArticleImageText")
-                .default
-            );
-            break;
-        case "vue_article_text-data":
-            await Vue.component(
-                "vue_article_text-data",
-                require("@components/article/article-text/ArticleText").default
-            );
-            break;
-        case "vue_article_image-data":
-            await Vue.component(
-                "vue_article_image-data",
-                require("@components/article/article-image/ArticleImage").default
-            );
-            break;
-        case "vue_article_images-data":
-            await Vue.component(
-                "vue_article_images-data",
-                require("@components/article/article-images/ArticleImages").default
-            );
-            break;
-        case "vue_article_customized-text-data":
-            await Vue.component(
-                "vue_article_customized-text-data",
-                require("@components/article/customized-text/CustomizedText").default
-            );
-            break;
-            /* proart group*/
-        case "vue_proart_hero-banner-top-data":
-            await Vue.component(
-                "vue_proart_hero-banner-top-data",
-                require("@components/proart/hero-banner-top/ProArtHeroBannerTop")
-                .default
-            );
-            break;
-        case "vue_proart_products-nav-data":
-            await Vue.component(
-                "vue_proart_products-nav-data",
-                require("@components/proart/products-nav/ProArtProductsNav").default
-            );
-            break;
-        case "vue_proart_categories-nav-data":
-            await Vue.component(
-                "vue_proart_categories-nav-data",
-                require("@components/proart/categories-nav/ProArtCategoriesNav").default
-            );
-            break;
-        default:
-            // alert("Нет таких значений");
-    }
-    // return element;
-}
+const pageComponents = {}
 
 vueArrayComponents.forEach((element) => {
     if (document.querySelector(element.tagName)) {
-        // getComponent(element).then(component => {
-        //     main.appendChild(component);
-        // })
-        getComponent(element);
+        getComponent(element.tagName);
+        // pageComponents[element.tagName] =
+        //     getComponent(element.tagName);
     }
 });
 
-new Vue({
-    el: vueRootData.rootIdSelector,
-    // components: vueComponentObject,
-    template: vueRootData.rootIdSelector,
-});
+Vue.config.ignoredElements = [
+    'cq',
+    // Use a `RegExp` to ignore all elements that start with "ion-"
+    // 2.5+ only
+    // /^ion-/
+];
+
+if (document.querySelector(vueRootData.rootIdSelector) != null) {
+    new Vue({
+        el: vueRootData.rootIdSelector,
+        template: vueRootData.rootIdSelector,
+    });
+}
+
+// .$mount(vueRootData.rootIdSelector);
+
+// new Vue({
+//      el: vueRootData.rootIdSelector,
+//      components: {
+//      ...pageComponents
+//      },
+//      render: h => h(),
+//      template: vueRootData.rootIdSelector,
+// }).$mount(vueRootData.rootIdSelector);
+
+// new Vue({
+//     el: vueRootData.rootIdSelector,
+//     render: h => h(vueRootData.rootIdValue),
+//     template: vueRootData.rootIdSelector,
+// })

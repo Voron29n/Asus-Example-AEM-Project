@@ -11,9 +11,7 @@
 
 <script>
 export default {
-    name: "article_customized-text-data",
     components: {
-        "article_customized-text-data": () => import( /* webpackChunkName: "CustomizedText" */ './CustomizedText.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "CustomizedText" */ "./v-components/title/Title"
@@ -46,9 +44,6 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss" scoped>
-@import "./v-style/customized_text_default";
-@import "./v-style/customized_text_media";
-</style>
+import (/* webpackChunkName: "CustomizedText" */ './v-style/_customized_text_default.scss');
+</script>

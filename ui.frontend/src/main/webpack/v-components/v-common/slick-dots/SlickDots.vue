@@ -24,9 +24,6 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss" scoped>
-@import "./slick-dots_default";
-@import "./slick-dots_media";
-</style>
+import (/* webpackChunkName: "SlickDots" */ './_slick-dots_default.scss');
+</script>

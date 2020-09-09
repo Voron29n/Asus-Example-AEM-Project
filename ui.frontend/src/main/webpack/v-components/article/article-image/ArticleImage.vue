@@ -6,9 +6,7 @@
 
 <script>
 export default {
-    name: "article_image-data",
     components: {
-        "article_image-data": () => import( /* webpackChunkName: "ArticleImage" */ './ArticleImage.vue').then(m => m.default),
         VueImage: () =>
             import(
                 /* webpackChunkName: "ArticleImage" */ "./v-components/image/Image"
@@ -29,8 +27,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss" scoped>
-@import "./v-style/article_image_default";
-@import "./v-style/article_image_media";
-</style>

@@ -61,9 +61,6 @@ export default {
     },
   },
 };
-</script>
 
-<style lang="scss">
-@import "./links_group_default";
-@import "./links_group_media";
-</style>
+import (/* webpackChunkName: "Footer" */ './_links_group_default.scss');
+</script>

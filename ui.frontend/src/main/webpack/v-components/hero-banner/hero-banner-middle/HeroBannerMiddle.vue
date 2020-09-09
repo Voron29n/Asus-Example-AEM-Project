@@ -10,9 +10,7 @@
 
 <script>
 export default {
-    name: "hero-banner-middle-data",
     components: {
-        "hero-banner-middle-data": () => import( /* webpackChunkName: "HeroBannerMiddle" */ './HeroBannerMiddle.vue').then(m => m.default),
         VueHeroMiddle: () =>
             import(
                 /* webpackChunkName: "HeroBannerMiddle" */ "./v-components/HeroMiddle"
@@ -47,8 +45,7 @@ export default {
         },
     },
 };
+
+import (/* webpackChunkName: "HeroBannerMiddle" */ './v-style/_banner_middle_default.scss');
+import (/* webpackChunkName: "HeroBannerMiddle" */ './v-style/_banner_middle_media.scss');
 </script>
-<style lang="scss" scoped>
-@import "./v-style/banner_middle_default";
-@import "./v-style/banner_middle_media";
-</style>

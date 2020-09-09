@@ -40,19 +40,13 @@
 
 @media only screen and (max-width: 720px) {
     body #footer_component-vue .aai-fmiddle {
-        padding: 1px 0 0px;
+        padding: 1px 10px 0px;
     }
     #footer_component-vue .aai-footer-span {
         margin-left: 10px;
         margin-right: 40px;
         padding-right: 0px;
         width: 95% !important;
-    }
-}
-
-@media (max-width: 719px) {
-    #footer_component-vue .aai-fnav li {
-        padding: 14px 0;
     }
 }
 
@@ -76,7 +70,7 @@
 }
 
 @media (max-width: 720px) {
-    #footer_component-vue .aai-footer-span {
+    body #footer_component-vue .aai-footer-span {
         width: 95% !important;
         overflow: hidden;
         display: block;
@@ -103,5 +97,14 @@
     }
     body #footer_component-vue {
         padding: 0px;
+    }
+    body #footer_component-vue .aai-footer-span {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 720px) {
+    .footer #footer_component-vue .aai-fnav li {
+        padding: 14px 0;
     }
 }

@@ -20,9 +20,7 @@ import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
 export default {
     mixins: [adapt],
-    name: "hero-banner-small-data",
     components: {
-        "hero-banner-small-data": () => import( /* webpackChunkName: "HeroBannerSmall" */ './HeroBannerSmall.vue').then(m => m.default),
         VueLink: () =>
             import(
                 /* webpackChunkName: "HeroBannerSmall" */ "./v-components/link/Link"
@@ -81,8 +79,7 @@ export default {
         },
     },
 };
+
+import (/* webpackChunkName: "HeroBannerSmall" */ './v-style/_banner_small_default.scss');
+import (/* webpackChunkName: "HeroBannerSmall" */ './v-style/_banner_small_media.scss');
 </script>
-<style lang="scss">
-@import "./v-style/banner_small_default";
-@import "./v-style/banner_small_media";
-</style>

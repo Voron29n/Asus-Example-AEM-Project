@@ -42,6 +42,26 @@ body footer.experiencefragment {
     border-top: none;
 }
 
+body #vue-root {
+    max-width: none;
+}
+
+.container {
+    display: contents;
+}
+
+.cmp-container {
+    margin: auto;
+}
+
+#vue-root>.cmp-container {
+    max-width: none;
+}
+
+#vue-root .cmp-container>.container>.cmp-container>div>*>* {
+    max-width: inherit;
+}
+
 a {
     color: $color-link;
     @media (prefers-color-scheme: dark) {

@@ -19,9 +19,7 @@
 
 <script>
 export default {
-    name: "proart_hero-banner-top-data",
     components: {
-        "proart_hero-banner-top-data": () => import( /* webpackChunkName: "ProArtHeroBannerTop" */ './ProArtHeroBannerTop.vue').then(m => m.default),
         VueImage: () =>
             import(
                 /* webpackChunkName: "ProArtHeroBannerTop" */ "./v-components/image/Image"
@@ -64,8 +62,7 @@ export default {
         },
     },
 };
+
+import (/* webpackChunkName: "ProArtHeroBannerTop" */ './v-style/_hero_banner_top_default.scss');
+import (/* webpackChunkName: "ProArtHeroBannerTop" */ './v-style/_hero_banner_top_media.scss');
 </script>
-<style lang="scss">
-@import "./v-style/hero_banner_top_default";
-@import "./v-style/hero_banner_top_media";
-</style>

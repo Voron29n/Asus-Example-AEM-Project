@@ -1,26 +1,23 @@
 "use strict";
 
 const path = require("path");
+
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TSConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const { Console } = require("console");
 
 const SOURCE_ROOT = __dirname + "/src/main/webpack";
 
 module.exports = {
     resolve: {
-        extensions: [".js", ".ts", ".vue", ".scss", ".json"],
-        plugins: [
-            new TSConfigPathsPlugin({
-                configFile: "./tsconfig.json",
-            }),
-        ],
+        extensions: [".js", ".ts", ".vue", ".css", ".scss", ".json", ".eot", ".svg", ".ttf", ".woff"],
         alias: {
             "@resources": path.resolve(
-                path.join(__dirname, "src", "main", "webpack", "resources")
+                path.join(__dirname, "src", "main", "webpack", "site", "resources")
             ),
             "@components": path.resolve(
                 path.join(__dirname, "src", "main", "webpack", "v-components")
@@ -44,10 +41,9 @@ module.exports = {
         site: SOURCE_ROOT + "/site/main.ts",
     },
     output: {
-        filename: 'clientlib-vue/js/[name].asus.js',
+        filename: 'apps/asus/clientlibs/clientlib-vue/js/[name].js',
         path: path.resolve(__dirname, "dist"),
-        // publicPath: '/bin/myDataSourcePoolServlet' + '/'
-        publicPath: '/apps/asus/clientlibs' + '/'
+        publicPath: '/',
     },
     module: {
         rules: [{
@@ -92,54 +88,100 @@ module.exports = {
                 },
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss)$/,
+                resolve: { extensions: [".scss"], },
                 loader: [
                     // "vue-style-loader",
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
                     {
                         loader: 'css-loader',
                         options: {
-                            url: false,
-                            import: true,
-                            sourceMap: false,
+                            sourceMap: true,
+                            importLoaders: 1,
+                            url: false
                         }
                     },
                     {
-                        loader: 'sass-loader',
-                        options: {
-                            url: true,
-                            // sourceMap: true
-                        }
-                    },
-                    {
-                        loader: "postcss-loader",
+                        loader: `postcss-loader`,
                         options: {
                             plugins() {
                                 return [require("autoprefixer")];
                             },
                         },
                     },
-                    {
-                        loader: "resolve-url-loader",
-                    },
+                    'resolve-url-loader?sourceMap',
+                    'sass-loader?sourceMap',
                     {
                         loader: "webpack-import-glob-loader",
                     },
                 ],
             },
+            {
+                test: /\.css$/,
+                loader: [
+                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                            importLoaders: 1,
+                            url: true
+                        }
+                    },
+                ],
+            },
+            {
+                test: /\.(ico|jpg|jpeg|png|gif|webp)(\?.*)?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'apps/asus/clientlibs/clientlib-vue/resources/images'
+                    }
+                }
+            },
+            {
+                test: /\.(eot|otf|ttf|woff|woff2|svg)(\?.*)?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'apps/asus/clientlibs/clientlib-vue/resources/fonts',
+                    },
+                },
+            },
+            {
+                test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 100000,
+                        name: '[name].[ext]',
+                        outputPath: 'urls/'
+                    }
+                }
+            },
         ],
     },
     plugins: [
         new VueLoaderPlugin(),
+        new TSConfigPathsPlugin({
+            configFile: "./tsconfig.json",
+        }),
         new CleanWebpackPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'clientlib-vue/css/[name].asus.css'
+            filename: 'apps/asus/clientlibs/clientlib-vue/css/[name].css',
         }),
-        new CopyWebpackPlugin([{
-            from: path.resolve(__dirname, SOURCE_ROOT + "/resources"),
-            to: "./clientlib-site/resources",
-        }, ]),
+        // new CopyWebpackPlugin([{
+        //     from: path.resolve(__dirname, SOURCE_ROOT + "/site/resources"),
+        //     to: "./resources",
+        // }, ]),
     ],
     stats: {
         assetsSort: "chunks",

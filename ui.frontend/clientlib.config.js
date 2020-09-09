@@ -14,7 +14,6 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 const path = require('path');
-
 const BUILD_DIR = path.join(__dirname, 'dist');
 const CLIENTLIB_DIR = path.join(
     __dirname,
@@ -40,6 +39,7 @@ const libsBaseConfig = {
 module.exports = {
     context: BUILD_DIR,
     clientLibRoot: CLIENTLIB_DIR,
+
     libs: [{
             ...libsBaseConfig,
             name: 'clientlib-dependencies',
@@ -70,26 +70,17 @@ module.exports = {
                 // Copy entrypoint scripts and stylesheets into the respective ClientLib
                 // directories
                 js: {
-                    cwd: 'clientlib-vue/js',
-                    files: ['site.*'],
+                    cwd: 'apps/asus/clientlibs/clientlib-vue/js',
+                    files: ['site.*', '_icomoon.*'],
                     flatten: true,
                 },
 
                 // default config
                 css: {
-                    cwd: 'clientlib-vue/css',
+                    cwd: 'apps/asus/clientlibs/clientlib-vue/css',
                     files: ['site.*'],
                     flatten: true,
                 },
-
-                // Copy all other files into the `resources` ClientLib directory
-                resources: {
-                    cwd: 'clientlib-site/resources',
-                    files: ['**/*.*'],
-                    flatten: false,
-                    ignore: ['**/*.js', '**/*.css']
-                },
-
             }
         },
         {
@@ -99,7 +90,7 @@ module.exports = {
                 // Copy entrypoint scripts and stylesheets into the respective ClientLib
                 // directories
                 js: {
-                    cwd: 'clientlib-vue/js',
+                    cwd: 'apps/asus/clientlibs/clientlib-vue/js',
                     files: ['**/*.js'],
                     flatten: false,
                     ignore: ['site.*']
@@ -107,19 +98,19 @@ module.exports = {
 
                 // default config
                 css: {
-                    cwd: 'clientlib-vue/css',
+                    cwd: 'apps/asus/clientlibs/clientlib-vue/css',
                     files: ['**/*.css'],
                     flatten: false,
                     ignore: ['site.*']
                 },
 
                 // Copy all other files into the `resources` ClientLib directory
-                // resources: {
-                //     cwd: 'clientlib-site/resources',
-                //     files: ['**/*.*'],
-                //     flatten: false,
-                //     ignore: ['**/*.js', '**/*.css']
-                // },
+                resources: {
+                    cwd: 'apps/asus/clientlibs/clientlib-vue/resources',
+                    files: ['**/*.*'],
+                    flatten: false,
+                    ignore: ['**/*.js', '**/*.css']
+                },
 
             }
         }

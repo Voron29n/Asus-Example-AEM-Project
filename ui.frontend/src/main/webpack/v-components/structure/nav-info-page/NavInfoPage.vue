@@ -7,9 +7,7 @@
 
 <script>
 export default {
-    name: "nav-info-page-data",
     components: {
-        "nav-info-page-data": () => import( /* webpackChunkName: "NavInfoPage" */ './NavInfoPage.vue').then(m => m.default),
         VueTitle: () =>
             import(
                 /* webpackChunkName: "NavInfoPage" */ "./v-components/title/Title"
@@ -43,9 +41,6 @@ export default {
         },
     },
 };
-</script>
 
-<style lang="scss">
-@import "./v-style/nav-info-page_default";
-@import "./v-style/nav-info-page_media";
-</style>
+import (/* webpackChunkName: "Footer" */ './v-style/_nav-info-page_default.scss');
+</script>
