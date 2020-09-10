@@ -1,5 +1,5 @@
 <template>
-    <li class="product-slick-slide product-slick-active">
+    <li class="product-slick-slide product-slick-active" :style="{width: itemWidth + `px`}">
         <a
             class="product-af-link-block"
             :href="productItemData.productItemLink.linkTo"
@@ -23,8 +23,12 @@ export default {
     props: {
         productItemData: {
             type: Object,
-            required: false,
+            required: true,
         },
+        itemWidth: {
+            type: Number,
+            required: true
+        }
     },
 };
 </script>
