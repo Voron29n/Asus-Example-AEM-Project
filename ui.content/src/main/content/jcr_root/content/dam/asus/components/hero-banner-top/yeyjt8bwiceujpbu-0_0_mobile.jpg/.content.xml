@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="0287c957-c6dc-4088-a2bc-f05241e894e4">
+    <jcr:content
+        cq:name="yeyjt8bwiceujpbu-0_0_mobile.jpg"
+        cq:parentPath="/content/dam/asus/components/hero-banner-top"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-08-30T17:17:11.680+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2020-08-30T17:17:10.373+03:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="70b9dffcd2fa6f63f650c957a6ceab8d657a14d0"
+            dam:size="{Long}241169"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2020-08-30T17:17:11.525+03:00"
+            jcr:lastModified="{Date}2020-08-30T17:17:11.525+03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}1170"
+            tiff:ImageWidth="{Long}1080"
+            xmp:CreatorTool="Adobe Photoshop CC (Windows)"
+            xmpMM:DocumentID="xmp.did:EFD20CC7E79111EA84798DD239BE9D25"
+            xmpMM:InstanceID="xmp.iid:EFD20CC6E79111EA84798DD239BE9D25"
+            xmpMM:OriginalDocumentID="xmp.did:316e9b9c-e606-3d4f-95dc-21e6d0f6e84c">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="adobe:docid:photoshop:1b59bd6e-9431-bb45-8435-c1520732d9dd"
+                stRef:instanceID="xmp.iid:5f616822-5a0b-584b-a31f-2188f46aee35"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
