@@ -2,12 +2,12 @@
 
 const path = require("path");
 
-const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TSConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const webpack                   = require("webpack");
+const MiniCssExtractPlugin      = require("mini-css-extract-plugin");
+const TSConfigPathsPlugin       = require("tsconfig-paths-webpack-plugin");
+const CopyWebpackPlugin         = require("copy-webpack-plugin");
+const { CleanWebpackPlugin }    = require("clean-webpack-plugin");
+const VueLoaderPlugin           = require("vue-loader/lib/plugin");
 
 const SOURCE_ROOT = __dirname + "/src/main/webpack";
 
