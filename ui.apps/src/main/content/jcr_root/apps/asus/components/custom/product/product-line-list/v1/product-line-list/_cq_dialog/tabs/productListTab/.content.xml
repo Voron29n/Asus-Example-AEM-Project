@@ -1,0 +1,151 @@
+<productListTab xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+                xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+                xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Product collection"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+
+        <column
+                jcr:primaryType="nt:unstructured"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+
+                <column jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <multiImagesCollecion
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                validation="custom-multifield-max-16"
+                                fieldDescription="New value"
+                                fieldLabel="Product list collection"
+                                granite:class="foundation-toggleable cq-dialog-container__editor-multifield-product_line_list">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    acs-commons-nested=""
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./productList"
+                                    granite:class="cq-dialog-container__editor-product_line_list">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <productImage
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Product Image"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true"
+                                            granite:class="cq-dialog-container-product_line_list-link-group product-image-data-group">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true"
+                                                    granite:class="cq-dialog-container__editor-product_line_list__image_block product-image-data">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <file
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                    allowUpload="{Boolean}false"
+                                                                    autoStart="{Boolean}false"
+                                                                    class="cq-droptarget"
+                                                                    fieldLabel="Product Image Asset"
+                                                                    fileNameParameter="./fileName"
+                                                                    fileReferenceParameter="./fileReference"
+                                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                                    multiple="{Boolean}false"
+                                                                    name="./file"
+                                                                    title="Upload Image Asset"
+                                                                    uploadUrl="${suffix.path}"
+                                                                    useHTML5="{Boolean}true"/>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </productImage>
+
+                                    <productTextData
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/well"
+                                            granite:class="cq-dialog-container-product_line_list-link-group product-text-data-group">
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                            <productTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    emptyText="Product Title"
+                                                    required="{Boolean}true"
+                                                    name="./productTitle"/>
+
+                                            <productDescription
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    emptyText="Product Description"
+                                                    name="./productDescription"/>
+
+                                        </items>
+                                    </productTextData>
+
+                                    <productLinkDataGroup
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/well"
+                                            granite:class="cq-dialog-container-product_line_list-link-group product-link-data-group">
+                                        <items jcr:primaryType="nt:unstructured">
+
+
+                                            <linkTo
+                                                    jcr:primaryType="nt:unstructured"
+                                                    emptyText="Link to Url"
+                                                    name="./linkTo"
+                                                    rootPath="/content/asus"
+                                                    suffix=".html"
+                                                    sling:resourceType="cq/gui/components/coral/common/form/pagefield/"/>
+
+                                            <productLinkDataSwitchGroup
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                    granite:class="cq-dialog-container-product_line_list-link-group product-link-data-switch-group">
+                                                <items jcr:primaryType="nt:unstructured">
+
+                                                    <typeLink
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                            fieldDescription="check - external link / uncheck - self link"
+                                                            name="./externalLink"
+                                                            value="{Boolean}true"
+                                                            default="{Boolean}true"
+                                                            uncheckedValue="{Boolean}false"/>
+                                                    <linkUrlTarget
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                            fieldDescription="check - new tab / uncheck - self tab"
+                                                            name="./linkUrlTarget"
+                                                            value="_blank"
+                                                            uncheckedValue="_self"
+                                                            default="_blank"
+                                                            checked="{Boolean}true"/>
+                                                </items>
+                                            </productLinkDataSwitchGroup>
+                                        </items>
+                                    </productLinkDataGroup>
+
+                                </items>
+
+                            </field>
+                        </multiImagesCollecion>
+                    </items>
+                </column>
+            </items>
+        </column>
+    </items>
+</productListTab>

@@ -20,7 +20,7 @@ const vueRootData = {
     rootIdSelector: "#vue-root",
 };
 
-/* Second step, you need add new Object with all vue components data at array 
+/* Second step, you need add new Object with all vue components data at array
 selector need to know if in the page we have our custom component
 name for custom tag(tagName) that you can use at ui.app in component.html */
 
@@ -48,6 +48,10 @@ vueArrayComponents = [
         "#hero-banner-top_component-vue",
         "vue_hero-banner-top-data"
     ),
+    new ComponentData(
+         "#hero-banner-middle-list_component-vue",
+         "vue_hero-banner-middle-list-data"
+        ),
     /* structure group*/
     new ComponentData("#footer_component-vue", "vue_footer-data", "@components/structure/footer/Footer"),
     new ComponentData("#nav-info-page_component-vue", "vue_nav-info-page-data"),
@@ -61,7 +65,7 @@ vueArrayComponents = [
     new ComponentData("#article__image_component-vue", "vue_article_image-data"),
     new ComponentData("#article__images_component-vue", "vue_article_images-data"),
     new ComponentData(
-        "#customized-text_component-vue",
+        "#article__customized-text_component-vue",
         "vue_article_customized-text-data"
     ),
     /* proart group*/
@@ -76,6 +80,11 @@ vueArrayComponents = [
     new ComponentData(
         "#proart__categories-nav_component-vue",
         "vue_proart_categories-nav-data"
+    ),
+    /* product group */
+    new ComponentData(
+        "#product__product-line-list_component-vue",
+        "vue_product-line-list-data"
     ),
 ];
 

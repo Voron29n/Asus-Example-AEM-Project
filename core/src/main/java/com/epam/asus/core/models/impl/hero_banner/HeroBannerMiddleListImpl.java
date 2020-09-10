@@ -1,6 +1,6 @@
 package com.epam.asus.core.models.impl.hero_banner;
 
-import com.epam.asus.core.models.HeroBannerTop;
+import com.epam.asus.core.models.HeroBannerMiddleList;
 import com.epam.asus.core.models.beans.hero_banner.ImageBean;
 import com.epam.asus.core.services.HeroBannerService;
 import com.epam.asus.core.utilites.CommonUtils;
@@ -18,13 +18,13 @@ import java.util.List;
 
 @Getter
 @Model(adaptables = {SlingHttpServletRequest.class, Resource.class},
-        adapters = {HeroBannerTop.class},
-        resourceType = HeroBannerTopImpl.RESOURCE_TYPE,
+        adapters = {HeroBannerMiddleList.class},
+        resourceType = HeroBannerMiddleListImpl.RESOURCE_TYPE,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
-public class HeroBannerTopImpl implements HeroBannerTop {
+public class HeroBannerMiddleListImpl implements HeroBannerMiddleList {
 
-    protected static final String RESOURCE_TYPE = "asus/components/custom/hero-banner/hero-banner-top/v1/hero-banner-top";
+    protected static final String RESOURCE_TYPE = "asus/components/custom/hero-banner/hero-banner-middle-list/v1/hero-banner-middle-list";
 
     @Inject
     private HeroBannerService heroBannerService;
@@ -34,23 +34,23 @@ public class HeroBannerTopImpl implements HeroBannerTop {
     private List<Resource> heroImages;
 
     private List<ImageBean> heroImagesCollection;
-    private String heroBannerTopCollectionJson;
+    private String heroBannerMiddleListCollectionJson;
 
     @PostConstruct
     public final void init() {
         if (CommonUtils.isCheckResource(heroImages)) {
             setHeroImagesCollection(heroImages);
-            heroBannerTopCollectionJson = new Gson().toJson(heroImagesCollection);
+            heroBannerMiddleListCollectionJson = new Gson().toJson(heroImagesCollection);
         }
     }
 
     private void setHeroImagesCollection(List<Resource> heroImages){
-        heroImagesCollection = heroBannerService.populateMultiFieldImageItems(heroImages);
+        heroImagesCollection = heroBannerService.adaptResourceToMultiFieldImageItems(heroImages);
     }
 
     @Override
     public boolean isEmpty() {
-        return heroBannerTopCollectionJson == null;
+        return heroBannerMiddleListCollectionJson == null;
     }
 
 }
