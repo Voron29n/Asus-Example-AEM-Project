@@ -97,3 +97,4 @@ node/
 
 # Tests
 coverage/
+/ui.apps/src/main/content/jcr_root/apps/asus/clientlibs/clientlib-vue/
