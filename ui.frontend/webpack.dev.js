@@ -16,6 +16,7 @@ module.exports = merge(common, {
     ],
     devServer: {
         inline: true,
+        port: 9000,
         proxy: [{
             context: ['/content', '/etc.clientlibs', '/apps'],
             target: 'http://localhost:4502',
