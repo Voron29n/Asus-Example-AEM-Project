@@ -37,30 +37,38 @@
                     </li>
                 </div>
             </div>
-            <v-slick-dots
+            <VueSlickDots
                 :items-data="imagesData.heroItems"
                 :active-item-id="activeImageId"
                 @change-slick-dots="slickDots"
-            ></v-slick-dots>
-            <v-slick-arrows
+            ></VueSlickDots>
+            <VueSlickArrows
                 :images-length="imagesLength"
                 :active-image-id="activeImageId"
                 @change-slick-arrow="slickNextOrPrev"
-            ></v-slick-arrows>
+            ></VueSlickArrows>
         </ul>
     </div>
 </template>
 
 <script>
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
-import HeroBannerTop_SlickArrowsCmp from "@common/slick-arrow/SlickArrow";
-import HeroBannerTop_SlickDotsCmp from "@common/slick-dots/SlickDots";
+// import HeroBannerTop_SlickArrowsCmp from "@common/slick-arrow/SlickArrow";
+// import HeroBannerTop_SlickDotsCmp from "@common/slick-dots/SlickDots";
 
 export default {
     mixins: [adapt],
     components: {
-        "v-slick-arrows": HeroBannerTop_SlickArrowsCmp,
-        "v-slick-dots": HeroBannerTop_SlickDotsCmp,
+        VueSlickDots: () =>
+            import(
+                /* webpackChunkName: "SlickDots" */ "@common/slick-dots/SlickDots"
+            ),
+            VueSlickArrows: () =>
+            import(
+                /* webpackChunkName: "SlickArrow" */ "@common/slick-arrow/SlickArrow"
+            ),
+        // "v-slick-arrows": HeroBannerTop_SlickArrowsCmp,
+        // "v-slick-dots": HeroBannerTop_SlickDotsCmp,
     },
     props: {
         imagesData: Object,

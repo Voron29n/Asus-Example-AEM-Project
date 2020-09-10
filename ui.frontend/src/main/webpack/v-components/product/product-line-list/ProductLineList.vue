@@ -1,16 +1,17 @@
 <template>
-        <v-product-list
+        <VueProductList
             :product-menu-bean="productMenuBean"
             :product-line-list="productLineListCollection"
-        ></v-product-list>
+        ></VueProductList>
 </template>
 
 <script>
-import ProductLineList_ProductLineListComp from "./v-components/product-line-list/ProductLineListComp";
-
 export default {
     components: {
-        "v-product-list": ProductLineList_ProductLineListComp,
+        VueProductList: () =>
+            import(
+                /* webpackChunkName: "ProductLineList" */ "./v-components/product-line-list/ProductLineListComp"
+            ),
     },
     props: {
         productMenuBeanJson: {

@@ -49,7 +49,7 @@ public class ArticleListImagesImpl implements ArticleListImages {
     }
 
     private void setImagesBeanList(List<Resource> images) {
-        imagesBeanList = articleService.populateMultiFieldImagesItems(images);
+        imagesBeanList = articleService.adaptMultiFieldImagesItems(images);
     }
 
     @Override

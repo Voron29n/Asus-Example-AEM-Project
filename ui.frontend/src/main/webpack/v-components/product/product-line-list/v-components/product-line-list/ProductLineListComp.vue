@@ -5,16 +5,16 @@
                 <ul class="product-slider product-slick-initialized product-slick-slider">
                     <div class="product-slick-list product-draggable">
                         <div class="product-slick-track" :style="lineWidth">
-                            <v-product-item
+                            <VueProductItem
                                 v-for="productItem in productLineList"
                                 :key="productItem.productTitle"
                                 :product-item-data="productItem"
                                 :item-width="productItemWidth"
-                            ></v-product-item>
-                            <v-product-menu-icon
+                            ></VueProductItem>
+                            <VueProductMenuIcon
                                 :product-menu-data="productMenuBean"
                                 :item-width="productItemWidth"
-                            ></v-product-menu-icon>
+                            ></VueProductMenuIcon>
                         </div>
                     </div>
                 </ul>
@@ -24,13 +24,16 @@
 </template>
 
 <script>
-import ProductLineList_ProductItem from "../product-line-list-parts/ProductItem";
-import ProductLineList_ProductMenuIcon from "../product-line-list-parts/ProductMenuIcon";
-
 export default {
     components: {
-        "v-product-item": ProductLineList_ProductItem,
-        "v-product-menu-icon": ProductLineList_ProductMenuIcon,
+        VueProductItem: () =>
+            import(
+                /* webpackChunkName: "ProductLineList" */ "../product-line-list-parts/ProductItem"
+            ),
+        VueProductMenuIcon: () =>
+            import(
+                /* webpackChunkName: "ProductLineList" */ "../product-line-list-parts/ProductMenuIcon"
+            ),
     },
     props: {
         productMenuBean: {
@@ -44,14 +47,15 @@ export default {
     },
     data() {
         return {
-            productItemWidth: 160
+            productItemWidth: 160,
         };
     },
     computed: {
         lineWidth() {
             return {
                 width:
-                    this.productItemWidth * (this.productLineList.length + 1) + `px`,
+                    this.productItemWidth * (this.productLineList.length + 1) +
+                    `px`,
             };
         },
     },

@@ -1,6 +1,5 @@
 package com.epam.asus.core.utilites;
 
-import com.epam.asus.core.models.beans.product.ProductMenuBean;
 import org.apache.commons.lang.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
@@ -9,8 +8,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static com.epam.asus.core.models.beans.product.ProductMenuBean.DEFAULT_FONT_AWESOME_MENU_ICON_CLASS;
 
 public final class CommonUtils {
     private CommonUtils() {}
@@ -22,6 +19,10 @@ public final class CommonUtils {
     private static final String FONT_AWESOME_ICON_PATTERN_WITHOUT_HTML = "^fa[a-z] fa.+";
     private static final String FONT_AWESOME_PATTERN_CLASS = "fa[a-z] fa.+[^(\"><\\/i>)]";
 
+
+    public static <T> T getValue(Object obj, Class<T> clazz) {
+        return (T) obj;
+    }
 
     public static boolean isCheckResource(final List<Resource> resources) {
         return resources != null && !resources.isEmpty();
@@ -60,8 +61,7 @@ public final class CommonUtils {
     private static String cutIconClassFromHtmlWithIconClass(String iconClassProp) {
         Pattern fontAwesomePattern = Pattern.compile(FONT_AWESOME_PATTERN_CLASS);
         Matcher fontAwesomeMatcher = fontAwesomePattern.matcher(iconClassProp);
-        fontAwesomeMatcher.find();
-        return iconClassProp.substring(fontAwesomeMatcher.start(),fontAwesomeMatcher.end());
+        return fontAwesomeMatcher.find() ? iconClassProp.substring(fontAwesomeMatcher.start(),fontAwesomeMatcher.end()) : "";
     }
 
     private static boolean isIconClassWithHtml(String iconClass) {

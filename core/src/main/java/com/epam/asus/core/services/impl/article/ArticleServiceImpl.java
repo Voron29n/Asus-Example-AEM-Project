@@ -35,6 +35,21 @@ public class ArticleServiceImpl implements ArticleService {
         return imagesBeanList;
     }
 
+    @Override
+    public List<ImagesBean> adaptMultiFieldImagesItems(List<Resource> images) {
+        List<ImagesBean> imagesBeanList = new ArrayList<>();
+        if (CommonUtils.isCheckResource(images)) {
+            for (Resource item : images) {
+                if (item != null) {
+                    imagesBeanList.add(item.adaptTo(ImagesBean.class));
+                } else {
+                    logger.info(LOGGER_MESSAGE , images);
+                }
+            }
+        }
+        return imagesBeanList;
+    }
+
     private ImagesBean buildImagesBean(Resource item){
         ValueMap vm = item.getValueMap();
         return ImagesBean.builder()

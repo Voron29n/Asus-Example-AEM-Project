@@ -42,18 +42,18 @@ vueArrayComponents = [
     ),
     new ComponentData(
         "#hero-banner-middle_component-vue",
-        "vue_hero-banner-middle-data", "@components/hero-banner/hero-banner-middle/HeroBannerMiddle"
+        "vue_hero-banner-middle-data"
     ),
     new ComponentData(
         "#hero-banner-top_component-vue",
         "vue_hero-banner-top-data"
     ),
     new ComponentData(
-         "#hero-banner-middle-list_component-vue",
-         "vue_hero-banner-middle-list-data"
-        ),
+        "#hero-banner-middle-list_component-vue",
+        "vue_hero-banner-middle-list-data"
+    ),
     /* structure group*/
-    new ComponentData("#footer_component-vue", "vue_footer-data", "@components/structure/footer/Footer"),
+    new ComponentData("#footer_component-vue", "vue_footer-data"),
     new ComponentData("#nav-info-page_component-vue", "vue_nav-info-page-data"),
     /* article group*/
     new ComponentData("#article__title_component-vue", "vue_article_title-data"),

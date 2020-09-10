@@ -10,4 +10,6 @@ public interface ArticleService {
 
     List<ImagesBean> populateMultiFieldImagesItems(List<Resource> images);
 
+    List<ImagesBean> adaptMultiFieldImagesItems(List<Resource> images);
+
 }

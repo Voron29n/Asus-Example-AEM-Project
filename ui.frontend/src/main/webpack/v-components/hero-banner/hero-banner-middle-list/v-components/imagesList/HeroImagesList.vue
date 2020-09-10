@@ -8,31 +8,33 @@
                     :key="heroMiddleItem.fileReferenceDesktop"
                     :class="{'active': index == activeImageId }"
                 >
-                    <v-hero-img :hero-item="heroMiddleItem"></v-hero-img>
+                    <VueHeroImg :hero-item="heroMiddleItem"></VueHeroImg>
                 </li>
             </div>
         </div>
-        <v-slick-dots
+        <VueSlickDots
             v-if="isNeedShowSlickDots"
             :items-data="heroBannerMiddleListData"
             :active-item-id="activeImageId"
             @change-slick-dots="slickDots"
-        ></v-slick-dots>
+        ></VueSlickDots>
     </ul>
 </template>
 
 <script>
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
 
-import HeroMiddleListImage from "../heroImage/HeroMiddleListImage";
-
-import SlickDots from "@common/slick-dots/SlickDots";
-
 export default {
     mixins: [adapt],
     components: {
-        "v-hero-img": HeroMiddleListImage,
-        "v-slick-dots": SlickDots,
+        VueHeroImg: () =>
+            import(
+                /* webpackChunkName: "HeroBannerMiddleList" */ "../heroImage/HeroMiddleListImage"
+            ),
+        VueSlickDots: () =>
+            import(
+                /* webpackChunkName: "SlickDots" */ "@common/slick-dots/SlickDots"
+            ),
     },
     props: {
         heroBannerMiddleListData: {
@@ -65,7 +67,7 @@ export default {
         },
         updateActiveImg() {
             if (this.isSlickDotsPressed) {
-                this.isSlickDotsPressed = false;                
+                this.isSlickDotsPressed = false;
             } else {
                 let arrayLenght = this.heroBannerMiddleListData.length - 1;
                 this.activeImageId =
@@ -92,7 +94,7 @@ export default {
                     : window.innerWidth * this.heroBannerMiddleListData.length
             }px`;
         },
-    }, 
+    },
     computed: {
         isNeedShowSlickDots() {
             return (
@@ -105,5 +107,4 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "./banner_images_list_default";
-// @import "./v-style/banner_middle_list_images_media";
 </style>

@@ -1,13 +1,14 @@
 <template>
-    <v-hero-images-list :hero-banner-middle-list-data="heroBannerMiddleListData"></v-hero-images-list>
+    <VueHeroImagesList :hero-banner-middle-list-data="heroBannerMiddleListData"></VueHeroImagesList>
 </template>
 
 <script>
-import HeroBannerMiddleList_ImagesListCmp from "./v-components/imagesList/HeroImagesList";
-
 export default {
     components: {
-        "v-hero-images-list": HeroBannerMiddleList_ImagesListCmp,
+        VueHeroImagesList: () =>
+            import(
+                /* webpackChunkName: "HeroBannerMiddleList" */ "./v-components/imagesList/HeroImagesList"
+            ),
     },
     props: {
         heroBannerMiddleListItems: {
