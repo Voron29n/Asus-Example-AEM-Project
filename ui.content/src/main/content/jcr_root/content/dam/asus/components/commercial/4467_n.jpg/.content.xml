@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="cf52805e-f603-4b48-be33-069bb556b557">
+    <jcr:content
+        cq:name="4467_n.jpg"
+        cq:parentPath="/content/dam/asus/components/commercial"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-08-30T17:17:08.542+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2020-08-30T17:17:07.292+03:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}0"
+            dam:Physicalheightininches="Infinity"
+            dam:Physicalwidthindpi="{Long}0"
+            dam:Physicalwidthininches="Infinity"
+            dam:Progressive="no"
+            dam:sha1="79fe5645af41ed85a00f40b0574439ee192bd32d"
+            dam:size="{Long}15576"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2020-08-30T17:17:02.260+03:00"
+            jcr:lastModified="{Date}2020-08-30T17:17:02.260+03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}130"
+            tiff:ImageWidth="{Long}130"
+            xmp:CreatorTool="Adobe Photoshop CS6 (Windows)"
+            xmpMM:DocumentID="xmp.did:948BF9E4D66311E78A58E7B2A6BFA7EE"
+            xmpMM:InstanceID="xmp.iid:948BF9E3D66311E78A58E7B2A6BFA7EE">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:948BF9E2D66311E78A58E7B2A6BFA7EE"
+                stRef:instanceID="xmp.iid:948BF9E1D66311E78A58E7B2A6BFA7EE"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

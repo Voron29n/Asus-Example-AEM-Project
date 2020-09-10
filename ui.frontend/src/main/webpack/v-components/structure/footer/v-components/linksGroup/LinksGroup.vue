@@ -48,7 +48,7 @@ export default {
         parentElement.style.height === null ||
         parentElement.style.height === ""
       ) {
-        let height = isSocialGroup ? 110 : countItems * 44 + 40;
+        let height = isSocialGroup ? 90 : countItems * 44 + 20;
         parentElement.style.height = height + "px";
       } else {
         parentElement.style.height = null;

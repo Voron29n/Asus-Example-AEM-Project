@@ -1,7 +1,5 @@
 <template>
-    <div>
         <VueImages :images-data="imagesData"></VueImages>
-    </div>
 </template>
 
 <script>
