@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f2691cf5-ce90-43e3-96d5-3c0296e18299">
+    <jcr:content
+        cq:name="shutterstock_1107457340.jpg"
+        cq:parentPath="/content/dam/asus/components/article/cgcg-studio-creates-new-computing-platform-with-asus-servers-cutting-animation-rendering-times-by-50"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-08-30T17:17:13.467+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2020-08-30T17:17:04.995+03:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}6.041666507720947"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}12.01388931274414"
+            dam:Progressive="no"
+            dam:sha1="ef4a9629e9250dd4ab292ab1dec025c44f4b1b28"
+            dam:size="{Long}107287"
+            dc:creator="[I Believe I Can Fly]"
+            dc:creator_xmpArrayType="rdf:Seq"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2020-08-14T12:00:59.326+03:00"
+            dc:title="1107457340"
+            exif:ColorSpace="{Long}65535"
+            exif:ExifVersion="0221"
+            exif:PixelXDimension="{Long}865"
+            exif:PixelYDimension="{Long}435"
+            jcr:lastModified="{Date}2020-08-30T17:17:13.278+03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="1107457340"
+            photoshop:ColorMode="{Long}3"
+            photoshop:LegacyIPTCDigest="FCE11F89C8B7C9782F346234075877EB"
+            tiff:BitsPerSample="{Long}[8,8,8]"
+            tiff:BitsPerSample_xmpArrayType="rdf:Seq"
+            tiff:ImageLength="{Long}435"
+            tiff:ImageWidth="{Long}865"
+            tiff:Orientation="{Long}1"
+            tiff:PhotometricInterpretation="{Long}2"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:SamplesPerPixel="{Long}3"
+            tiff:XResolution="720000/10000"
+            tiff:YResolution="720000/10000"
+            xmp:CreateDate="{Date}2018-09-28T16:53:52.000+08:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2018 (Windows)"
+            xmp:MetadataDate="{Date}2018-09-28T17:42:05.000+08:00"
+            xmp:ModifyDate="{Date}2018-09-28T17:42:05.000+08:00"
+            xmpMM:DocumentID="xmp.did:FEE484C1C2FB11E8BACA85B1A98D0E9F"
+            xmpMM:InstanceID="xmp.iid:1a737410-6d59-2343-97d0-1ade8d7fc89b"
+            xmpMM:OriginalDocumentID="xmp.did:FEE484C1C2FB11E8BACA85B1A98D0E9F">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="08F3744B5F971EF0D6B2FD66E530C4C2"
+                stRef:instanceID="08F3744B5F971EF0D6B2FD66E530C4C2"
+                xmpNodeType="xmpStruct"/>
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}2"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:b4978e63-bdbd-8c46-80e3-adf7c9f57d53"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2018 (Windows)"
+                    stEvt:when="{Date}2018-09-28T17:41:33.000+08:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:1a737410-6d59-2343-97d0-1ade8d7fc89b"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2018 (Windows)"
+                    stEvt:when="{Date}2018-09-28T17:42:05.000+08:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,12 +1,10 @@
 <template>
-    <div>
         <section class="cmc-hot-prod">
             <VueTitle :title-data="titleData"></VueTitle>
             <div class="commercial-inner">
                 <VueProductGroups :product-groups-data="productGroupsData"></VueProductGroups>
             </div>
         </section>
-    </div>
 </template>
 
 <script>

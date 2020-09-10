@@ -2,7 +2,8 @@
     <div class="af-banner af-top-banner loaded" id="hero-banner-top">
         <ul class="top-slider slick-initialized slick-slider">
             <div class="slick-list draggable">
-                <div class="slick-track" :style="fullWidth">
+                <div class="slick-track" style="width: auto;">
+                    <!-- <div class="slick-track" :style="fullWidth"> -->
                     <li
                         class="slick-slide"
                         :class="
@@ -53,8 +54,6 @@
 
 <script>
 import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
-// import HeroBannerTop_SlickArrowsCmp from "@common/slick-arrow/SlickArrow";
-// import HeroBannerTop_SlickDotsCmp from "@common/slick-dots/SlickDots";
 
 export default {
     mixins: [adapt],
@@ -67,8 +66,6 @@ export default {
             import(
                 /* webpackChunkName: "SlickArrow" */ "@common/slick-arrow/SlickArrow"
             ),
-        // "v-slick-arrows": HeroBannerTop_SlickArrowsCmp,
-        // "v-slick-dots": HeroBannerTop_SlickDotsCmp,
     },
     props: {
         imagesData: Object,
@@ -114,10 +111,10 @@ export default {
             this.updateStyleLeftLi();
         },
         updateFullWidth() {
-            this.fullWidth.width = this.imagesLength * window.innerWidth + "px";
+            this.fullWidth.width = this.imagesLength * document.body.clientWidth + "px";
         },
         updateStyleWidthLi() {
-            this.widthLi.width = window.innerWidth + "px";
+            this.widthLi.width = document.body.clientWidth + "px";
         },
         updateStyleLeftLi() {
             let elements = this.$el.querySelectorAll(
@@ -127,7 +124,7 @@ export default {
                 if (index === 0) {
                     item.style.left = "0px";
                 } else {
-                    item.style.left = "-" + index * window.innerWidth + "px";
+                    item.style.left = "-" + index * document.body.clientWidth + "px";
                 }
             });
         },

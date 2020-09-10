@@ -14,8 +14,66 @@
             sling:resourceType="asus/components/container"
             layout="responsiveGrid">
             <nav
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="asus/components/custom/structure/nav-info-page/v1/nav-info-page"/>
+                jcr:lastModified="{Date}2020-08-19T10:45:39.231+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="asus/components/custom/structure/nav-info-page/v1/nav-info-page"
+                title="Примеры реализации">
+                <navInfoPageGroupLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        groupTitle="Industry">
+                        <navInfoPageLinksGroup jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Образование"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Industry/Education/"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Розничная торговля и сфера услуг"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Industry/Retail_Service/"/>
+                        </navInfoPageLinksGroup>
+                    </item0>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        groupTitle="Продукты">
+                        <navInfoPageLinksGroup jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="AIoT и промышленные решения"
+                                linkTo="https://www.asus.com/ru/SuccessStories/AIoT-Industrial-Solutions/"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Компактные ПК"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Commercial-Mini-PCs/"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Мониторы"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Commercial-Monitors/"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Моноблоки (All-in-One)"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Commercial-All-in-One-PCs/"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Настольные ПК"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Commercial-All-in-One-PCs/"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Ноутбуки"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Commercial-Laptops/"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Проекторы"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Commercial-Projectors/"/>
+                            <item7
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Серверы и рабочие станции"
+                                linkTo="https://www.asus.com/ru/SuccessStories/Commercial-All-in-One-PCs/"/>
+                        </navInfoPageLinksGroup>
+                    </item1>
+                </navInfoPageGroupLinks>
+            </nav>
         </root>
     </jcr:content>
 </jcr:root>

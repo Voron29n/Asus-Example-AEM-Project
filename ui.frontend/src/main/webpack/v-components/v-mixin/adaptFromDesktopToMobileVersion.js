@@ -11,10 +11,14 @@ export const adapt = {
             },
             windowVersion: null,
             currentWidth: null,
+            // screenWidth: null,
+            // clientWidth: null,
+            // elementWidth: null,
+            // availWidth: null,
         };
     },
     mounted() {
-        this.currentWidth = window.innerWidth;
+        this.currentWidth = document.body.clientWidth;
         this.adaptToWindow();
         this.getWindowVersion();
         window.addEventListener("resize", this.adaptToWindow);
@@ -23,21 +27,28 @@ export const adapt = {
         window.removeEventListener("resize", this.adaptToWindow);
     },
     methods: {
+        // getNowWidth() {
+        //     this.screenWidth = window.screen.width;
+        //     this.clientWidth = document.body.clientWidth;
+        //     this.elementWidth = documentElement.clientWidth;
+        //     this.availWidth = window.screen.availWidth;
+        // },
         adaptToWindow() {
             //default impl
             this.isDesktopVersionMeth();
             this.getWindowVersion();
+            // this.getNowWidth();
         },
         isDesktopVersionMeth(maxWidth) {
             if (maxWidth !== undefined) {
-                this.isDesktopVersion = window.innerWidth > maxWidth;
+                this.isDesktopVersion = document.body.clientWidth > maxWidth;
             } else {
-                this.isDesktopVersion = window.innerWidth > this.witchForMobileVersion;
+                this.isDesktopVersion = document.body.clientWidth > this.witchForMobileVersion;
             }
             return this.isDesktopVersion;
         },
         getWindowVersion() {
-            this.currentWidth = window.innerWidth;
+            this.currentWidth = document.body.clientWidth;
             if (this.$data.currentWidth <= this.constWindowVersion.small) {
                 return (this.windowVersion = "small");
             } else if (

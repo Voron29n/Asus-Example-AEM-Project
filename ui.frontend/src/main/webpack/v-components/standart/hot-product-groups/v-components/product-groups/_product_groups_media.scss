@@ -2,10 +2,18 @@
     .cmc-unit-group>li {
         width: 49%;
     }
+    .cmc-unit-group>li>h3,
+    .cmc-unit-group>li>a {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
     .cmc-unit-group>li {
-        width: 100%;
+        width: 49%;
+    }
+    .cmc-unit-group>li>h3,
+    .cmc-unit-group>li>a {
+        font-size: 14px;
     }
 }

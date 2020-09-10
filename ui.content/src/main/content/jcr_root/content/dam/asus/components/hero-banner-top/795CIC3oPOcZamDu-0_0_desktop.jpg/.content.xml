@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="087c7ad7-6ae1-4e16-8ef6-8495212d5671">
+    <jcr:content
+        cq:name="795CIC3oPOcZamDu-0_0_desktop.jpg"
+        cq:parentPath="/content/dam/asus/components/hero-banner-top"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-08-30T17:17:12.764+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2020-08-30T17:17:11.892+03:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}10.0"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}27.77777862548828"
+            dam:Progressive="no"
+            dam:sha1="5a5818d4dbc4c36d9ccafd8d39465a09064082af"
+            dam:size="{Long}372227"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2020-08-30T17:17:04.386+03:00"
+            exif:ExifVersion="0220"
+            exif:PixelXDimension="{Long}2000"
+            exif:PixelYDimension="{Long}720"
+            jcr:lastModified="{Date}2020-08-30T17:17:04.386+03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:DocumentAncestors="[229AE584CB2B6F490683606CF3549115,2D5B501EED61F1E7BBF1543B313FD3EE]"
+            photoshop:DocumentAncestors_xmpArrayType="rdf:Bag"
+            tiff:ImageLength="{Long}720"
+            tiff:ImageWidth="{Long}2000"
+            tiff:Orientation="{Long}1"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:XResolution="720000/10000"
+            tiff:YResolution="720000/10000"
+            xmp:CreateDate="{Date}2020-05-22T10:05:48.000+03:00"
+            xmp:CreatorTool="Adobe Photoshop CS6 (Windows)"
+            xmp:MetadataDate="{Date}2020-05-27T14:39:09.000+03:00"
+            xmp:ModifyDate="{Date}2020-05-27T14:39:09.000+03:00"
+            xmpMM:DocumentID="xmp.did:ADCE8DC2A00E11EA871483DD39A28587"
+            xmpMM:InstanceID="xmp.iid:ADCE8DC1A00E11EA871483DD39A28587"
+            xmpMM:OriginalDocumentID="xmp.did:308FFC14F69BEA11AF9DAED3A9A41A0A">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:308FFC14F69BEA11AF9DAED3A9A41A0A"
+                stRef:instanceID="xmp.iid:1EDBD7A3FE9FEA118B28DEFA0B4CC286"
+                xmpNodeType="xmpStruct"/>
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}3"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="created"
+                    stEvt:instanceID="xmp.iid:308FFC14F69BEA11AF9DAED3A9A41A0A"
+                    stEvt:softwareAgent="Adobe Photoshop CS6 (Windows)"
+                    stEvt:when="{Date}2020-05-22T10:05:48.000+03:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:3E91C02BFF9BEA11AF9DAED3A9A41A0A"
+                    stEvt:softwareAgent="Adobe Photoshop CS6 (Windows)"
+                    stEvt:when="{Date}2020-05-22T10:38:07.000+03:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0033_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:1EDBD7A3FE9FEA118B28DEFA0B4CC286"
+                    stEvt:softwareAgent="Adobe Photoshop CS6 (Windows)"
+                    stEvt:when="{Date}2020-05-27T13:12:09.000+03:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+            <photoshop:TextLayers
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}14"
+                xmpArrayType="rdf:Bag"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="WIN NOW! "
+                    photoshop:LayerText="WIN NOW! "
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="WIN NOW! "
+                    photoshop:LayerText="WIN NOW! "
+                    xmpNodeType="xmpStruct"/>
+                <_x0033_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="WIN NOW! "
+                    photoshop:LayerText="WIN NOW! "
+                    xmpNodeType="xmpStruct"/>
+                <_x0034_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="WIN NOW! "
+                    photoshop:LayerText="WIN NOW! "
+                    xmpNodeType="xmpStruct"/>
+                <_x0035_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="ОСТАВЬ ОТЗЫВ И ПОЛУЧИ ПРИЗ!"
+                    photoshop:LayerText="ОСТАВЬ ОТЗЫВ И ПОЛУЧИ ПРИЗ!"
+                    xmpNodeType="xmpStruct"/>
+                <_x0036_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="БИТВА ОТЗЫВОВ copy"
+                    photoshop:LayerText="БИТВА ОТЗЫВОВ"
+                    xmpNodeType="xmpStruct"/>
+                <_x0037_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="БИТВА ОТЗЫВОВ copy 2"
+                    photoshop:LayerText="БИТВА ОТЗЫВОВ"
+                    xmpNodeType="xmpStruct"/>
+                <_x0038_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="БИТВА ОТЗЫВОВ"
+                    photoshop:LayerText="БИТВА ОТЗЫВОВ"
+                    xmpNodeType="xmpStruct"/>
+                <_x0039_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="Submit a review to win rewards"
+                    photoshop:LayerText="SUBMIT A REVIEW OF  ASUS Z490 AI MOTHERBOARDS  TO WIN REWARDS "
+                    xmpNodeType="xmpStruct"/>
+                <_x0031_0
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="Submit a review to win rewards "
+                    photoshop:LayerText="SUBMIT A REVIEW OF  ASUS Z490 AI MOTHERBOARDS  TO WIN REWARDS "
+                    xmpNodeType="xmpStruct"/>
+                <_x0031_1
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="Submit a review to win rewards "
+                    photoshop:LayerText="SUBMIT A REVIEW OF  ASUS Z490 AI MOTHERBOARDS  TO WIN REWARDS "
+                    xmpNodeType="xmpStruct"/>
+                <_x0031_2
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="Применяются сроки и условия"
+                    photoshop:LayerText="Применяются сроки и условия"
+                    xmpNodeType="xmpStruct"/>
+                <_x0031_3
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="ОСТАВЬ ОТЗЫВ И ПОЛУЧИ"
+                    photoshop:LayerText="ОСТАВЬ ОТЗЫВ И ПОЛУЧИ"
+                    xmpNodeType="xmpStruct"/>
+                <_x0031_4
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="до 1000 ₽"
+                    photoshop:LayerText="до 1000 ₽"
+                    xmpNodeType="xmpStruct"/>
+            </photoshop:TextLayers>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="c99680ea-e919-41d1-9771-6c9b92e01fe0">
+    <jcr:content
+        cq:name="shutterstock_680300512.jpg"
+        cq:parentPath="/content/dam/asus/components/article/cgcg-studio-creates-new-computing-platform-with-asus-servers-cutting-animation-rendering-times-by-50"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-08-30T17:17:08.202+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2020-08-30T17:17:07.826+03:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="721a0891dec75cb4631f87f0e5fda3be97975f15"
+            dam:size="{Long}62566"
+            dc:creator="[Connect world]"
+            dc:creator_xmpArrayType="rdf:Seq"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2020-08-14T12:00:56.713+03:00"
+            dc:title="680300512"
+            jcr:lastModified="{Date}2020-08-30T17:17:05.387+03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="680300512"
+            tiff:ImageLength="{Long}505"
+            tiff:ImageWidth="{Long}865"
+            xmp:CreatorTool="Adobe Photoshop CC 2018 Windows"
+            xmpMM:DocumentID="xmp.did:F206A446C2F011E88A5AA711AB879A5C"
+            xmpMM:InstanceID="xmp.iid:F206A445C2F011E88A5AA711AB879A5C"
+            xmpMM:OriginalDocumentID="F2BDFE3363A52F862ACD0DA80770AFD0">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="F2BDFE3363A52F862ACD0DA80770AFD0"
+                stRef:instanceID="xmp.iid:55f33cb9-af26-4944-8fe5-70ce956300ce"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

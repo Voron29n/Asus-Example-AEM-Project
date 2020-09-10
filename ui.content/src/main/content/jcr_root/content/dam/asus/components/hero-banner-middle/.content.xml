@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:lastModified="{Date}2020-08-28T17:12:59.167+03:00"
+    jcr:lastModifiedBy="admin"
+    jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="sling:OrderedFolder">
     <jcr:content
+        cq:conf="/conf/asus"
         jcr:primaryType="nt:unstructured"
-        jcr:title="hero-banner-middle">
+        jcr:title="Hero-banner-middle">
+        <folderThumbnail/>
     </jcr:content>
+    <mobile.png/>
+    <poweredAsus.jpg/>
+    <poweredAsusMobile.jpg/>
+    <ywlcmkwva7rfhcrh-0_0_desktop.jpg/>
+    <ywlcmkwva7rfhcrh-0_0_mobile.jpg/>
 </jcr:root>

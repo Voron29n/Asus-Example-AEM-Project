@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2020-09-01T14:07:53.349+03:00"
+        cq:lastModifiedBy="admin"
         cq:tags="[]"
         cq:template="/conf/asus/settings/wcm/templates/xf-web-variation"
         cq:xfMasterVariation="{Boolean}true"
@@ -14,8 +16,220 @@
             sling:resourceType="asus/components/container"
             layout="responsiveGrid">
             <footer
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="asus/components/custom/structure/footer/v1/footer"/>
+                jcr:lastModified="{Date}2020-09-01T14:07:53.131+03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="asus/components/custom/structure/footer/v1/footer"
+                descriptionLink="Russia / Русский"
+                fileReference="/content/dam/asus/components/footer/world.png"
+                isBlackVersion="true"
+                isExternalLink="true"
+                linkTo="https://www.asus.com/entry.htm"
+                linkUrlTarget="_blank"
+                socialTitle="Мы в сети!">
+                <footerGroupLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        groupTitle="Подробнее">
+                        <linksGroup jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Компьютеры «Powered by ASUS»"
+                                isExternalLink="true"
+                                linkTo="http://www.asus.com/Microsite/powered-by-asus/RU/"
+                                linkUrlTarget="_blank"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Материнские платы ROG Strix X299"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/Microsite/mb/cross/X299/ru/"
+                                linkUrlTarget="_blank"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Материнские платы ASUS X570"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/microsite/motherboard/AMD-X570/RU/"
+                                linkUrlTarget="_blank"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Сайт ASUS CSM"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/microsite/csm/ru/"
+                                linkUrlTarget="_blank"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Мониторы ASUS ProArt"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/Microsite/ProArtMonitor/ru/"
+                                linkUrlTarget="_blank"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Сайт Aura"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/campaign/aura/ru/index.html"
+                                linkUrlTarget="_blank"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Сайт TUF Gaming"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/campaign/tuf-gaming/ru/index.html"
+                                linkUrlTarget="_blank"/>
+                        </linksGroup>
+                    </item0>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        groupTitle="Кто мы?">
+                        <linksGroup jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="О компании"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/About-ASUS/"
+                                linkUrlTarget="_blank"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Новости"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/News/"
+                                linkUrlTarget="_blank"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Награды"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/Award/Award?&amp;Area=RUSSIA"
+                                linkUrlTarget="_blank"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Внутренний аудит"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/Internal-Audit/"
+                                linkUrlTarget="_blank"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Информация для инвесторов"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/investor.aspx"
+                                linkUrlTarget="_blank"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Контакты для прессы"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/ASUS_Website_Information/Press_Room"
+                                linkUrlTarget="_blank"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Вакансии в России"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/ASUS_Website_Information/RussiaJobs"
+                                linkUrlTarget="_blank"/>
+                            <item7
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Фирменные магазины"
+                                isExternalLink="true"
+                                linkTo="https://www.asus.com/ru/ASUS_Website_Information/BrandShops"
+                                linkUrlTarget="_blank"/>
+                        </linksGroup>
+                    </item1>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        groupTitle="Нужна помощь?">
+                        <linksGroup jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Контакты"
+                                isExternalLink="true"
+                                linkTo="http://www.asus.com/ru/support/Contact-ASUS"
+                                linkUrlTarget="_blank"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Регистрация продукта"
+                                isExternalLink="true"
+                                linkTo="https://account.asus.com/registerform.aspx?lang=ru-ru&amp;site=ru"
+                                linkUrlTarget="_blank"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Сервисные центры"
+                                isExternalLink="true"
+                                linkTo="http://www.asus.com/ru/support/Service-Center/Russia"
+                                linkUrlTarget="_blank"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Горячая линия ASUS"
+                                isExternalLink="true"
+                                linkTo="http://www.asus.com/ru/support/Hotline/"
+                                linkUrlTarget="_blank"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Технический запрос"
+                                isExternalLink="true"
+                                linkTo="http://vip.asus.com/VIP2/Services/TechQuery?lang=ru-ru"
+                                linkUrlTarget="_blank"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Служба контроля качества"
+                                isExternalLink="true"
+                                linkTo="https://vip.asus.com/VIP2/Services/complain?lang=ru-ru"
+                                linkUrlTarget="_blank"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                descriptionLink="Служба поддержки работает с пн по пт с 9:00 до 21:00 МСК"
+                                isExternalLink="false"
+                                linkUrlTarget="_blank"/>
+                        </linksGroup>
+                    </item2>
+                </footerGroupLinks>
+                <socials jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="/content/dam/asus/components/footer/twiter.png"
+                        linkTo="https://twitter.com/asus_russia"
+                        linkUrlTarget="_blank"
+                        title="ASUS в Twitter"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="/content/dam/asus/components/footer/youtube.png"
+                        linkTo="http://www.youtube.com/user/asusru"
+                        linkUrlTarget="_blank"
+                        title="ASUS в YouTube"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="/content/dam/asus/components/footer/facebook.png"
+                        linkTo="http://www.facebook.com/asus.ru?ref=stream"
+                        linkUrlTarget="_blank"
+                        title="ASUS в Facebook"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="/content/dam/asus/components/footer/vkontakte.png"
+                        linkTo="https://vk.com/rog_russia"
+                        linkUrlTarget="_blank"
+                        title="ASUS в ВКонтакте"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        fileReference="/content/dam/asus/components/footer/instagram.png"
+                        linkTo="https://www.instagram.com/asus_russia/"
+                        linkUrlTarget="_blank"
+                        title="ASUS в Инстаграм"/>
+                </socials>
+                <copyrights jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        descriptionLink="Политика конфиденциальности"
+                        isExternalLink="true"
+                        linkTo="https://www.asus.com/ru/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy"
+                        linkUrlTarget="_blank"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        descriptionLink="Правовая информация"
+                        isExternalLink="true"
+                        linkTo="https://www.asus.com/ru/Terms_of_Use_Notice_Privacy_Policy/Official-Site"
+                        linkUrlTarget="_blank"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        descriptionLink="©ASUSTeK Computer Inc. Все права защищены."
+                        isExternalLink="false"
+                        linkUrlTarget="_blank"/>
+                </copyrights>
+            </footer>
         </root>
     </jcr:content>
 </jcr:root>

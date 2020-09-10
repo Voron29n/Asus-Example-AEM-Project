@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="9af04287-f53a-4161-8910-f3140327ad65">
+    <jcr:content
+        cq:name="motherboard-720-300-small.jpg"
+        cq:parentPath="/content/dam/asus/components/proart/products-navigation"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-08-30T17:17:18.137+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2020-08-30T17:17:16.543+03:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="fbb4a7fbe302b3083e28d83fb332f33628d4b8fe"
+            dam:size="{Long}64880"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2020-08-30T17:17:17.795+03:00"
+            jcr:lastModified="{Date}2020-08-30T17:17:17.795+03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}300"
+            tiff:ImageWidth="{Long}720"
+            xmp:CreatorTool="Adobe Photoshop CC 2019 Windows"
+            xmpMM:DocumentID="xmp.did:76BCB9A18A8B11EABE38DC87605E1E89"
+            xmpMM:InstanceID="xmp.iid:76BCB9A08A8B11EABE38DC87605E1E89">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="F16AE9B729569E565ACD92F1785BB9BC"
+                stRef:instanceID="F16AE9B729569E565ACD92F1785BB9BC"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
