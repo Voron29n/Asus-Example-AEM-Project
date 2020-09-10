@@ -16,7 +16,6 @@ import { ComponentData } from "./ComponentData";
 let vueArrayComponents = []; // Array for all created vue components
 const vueRootData = {
     rootClassSelector: ".root",
-    rootWrapperSelector: ".root.container.responsivegrid",
     rootIdValue: "vue-root",
     rootIdSelector: "#vue-root",
 };
@@ -85,12 +84,6 @@ vueArrayComponents = [
     because vue can't mount to <html> or <body> 
 */
 
-// if (document.querySelector('.xf-web-container > div') != null) {
-//     document.querySelector('.xf-web-container > div').id = vueRootData.rootIdValue;
-// } else if (document.querySelector(vueRootData.rootIdSelector) != null) {
-//     document.querySelector(vueRootData.rootIdSelector).id = vueRootData.rootIdValue;
-// }
-
 if (document.querySelector(vueRootData.rootClassSelector) != null) {
     document.querySelector(vueRootData.rootClassSelector).id =
         vueRootData.rootIdValue;
@@ -106,8 +99,6 @@ const pageComponents = {}
 vueArrayComponents.forEach((element) => {
     if (document.querySelector(element.tagName)) {
         getComponent(element.tagName);
-        // pageComponents[element.tagName] =
-        //     getComponent(element.tagName);
     }
 });
 
@@ -124,20 +115,3 @@ if (document.querySelector(vueRootData.rootIdSelector) != null) {
         template: vueRootData.rootIdSelector,
     });
 }
-
-// .$mount(vueRootData.rootIdSelector);
-
-// new Vue({
-//      el: vueRootData.rootIdSelector,
-//      components: {
-//      ...pageComponents
-//      },
-//      render: h => h(),
-//      template: vueRootData.rootIdSelector,
-// }).$mount(vueRootData.rootIdSelector);
-
-// new Vue({
-//     el: vueRootData.rootIdSelector,
-//     render: h => h(vueRootData.rootIdValue),
-//     template: vueRootData.rootIdSelector,
-// })

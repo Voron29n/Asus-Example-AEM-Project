@@ -47,18 +47,18 @@ module.exports = {
             assets: {
                 // Copy entrypoint scripts and stylesheets into the respective ClientLib
                 // directories
-                js: {
-                    cwd: 'js',
-                    files: ['*.js'],
-                    flatten: false,
-                    ignore: ['site.asus.js']
-                },
-                css: {
-                    cwd: 'css',
-                    files: ['*.css'],
-                    flatten: false,
-                    ignore: ['site.asus.css']
-                },
+                // js: {
+                //     cwd: 'js',
+                //     files: ['*.js'],
+                //     flatten: false,
+                //     ignore: ['site.asus.js']
+                // },
+                // css: {
+                //     cwd: 'css',
+                //     files: ['*.css'],
+                //     flatten: false,
+                //     ignore: ['site.asus.css']
+                // },
             }
         },
         {
@@ -71,7 +71,7 @@ module.exports = {
                 // directories
                 js: {
                     cwd: 'apps/asus/clientlibs/clientlib-vue/js',
-                    files: ['site.*', '_icomoon.*'],
+                    files: ['site.*'],
                     flatten: true,
                 },
 

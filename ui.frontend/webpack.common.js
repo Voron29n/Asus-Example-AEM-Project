@@ -8,7 +8,6 @@ const TSConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
-const { Console } = require("console");
 
 const SOURCE_ROOT = __dirname + "/src/main/webpack";
 

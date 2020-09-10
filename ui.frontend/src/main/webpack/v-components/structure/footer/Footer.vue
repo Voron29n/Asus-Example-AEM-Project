@@ -13,8 +13,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-Vue.component('VueLinksGroup', require("@components/structure/footer/v-components/linksGroup/LinksGroup"));
 export default {
     components: {
         VueCopyright: () =>

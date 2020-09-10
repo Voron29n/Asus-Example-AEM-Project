@@ -1,7 +1,6 @@
 export class ComponentData {
-    constructor(selector, tagName, path) {
+    constructor(selector, tagName) {
         this.selector = selector;
         this.tagName = tagName;
-        this.path = path;
     }
 }
