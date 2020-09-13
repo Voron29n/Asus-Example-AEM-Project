@@ -18,7 +18,7 @@
             flex-wrap: wrap;
             
             .parsys-block {
-                width: 49.9%;
+                width: 49.8%;
             }
         }
     }
@@ -26,6 +26,19 @@
     .desktop-parsys {
         .parsys-block {
             width: 33.3%;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+#grid-parsys_desc-three-mobile-four-or-two_component-vue {
+    .mobile-parsys {
+        .af-parsys {
+            flex-wrap: wrap;
+            
+            .parsys-block {
+                width: 49.4%;
+            }
         }
     }
 }
