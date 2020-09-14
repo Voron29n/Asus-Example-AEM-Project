@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f8558b2f-dbbb-41b2-9067-79143d8990fb">
+    <jcr:content
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2020-09-14T13:05:35.464+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="XML:com.adobe.xmp: &lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?> &lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        &quot;> &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;> &lt;rdf:Description rdf:about=&quot;&quot; xmlns:xmpMM=&quot;http://ns.adobe.com/xap/1.0/mm/&quot; xmlns:stRef=&quot;http://ns.adobe.com/xap/1.0/sType/ResourceRef#&quot; xmlns:stEvt=&quot;http://ns.adobe.com/xap/1.0/sType/ResourceEvent#&quot; xmlns:xmp=&quot;http://ns.adobe.com/xap/1.0/&quot; xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot; xmlns:photoshop=&quot;http://ns.adobe.com/photoshop/1.0/&quot; xmpMM:OriginalDocumentID=&quot;xmp.did:d0bdb4e1-f085-e940-8b3a-1c3732f67669&quot; xmpMM:DocumentID=&quot;xmp.did:FA7B37F2F15911E8A8E9C2F113EF1719&quot; xmpMM:InstanceID=&quot;xmp.iid:123e67ae-63f4-f64a-a8a6-2ccc7daee9b5&quot; xmp:CreatorTool=&quot;Adobe Photoshop CC 2015 (Macintosh)&quot; xmp:CreateDate=&quot;2019-02-05T21:47:48+03:00&quot; xmp:ModifyDate=&quot;2019-02-05T21:48:42+03:00&quot; xmp:MetadataDate=&quot;2019-02-05T21:48:42+03:00&quot; dc:format=&quot;image/png&quot; photoshop:ColorMode=&quot;3&quot;> &lt;xmpMM:DerivedFrom stRef:instanceID=&quot;xmp.iid:a2dc9e2a-22c4-47f6-81e9-f9b2370878be&quot; stRef:documentID=&quot;adobe:docid:photoshop:90fa8a41-1c04-117c-ba90-e23b10e2d8c8&quot;/> &lt;xmpMM:History> &lt;rdf:Seq> &lt;rdf:li stEvt:action=&quot;saved&quot; stEvt:instanceID=&quot;xmp.iid:123e67ae-63f4-f64a-a8a6-2ccc7daee9b5&quot; stEvt:when=&quot;2019-02-05T21:48:42+03:00&quot; stEvt:softwareAgent=&quot;Adobe Photoshop CC 2018 (Windows)&quot; stEvt:changed=&quot;/&quot;/> &lt;/rdf:Seq> &lt;/xmpMM:History> &lt;/rdf:Description> &lt;/rdf:RDF> &lt;/x:xmpmeta> &lt;?xpacket end=&quot;r&quot;?>&#xa;"
+            dam:extracted="{Date}2020-09-14T13:05:34.747+03:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}1"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}1.0419039726257324"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}1.3892053365707397"
+            dam:Progressive="no"
+            dam:sha1="0d3c35d510a13b028088a06de426eed2994772c2"
+            dam:size="{Long}13709"
+            dc:format="image/png"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            tiff:ImageLength="{Long}75"
+            tiff:ImageWidth="{Long}100"
+            xmp:CreateDate="{Date}2019-02-05T21:47:48.000+03:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2015 (Macintosh)"
+            xmp:MetadataDate="{Date}2019-02-05T21:48:42.000+03:00"
+            xmp:ModifyDate="{Date}2019-02-05T21:48:42.000+03:00"
+            xmpMM:DocumentID="xmp.did:FA7B37F2F15911E8A8E9C2F113EF1719"
+            xmpMM:InstanceID="xmp.iid:123e67ae-63f4-f64a-a8a6-2ccc7daee9b5"
+            xmpMM:OriginalDocumentID="xmp.did:d0bdb4e1-f085-e940-8b3a-1c3732f67669">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="adobe:docid:photoshop:90fa8a41-1c04-117c-ba90-e23b10e2d8c8"
+                stRef:instanceID="xmp.iid:a2dc9e2a-22c4-47f6-81e9-f9b2370878be"
+                xmpNodeType="xmpStruct"/>
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}1"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:123e67ae-63f4-f64a-a8a6-2ccc7daee9b5"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2018 (Windows)"
+                    stEvt:when="{Date}2019-02-05T21:48:42.000+03:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

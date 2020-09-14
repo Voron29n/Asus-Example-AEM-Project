@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-09-14T12:59:43.972+03:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/asus/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Русский"
+        sling:resourceType="asus/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="asus/components/container">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="asus/components/container"
+                layout="responsiveGrid">
+                <hero_banner_top
+                    jcr:created="{Date}2020-09-13T18:57:49.490+03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-09-13T19:03:42.684+03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="asus/components/custom/hero-banner/hero-banner-top/v1/hero-banner-top">
+                    <heroImages jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            descriptionLink="Ты выбираешь во что верить"
+                            externalLink="false"
+                            fileReferenceDesktop="/content/dam/asus/components/hero-banner-top/jgowahffk7rim1u8-0_0_desktop.jpg"
+                            fileReferenceMobile="/content/dam/asus/components/hero-banner-top/jgowahffk7rim1u8-0_0_mobile.jpg"
+                            linkTo="#"
+                            linkUrlTarget="_blank"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            descriptionLink="Снова в школу"
+                            externalLink="false"
+                            fileReferenceDesktop="/content/dam/asus/components/hero-banner-top/2vsdk7kqjnznqnyo-0_0_desktop.jpg"
+                            fileReferenceMobile="/content/dam/asus/components/hero-banner-top/2vsdk7kqjnznqnyo-0_0_mobile.jpg"
+                            linkTo="#"
+                            linkUrlTarget="_blank"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            descriptionLink="Битва отзывов"
+                            externalLink="false"
+                            fileReferenceDesktop="/content/dam/asus/components/hero-banner-top/795CIC3oPOcZamDu-0_0_desktop.jpg"
+                            fileReferenceMobile="/content/dam/asus/components/hero-banner-top/795cic3opoczamdu-0_0_mobile.jpg"
+                            linkTo="#"
+                            linkUrlTarget="_blank"/>
+                    </heroImages>
+                </hero_banner_top>
+                <desc_3_mobile_4_or_2
+                    jcr:created="{Date}2020-09-13T19:03:50.571+03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-09-13T19:03:56.359+03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="asus/components/custom/parsys/desc-3_mobile-4_or_2"
+                    parsysType="NORMAL">
+                    <par_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/parsys">
+                        <hero_banner_small
+                            jcr:created="{Date}2020-09-13T19:04:09.841+03:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-13T19:08:26.215+03:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="asus/components/custom/hero-banner/hero-banner-small/v1/hero-banner-small"
+                            fileReference="/content/dam/asus/components/hero-banner-small/first-banner.png"
+                            heroDescription="Включайся в работу!"
+                            heroTitle="ROG Strix GA35 (G35DX)"
+                            isExternalLink="false"
+                            linkTo="#"
+                            linkUrlTarget="_blank"/>
+                    </par_0>
+                    <par_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/parsys">
+                        <hero_banner_small
+                            jcr:created="{Date}2020-09-13T19:04:12.256+03:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-13T19:09:01.539+03:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="asus/components/custom/hero-banner/hero-banner-small/v1/hero-banner-small"
+                            fileReference="/content/dam/asus/components/hero-banner-small/second-banner.png"
+                            heroDescription="Двухдиапазонная ячеистая система Wi-Fi AC1750"
+                            heroTitle="Lyra Trio"
+                            isExternalLink="false"
+                            linkUrlTarget="_blank"/>
+                    </par_1>
+                    <par_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/parsys">
+                        <hero_banner_small
+                            jcr:created="{Date}2020-09-13T19:04:15.048+03:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-13T19:07:50.250+03:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="asus/components/custom/hero-banner/hero-banner-small/v1/hero-banner-small"
+                            fileReference="/content/dam/asus/components/hero-banner-small/last-banner.png"
+                            heroDescription="Экстримальное решение"
+                            heroTitle="ROG RYUJIN"
+                            isExternalLink="false"
+                            linkTo="#"
+                            linkUrlTarget="_blank"/>
+                    </par_2>
+                    <par_3
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/parsys">
+                        <hero_banner_small
+                            jcr:created="{Date}2020-09-13T19:04:28.325+03:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-09-13T19:06:15.922+03:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="asus/components/custom/hero-banner/hero-banner-small/v1/hero-banner-small"
+                            fileReference="/content/dam/asus/components/hero-banner-small/third-banner.png"
+                            heroDescription="Привликай Внимание"
+                            heroTitle="Asus VivoBook S14"
+                            isExternalLink="false"
+                            linkTo="#"
+                            linkUrlTarget="_blank"/>
+                    </par_3>
+                </desc_3_mobile_4_or_2>
+                <hero_banner_middle
+                    jcr:created="{Date}2020-09-14T12:59:11.982+03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-09-14T12:59:43.968+03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="asus/components/custom/hero-banner/hero-banner-middle/v1/hero-banner-middle"
+                    fileReferenceDesktop="/content/dam/asus/components/hero-banner-middle/poweredAsus.jpg"
+                    fileReferenceMobile="/content/dam/asus/components/hero-banner-middle/poweredAsusMobile.jpg"
+                    isExternalLink="false"
+                    linkTo="#"
+                    linkUrlTarget="_blank"/>
+                <product_line_list
+                    jcr:created="{Date}2020-09-01T20:08:45.769+03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-09-14T14:08:33.615+03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="asus/components/custom/product/product-line-list/v1/product-line-list"
+                    externalLink="false"
+                    iconClass="&lt;i class=&quot;fas fa-th&quot;>&lt;/i>"
+                    iconColor="black"
+                    linkTo="#"
+                    linkUrlTarget="_blank"
+                    menuTitle="Все модели">
+                    <productList jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            externalLink="false"
+                            fileReference="/content/dam/asus/components/product-line-list/smartfone-1.png"
+                            linkTo="#"
+                            linkUrlTarget="_blank"
+                            productDescription="Стильные, тонкие и легкие"
+                            productTitle="ZenBook"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            externalLink="false"
+                            fileReference="/content/dam/asus/components/product-line-list/smartfone-2.png"
+                            linkTo="#"
+                            linkUrlTarget="_blank"
+                            productDescription="Мобильные и молодежные"
+                            productTitle="VivoBook"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            externalLink="false"
+                            fileReference="/content/dam/asus/components/product-line-list/smartfone-3.png"
+                            linkTo="#"
+                            linkUrlTarget="_blank"
+                            productDescription="Мобильные рабочие станции"
+                            productTitle="StudioBook"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            externalLink="false"
+                            fileReference="/content/dam/asus/components/product-line-list/smartfone-4.png"
+                            linkTo="#"
+                            linkUrlTarget="_blank"
+                            productDescription="Легендарный игровой бренд"
+                            productTitle="ROG"/>
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            externalLink="false"
+                            fileReference="/content/dam/asus/components/product-line-list/smartfone-5.png"
+                            linkTo="#"
+                            linkUrlTarget="_blank"
+                            productDescription="Повышенная надежность"
+                            productTitle="TUF Gaming"/>
+                        <item5
+                            jcr:primaryType="nt:unstructured"
+                            externalLink="false"
+                            fileReference="/content/dam/asus/components/product-line-list/smartfone-6.png"
+                            linkTo="#"
+                            linkUrlTarget="_blank"
+                            productDescription="Доступные игровые ноутбуки"
+                            productTitle="Серия FX"/>
+                        <item6
+                            jcr:primaryType="nt:unstructured"
+                            externalLink="false"
+                            fileReference="/content/dam/asus/components/product-line-list/smartfone-7.png"
+                            linkTo="#"
+                            linkUrlTarget="_blank"
+                            productDescription="Компактные ноутбуки на ОС Chrome"
+                            productTitle="Chromebook"/>
+                    </productList>
+                </product_line_list>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
