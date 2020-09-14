@@ -55,6 +55,7 @@
                                                             <file
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                    required="{Boolean}true"
                                                                     allowUpload="{Boolean}false"
                                                                     autoStart="{Boolean}false"
                                                                     class="cq-droptarget"

@@ -28,6 +28,8 @@ public class ProductMenuBean {
     @ValueMapValue
     private String iconClass;
     @ValueMapValue
+    private String iconColor;
+    @ValueMapValue
     private String menuTitle;
 
     private SimpleLinkWithoutTitleBean productMenuLink;
