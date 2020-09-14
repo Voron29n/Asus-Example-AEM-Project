@@ -6,7 +6,7 @@
             :target="productMenuData.productMenuLink.linkUrlTarget"
         >
             <div class="product-info-block">
-                <div class="product-block-icon">
+                <div class="product-block-icon" :style="{ color: productMenuData.iconColor }">
                     <i :class="productMenuData.iconClass"></i>
                 </div>
                 <div class="product-block-info product-menu-icon">
@@ -26,8 +26,8 @@ export default {
         },
         itemWidth: {
             type: Number,
-            required: true
-        }
+            required: true,
+        },
     },
 };
 </script>
