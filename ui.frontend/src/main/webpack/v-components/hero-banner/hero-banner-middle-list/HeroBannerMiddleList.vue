@@ -24,7 +24,8 @@ export default {
         },
         isCycle: {
             type: Boolean,
-            required: true,
+            required: false,
+            default: false
         },
     },
     methods: {
