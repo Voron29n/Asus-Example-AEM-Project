@@ -2,10 +2,16 @@
     <div class="product-block-list product-line-list">
         <div class="product-block-inner">
             <div class="product-info-block-list">
-                <ul class="product-slider product-slick-initialized product-slick-slider">
+                <ul
+                    class="product-slider product-slick-initialized product-slick-slider"
+                    :style="productStyleData.productLineWindow"
+                >
+                    <SlickArrowFontAwesome
+                        v-show="slickData.isNeedShowNextSlick"
+                        :is-next-arrow="false"
+                    ></SlickArrowFontAwesome>
                     <div class="product-slick-list product-draggable">
                         <div class="product-slick-track" :style="productStyleData.productLineWidth">
-                            <SlickArrowNext v-show="slickData.isNeedShowNextSlick"></SlickArrowNext>
                             <VueProductItem
                                 v-for="productItem in productLineList"
                                 :key="productItem.productTitle"
@@ -16,9 +22,12 @@
                                 :product-menu-data="productMenuBean"
                                 :item-width="productTemplateData.productItemWidth"
                             ></VueProductMenuIcon>
-                            <SlickArrowPrev v-show="slickData.isNeedShowPrevSlick"></SlickArrowPrev>
                         </div>
                     </div>
+                    <SlickArrowFontAwesome
+                        v-show="slickData.isNeedShowPrevSlick"
+                        :is-next-arrow="true"
+                    ></SlickArrowFontAwesome>
                 </ul>
             </div>
         </div>
@@ -36,13 +45,9 @@ export default {
             import(
                 /* webpackChunkName: "ProductLineList" */ "../product-line-list-parts/ProductMenuIcon"
             ),
-        SlickArrowNext: () =>
+        SlickArrowFontAwesome: () =>
             import(
-                /* webpackChunkName: "SlickArrowNext" */ "@common/slick-arrow-font-awesome/SlickArrowNext"
-            ),
-        SlickArrowPrev: () =>
-            import(
-                /* webpackChunkName: "SlickArrowPrev" */ "@common/slick-arrow-font-awesome/SlickArrowPrev"
+                /* webpackChunkName: "SlickArrowFontAwesome" */ "@common/slick-arrow-font-awesome/SlickArrowFontAwesome"
             ),
     },
     props: {
@@ -60,9 +65,10 @@ export default {
             activeProductId: 0,
             productTemplateData: {
                 productItemWidth: 160,
-                productMaxLineItems: 8,
+                productMaxLineItems: 7,
             },
             productStyleData: {
+                productLineWindow: 0,
                 productLineWidth: 0,
             },
             slickData: {
@@ -76,6 +82,12 @@ export default {
     },
     mounted() {
         this.productStyleData.productLineWidth = {
+            width:
+                this.productTemplateData.productItemWidth *
+                    (this.productLineList.length + 1) +
+                `px`,
+        };
+        this.productStyleData.productLineWindow = {
             width:
                 this.productTemplateData.productItemWidth *
                     this.productTemplateData.productMaxLineItems +
