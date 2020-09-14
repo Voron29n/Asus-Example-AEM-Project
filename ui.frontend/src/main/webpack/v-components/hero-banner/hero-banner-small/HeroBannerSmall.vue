@@ -1,41 +1,21 @@
 <template>
-    <div class="banner-small-block">
-        <div class="banner-small-inner">
-            <div class="banner-small-wrap">
-                <VueLink :link-data="linkData"></VueLink>
-                <VueImage :image-data="imageData"></VueImage>
-                <div class="banner-small-info">
-                    <div :class="{'banner-small-info-wrap' : !isDesktopVersion}">
-                        <VueTitle :title-data="titleData"></VueTitle>
-                        <VueDescription :description-data="descriptionData"></VueDescription>
-                    </div>
-                </div>
+        <div class="banner-small-block">
+            <div class="banner-small-inner">
+                <HeroSmall
+                    :hero-small-data="heroSmallData"
+                ></HeroSmall>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
-import { adapt } from "@mixin/adaptFromDesktopToMobileVersion";
+import HeroSmall from "./v-components/HeroSmall";
 
 export default {
-    mixins: [adapt],
     components: {
-        VueLink: () =>
+        HeroSmall: () =>
             import(
-                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/link/Link"
-            ),
-        VueImage: () =>
-            import(
-                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/image/Image"
-            ),
-        VueTitle: () =>
-            import(
-                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/title/Title"
-            ),
-        VueDescription: () =>
-            import(
-                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/description/Description"
+                /* webpackChunkName: "HeroBannerSmall" */ "./v-components/HeroSmall"
             ),
     },
     props: {
@@ -57,23 +37,11 @@ export default {
         },
     },
     computed: {
-        linkData() {
+        heroSmallData() {
             return {
                 heroLink: JSON.parse(this.$props.jsonOfLinkData),
-            };
-        },
-        imageData() {
-            return {
                 fileReference: this.$props.fileReference,
-            };
-        },
-        titleData() {
-            return {
                 heroTitle: this.$props.heroTitle,
-            };
-        },
-        descriptionData() {
-            return {
                 heroDescription: this.$props.heroDescription,
             };
         },

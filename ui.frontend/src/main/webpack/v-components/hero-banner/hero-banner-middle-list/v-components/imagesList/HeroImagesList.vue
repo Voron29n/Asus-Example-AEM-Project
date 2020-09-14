@@ -173,5 +173,4 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "./banner_images_list_default";
-@import "./banner_images_list_media";
 </style>
