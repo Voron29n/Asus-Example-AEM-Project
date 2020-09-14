@@ -16,8 +16,6 @@
                 >
                     <VueHeroImg :hero-item="heroMiddleItem"></VueHeroImg>
                 </li>
-
-                
             </div>
         </div>
         <VueSlickDots
@@ -72,7 +70,8 @@ export default {
             touchMoveData: {
                 startPositionX: 0,
                 touchMoveX: 0,
-                maxTouchMoveX: document.body.clientWidth * 0.1,
+                maxTouchMoveX_BetweenImg: document.body.clientWidth * 0.1,
+                maxTouchMoveX_BeforeAfterImg: document.body.clientWidth * 0.25,
             },
         };
     },
@@ -88,9 +87,8 @@ export default {
         },
         updateActiveImg() {
             if (this.isNeedShowNextImg) {
-                let arrayLenght = this.heroBannerMiddleListData.length - 1;
                 this.activeImageId =
-                    this.activeImageId === arrayLenght
+                    this.activeImageId === this.arrayLenght
                         ? 0
                         : this.activeImageId + 1;
                 this.updateComponentStyle();
@@ -130,6 +128,21 @@ export default {
             let touchPosititonX = event.touches[0].clientX;
             this.touchMoveData.touchMoveX =
                 touchPosititonX - this.touchMoveData.startPositionX;
+
+            let isTouchMoveLeftFromFirstImg =
+                this.activeImageId === 0 && this.touchMoveData.touchMoveX > 0;
+
+            let isTouchMoveRigthFromLastImg =
+                this.activeImageId === this.arrayLenght && this.touchMoveData.touchMoveX < 0;
+
+            if (isTouchMoveLeftFromFirstImg || isTouchMoveRigthFromLastImg) {
+                this.touchMoveData.touchMoveX *= 0.15;
+
+                if (Math.abs(this.touchMoveData.touchMoveX) > this.touchMoveData.maxTouchMoveX_BeforeAfterImg){
+                    return ; 
+                }
+            }
+
             this.componentStyle.transform = `translateX(${
                 -document.body.clientWidth * this.activeImageId +
                 this.touchMoveData.touchMoveX
@@ -137,21 +150,24 @@ export default {
         },
         endTouchMove() {
             if (
-                Math.abs(this.touchMoveData.touchMoveX) > this.touchMoveData.maxTouchMoveX
+                Math.abs(this.touchMoveData.touchMoveX) >
+                this.touchMoveData.maxTouchMoveX_BetweenImg
             ) {
-                let touchMoveImg = this.touchMoveData.touchMoveX / document.body.clientWidth;
+                let touchMoveImg =
+                    this.touchMoveData.touchMoveX / document.body.clientWidth;
                 let countMoveImgId =
                     Math.abs(touchMoveImg) < 1
                         ? 1
                         : Math.ceil(Math.abs(touchMoveImg));
-                let changeActivateId = this.activeImageId - Math.sign(touchMoveImg) * countMoveImgId;
+                let changeActivateId =
+                    this.activeImageId -
+                    Math.sign(touchMoveImg) * countMoveImgId;
                 if (changeActivateId < 0) {
                     this.activeImageId = 0;
                 } else {
-                    let arrayLenght = this.heroBannerMiddleListData.length - 1;
                     this.activeImageId =
-                        changeActivateId > arrayLenght
-                            ? arrayLenght
+                        changeActivateId > this.arrayLenght
+                            ? this.arrayLenght
                             : changeActivateId;
                 }
             }
@@ -167,6 +183,9 @@ export default {
                 !this.isDesktopVersion &&
                 this.heroBannerMiddleListData.length > 1
             );
+        },
+        arrayLenght() {
+            return this.heroBannerMiddleListData.length - 1;
         },
     },
 };
