@@ -1,0 +1,47 @@
+.banner-hero-list {
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+
+
+    .banner-hero-list-block {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        margin: 0px;
+        padding: 0px;
+
+        .banner-hero-list-wrap {
+            position: relative;
+            overflow: hidden;
+            left: 0px;
+            top: 0px;
+            display: block;
+            opacity: 1;
+            list-style: none;
+
+
+            >li:first-child.banner-hero-list-item {
+                border-top: 0px;
+            }
+
+            >li.banner-hero-list-item {
+                list-style-type: none;
+                /* Убираем маркеры */
+                margin-bottom: 2px;
+                border-top: 2px solid #fff;
+                width: 100vw;
+                display: block;
+                position: relative;
+                min-height: 1px;
+                float: left;
+            }
+        }
+    }
+}

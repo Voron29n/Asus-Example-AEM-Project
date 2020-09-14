@@ -11,6 +11,7 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Via;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -32,6 +33,8 @@ public class HeroBannerMiddleListImpl implements HeroBannerMiddleList {
     @Inject
     @Via("resource")
     private List<Resource> heroImages;
+    @ValueMapValue
+    private boolean isCycle;
 
     private List<ImageBean> heroImagesCollection;
     private String heroBannerMiddleListCollectionJson;

@@ -4,5 +4,7 @@ public interface HeroBannerMiddleList {
 
     boolean isEmpty();
 
+    boolean isCycle();
+
     String getHeroBannerMiddleListCollectionJson();
 }

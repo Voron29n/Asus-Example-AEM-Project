@@ -18,6 +18,15 @@
                         sling:resourceType="granite/ui/components/coral/foundation/container">
                     <items jcr:primaryType="nt:unstructured">
 
+                        <typeLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                fieldDescription="check - cycle version / uncheck - uncycle version"
+                                name="./isCycle"
+                                value="{Boolean}true"
+                                default="{Boolean}false"
+                                uncheckedValue="{Boolean}false"/>
+
                         <multiImagesCollecion
                                 cq:showOnCreate="{Boolean}true"
                                 jcr:primaryType="nt:unstructured"
