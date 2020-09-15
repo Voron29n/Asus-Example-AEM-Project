@@ -1,9 +1,10 @@
 <template>
-    <div class="slick-arrow-font-awesome" :class="[isNextArrow ? 'next' : 'prev']">
-        <i
-            :class="[isNextArrow ? iconClassData.nextClass : iconClassData.prevClass]"
-            @click="slickNext"
-        ></i>
+    <div
+        class="slick-arrow-font-awesome"
+        :class="[isNextArrow ? 'next' : 'prev']"
+        @click="slickNext"
+    >
+        <i :class="[isNextArrow ? iconClassData.nextClass : iconClassData.prevClass]"></i>
     </div>
 </template>
 
