@@ -1,7 +1,7 @@
 <template>
     <div class="product-block-list product-line-list">
         <div class="product-block-inner">
-            <div class="product-info-block-list">
+            <div class="product-info-block-list" @mouseup="stopMove" @touchend="stopMove">
                 <ul
                     class="product-slider product-slick-initialized product-slick-slider"
                     :style="widthWindowProductLineList"
@@ -13,6 +13,10 @@
                     ></SlickArrowFontAwesome>
                     <div class="product-slick-list product-draggable">
                         <div
+                            @mousedown="startMove"
+                            @mousemove="doMove"
+                            @touchstart="startMove"
+                            @touchmove="doMove"
                             class="product-slick-track"
                             :style="[widthProductLineList,productStyleData]"
                         >
@@ -72,10 +76,14 @@ export default {
         return {
             activeProductId: 0,
             activeProductTab: 0,
-            productStyleData: {
-                transform: "",
-                transition: "all 0.25s ease 0s",
+            moveData: {
+                startPositionX: 0,
+                movePositionX: 0,
+                isMouseDown: false,
+                isMoveStart: false,
+                startTransformValue: 0,
             },
+            currentTransformValue: 0,
             productItemsInLine: {
                 currentCount: 0,
                 countSmallVersion: 4,
@@ -92,17 +100,21 @@ export default {
                 isNeedShowNextSlick: true,
                 isNeedShowPrevSlick: true,
             },
+            defaultStyleData: {
+                allowTransition: "all 0.5s ease 0s",
+                disableTransition: "none",
+            },
         };
     },
-    mounted () {
+    mounted() {
         this.setDefaultStatusSlickArrow();
     },
     methods: {
-        setDefaultStatusSlickArrow(){
-            if (this.isSelectedFirstTab && this.isNeedShowSlickArrows){
-                this.changeShowStatusSlickArrow(false, true)
+        setDefaultStatusSlickArrow() {
+            if (this.isSelectedFirstTab && this.isNeedShowSlickArrows) {
+                this.changeShowStatusSlickArrow(false, true);
             } else if (this.isSelectedLastTab && this.isNeedShowSlickArrows) {
-                this.changeShowStatusSlickArrow(true, false)
+                this.changeShowStatusSlickArrow(true, false);
             }
         },
         changeBySlickArrow(isNextArrow) {
@@ -110,10 +122,9 @@ export default {
                 this.productLineList.length >
                 this.productItemsInLine.currentCount;
             if (isNextArrow && this.countProductTab > 1) {
-                this.activeProductTab =
-                    this.isSelectedLastTab
-                        ? this.activeProductTab
-                        : this.activeProductTab + 1;
+                this.activeProductTab = this.isSelectedLastTab
+                    ? this.activeProductTab
+                    : this.activeProductTab + 1;
                 if (this.isSelectedLastTab) {
                     this.updateTransformForLastTab();
                     this.changeShowStatusSlickArrow(true, false);
@@ -126,7 +137,7 @@ export default {
                     ? this.activeProductTab
                     : this.activeProductTab - 1;
                 if (this.isSelectedFirstTab) {
-                    this.productStyleData.transform = `translateX(0px)`;
+                    this.updateTransformForFirstTab();
                     this.changeShowStatusSlickArrow(false, true);
                 } else {
                     this.updateTransformByActiveProductTab();
@@ -137,25 +148,86 @@ export default {
         updateTransformByActiveProductTab() {
             let itemToTransform =
                 this.activeProductTab * this.productItemsInLine.currentCount;
-            this.productStyleData.transform = `translateX(${
-                -itemToTransform * this.widthProductLineItem
-            }px)`;
+            this.currentTransformValue =
+                -itemToTransform * this.widthProductLineItem;
         },
         updateTransformForLastTab() {
             let itemToTransform =
                 this.productLineList.length +
                 1 -
                 this.productItemsInLine.currentCount;
-            this.productStyleData.transform = `translateX(${
-                -itemToTransform * this.widthProductLineItem
-            }px)`;
+            this.currentTransformValue =
+                -itemToTransform * this.widthProductLineItem;
         },
         updateTransformForFirstTab() {
-            this.productStyleData.transform = `translateX(0px)`;
+            this.currentTransformValue = 0;
         },
         changeShowStatusSlickArrow(statusToChangePrev, statusToChangeNext) {
             this.slickData.isNeedShowPrevSlick = statusToChangePrev;
             this.slickData.isNeedShowNextSlick = statusToChangeNext;
+        },
+        startMove(event) {
+            this.moveData.startPositionX = this.isTouchEvent(event)
+                ? event.touches[0].clientX
+                : event.clientX;
+            this.moveData.isMouseDown = this.isTouchEvent(event)
+                ? this.moveData.isMouseDown
+                : true;
+            this.moveData.startTransformValue = this.currentTransformValue;
+            this.moveData.isMoveStart = true;
+        },
+        doMove(event) {
+            if (this.moveData.isMoveStart) {
+                this.moveData.movePositionX = this.isTouchEvent(event)
+                    ? event.touches[0].clientX
+                    : event.clientX;
+
+                let movedWidth =
+                    this.moveData.movePositionX - this.moveData.startPositionX;
+
+                this.currentTransformValue =
+                    this.moveData.startTransformValue + movedWidth;
+            }
+        },
+        stopMove(event) {
+            if (this.moveData.isMoveStart) {
+                this.moveData.isMouseDown = this.isTouchEvent(event)
+                    ? this.moveData.isMouseDown
+                    : false;
+                this.endTransition(event);
+                this.moveData.isMoveStart = false;
+            }
+        },
+        isTouchEvent(event) {
+            return event instanceof TouchEvent;
+        },
+        endTransition(event) {
+            let moveWidth =
+                this.moveData.movePositionX - this.moveData.startPositionX;
+            let activeTab =
+                -1 *
+                Math.sign(moveWidth) *
+                Math.ceil(
+                    Math.abs(moveWidth) /
+                        (this.widthProductLineItem *
+                            this.productItemsInLine.currentCount)
+                );
+            if (activeTab >= 0) {
+                this.activeProductTab =
+                    this.activeProductTab + activeTab >= this.countProductTab
+                        ? this.countProductTab - 1
+                        : this.activeProductTab + activeTab;
+            } else {
+                this.activeProductTab =
+                    this.activeProductTab + activeTab < 0
+                        ? 0
+                        : this.activeProductTab + activeTab;
+            }
+            if (this.activeProductTab === this.countProductTab - 1) {
+                this.updateTransformForLastTab();
+            } else {
+                this.updateTransformByActiveProductTab();
+            }
         },
     },
     computed: {
@@ -244,18 +316,27 @@ export default {
             return tabsValue;
         },
         isNeedShowSlickArrows() {
-            return this.countProductTab !== 1 
+            return this.countProductTab !== 1;
         },
         isSmallVersion() {
             return this.productWindowVersion === this.productWindowType.small;
         },
         isSelectedFirstTab() {
-            return (
-                this.activeProductTab === 0
-            );
+            return this.activeProductTab === 0;
         },
         isSelectedLastTab() {
-            return this.activeProductTab +1  === this.countProductTab;
+            return this.activeProductTab + 1 === this.countProductTab;
+        },
+        productStyleData() {
+            let transitionValue = this.moveData.isMoveStart
+                ? this.defaultStyleData.disableTransition
+                : this.defaultStyleData.allowTransition;
+            return {
+                transform: `translateX(${this.currentTransformValue}px)`,
+                transition: this.moveData.isMoveStart
+                    ? this.defaultStyleData.disableTransition
+                    : this.defaultStyleData.allowTransition,
+            };
         },
     },
 };
