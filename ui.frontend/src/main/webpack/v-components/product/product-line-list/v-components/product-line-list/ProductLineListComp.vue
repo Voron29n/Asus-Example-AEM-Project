@@ -96,52 +96,32 @@ export default {
                 medium: "medium",
                 large: "large",
             },
-            slickData: {
-                isNeedShowNextSlick: true,
-                isNeedShowPrevSlick: true,
-            },
             defaultStyleData: {
                 allowTransition: "all 0.5s ease 0s",
                 disableTransition: "none",
             },
         };
     },
-    mounted() {
-        this.setDefaultStatusSlickArrow();
-    },
     methods: {
-        setDefaultStatusSlickArrow() {
-            if (this.isSelectedFirstTab && this.isNeedShowSlickArrows) {
-                this.changeShowStatusSlickArrow(false, true);
-            } else if (this.isSelectedLastTab && this.isNeedShowSlickArrows) {
-                this.changeShowStatusSlickArrow(true, false);
-            }
-        },
         changeBySlickArrow(isNextArrow) {
-            let isSlickChangeEnable =
-                this.productLineList.length >
-                this.productItemsInLine.currentCount;
-            if (isNextArrow && this.countProductTab > 1) {
-                this.activeProductTab = this.isSelectedLastTab
-                    ? this.activeProductTab
-                    : this.activeProductTab + 1;
+            if (this.countProductTab <= 1) {
+                return;
+            } else {
+                if (isNextArrow) {
+                    this.activeProductTab = this.isSelectedLastTab
+                        ? this.activeProductTab
+                        : this.activeProductTab + 1;
+                } else {
+                    this.activeProductTab = this.isSelectedFirstTab
+                        ? this.activeProductTab
+                        : this.activeProductTab - 1;
+                }
                 if (this.isSelectedLastTab) {
                     this.updateTransformForLastTab();
-                    this.changeShowStatusSlickArrow(true, false);
-                } else {
-                    this.updateTransformByActiveProductTab();
-                    this.changeShowStatusSlickArrow(true, true);
-                }
-            } else if (!isNextArrow && this.countProductTab > 1) {
-                this.activeProductTab = this.isSelectedFirstTab
-                    ? this.activeProductTab
-                    : this.activeProductTab - 1;
-                if (this.isSelectedFirstTab) {
+                } else if (this.isSelectedFirstTab) {
                     this.updateTransformForFirstTab();
-                    this.changeShowStatusSlickArrow(false, true);
                 } else {
                     this.updateTransformByActiveProductTab();
-                    this.changeShowStatusSlickArrow(true, true);
                 }
             }
         },
@@ -161,10 +141,6 @@ export default {
         },
         updateTransformForFirstTab() {
             this.currentTransformValue = 0;
-        },
-        changeShowStatusSlickArrow(statusToChangePrev, statusToChangeNext) {
-            this.slickData.isNeedShowPrevSlick = statusToChangePrev;
-            this.slickData.isNeedShowNextSlick = statusToChangeNext;
         },
         startMove(event) {
             this.moveData.startPositionX = this.isTouchEvent(event)
@@ -315,8 +291,15 @@ export default {
             tabsValue = tabsValue <= 1 ? 1 : Math.ceil(tabsValue);
             return tabsValue;
         },
-        isNeedShowSlickArrows() {
-            return this.countProductTab !== 1;
+        slickData() {
+            let isShowNext =
+                this.countProductTab !== 1 && !this.isSelectedLastTab;
+            let isShowPrev =
+                this.countProductTab !== 1 && !this.isSelectedFirstTab;
+            return {
+                isNeedShowPrevSlick: isShowPrev,
+                isNeedShowNextSlick: isShowNext,
+            };
         },
         isSmallVersion() {
             return this.productWindowVersion === this.productWindowType.small;
