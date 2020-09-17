@@ -1,0 +1,104 @@
+<data xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+      xmlns:jcr="http://www.jcp.org/jcr/1.0"
+      xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+      jcr:primaryType="nt:unstructured"
+      jcr:title="Professional Personal Data"
+      margin="{Boolean}true"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+
+        <column
+                jcr:primaryType="nt:unstructured"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+
+                <column jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <actionslink jcr:primaryType="nt:unstructured"
+                                     jcr:title="Link and Actions"
+                                     margin="{Boolean}true"
+                                     sling:resourceType="granite/ui/components/coral/foundation/container">
+
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                        jcr:primaryType="nt:unstructured"
+                                        margin="{Boolean}true"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <nameRu
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                        granite:class="cq-dialog-container__proart__professional__person-info">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <firstName
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First name(ru)"
+                                                                emptyText="First name..."
+                                                                required="{Boolean}true"
+                                                                name="./firstNameRu"/>
+                                                        <lastName
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last name(ru)"
+                                                                emptyText="Last name..."
+                                                                required="{Boolean}true"
+                                                                name="./lastNameRu"/>
+                                                    </items>
+                                                </nameRu>
+                                                <nameEn
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                        granite:class="cq-dialog-container__proart__professional__person-info">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <firstName
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="First name(en)"
+                                                                emptyText="First name..."
+                                                                required="{Boolean}true"
+                                                                name="./firstNameEn"/>
+                                                        <lastName
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Last name(en)"
+                                                                emptyText="Last name..."
+                                                                required="{Boolean}true"
+                                                                name="./lastNameEn"/>
+                                                    </items>
+                                                </nameEn>
+                                                <professionPosition
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <professionPosition
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Professional Position"
+                                                                emptyText="Position..."
+                                                                required="{Boolean}true"
+                                                                name="./professionPosition"/>
+                                                    </items>
+                                                </professionPosition>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </column>
+                            </items>
+                        </actionslink>
+
+                    </items>
+                </column>
+            </items>
+        </column>
+    </items>
+</data>
