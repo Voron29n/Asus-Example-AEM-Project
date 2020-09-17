@@ -81,6 +81,11 @@ vueArrayComponents = [
         "#proart__categories-nav_component-vue",
         "vue_proart_categories-nav-data"
     ),
+    /* proart professional group*/
+    new ComponentData(
+        "#proart__prof__hero-img_component-vue",
+        "vue_proart_prof_hero-img-data"
+    ),
     /* product group */
     new ComponentData(
         "#product__product-line-list_component-vue",

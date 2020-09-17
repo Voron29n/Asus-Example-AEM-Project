@@ -117,6 +117,13 @@ export async function getComponent(tagName) {
                 require("@components/proart/categories-nav/ProArtCategoriesNav").default
             );
             break;
+            /* proart professional group*/
+        case "vue_proart_prof_hero-img-data":
+            cmpVue = Vue.component(
+                "vue_proart_prof_hero-img-data",
+                require("@components/proart/professional/hero-img/ProArtProfHeroImg").default
+            );
+            break;
             /* product group*/
         case "vue_product-line-list-data":
             cmpVue = Vue.component(
