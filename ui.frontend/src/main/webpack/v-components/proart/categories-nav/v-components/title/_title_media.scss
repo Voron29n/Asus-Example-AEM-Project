@@ -1,0 +1,65 @@
+@media (max-width: 720px) {
+    .wd_content {
+        padding-bottom: 35px;
+        width: 89.9%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .small_text-left.wd_content {
+        text-align: left;
+        left: 0;
+    }
+    .wd_content .content_slogan {
+        font-size: 20px;
+        padding-bottom: 29px;
+    }
+    #proart__categoriesNav .small_text-left.wd_content .content_comment,
+    #proart__categoriesNav .small_text-left.wd_content .content_info,
+    #proart__categoriesNav .small_text-left.wd_content .content_link,
+    #proart__categoriesNav .small_text-left.wd_content .content_slogan,
+    #proart__categoriesNav .small_text-left.wd_content .content_title {
+        text-align: left;
+        margin-left: 0;
+    }
+    .wd_content .content_slogan {
+        font-size: 20px;
+        padding-bottom: 29px;
+    }
+    .wd_content.wd_content-main .content_slogan .slogan-text {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1300px) and (min-width: 721px) {
+    .wd_content {
+        padding-bottom: 55px;
+    }
+    #proart__categoriesNav .medium_text-center.wd_content {
+        text-align: center;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .wd_content .content_slogan {
+        font-size: 24px;
+    }
+    #proart__categoriesNav .medium_text-center.wd_content .content_comment,
+    #proart__categoriesNav .medium_text-center.wd_content .content_info,
+    #proart__categoriesNav .medium_text-center.wd_content .content_link,
+    #proart__categoriesNav .medium_text-center.wd_content .content_slogan,
+    #proart__categoriesNav .medium_text-center.wd_content .content_title {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .wd_content.wd_content-main .content_slogan .slogan-text {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 1301px) {
+    .cmdPageContainer .section_industry .wd_content {
+        max-width: 800px;
+    }
+}

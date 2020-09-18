@@ -1,0 +1,75 @@
+.wd_content {
+    background-color: #131313;
+    padding-bottom: 75px;
+}
+
+#proart__categoriesNav .large_text-center {
+    text-align: center;
+}
+
+#proart__categoriesNav .large_text-center.wd_content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-gradient-gold,
+.text-gradient-gold * {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(39deg, #ceb497 0%, #766050 100%);
+}
+
+.wd_content .content_slogan {
+    position: relative;
+    padding-bottom: 33px;
+    color: #a89d5b;
+    font-size: 30px;
+}
+
+.wd_content .content_slogan,
+.wd_content .content_slogan * {
+    font-family: "Helvetica Now Display W05 Bold" !important;
+    font-style: normal !important;
+}
+
+#proart__categoriesNav .large_text-center.wd_content .content_comment,
+#proart__categoriesNav .large_text-center.wd_content .content_info,
+#proart__categoriesNav .large_text-center.wd_content .content_link,
+#proart__categoriesNav .large_text-center.wd_content .content_slogan,
+#proart__categoriesNav .large_text-center.wd_content .content_title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wd_content .content_slogan {
+    position: relative;
+    padding-bottom: 33px;
+    color: #a89d5b;
+    font-size: 30px;
+}
+
+.wd_content .content_slogan,
+.wd_content .content_slogan * {
+    font-family: "Helvetica Now Display W05 Bold" !important;
+    font-style: normal !important;
+}
+
+.wd_content.wd_content-main .content_slogan .slogan-text {
+    display: inline-block;
+    position: relative;
+    font-size: 54px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.wd_content.wd_content-main .content_slogan .slogan-text:before {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    top: -17px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(39deg, #ceb497 0%, #766050 100%);
+}

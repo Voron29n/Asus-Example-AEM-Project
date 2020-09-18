@@ -1,7 +1,7 @@
 <template>
-    <div id="proart__categoriesNav">
-        <VueTitle :title-data="titleData"></VueTitle>
-        <VueCategories :categories-data="categoriesData"></VueCategories>
+    <div id="proart__categoriesNav" class="col l12 m12 s12 always__on__top">
+        <VueTitle :title-data="categoriesTitleData"></VueTitle>
+        <VueCategories :categories-data="categoriesNavData"></VueCategories>
     </div>
 </template>
 
@@ -28,12 +28,12 @@ export default {
         },
     },
     computed: {
-        titleData() {
+        categoriesTitleData() {
             return {
                 categoriesTitle: this.$props.categoriesTitle,
             };
         },
-        categoriesData() {
+        categoriesNavData() {
             return {
                 categoriesNav: JSON.parse(this.$props.categoriesNav),
             };
