@@ -23,6 +23,13 @@
     }
 }
 
+@media (max-width: 580px) {
+    .products-nav .section_products .product_list {
+        width: 250px;
+        height: 150px;
+    }
+}
+
 @media (max-width: 1300px) and (min-width: 721px) {
     .section {
         margin-left: auto;

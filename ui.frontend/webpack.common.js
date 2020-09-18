@@ -1,13 +1,10 @@
-"use strict";
-
 const path = require("path");
 
-const webpack                   = require("webpack");
-const MiniCssExtractPlugin      = require("mini-css-extract-plugin");
-const TSConfigPathsPlugin       = require("tsconfig-paths-webpack-plugin");
-const CopyWebpackPlugin         = require("copy-webpack-plugin");
-const { CleanWebpackPlugin }    = require("clean-webpack-plugin");
-const VueLoaderPlugin           = require("vue-loader/lib/plugin");
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TSConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 const SOURCE_ROOT = __dirname + "/src/main/webpack";
 
@@ -35,6 +32,11 @@ module.exports = {
             ),
             'vue$': 'vue/dist/vue.esm.js'
         },
+        plugins: [
+            new TSConfigPathsPlugin({
+                configFile: "./tsconfig.json",
+            }),
+        ],
     },
     entry: {
         site: SOURCE_ROOT + "/site/main.ts",
@@ -90,7 +92,7 @@ module.exports = {
                 test: /\.(scss)$/,
                 resolve: { extensions: [".scss"], },
                 loader: [
-                    // "vue-style-loader",
+                    "vue-style-loader",
                     {
                         loader: MiniCssExtractPlugin.loader,
                     },
@@ -161,7 +163,7 @@ module.exports = {
                     options: {
                         limit: 100000,
                         name: '[name].[ext]',
-                        outputPath: 'urls/'
+                        outputPath: 'apps/asus/clientlibs/clientlib-vue/resources/urls'
                     }
                 }
             },
@@ -169,18 +171,11 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
-        new TSConfigPathsPlugin({
-            configFile: "./tsconfig.json",
-        }),
         new CleanWebpackPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new MiniCssExtractPlugin({
             filename: 'apps/asus/clientlibs/clientlib-vue/css/[name].css',
         }),
-        // new CopyWebpackPlugin([{
-        //     from: path.resolve(__dirname, SOURCE_ROOT + "/site/resources"),
-        //     to: "./resources",
-        // }, ]),
     ],
     stats: {
         assetsSort: "chunks",
