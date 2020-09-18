@@ -8,25 +8,18 @@
 }
 
 @media (max-width: 720px) {
-    #proart__products-nav_component-vue .wd_section {
-        margin-bottom: 95px;
+    #proart__products-nav_component-vue {
+        padding-bottom: 95px;
+        padding-top: 10px;
     }
-    #proart__products-nav_component-vue .section_products {
+    .section_products {
         position: relative;
-        margin-top: 10px;
     }
     #proart__productsNav .row .col.s12 {
         width: 100%;
         margin-left: auto;
         left: auto;
         right: auto;
-    }
-}
-
-@media (max-width: 580px) {
-    .products-nav .section_products .product_list {
-        width: 250px;
-        height: 150px;
     }
 }
 
@@ -37,12 +30,12 @@
         width: 100%;
         max-width: 1300px;
     }
-    .wd_section {
-        margin-bottom: 137px;
+    #proart__products-nav_component-vue {
+        padding-bottom: 137px;
+        padding-top: 60px;
     }
     #proart__products-nav_component-vue .section_products {
         position: relative;
-        margin-top: 60px;
         background-color: #000;
     }
     #proart__productsNav .row .col.m12 {
