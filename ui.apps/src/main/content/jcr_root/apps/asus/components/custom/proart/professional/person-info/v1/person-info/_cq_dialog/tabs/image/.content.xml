@@ -47,7 +47,8 @@
                                                         name="./file"
                                                         title="Upload Image Asset"
                                                         uploadUrl="${suffix.path}"
-                                                        useHTML5="{Boolean}true"/>
+                                                        useHTML5="{Boolean}true"
+                                                        required="{Boolean}true"/>
                                             </items>
                                         </column>
                                     </items>
