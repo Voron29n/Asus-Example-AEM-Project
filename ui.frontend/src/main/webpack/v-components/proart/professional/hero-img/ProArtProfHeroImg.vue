@@ -15,7 +15,7 @@ export default {
             type: String,
             required: false,
         },
-    },
+    }
 };
 
 import(
