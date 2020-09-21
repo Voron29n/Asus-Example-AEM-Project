@@ -96,6 +96,10 @@ vueArrayComponents = [
         "#proart__prof__hero-img_component-vue",
         "vue_proart_prof_hero-img-data"
     ),
+    new ComponentData(
+        "#proart__prof__person-info_component-vue",
+        "vue_proart_prof_person-info-data"
+    ),
     /* product group */
     new ComponentData(
         "#product__product-line-list_component-vue",
