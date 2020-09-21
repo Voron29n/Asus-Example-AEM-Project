@@ -44,9 +44,8 @@ public class PersonInfoBean {
     @ValueMapValue
     private String lastNameEn;
     @JsonView(value = View.PersonInfo.class)
+    @ValueMapValue
     private String professionPosition;
-    /*field at List - /content/asus/ru/ru/ProArt/Professional*/
-    /*resource field resourcePath - /content/asus/ru/ru/ProArt/Professional/david_Backhem/jcr:content/root/container/person_info*/
 
     @PostConstruct
     private void init() {
