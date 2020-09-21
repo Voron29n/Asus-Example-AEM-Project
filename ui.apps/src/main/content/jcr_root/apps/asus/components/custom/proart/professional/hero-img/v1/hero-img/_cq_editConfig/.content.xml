@@ -19,6 +19,10 @@
         </image>
     </cq:dropTargets>
     <cq:listeners jcr:primaryType="cq:EditListenersConfig"
-                  afteredit="function doRefresh() { console.log(`refreshVue`); var event = new CustomEvent(`refreshVue`); document.dispatchEvent(event); }"
-                  />
+                  aftermove="REFRESH_PAGE"
+                  afteredit="REFRESH_PAGE"
+                  afterdelete="REFRESH_PAGE"
+                  afterinsert="REFRESH_PAGE"
+                  aftercopymove="REFRESH_PAGE"
+    />
 </jcr:root>
