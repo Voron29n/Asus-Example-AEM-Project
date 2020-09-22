@@ -8,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public final class CommonUtils {
     private CommonUtils() {}
@@ -20,8 +21,10 @@ public final class CommonUtils {
     private static final String FONT_AWESOME_PATTERN_CLASS = "fa[a-z] fa.+[^(\"><\\/i>)]";
 
 
-    public static <T> T getValue(Object obj, Class<T> clazz) {
-        return (T) obj;
+    public static <T> List<T> adaptListResourcesToListBeans(List<Resource> resourceList, Class<T> clazz) {
+        return resourceList.stream()
+                .map(resource -> resource.adaptTo(clazz))
+                .collect(Collectors.toList());
     }
 
     public static boolean isCheckResource(final List<Resource> resources) {

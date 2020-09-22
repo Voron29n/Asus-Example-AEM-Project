@@ -3,10 +3,12 @@ package com.epam.asus.core.models.impl.product;
 import com.epam.asus.core.models.ProductLineList;
 import com.epam.asus.core.models.beans.product.ProductItemBean;
 import com.epam.asus.core.models.beans.product.ProductMenuBean;
+import com.epam.asus.core.utilites.CommonUtils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.*;
@@ -51,9 +53,7 @@ public class ProductLineListImpl implements ProductLineList {
     @PostConstruct
     private void init() throws JsonProcessingException {
         ProductMenuBean productMenuBean = currentResource.adaptTo(ProductMenuBean.class);
-        productLineList = productList.stream()
-                .map(productItem -> productItem.adaptTo(ProductItemBean.class))
-                .collect(Collectors.toList());
+        productLineList = CommonUtils.adaptListResourcesToListBeans(productList, ProductItemBean.class);
 
         productMenuBeanJson = new ObjectMapper().writeValueAsString(productMenuBean);
         productLineListCollectionJson = new ObjectMapper().writeValueAsString(productLineList);
