@@ -1,0 +1,175 @@
+.img_wall_List {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    position: relative;
+    justify-content: center;
+}
+
+//
+.img_wall_List .imgWall-box {
+    display: inline-flex;
+    position: relative;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px 1px 1px;
+    box-sizing: content-box;
+    *height: 400px;
+    background-color: #ccc;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #000;
+}
+
+//
+.img_wall_List figure {
+    display: block;
+}
+
+.img_wall_List .img {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img_wall_List .imgWall-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img_wall_List .imgWall-img figure.img {
+    position: absolute;
+    top: 50%;
+    *margin-top: -400px;
+    left: 50%;
+    *margin-left: -400px;
+    z-index: 1;
+}
+
+.img_wall_List .imgWall-box figure.img {
+    transition: -webkit-transform 8000ms;
+    transition: transform 8000ms;
+    transition: transform 8000ms, -webkit-transform 8000ms;
+}
+
+.imgWall-box figure.img {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+//
+.img_wall_List .imgWall-txt span {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    z-index: 9;
+    color: #fff;
+    letter-spacing: normal;
+}
+
+.img_wall_List .imgWall-txt,
+.img_wall_List .imgWall-txt * {
+    line-height: 1.3em;
+}
+
+.imgWall-box .text_regular,
+.imgWall-box .text_regular * {
+    font-family: "Helvetica Now Display W05 Rg" !important;
+    font-style: normal !important;
+}
+
+.img_wall_List .text__no__wrap {
+    display: block;
+    width: 100%;
+}
+
+// category-frame
+.img_wall_List .imgWall-box .category-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img_wall_List .imgWall-box:hover .category-frame {
+    z-index: 12;
+}
+
+.img_wall_List .imgWall-box .category-frame>div {
+    position: absolute;
+    background: #c09f7e;
+}
+
+.img_wall_List .imgWall-box .category-frame .frame-top {
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 0%;
+    transition: width 400ms 400ms;
+}
+
+.img_wall_List .imgWall-box:hover .category-frame .frame-top {
+    width: 100%;
+    transition: width 400ms 400ms;
+}
+
+.img_wall_List .imgWall-box .category-frame .frame-right {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 0%;
+    transition: height 400ms;
+}
+
+.img_wall_List .imgWall-box:hover .category-frame .frame-right {
+    height: 100%;
+    transition: height 400ms 800ms;
+}
+
+.img_wall_List .imgWall-box .category-frame .frame-bottom {
+    width: 0%;
+    transition: width 400ms 400ms;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+}
+
+.img_wall_List .imgWall-box:hover .category-frame .frame-bottom {
+    width: 100%;
+    transition: width 400ms 400ms;
+}
+
+.img_wall_List .imgWall-box .category-frame .frame-left {
+    height: 0%;
+    transition: height 400ms;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+}
+
+.img_wall_List .imgWall-box:hover .category-frame .frame-left {
+    height: 100%;
+    transition: height 400ms 800ms;
+}
+
+// a
+.img_wall_List .moreLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+}

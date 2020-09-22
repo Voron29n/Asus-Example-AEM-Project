@@ -1,129 +1,117 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Static Frontend file</title>
-    <meta name="template" content="page-content"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="/etc.clientlibs/asus/clientlibs/clientlib-base.css" type="text/css">
+    <meta content="page-content" name="template" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="/etc.clientlibs/asus/clientlibs/clientlib-base.css" rel="stylesheet" type="text/css">
 </head>
+
 <body class="page basicpage">
-<div class="root container responsivegrid">
-    <div class="cmp-container">
-        <header class="experiencefragment">
-            <div class="cmp-experiencefragment">
-                <div class="cmp-container">
-                    <div class="navigation">
-                        <nav class="cmp-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                            <ul class="cmp-navigation__group">
-                                <li class="cmp-navigation__item cmp-navigation__item--level-0 cmp-navigation__item--active">
-                                    <a href="/content/asus/language-masters/en.html" title="My Site" aria-current="page" class="cmp-navigation__item-link">My Site</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="languagenavigation">
-                        <nav class="cmp-languagenavigation">
-                            <ul class="cmp-languagenavigation__group">
-                                <li class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-0">
-                                    <span class="cmp-languagenavigation__item-title" lang="en">United States</span>
-                                    <ul class="cmp-languagenavigation__group">
-                                        <li class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-1">
-                                            <a class="cmp-languagenavigation__item-link" href="/content/asus/us/en.html" hreflang="en" lang="en" rel="alternate" title="English">English</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="search">
-                        <section class="cmp-search" role="search" data-cmp-is="search" data-cmp-min-length="3" data-cmp-results-size="10">
-                            <form class="cmp-search__form" data-cmp-hook-search="form" method="get" action="/content/asus/language-masters/en.searchresults.json/_jcr_content/root/search" autocomplete="off">
-                                <div class="cmp-search__field">
-                                    <i class="cmp-search__icon" data-cmp-hook-search="icon"></i>
-                                    <span class="cmp-search__loading-indicator" data-cmp-hook-search="loadingIndicator"></span>
-                                    <input class="cmp-search__input" data-cmp-hook-search="input" type="text" name="fulltext" placeholder="Search" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-invalid="false"/>
-                                    <button class="cmp-search__clear" data-cmp-hook-search="clear">
+    <div class="root container responsivegrid">
+        <div class="cmp-container">
+
+            <header class="experiencefragment">
+                <div class="cmp-experiencefragment">
+                    <div class="cmp-container">
+                        <div class="navigation">
+                            <nav class="cmp-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+                                <ul class="cmp-navigation__group">
+                                    <li class="cmp-navigation__item cmp-navigation__item--level-0 cmp-navigation__item--active">
+                                        <a aria-current="page" class="cmp-navigation__item-link" href="/content/asus/language-masters/en.html" title="My Site">My Site</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="languagenavigation">
+                            <nav class="cmp-languagenavigation">
+                                <ul class="cmp-languagenavigation__group">
+                                    <li class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-0">
+                                        <span class="cmp-languagenavigation__item-title" lang="en">United States</span>
+                                        <ul class="cmp-languagenavigation__group">
+                                            <li class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-1">
+                                                <a class="cmp-languagenavigation__item-link" href="/content/asus/us/en.html" hreflang="en" lang="en" rel="alternate" title="English">English</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="search">
+                            <section class="cmp-search" data-cmp-is="search" data-cmp-min-length="3" data-cmp-results-size="10" role="search">
+                                <form action="/content/asus/language-masters/en.searchresults.json/_jcr_content/root/search" autocomplete="off" class="cmp-search__form" data-cmp-hook-search="form" method="get">
+                                    <div class="cmp-search__field">
+                                        <i class="cmp-search__icon" data-cmp-hook-search="icon"></i>
+                                        <span class="cmp-search__loading-indicator" data-cmp-hook-search="loadingIndicator"></span>
+                                        <input aria-autocomplete="list" aria-haspopup="true" aria-invalid="false" class="cmp-search__input" data-cmp-hook-search="input" name="fulltext" placeholder="Search" role="combobox" type="text" />
+                                        <button class="cmp-search__clear" data-cmp-hook-search="clear">
                                         <i class="cmp-search__clear-icon"></i>
                                     </button>
-                                </div>
-                            </form>
-                            <div class="cmp-search__results" data-cmp-hook-search="results" role="listbox" aria-multiselectable="false"></div>
-                            <script data-cmp-hook-search="itemTemplate" type="x-template">
-                                <a class="cmp-search__item" data-cmp-hook-search="item">
-                                    <span class="cmp-search__item-title" data-cmp-hook-search="itemTitle"></span>
-                                </a>
-                            </script>
-                        </section></div>
+                                    </div>
+                                </form>
+                                <div aria-multiselectable="false" class="cmp-search__results" data-cmp-hook-search="results" role="listbox"></div>
+                                <script data-cmp-hook-search="itemTemplate" type="x-template">
+                                    <a class="cmp-search__item" data-cmp-hook-search="item">
+                                        <span class="cmp-search__item-title" data-cmp-hook-search="itemTitle"></span>
+                                    </a>
+                                </script>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </header>
-        <main class="container responsivegrid">
+            </header>
+
+            <!-- <main class="container responsivegrid"> -->
             <div class="cmp-container">
                 <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
-                    <div class="title aem-GridColumn aem-GridColumn--default--12">
-                        <div class="cmp-title">
-                            <h1 class="cmp-title__text">Welcome to My Site!</h1>
-                        </div>
-                    </div>
-                    <div class="container responsivegrid aem-GridColumn aem-GridColumn--default--12">
-                        <div class="cmp-container">
-                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
 
-                                <div class="text aem-GridColumn aem-GridColumn--default--12">
-                                    <div class="cmp-text">
-                                        <p>This is the main welcome page of your web site. A few notes about this site:</p>
-                                        <ul>
-                                            <li>It is built entirely with the Core Components - see the <a href="https://www.adobe.com/go/aem_cmp_library">Component Library</a> to view the components in all their shapes and forms.</li>
-                                            <li>Only the Hello World component has been built custom to illustrate how further components can be built (which also shows how JavaScript is best initialized for components, so that it also works well with the Page Editor).</li>
-                                            <li>The page header and footer are assembled as Experience Fragments, which <a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html#localized-site-structure">can also be localized if needed</a>.<br />
-                                            </li>
-                                            <li>The Style System is used to insert a sematic &lt;header&gt; and &lt;footer&gt; element to the corresponding Experience Fragment components, as well as a &lt;main&gt; element to the container of the page content. This allows to apply some CSS specifically to these sections of the page.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="helloworld aem-GridColumn aem-GridColumn--default--12"><div class="cmp-helloworld" data-cmp-is="helloworld">
-                                    <h2 class="cmp-helloworld__title">Hello World Component</h2>
-                                    <div class="cmp-helloworld__item">
-                                        <p class="cmp-helloworld__item-label">Model message:</p>
-                                        <pre class="cmp-helloworld__item-output" data-cmp-hook-helloworld="model">Hello World!
-Resource type is: asus/components/helloworld
-Current page is:  /content/asus/language-masters/en
-This is instance: 78f60b4a-a52a-4021-82d5-fb17f5fb95cf
-</pre>
-                                    </div>
-                                </div></div>
-                            </div>
-                        </div>
+                    <div id="proart__hero-banner-top_component-vue">
+                        <vue_proart_hero-banner-top-data file-reference-small="/content/dam/asus/components/proart/hero-banner-top/small_1x_kv_banner_carousel.jpg" file-reference-medium="/content/dam/asus/components/proart/hero-banner-top/kv_banner_carousel_1300.jpg" file-reference-large="/content/dam/asus/components/proart/hero-banner-top/kv_banner_carousel_2560.jpg">
+                        </vue_proart_hero-banner-top-data>
                     </div>
+
+                    <div id="proart__products-nav_component-vue">
+                        <vue_proart_products-nav-data products-nav="[{&#34;fileReferenceSmall&#34;:&#34;/content/dam/asus/components/proart/products-navigation/laptop-720-300-small.jpg&#34;,&#34;fileReferenceMedium&#34;:&#34;/content/dam/asus/components/proart/products-navigation/laptop-360-360-medium.jpg&#34;,&#34;fileReferenceLarge&#34;:&#34;/content/dam/asus/components/proart/products-navigation/laptop-480-784-large.jpg&#34;,&#34;title&#34;:&#34;Ноутбуки&#34;,&#34;description&#34;:&#34;\u003cp style\u003d\&#34;text-align: center;\&#34;\u003eНоутбуки ProArt StudioBook – это профессиональные мобильные рабочие станции. За их высокую графическую производительность отвечают видеокарты NVIDIA Quadro, а за отличное качество изображения – тонкорамочный дисплей NanoEdge с сертификацией Pantone Validated и точной цветопередачей (ΔE\u0026lt;1,5).\u003c/p\u003e\r\n&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Laptops-Home/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceSmall&#34;:&#34;/content/dam/asus/components/proart/products-navigation/desktop-720-300-small.jpg&#34;,&#34;fileReferenceMedium&#34;:&#34;/content/dam/asus/components/proart/products-navigation/desktop-360-360-medium.jpg&#34;,&#34;fileReferenceLarge&#34;:&#34;/content/dam/asus/components/proart/products-navigation/desktop-480-784-large.jpg&#34;,&#34;title&#34;:&#34;Компьютеры&#34;,&#34;description&#34;:&#34;\u003cp style\u003d\&#34;text-align: center;\&#34;\u003eМини-компьютеры Pro Art Mini PC и компактные рабочие станции ProArt Station оснащаются мощными процессорами и видеокартами, используют высокоэффективные и тихие системы охлаждения, а также обладают сертификацией со стороны разработчиков профессионального программного обеспечения.\u003c/p\u003e\r\n&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Desktops-Home/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceSmall&#34;:&#34;/content/dam/asus/components/proart/products-navigation/monitor-720-300-small.jpg&#34;,&#34;fileReferenceMedium&#34;:&#34;/content/dam/asus/components/proart/products-navigation/monitor-360-360-medium.jpg&#34;,&#34;fileReferenceLarge&#34;:&#34;/content/dam/asus/components/proart/products-navigation/monitor-480-784-large.jpg&#34;,&#34;title&#34;:&#34;Мониторы&#34;,&#34;description&#34;:&#34;\u003cp style\u003d\&#34;text-align: center;\&#34;\u003eРасширенный динамический диапазон, точная цветопередача, фабричная калибровка и большой цветовой охват – мониторы ProArt являются лучшим выбором для работы с видеоматериалами, фотографиями и графикой. Они наделены современными технологиями и обладают великолепной эргономикой.\u003c/p\u003e\r\n&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Displays-Home/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceSmall&#34;:&#34;/content/dam/asus/components/proart/products-navigation/motherboard-720-300-small.jpg&#34;,&#34;fileReferenceMedium&#34;:&#34;/content/dam/asus/components/proart/products-navigation/motherboard-360-360-medium.jpg&#34;,&#34;fileReferenceLarge&#34;:&#34;/content/dam/asus/components/proart/products-navigation/motherboard-480-784-large.jpg&#34;,&#34;title&#34;:&#34;Материнские платы&#34;,&#34;description&#34;:&#34;\u003cp style\u003d\&#34;text-align: center;\&#34;\u003eКомпания ASUS получила широкое признание как ведущий бренд материнских плат в мире. Эти и другие компьютерные компоненты ASUS отличаются высокой производительностью, проверенной тестами совместимостью и стабильной работой, поэтому профессионалы смогут полностью на них положиться.\u003c/p\u003e\r\n&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Motherboards-Home/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;}]">
+                        </vue_proart_products-nav-data>
+                    </div>
+
+
+                    <div id="proart__categories-nav_component-vue">
+                        <vue_proart_categories-nav-data categories-title="Отрасль" categories-nav="[{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/proart/categories-navigation/_edit_foto_1.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;&#34;,&#34;title&#34;:&#34;Обработка фотографий&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Photography/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/proart/categories-navigation/_edit_film_1.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;&#34;,&#34;title&#34;:&#34;Фильмопроизводство и редактирование видео&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Filmmaking-Video-Editing/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/proart/categories-navigation/_edit_game_1.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;&#34;,&#34;title&#34;:&#34;Анимация и разработка игр&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Animation-Game-Development/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/proart/categories-navigation/_edit_building_1.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;&#34;,&#34;title&#34;:&#34;Архитектура и проектирование&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Architecture-Engineering/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/proart/categories-navigation/_edit_products_1.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;&#34;,&#34;title&#34;:&#34;Разработка и производство продуктов&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Product-Design-Manufacturing/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;},{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/proart/categories-navigation/_edit_grafics_1.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;&#34;,&#34;title&#34;:&#34;Графика&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ProArt/Graphic-Art/&#34;,&#34;linkUrlTarget&#34;:&#34;_self&#34;}]">
+                        </vue_proart_categories-nav-data>
+                    </div>
+
                 </div>
             </div>
-        </main>
-        <footer class="experiencefragment">
-            <div class="cmp-experiencefragment">
+
+            <!-- </main> -->
+
+
+            <div class="cmp-experiencefragment cmp-experiencefragment--footer">
                 <div class="cmp-container">
-                    <div class="separator">
-                        <div class="cmp-separator">
-                            <hr class="cmp-separator__horizontal-rule"/>
-                        </div></div>
-                    <div class="text">
-                        <div class="cmp-text">
-                            <p>Copyright 2019, My Site. All rights reserved.</p>
+                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                        <div class="footer aem-GridColumn aem-GridColumn--default--12">
+
+                            <div id="footer_component-vue">
+
+                                <vue_footer-data black-version description-link="Russia / Русский" link-to="https://www.asus.com/entry.htm" link-url-target="_blank" file-reference="/content/dam/asus/components/footer/world.png" links-group="[{&#34;groupTitle&#34;:&#34;Подробнее&#34;,&#34;linksNames&#34;:[{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Компьютеры «Powered by ASUS»&#34;,&#34;linkTo&#34;:&#34;http://www.asus.com/Microsite/powered-by-asus/RU/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Материнские платы ROG Strix X299&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/Microsite/mb/cross/X299/ru/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Материнские платы ASUS X570&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/microsite/motherboard/AMD-X570/RU/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Сайт ASUS CSM&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/microsite/csm/ru/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Мониторы ASUS ProArt&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/Microsite/ProArtMonitor/ru/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Сайт Aura&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/campaign/aura/ru/index.html&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Сайт TUF Gaming&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/campaign/tuf-gaming/ru/index.html&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;}]},{&#34;groupTitle&#34;:&#34;Кто мы?&#34;,&#34;linksNames&#34;:[{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;О компании&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/About-ASUS/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Новости&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/News/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Награды&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/Award/Award?\u0026Area\u003dRUSSIA&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Внутренний аудит&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/Internal-Audit/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Информация для инвесторов&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/investor.aspx&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Контакты для прессы&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ASUS_Website_Information/Press_Room&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Вакансии в России&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ASUS_Website_Information/RussiaJobs&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Фирменные магазины&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/ASUS_Website_Information/BrandShops&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;}]},{&#34;groupTitle&#34;:&#34;Нужна помощь?&#34;,&#34;linksNames&#34;:[{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Контакты&#34;,&#34;linkTo&#34;:&#34;http://www.asus.com/ru/support/Contact-ASUS&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Регистрация продукта&#34;,&#34;linkTo&#34;:&#34;https://account.asus.com/registerform.aspx?lang\u003dru-ru\u0026site\u003dru&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Сервисные центры&#34;,&#34;linkTo&#34;:&#34;http://www.asus.com/ru/support/Service-Center/Russia&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Горячая линия ASUS&#34;,&#34;linkTo&#34;:&#34;http://www.asus.com/ru/support/Hotline/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Технический запрос&#34;,&#34;linkTo&#34;:&#34;http://vip.asus.com/VIP2/Services/TechQuery?lang\u003dru-ru&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:true,&#34;descriptionLink&#34;:&#34;Служба контроля качества&#34;,&#34;linkTo&#34;:&#34;https://vip.asus.com/VIP2/Services/complain?lang\u003dru-ru&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:false,&#34;descriptionLink&#34;:&#34;Служба поддержки работает с пн по пт с 9:00 до 21:00 МСК&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;}]}]"
+                                    socials-title="Мы в сети!" socials="[{&#34;title&#34;:&#34;ASUS в Twitter&#34;,&#34;linkTo&#34;:&#34;https://twitter.com/asus_russia&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;,&#34;fileReference&#34;:&#34;/content/dam/asus/components/footer/twiter.png&#34;},{&#34;title&#34;:&#34;ASUS в YouTube&#34;,&#34;linkTo&#34;:&#34;http://www.youtube.com/user/asusru&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;,&#34;fileReference&#34;:&#34;/content/dam/asus/components/footer/youtube.png&#34;},{&#34;title&#34;:&#34;ASUS в Facebook&#34;,&#34;linkTo&#34;:&#34;http://www.facebook.com/asus.ru?ref\u003dstream&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;,&#34;fileReference&#34;:&#34;/content/dam/asus/components/footer/facebook.png&#34;},{&#34;title&#34;:&#34;ASUS в ВКонтакте&#34;,&#34;linkTo&#34;:&#34;https://vk.com/rog_russia&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;,&#34;fileReference&#34;:&#34;/content/dam/asus/components/footer/vkontakte.png&#34;},{&#34;title&#34;:&#34;ASUS в Инстаграм&#34;,&#34;linkTo&#34;:&#34;https://www.instagram.com/asus_russia/&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;,&#34;fileReference&#34;:&#34;/content/dam/asus/components/footer/instagram.png&#34;}]"
+                                    copyrights="[{&#34;isExternalLink&#34;:false,&#34;descriptionLink&#34;:&#34;Политика конфиденциальности&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/Terms_of_Use_Notice_Privacy_Policy/Privacy_Policy.html&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:false,&#34;descriptionLink&#34;:&#34;Правовая информация&#34;,&#34;linkTo&#34;:&#34;https://www.asus.com/ru/Terms_of_Use_Notice_Privacy_Policy/Official-Site.html&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;},{&#34;isExternalLink&#34;:false,&#34;descriptionLink&#34;:&#34;©ASUSTeK Computer Inc. Все права защищены.&#34;,&#34;linkTo&#34;:&#34;.html&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;}]">
+                                </vue_footer-data>
+
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
-        </footer>
-
-        <div id="hero-banner-middle-list_component-vue">
-            <vue_hero-banner-middle-list-data
-                    hero-banner-middle-list-items="[{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/hero-banner-middle-list/second-0_0_desktop.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;/content/dam/asus/components/hero-banner-middle-list/second-0_0_mobile.jpg&#34;,&#34;descriptionLink&#34;:&#34;Zenfone 6&#34;,&#34;linkTo&#34;:&#34;#.html&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;,&#34;externalLink&#34;:false},{&#34;fileReferenceDesktop&#34;:&#34;/content/dam/asus/components/hero-banner-middle-list/first-0_0_desktop.jpg&#34;,&#34;fileReferenceMobile&#34;:&#34;/content/dam/asus/components/hero-banner-middle-list/first-0_0_mobile.jpg&#34;,&#34;descriptionLink&#34;:&#34;Rog phone 3&#34;,&#34;linkTo&#34;:&#34;#.html&#34;,&#34;linkUrlTarget&#34;:&#34;_blank&#34;,&#34;externalLink&#34;:false}]">
-            </vue_hero-banner-middle-list-data>
         </div>
-
     </div>
-</div>
-<script type="text/javascript" src="/etc.clientlibs/asus/clientlibs/clientlib-site.js"></script>
-<script type="text/javascript" src="/etc.clientlibs/asus/clientlibs/clientlib-base.js"></script>
+    <script src="/etc.clientlibs/asus/clientlibs/clientlib-site.js" type="text/javascript"></script>
+    <script src="/etc.clientlibs/asus/clientlibs/clientlib-base.js" type="text/javascript"></script>
 </body>
+
 </html>

@@ -295,6 +295,36 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1574695586800>
+                <policy_1574695586801
+                        jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:Asus Project - Content,group:Asus Project - Grid Parsys,group:Asus Project - Hero Group,group:Asus Project - ProArt,/apps/asus/components/form/container,group:Asus Project - Custom Content]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:authoring jcr:primaryType="nt:unstructured">
+                        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                            <mapping_1575030255082
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="asus/components/image"/>
+                            <mapping_1575030260142
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="asus/components/experiencefragment"/>
+                            <mapping_1575030269139
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                    droptarget="contentfragment"
+                                    resourceType="asus/components/contentfragment"/>
+                        </assetToComponentMapping>
+                    </cq:authoring>
+                </policy_1574695586801>
                 <policy_649128221558427
                     cq:styleDefaultElement="main"
                     jcr:description="Sets a &lt;main> element on the page content area."

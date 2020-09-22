@@ -10,7 +10,7 @@
             sling:resourceType="asus/components/container">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="asus/components/container"
+                    sling:resourceType="apps/asus/components/custom/parsys/layout-container"
                     layout="responsiveGrid"/>
         </root>
     </jcr:content>
