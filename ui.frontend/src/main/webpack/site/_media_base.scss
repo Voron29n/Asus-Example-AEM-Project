@@ -1,14 +1,30 @@
 //== Base media
-@media (max-width: 959px) and (min-width: 720px) {
-    [class*="span"] {
-        float: left;
-        margin-left: 20px;
+@media (max-width: 719px) {
+    body h1.page-title.double-border-bottom {
+        margin-bottom: 6px !important;
     }
-    .span3 {
-        width: 166px;
+    [class*="span"],
+    .row-fluid [class*="span"] {
+        float: none;
+        display: block;
+        width: auto!important;
+        margin-left: 0;
     }
-    .span4 {
-        width: 228px;
+    .row,
+    .thumbnails {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #member-page-content img {
+        max-width: 100%!important;
+    }
+    .row .col.s12 {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
     }
 }
 
@@ -21,56 +37,31 @@
     }
 }
 
-@media (max-width: 719px) {
-    [class*="span"],
-    .row-fluid [class*="span"] {
-        float: none;
-        display: block;
-        width: auto!important;
-        margin-left: 0;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    #member-page-content img {
-        max-width: 100%!important;
-    }
-}
-
-@media (max-width: 719px) {
-    body h1.page-title.double-border-bottom {
-        margin-bottom: 6px !important;
-    }
-}
-
-@media (max-width: 959px) and (min-width: 720px) {
-    [class*="span"] {
-        margin-left: 1%;
-    }
-}
-
-@media (max-width: 959px) and (min-width: 720px) {
-    .span3 {
-        width: 166px;
-    }
-}
-
 @media (max-width: 959px) and (min-width: 720px) {
     [class*="span"] {
         float: left;
         margin-left: 20px;
     }
-}
-
-@media (max-width: 719px) {
-    .row,
-    .thumbnails {
-        margin-left: 0;
+    .span3 {
+        width: 166px;
+    }
+    .span4 {
+        width: 228px;
+    }
+    [class*="span"] {
+        float: left;
+        margin-left: 20px;
+    }
+    .row {
+        margin-left: -20px;
     }
 }
 
-@media (max-width: 959px) and (min-width: 720px) {
-    .row {
-        margin-left: -20px;
+@media only screen and (max-width: 1300px) and (min-width: 721px) {
+    .row .col.m12 {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
     }
 }

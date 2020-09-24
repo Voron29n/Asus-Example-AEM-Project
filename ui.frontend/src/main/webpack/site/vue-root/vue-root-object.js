@@ -91,6 +91,10 @@ vueArrayComponents = [
         "#proart__categories-nav_component-vue",
         "vue_proart_categories-nav-data"
     ),
+    new ComponentData(
+        "#proart__images-carousel-vue",
+        "vue_proart_images-carousel-data"
+    ),
     /* proart professional group*/
     new ComponentData(
         "#proart__prof__hero-img_component-vue",
@@ -122,7 +126,7 @@ if (document.querySelector(vueRootData.rootClassSelector) != null) {
 } else if (document.querySelector(".xf-web-container > div")) {
     document.querySelector(".xf-web-container > div").id =
         vueRootData.rootIdValue;
-}  
+}
 
 /* Fourth  step import Vue Component */
 import { getComponent } from "./utils";
@@ -162,7 +166,7 @@ if (document.querySelector(vueRootData.rootIdSelector) != null) {
 //     } else {
 //         document.querySelector(vueRootData.rootClassSelectorSecond).id = vueRootData.rootIdValue;
 //     }
-    
+
 //     /* Fourth  step import Vue Component */
 //     debugger
 
@@ -183,5 +187,5 @@ if (document.querySelector(vueRootData.rootIdSelector) != null) {
 
 //     }
 
-   
+
 // })

@@ -22,9 +22,10 @@ public final class CommonUtils {
 
 
     public static <T> List<T> adaptListResourcesToListBeans(List<Resource> resourceList, Class<T> clazz) {
-        return resourceList.stream()
+        return isCheckResource(resourceList) ?
+                resourceList.stream()
                 .map(resource -> resource.adaptTo(clazz))
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()) :  null;
     }
 
     public static boolean isCheckResource(final List<Resource> resources) {

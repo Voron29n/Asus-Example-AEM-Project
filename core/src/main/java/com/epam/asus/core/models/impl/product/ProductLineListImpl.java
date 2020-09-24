@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.*;
@@ -17,7 +16,6 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Getter
 @Model(adaptables = {SlingHttpServletRequest.class, Resource.class},

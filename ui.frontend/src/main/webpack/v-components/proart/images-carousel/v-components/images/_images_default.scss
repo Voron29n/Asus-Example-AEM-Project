@@ -1,0 +1,45 @@
+#proart__images-carousel .software-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: -18px auto 0;
+    width: 100%;
+    max-width: var(--img-orig-width);
+    background-color: #131313;
+}
+
+#proart__images-carousel .software-list .list-row {
+    position: relative;
+    width: 5120px;
+    font-size: 0;
+    margin-bottom: 16px;
+    display: flex;
+    flex: auto;
+}
+
+#proart__images-carousel .img {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#proart__images-carousel .software-list .list-row figure {
+    position: relative;
+    display: inline-block;
+    width: var(--img-orig-width);
+    height: 120px;
+}
+
+#proart__images-carousel .img-left {
+    position: absolute;
+    animation: moveImageLeft var(--speed-row) linear infinite;
+    -webkit-animation: moveImageLeft var(--speed-row) linear infinite;
+}
+
+#proart__images-carousel .img-right {
+    position: absolute;
+    animation: moveImageRight var(--speed-row) linear infinite;
+    -webkit-animation: moveImageRight var(--speed-row) linear infinite;
+    left: var(--img-left);
+}

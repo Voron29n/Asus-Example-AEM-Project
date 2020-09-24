@@ -459,7 +459,7 @@ body .container {
     display: block;
 }
 
-body .row {
+.row {
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -474,6 +474,20 @@ body .row {
 
 .row:after {
     clear: both;
+}
+
+.row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.row .col.l12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
 }
 
 .always__on__top {

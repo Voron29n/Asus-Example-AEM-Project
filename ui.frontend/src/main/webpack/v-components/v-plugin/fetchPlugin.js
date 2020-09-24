@@ -21,9 +21,11 @@ export default {
             let requestSelector = selector !== undefined ? selector : defaultSelector;
             let requestExtension = extension !== undefined ? extension : defaultExtensions;
 
-            let requestUrl = new URL(resourcePath.concat(requestSelector, requestExtension));
+            let urlValue = resourcePath.concat(requestSelector, requestExtension);
 
-            let response = await fetch(requestUrl, {
+            // let requestUrl = new URL(urlValue);
+
+            let response = await fetch(urlValue, {
                 method: "GET",
                 cache: "no-cache",
                 headers: {
@@ -43,7 +45,7 @@ export default {
                 ["lat", "35.696233"],
                 ["long", "139.570431"],
             ]; */
-            if (params !== undefined){
+            if (params !== undefined) {
                 requestUrl.search = new URLSearchParams(params).toString();
             }
 
