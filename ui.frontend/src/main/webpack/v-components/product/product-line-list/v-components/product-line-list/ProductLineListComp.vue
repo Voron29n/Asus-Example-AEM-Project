@@ -229,7 +229,7 @@ export default {
                         itemWidth =
                             this.currentWidth /
                             (this.productItemsInLine.countSmallVersion - 1);
-                        this.productItemsInLine.currentCount = this.productItemsInLine.countSmallVersion;
+                        this.productItemsInLine.currentCount = (this.productItemsInLine.countSmallVersion - 1);
                     }
                     break;
                 case this.productWindowType.medium:
@@ -237,12 +237,12 @@ export default {
                         (this.currentWidth - 150) /
                         this.productItemsInLine.countMediumVersion;
                     if (itemWidth > 130) {
-                        this.productItemsInLine.currentCount = this.productItemsInLine.countSmallVersion;
+                        this.productItemsInLine.currentCount = this.productItemsInLine.countMediumVersion;
                     } else {
                         itemWidth =
-                            this.currentWidth /
+                            (this.currentWidth - 150) /
                             (this.productItemsInLine.countMediumVersion - 1);
-                        this.productItemsInLine.currentCount = this.productItemsInLine.countMediumVersion;
+                        this.productItemsInLine.currentCount = (this.productItemsInLine.countMediumVersion - 1);
                     }
                     break;
                 case this.productWindowType.large:
