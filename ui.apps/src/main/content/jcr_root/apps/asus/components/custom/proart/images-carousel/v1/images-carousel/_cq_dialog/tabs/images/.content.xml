@@ -1,0 +1,116 @@
+<images xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Images carousel"
+          margin="{Boolean}true"
+          sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+
+        <column
+                jcr:primaryType="nt:unstructured"
+                margin="{Boolean}true"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+
+                <column jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <multi
+                                cq:showOnCreate="{Boolean}true"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                validation="multifield-max-4"
+                                fieldDescription="New value"
+                                fieldLabel="Products nav collection"
+                                granite:class="foundation-toggleable cq-dialog-container__editor-multifield-images_carousel_group">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    acs-commons-nested=""
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./imagesResource"
+                                    granite:class="cq-dialog-container__editor-images_carousel_group">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <image
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Image"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            margin="{Boolean}true"
+                                            granite:class="cq-dialog-container__editor-images_carousel__image">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <columns
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true"
+                                                    granite:class="cq-dialog-container__editor-images_carousel__image_block">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <fileSmall
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                    allowUpload="{Boolean}false"
+                                                                    autoStart="{Boolean}false"
+                                                                    class="cq-droptarget"
+                                                                    fieldLabel="Image Asset"
+                                                                    fileNameParameter="./fileName"
+                                                                    fileReferenceParameter="./fileReference"
+                                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff]"
+                                                                    multiple="{Boolean}false"
+                                                                    name="./file"
+                                                                    title="Upload Image Asset"
+                                                                    uploadUrl="${suffix.path}"
+                                                                    requestSuffix="/img.png"
+                                                                    useHTML5="{Boolean}true"/>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                            </columns>
+                                        </items>
+                                    </image>
+
+                                    <wellGroup
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/well"
+                                            granite:class="cq-dialog-container-images_carousel-group-well">
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                            <speedMoveImage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    fieldDescription="SpeedMoveImage"
+                                                    emptyText="SpeedMoveImage"
+                                                    required="{Boolean}true"
+                                                    type="{Long}"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                    name="./speedMoveImage"
+                                                    granite:class="cq-dialog-container-images_carousel-speed"
+                                            />
+
+                                            <isRightSideMove
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+                                                    fieldDescription="check - right move / uncheck - left move"
+                                                    name="./rightSideMove"
+                                                    unchecked="{Boolean}true"
+                                                    uncheckedValue="{Boolean}false"
+                                                    checked="{Boolean}true"
+                                                    granite:class="cq-dialog-container-images_carousel-check_side_move"/>
+                                        </items>
+                                    </wellGroup>
+
+                                </items>
+
+                            </field>
+                        </multi>
+                    </items>
+                </column>
+            </items>
+        </column>
+    </items>
+</images>
