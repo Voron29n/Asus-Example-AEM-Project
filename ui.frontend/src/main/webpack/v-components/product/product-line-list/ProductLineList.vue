@@ -39,8 +39,8 @@ export default {
                 console.log("fetch request failed");
             } else {
                 console.log("fetch request OK");
-                let responceJson = await response.json();
-                this.productLineList = responceJson.productLineList;
+                let responseJson = await response.json();
+                this.productLineList = responseJson.productLineList;
             }
         }
     },
