@@ -3,3 +3,30 @@
         font-size: 17px;
     }
 }
+
+@media (max-width: 720px) {
+    .person-info {
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .person-info {
+        margin-bottom: 2.352941em;
+
+        .person-info-inner .person-info-txt {
+            .person-info-title {
+                padding-left: 15px;
+                padding-right: 15px;
+                letter-spacing: -.01em;
+            }
+
+            .person-info-name {
+                padding-left: 15px;
+                padding-right: 15px;
+                letter-spacing: -0.03em;
+                font-size: 2.470588em;
+            }
+        }
+    }
+}
