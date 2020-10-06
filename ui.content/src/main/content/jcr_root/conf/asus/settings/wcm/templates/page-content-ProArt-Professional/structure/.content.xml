@@ -4,7 +4,7 @@
           jcr:primaryType="cq:Page">
     <jcr:content
             cq:deviceGroups="[/etc/mobile/groups/responsive]"
-            cq:template="/conf/asus/settings/wcm/templates/page-content-ProArt"
+            cq:template="/conf/asus/settings/wcm/templates/page-content-ProArt-Professional"
             jcr:primaryType="cq:PageContent"
             sling:resourceType="asus/components/page">
         <root
@@ -27,25 +27,16 @@
                     sling:resourceType="asus/components/experiencefragment"
                     fragmentVariationPath="/content/experience-fragments/asus/ru/ru/site/footer/master_v3"/>
         </root>
-
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
-                <extrasmall
+                <phone
                         jcr:primaryType="nt:unstructured"
                         title="Extra Small"
                         width="{Long}480"/>
-                <small
-                        jcr:primaryType="nt:unstructured"
-                        title="Smaller Screen"
-                        width="{Long}768"/>
-                <medium
-                        jcr:primaryType="nt:unstructured"
-                        title="Medium Screen"
-                        width="{Long}1024"/>
                 <tablet
                         jcr:primaryType="nt:unstructured"
-                        title="Tablet"
-                        width="{Long}1200"/>
+                        title="Medium Screen"
+                        width="{Long}768"/>
             </breakpoints>
         </cq:responsive>
     </jcr:content>
