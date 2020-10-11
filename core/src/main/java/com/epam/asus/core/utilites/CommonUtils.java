@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public final class CommonUtils {
-    private CommonUtils() {}
 
     private static final String LINK_TO = "linkTo";
     private static final String HTML = ".html";
@@ -20,19 +19,21 @@ public final class CommonUtils {
     private static final String FONT_AWESOME_ICON_PATTERN_WITHOUT_HTML = "^fa[a-z] fa.+";
     private static final String FONT_AWESOME_PATTERN_CLASS = "fa[a-z] fa.+[^(\"><\\/i>)]";
 
+    private CommonUtils() {
+    }
 
     public static <T> List<T> adaptListResourcesToListBeans(List<Resource> resourceList, Class<T> clazz) {
         return isCheckResource(resourceList) ?
                 resourceList.stream()
-                .map(resource -> resource.adaptTo(clazz))
-                .collect(Collectors.toList()) :  null;
+                        .map(resource -> resource.adaptTo(clazz))
+                        .collect(Collectors.toList()) : null;
     }
 
     public static boolean isCheckResource(final List<Resource> resources) {
         return resources != null && !resources.isEmpty();
     }
 
-    public static String correctExternalLink(boolean isExternalLink, String linkTo){
+    public static String correctExternalLink(boolean isExternalLink, String linkTo) {
         return !isExternalLink && linkTo != null ? linkTo.concat(HTML) : linkTo;
     }
 
@@ -40,14 +41,14 @@ public final class CommonUtils {
         return properties.containsKey(propertyName) ? properties.get(propertyName, String.class) : StringUtils.EMPTY;
     }
 
-    public static String correctLinkByURLFromValueMap(final boolean isExternalLink, final ValueMap vm){
+    public static String correctLinkByURLFromValueMap(final boolean isExternalLink, final ValueMap vm) {
         return isExternalLink ? getPropertyValueByPropertyName(vm, LINK_TO) : getPropertyValueByPropertyName(vm, LINK_TO).concat(HTML);
     }
 
-    public static String correctFontAwesomeIconClass(String iconClassProp, String defaultIconClass){
+    public static String correctFontAwesomeIconClass(String iconClassProp, String defaultIconClass) {
         String iconClassData = null;
         if (isIconClassWithHtml(iconClassProp)) {
-             iconClassData = cutIconClassFromHtmlWithIconClass(iconClassProp);
+            iconClassData = cutIconClassFromHtmlWithIconClass(iconClassProp);
         } else if (isIconClassWithoutHtml(iconClassProp)) {
             iconClassData = iconClassProp;
         } else {
@@ -65,7 +66,7 @@ public final class CommonUtils {
     private static String cutIconClassFromHtmlWithIconClass(String iconClassProp) {
         Pattern fontAwesomePattern = Pattern.compile(FONT_AWESOME_PATTERN_CLASS);
         Matcher fontAwesomeMatcher = fontAwesomePattern.matcher(iconClassProp);
-        return fontAwesomeMatcher.find() ? iconClassProp.substring(fontAwesomeMatcher.start(),fontAwesomeMatcher.end()) : "";
+        return fontAwesomeMatcher.find() ? iconClassProp.substring(fontAwesomeMatcher.start(), fontAwesomeMatcher.end()) : "";
     }
 
     private static boolean isIconClassWithHtml(String iconClass) {
