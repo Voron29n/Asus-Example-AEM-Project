@@ -5,7 +5,7 @@
                 <span class="person-info-title">{{personInfoData.professionPosition}}</span>
                 <span
                     class="person-info-name"
-                >{{personInfoData.firstNameRu}} {{personInfoData.lastNameRu}} ({{personInfoData.firstNameEn}} {{personInfoData.firstNameEn}})</span>
+                >{{personInfoData.firstNameRu}} {{personInfoData.lastNameRu}} ({{personInfoData.firstNameEn}} {{personInfoData.lastNameEn}})</span>
             </div>
         </div>
     </h1>
