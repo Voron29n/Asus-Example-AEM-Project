@@ -28,6 +28,9 @@ public class PersonInfoBean {
     @JsonView(value = View.PersonImg.class)
     @ValueMapValue
     private String resourcePath;
+    @JsonView(value = View.PersonImg.class)
+    @ValueMapValue
+    private String personPagePath;
 
     @JsonView(value = View.PersonInfo.class)
     @ValueMapValue
@@ -62,6 +65,7 @@ public class PersonInfoBean {
     @JsonIgnore
     public boolean isEmptyWithImg() {
         return StringUtils.isBlank(fileReference)
+                || StringUtils.isBlank(personPagePath)
                 || StringUtils.isBlank(resourcePath)
                 || this.isEmpty();
     }
