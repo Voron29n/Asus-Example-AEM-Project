@@ -45,8 +45,6 @@ public class QueryUtils {
         return query.execute();
     }
 
-
-
     private static boolean isSearchPatternQueryValid(String searchPatternQuerySQL2, String[] searchArgs) {
         if (StringUtils.isBlank(searchPatternQuerySQL2) || searchArgs == null || searchArgs.length <= 0) {
             return false;
