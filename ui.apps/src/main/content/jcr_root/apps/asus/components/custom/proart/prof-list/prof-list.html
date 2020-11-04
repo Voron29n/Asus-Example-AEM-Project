@@ -1,0 +1,15 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.searchPath="${properties.searchPath}"
+     data-sly-test.searchLimit="${properties.searchLimit}"
+     data-sly-test.rowCountItems="${properties.rowCountItems}"
+     data-sly-test.hasContent="${searchPath && searchLimit && rowCountItems}"
+>
+
+    <div id="proart__prof__prof-list">
+        <h3>${searchPath}</h3>
+        <h3>${searchLimit}</h3>
+        <h3>${rowCountItems}</h3>
+    </div>
+
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
